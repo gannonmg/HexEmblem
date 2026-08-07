@@ -19,10 +19,29 @@ public struct BAManifest: Codable {
     public let preservedPalette: [RGBA]
     public let warnings: [String]
 
+    // MARK: - Init
+    public init(id: String, sourceScript: String, renderSize: FrameSize, frameAssets: [Frame.Asset], timelines: [Timeline], preservedPalette: [RGBA], warnings: [String]) {
+        self.id = id
+        self.sourceScript = sourceScript
+        self.renderSize = renderSize
+        self.frameAssets = frameAssets
+        self.timelines = timelines
+        self.preservedPalette = preservedPalette
+        self.warnings = warnings
+    }
+}
+
+// MARK: - BAManifest.Frame
+extension BAManifest {
     public enum Frame {
         public struct Asset: Codable {
             public let sourceFile: String
             public let layerType: LayerType
+
+            public init(sourceFile: String, layerType: LayerType) {
+                self.sourceFile = sourceFile
+                self.layerType = layerType
+            }
         }
 
         public enum LayerType: Codable {
@@ -40,9 +59,17 @@ public struct BAManifest: Codable {
         public struct Event: Codable {
             public let sourceFile: String
             public let duration: TimeInterval
+
+            public init(sourceFile: String, duration: TimeInterval) {
+                self.sourceFile = sourceFile
+                self.duration = duration
+            }
         }
     }
+}
 
+// MARK: - BAManifest.Timeline
+extension BAManifest {
     public struct Timeline: Codable {
         public let modeID: BAModeID
         public let rawModeNumber: Int
@@ -52,6 +79,13 @@ public struct BAManifest: Codable {
         public enum Event: Codable {
             case frame(Frame.Event)
             case command(BAScript.Command)
+        }
+
+        public init(modeID: BAModeID, rawModeNumber: Int, title: String?, events: [Event]) {
+            self.modeID = modeID
+            self.rawModeNumber = rawModeNumber
+            self.title = title
+            self.events = events
         }
     }
 }

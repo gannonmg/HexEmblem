@@ -5,8 +5,9 @@
 //  Created by Matt Gannon on 8/3/26.
 //
 
-import Foundation
+import BAModel
 import CoreGraphics
+import Foundation
 import ImageIO
 import UniformTypeIdentifiers
 

@@ -22,4 +22,11 @@ public struct BAMode: Codable, Hashable {
             }
         }
     }
+
+    public init(rawModeNumber: Int, id: BAModeID, title: String?, events: [BAScript.Event]) {
+        self.rawModeNumber = rawModeNumber
+        self.id = id
+        self.title = title
+        self.events = events
+    }
 }
