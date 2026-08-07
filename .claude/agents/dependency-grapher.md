@@ -130,7 +130,7 @@ Products (`BAPlayback`, `BAImportTool`) sit on the bottom row. `BAPlayback` depe
           │ │ScriptParser│      │                 │
           │ └─────┬──────┘      ▼                 ▼
           │       │      ┌────────────────────────────┐
-          │       └─────►│         ImportTooling       │
+          │       └─────►│         ImportTooling      │
           │              └──────────────┬─────────────┘
           │                             │
           ▼                             ▼
