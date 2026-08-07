@@ -1,6 +1,6 @@
 //
 //  CharacterStats.swift
-//  hex-emblem-swift-poc
+//  HexEmblem
 //
 //  Created by Matt Gannon on 8/2/26.
 //

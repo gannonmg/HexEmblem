@@ -5,6 +5,7 @@
 //  Created by Matt Gannon on 8/4/26.
 //
 
+import CombatModels
 import Foundation
 
 public struct CombatPlan {

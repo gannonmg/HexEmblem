@@ -1,11 +1,12 @@
 //
 //  StrikeResult.swift
-//  hex-emblem-swift-poc
+//  HexEmblem
 //
 //  Created by Matt Gannon on 8/2/26.
 //
 
 import Foundation
+import GameRules
 
 public enum StrikeResult {
     case miss

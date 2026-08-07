@@ -6,6 +6,7 @@
 //
 
 import CombatCore
+import CombatModels
 import Foundation
 import GameModels
 
@@ -13,7 +14,16 @@ public struct CombatEvaluator {
     private let planner: CombatPlanBuilder
     private let resolver: CombatPlanResolver
 
-    init(
+    public init(config: CombatConfig) {
+        self.init(
+            initiator: config.initiator,
+            responder: config.responder,
+            range: config.range,
+            seed: config.seed
+        )
+    }
+
+    private init(
         initiator: Combatant,
         responder: Combatant,
         range: Int,
@@ -31,15 +41,6 @@ public struct CombatEvaluator {
             responder: responder,
             seed: seed
         )
-    }
-
-    public static func create(
-        initiator: CharacterUnit,
-        responder: CharacterUnit,
-        range: Int,
-        seed: Int
-    ) -> CombatEvaluator {
-        self.init(initiator: initiator, responder: responder, range: range, seed: seed)
     }
 
     public func getCombatSummary() -> CombatSummary {

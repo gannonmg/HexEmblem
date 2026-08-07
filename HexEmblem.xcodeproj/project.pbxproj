@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D6236EF302672F2005BD1DA /* CCEvaluator in Frameworks */ = {isa = PBXBuildFile; productRef = 2D6236EE302672F2005BD1DA /* CCEvaluator */; };
 		2D817CD230258539008AF97B /* BAPlayback in Frameworks */ = {isa = PBXBuildFile; productRef = 2D817CD130258539008AF97B /* BAPlayback */; };
 		2D817CD43025A762008AF97B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2D817CD33025A762008AF97B /* README.md */; };
 		2D817DC13026550C008AF97B /* GameModels in Frameworks */ = {isa = PBXBuildFile; productRef = 2D817DC03026550C008AF97B /* GameModels */; };
@@ -62,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6236EF302672F2005BD1DA /* CCEvaluator in Frameworks */,
 				2D817DC13026550C008AF97B /* GameModels in Frameworks */,
 				2D817CD230258539008AF97B /* BAPlayback in Frameworks */,
 			);
@@ -139,6 +141,7 @@
 				2D817CD130258539008AF97B /* BAPlayback */,
 				2D817DBD302654FA008AF97B /* GameModels */,
 				2D817DC03026550C008AF97B /* GameModels */,
+				2D6236EE302672F2005BD1DA /* CCEvaluator */,
 			);
 			productName = HexEmblem;
 			productReference = 2D79BB803025696E000C8E92 /* HexEmblem.app */;
@@ -225,6 +228,7 @@
 			packageReferences = (
 				2D817CD030258538008AF97B /* XCLocalSwiftPackageReference "BattleAnimationCore" */,
 				2D817DBF3026550C008AF97B /* XCLocalSwiftPackageReference "GameCore" */,
+				2D6236ED302672F2005BD1DA /* XCLocalSwiftPackageReference "CombatCore" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2D79BB813025696E000C8E92 /* Products */;
@@ -649,6 +653,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
+		2D6236ED302672F2005BD1DA /* XCLocalSwiftPackageReference "CombatCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = CombatCore;
+		};
 		2D817CD030258538008AF97B /* XCLocalSwiftPackageReference "BattleAnimationCore" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = BattleAnimationCore;
@@ -660,6 +668,10 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2D6236EE302672F2005BD1DA /* CCEvaluator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CCEvaluator;
+		};
 		2D817CD130258539008AF97B /* BAPlayback */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BAPlayback;

@@ -1,6 +1,6 @@
 //
 //  CharacterUnit.swift
-//  hex-emblem-swift-poc
+//  HexEmblem
 //
 //  Created by Matt Gannon on 8/2/26.
 //
@@ -35,6 +35,14 @@ public final class CharacterUnit {
         self._weapon = weapon
         self._armor = armor
     }
+
+    // MARK: Accessers
+    public func takeDamage(_ damage: Int) {
+        let damage = max(damage, 0)
+        currentHealth = max(currentHealth - damage, 0)
+    }
+
+    public var isAlive: Bool { 0 < currentHealth }
 
     // MARK: - Functions
     // TODO: Get rid of all this duplicate compactMap / reduce code for a unified solution

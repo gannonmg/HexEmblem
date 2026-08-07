@@ -11,13 +11,16 @@ let package = Package(
             name: "GameModels",
             targets: ["GameModels"]
         ),
+        .library(
+            name: "GameRules",
+            targets: ["GameRules"]
+        ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "GameModels"
-        ),
+        .target(name: "GameModels"),
+        .target(name: "GameRules"),
         .testTarget(
             name: "GameCoreTests",
             dependencies: ["GameModels"]

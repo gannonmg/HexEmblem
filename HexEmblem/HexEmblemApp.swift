@@ -12,6 +12,9 @@ struct HexEmblemApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    SanityTests.testCombatEvaluator()
+                }
         }
     }
 }

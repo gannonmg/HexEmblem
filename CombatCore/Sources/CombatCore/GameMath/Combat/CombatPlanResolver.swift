@@ -1,10 +1,11 @@
 //
 //  CombatResolver.swift
-//  hex-emblem-swift-poc
+//  HexEmblem
 //
 //  Created by Matt Gannon on 8/2/26.
 //
 
+import CombatModels
 import Foundation
 import GameModels
 import GameplayKit
@@ -25,7 +26,7 @@ public final class CombatPlanResolver {
 
     private let initiator: Combatant
     private let responder: Combatant
-    private var healthPool: [CharacterID: Int]
+    private var healthPool: [CombatRole: Int]
     private let randomSource: GKMersenneTwisterRandomSource
 
     // MARK: - Init
@@ -38,8 +39,8 @@ public final class CombatPlanResolver {
         self.responder = responder
 
         self.healthPool = [
-            initiator.characterID: initiator.initialHealth,
-            responder.characterID: responder.initialHealth
+            .initiator: initiator.initialHealth,
+            .responder: responder.initialHealth
         ]
 
         self.randomSource = GKMersenneTwisterRandomSource(seed: UInt64(seed))
@@ -49,17 +50,17 @@ public final class CombatPlanResolver {
         var strikes: [CombatStrike] = []
 
         for event in plan.events {
-            let striker = combatant(for: event.striker)
-            let receiver = combatant(for: event.receiver)
-
-            let strike = buildStrike(striker: striker, receiver: receiver)
+            let strike = buildStrike(
+                strikerRole: event.striker,
+                receiverRole: event.receiver
+            )
             strikes.append(strike)
-            applyDamage(strike.totalDamage, to: receiver)
+            applyDamage(strike.totalDamage, to: event.receiver)
 
-            guard isAlive(receiver) else {
+            guard isAlive(event.receiver) else {
                 return CombatSummary(
                     strikes: strikes,
-                    defeatedCharacterID: receiver.characterID
+                    defeatedCharacterRole: event.receiver
                 )
             }
         }
@@ -68,9 +69,12 @@ public final class CombatPlanResolver {
     }
 
     private func buildStrike(
-        striker: Combatant,
-        receiver: Combatant
+        strikerRole: CombatRole,
+        receiverRole: CombatRole
     ) -> CombatStrike {
+
+        let striker = combatant(for: strikerRole)
+        let receiver = combatant(for: receiverRole)
 
         // Check if the individual strike lands on the defender
         let strikeLands = HitCalculator.determineHit(
@@ -83,8 +87,8 @@ public final class CombatPlanResolver {
 
         guard strikeLands else {
             return CombatStrike(
-                strikerID: striker.characterID,
-                receiverID: receiver.characterID,
+                strikerRole: strikerRole,
+                receiverRole: receiverRole,
                 result: .miss
             )
         }
@@ -117,8 +121,8 @@ public final class CombatPlanResolver {
         }
 
         let strike = CombatStrike(
-            strikerID: striker.characterID,
-            receiverID: receiver.characterID,
+            strikerRole: strikerRole,
+            receiverRole: receiverRole,
             result: strikeResult
         )
 
@@ -133,11 +137,11 @@ public final class CombatPlanResolver {
         }
     }
 
-    private func applyDamage(_ damage: Int, to combatant: Combatant) {
-        healthPool[combatant.characterID, default: 0] -= damage
+    private func applyDamage(_ damage: Int, to combatantRole: CombatRole) {
+        healthPool[combatantRole, default: 0] -= damage
     }
 
-    private func isAlive(_ combatant: Combatant) -> Bool {
-        0 < healthPool[combatant.characterID, default: 0]
+    private func isAlive(_ combatantRole: CombatRole) -> Bool {
+        0 < healthPool[combatantRole, default: 0]
     }
 }

@@ -1,6 +1,6 @@
 //
 //  CombatStrike.swift
-//  hex-emblem-swift-poc
+//  HexEmblem
 //
 //  Created by Matt Gannon on 8/2/26.
 //
@@ -10,9 +10,15 @@ import Foundation
 /// Data representation of a Strike inflicted (or missed) in Combat.
 /// Contains the Striker and Receiver IDs, the result of the Strike attempt, and total damage inflicted.
 public struct CombatStrike {
-    public let strikerID: UUID
-    public let receiverID: UUID
+    public let strikerRole: CombatRole
+    public let receiverRole: CombatRole
     public let result: StrikeResult
 
     public var totalDamage: Int { result.totalDamage }
+
+    public init(strikerRole: CombatRole, receiverRole: CombatRole, result: StrikeResult) {
+        self.strikerRole = strikerRole
+        self.receiverRole = receiverRole
+        self.result = result
+    }
 }

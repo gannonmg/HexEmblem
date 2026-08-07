@@ -5,6 +5,7 @@
 //  Created by Matt Gannon on 8/4/26.
 //
 
+import CombatModels
 import Foundation
 
 public struct CombatPlanBuilder {
@@ -37,7 +38,7 @@ public struct CombatPlanBuilder {
     /// Builds a timeline preview of the Combat's Strikes based on factors such as speed, weapon range, and applicable skills.
     /// These strikes are not guarenteed to be calculated. A Combatant may die before all Strikes are evaluated.
     ///
-    /// - Returns: An ordered array of character IDs representing who makes which Strike.
+    /// - Returns: An ordered array of combat events with the role of who strikes.
     public func buildCombatPlan() -> CombatPlan {
         if responderCanStrike {
             return buildBidirectionalCombatPlan()
