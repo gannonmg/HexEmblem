@@ -5,7 +5,7 @@
 //  Created by Matt Gannon on 8/6/26.
 //
 
-import BattleAnimationCore
+import BAPlayback
 import SpriteKit
 
 final class CombatScene: SKScene {
@@ -30,13 +30,15 @@ final class CombatScene: SKScene {
         addCharacterToScene(combatant, mirror: true)
 
         do {
-            try combatant.play(modeID: .meleeEquipped)
+//            try combatant.play(modeID: .meleeEquipped)
+            try combatant.play(modeID: 1)
         } catch {
             print("Failed to start idle combat animations: \(error)")
         }
 
         Task {
-            try combatant.play(modeID: .meleeCritical)
+//            try combatant.play(modeID: .meleeCritical)
+            try combatant.play(modeID: 2)
         }
     }
 

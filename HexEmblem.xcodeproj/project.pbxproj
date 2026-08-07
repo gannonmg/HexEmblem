@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D817CCC30256E66008AF97B /* BattleAnimationCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2D817CCB30256E66008AF97B /* BattleAnimationCore */; };
+		2D817CD230258539008AF97B /* BAPlayback in Frameworks */ = {isa = PBXBuildFile; productRef = 2D817CD130258539008AF97B /* BAPlayback */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D817CCC30256E66008AF97B /* BattleAnimationCore in Frameworks */,
+				2D817CD230258539008AF97B /* BAPlayback in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,7 +127,7 @@
 			);
 			name = HexEmblem;
 			packageProductDependencies = (
-				2D817CCB30256E66008AF97B /* BattleAnimationCore */,
+				2D817CD130258539008AF97B /* BAPlayback */,
 			);
 			productName = HexEmblem;
 			productReference = 2D79BB803025696E000C8E92 /* HexEmblem.app */;
@@ -212,6 +212,7 @@
 			mainGroup = 2D79BB773025696E000C8E92;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
+				2D817CD030258538008AF97B /* XCLocalSwiftPackageReference "BattleAnimationCore" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2D79BB813025696E000C8E92 /* Products */;
@@ -634,10 +635,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		2D817CD030258538008AF97B /* XCLocalSwiftPackageReference "BattleAnimationCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = BattleAnimationCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
-		2D817CCB30256E66008AF97B /* BattleAnimationCore */ = {
+		2D817CD130258539008AF97B /* BAPlayback */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = BattleAnimationCore;
+			productName = BAPlayback;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -5,7 +5,7 @@
 //  Created by Matt Gannon on 8/6/26.
 //
 
-import BattleAnimationCore
+import BAPlayback
 import SpriteKit
 
 final class CombatantNode: SKNode {
@@ -39,7 +39,7 @@ final class CombatantNode: SKNode {
         frontNode.zPosition = newZ
     }
 
-    private func play(frames: [BAPlayback.Frame], repeatForever: Bool) throws {
+    private func play(frames: [BAPlaybackFrame], repeatForever: Bool) throws {
         removeAction(forKey: animationKey)
 
         let preparedFrames = try frames.map { frame in
@@ -73,7 +73,7 @@ final class CombatantNode: SKNode {
         }
     }
 
-    func play(modeID: BAModeID, repeatForever: Bool = true) throws {
+    func play(modeID: Int, repeatForever: Bool = true) throws {
         let sequence = try animationAction(modeID: modeID)
         let action = repeatForever ? SKAction.repeatForever(sequence) : sequence
 
@@ -82,7 +82,7 @@ final class CombatantNode: SKNode {
     }
 
     // Plays one battle animation and returns after the final frame.
-    func playOnce(modeID: BAModeID) async throws {
+    func playOnce(modeID: Int) async throws {
         let action = try animationAction(modeID: modeID)
 
         removeAction(forKey: animationKey)
@@ -95,7 +95,7 @@ final class CombatantNode: SKNode {
         }
     }
 
-    private func animationAction(modeID: BAModeID) throws -> SKAction {
+    private func animationAction(modeID: Int) throws -> SKAction {
         let frames = try BAProcessedAnimationStore.playableFrames(
             animationID: animationID,
             modeID: modeID

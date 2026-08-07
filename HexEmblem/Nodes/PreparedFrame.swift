@@ -5,15 +5,15 @@
 //  Created by Matt Gannon on 8/6/26.
 //
 
-import BattleAnimationCore
+import BAPlayback
 import SpriteKit
 
-/// Adapts a BAPlayback.Frame and prepares for animation.
+/// Adapts a BAPlaybackFrame and prepares for animation.
 struct PreparedFrame {
     let duration: TimeInterval
     let layerTextures: LayerTextures
 
-    init(_ frame: BAPlayback.Frame) throws {
+    init(_ frame: BAPlaybackFrame) throws {
         duration = frame.duration
 
         layerTextures = switch frame.layerURLs {
