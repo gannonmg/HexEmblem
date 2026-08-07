@@ -68,7 +68,7 @@ Graphs are **not** embedded as live ```` ```mermaid ```` blocks (GitHub would re
 2. **Rendered output:** a sibling **visible** SVG with the leading dot stripped, e.g. `dependency-graph.svg`.
 3. **Render tooling:** `tools/diagrams/` (mermaid-cli + `@mermaid-js/layout-elk`, `mermaid.config.json` with `htmlLabels:false`, `render.sh`). Run locally with `cd tools/diagrams && npm install && npm run render`; `render.sh` renders every `*.mmd` in the repo (including hidden ones) to a sibling SVG.
 4. **Automation:** a pre-commit hook (`.githooks/pre-commit`) re-renders a diagram's SVG whenever its `.mmd` is staged in a commit, and stages the result. Enable once per clone with `git config core.hooksPath .githooks`.
-5. **README embed:** reference the SVG (`![Dependency graph](.docs/diagrams/dependency-graph.svg)`) plus a link to the `.mmd` source and the "edit the .mmd, not the SVG" note. Keep the ASCII fallback in a `<details>` block and the color legend.
+5. **README embed:** reference the SVG with `![Dependency graph](.docs/diagrams/dependency-graph.svg)`, then a single blockquote source pointer directly below it that links the `.mmd` (e.g. `> Source: [...](...)`) — and nothing else. Do **not** explain in a package README why the docs are hidden or how the render pipeline works; it's beside the point. Keep the ASCII fallback in a `<details>` block and the color legend.
 
 After editing a `.mmd`, verify the render is GitHub-safe: the SVG must contain **zero** `foreignObject` and native `<text>` elements.
 
