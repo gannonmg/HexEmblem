@@ -12,36 +12,15 @@ exposed products sit on the bottom row. Arrows point **from a module to the
 modules that consume it** (provider → consumer), so dependencies flow downward
 toward the products.
 
-```mermaid
-graph TD
-    BAModel["<b>BAModel</b><br/><i>shared contract types</i>"]:::foundation
-    ImageUtilities["<b>ImageUtilities</b><br/><i>PNG I/O · pixel editing</i>"]:::foundation
-    ScriptParser["<b>ScriptParser</b><br/><i>FE script → BAScript</i>"]:::internal
-    ImportTooling["<b>ImportTooling</b><br/><i>parse + format → manifest</i>"]:::internal
-    BAPlayback["<b>BAPlayback</b><br/><i>library product</i>"]:::product
-    BAImportTool["<b>BAImportTool</b><br/><i>executable product</i>"]:::product
+![Dependency graph](.docs/diagrams/dependency-graph.svg)
 
-    BAModel --> ScriptParser
-    BAModel --> ImportTooling
-    BAModel --> BAPlayback
-    ImageUtilities --> ImportTooling
-    ScriptParser --> ImportTooling
-    ImportTooling --> BAImportTool
-
-    %% invisible hints (not drawn) — align nodes by role, not by depth
-    ImageUtilities ~~~ ScriptParser
-    ImportTooling ~~~ BAPlayback
-
-    classDef foundation fill:#cfe0f5,stroke:#3b6fb0,stroke-width:1px,color:#12233d;
-    classDef internal   fill:#f3e2c7,stroke:#b07d2b,stroke-width:1px,color:#3d2c10;
-    classDef product    fill:#cdeccd,stroke:#2f9e44,stroke-width:1px,color:#123a1c;
-```
+> Source: [`.docs/diagrams/.dependency-graph.mmd`](.docs/diagrams/.dependency-graph.mmd)
 
 **Legend — color = role:** 🔵 blue = foundation (no dependencies) · 🟠 sand =
 internal target (not vended) · 🟢 green = exposed product.
 
 <details>
-<summary>Plain-text version (for viewers that don't render Mermaid)</summary>
+<summary>Plain-text version (for viewers that don't render images)</summary>
 
 ```
         ┌──────────────┐                 ┌────────────────┐
@@ -54,7 +33,7 @@ internal target (not vended) · 🟢 green = exposed product.
           │ │ScriptParser│      │                 │
           │ └─────┬──────┘      ▼                 ▼
           │       │      ┌────────────────────────────┐
-          │       └─────►│         ImportTooling      │
+          │       └─────►│         ImportTooling       │
           │              └──────────────┬─────────────┘
           │                             │
           ▼                             ▼
