@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Auto-render committed Mermaid diagrams. When a .mmd is part of this commit,
+# regenerate its sibling SVG and stage it, so the image never drifts from source.
+#
+# Enable once per clone (see the root README, "Project setup"):
+#     git config core.hooksPath .githooks
+#
+# Written for bash 3.2 (macOS system bash) — no mapfile.
+
+ROOT="$(git rev-parse --show-toplevel)"
+cd "$ROOT"
+
+# .mmd files staged in this commit (added / copied / modified / renamed).
+staged=()
+while IFS= read -r f; do
+  [ -n "$f" ] && staged+=("$f")
+done < <(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.mmd$' || true)
+
+[ "${#staged[@]}" -eq 0 ] && exit 0
+
+echo "pre-commit: rendering ${#staged[@]} diagram(s)…"
+bash tools/diagrams/render.sh "${staged[@]}"
+
+# Stage the regenerated SVGs (hidden ".foo.mmd" -> visible "foo.svg").
+for src in "${staged[@]}"; do
+  dir="$(dirname "$src")"
+  base="$(basename "$src" .mmd)"
+  base="${base#.}"
+  git add "$dir/$base.svg"
+done
