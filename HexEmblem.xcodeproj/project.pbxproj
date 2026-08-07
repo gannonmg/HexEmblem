@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2D817CCC30256E66008AF97B /* BattleAnimationCore in Frameworks */ = {isa = PBXBuildFile; productRef = 2D817CCB30256E66008AF97B /* BattleAnimationCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		2D79BB8E3025696F000C8E92 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		2D79BB803025696E000C8E92 /* HexEmblem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexEmblem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D79BB8D3025696F000C8E92 /* HexEmblemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexEmblemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D79BB973025696F000C8E92 /* HexEmblemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexEmblemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D817CAB30256C76008AF97B /* BattleAnimationCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BattleAnimationCore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D817CCC30256E66008AF97B /* BattleAnimationCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +81,11 @@
 		2D79BB773025696E000C8E92 = {
 			isa = PBXGroup;
 			children = (
+				2D817CAB30256C76008AF97B /* BattleAnimationCore */,
 				2D79BB823025696E000C8E92 /* HexEmblem */,
 				2D79BB903025696F000C8E92 /* HexEmblemTests */,
 				2D79BB9A3025696F000C8E92 /* HexEmblemUITests */,
+				2D817CCA30256E66008AF97B /* Frameworks */,
 				2D79BB813025696E000C8E92 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +98,13 @@
 				2D79BB973025696F000C8E92 /* HexEmblemUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2D817CCA30256E66008AF97B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +127,7 @@
 			);
 			name = HexEmblem;
 			packageProductDependencies = (
+				2D817CCB30256E66008AF97B /* BattleAnimationCore */,
 			);
 			productName = HexEmblem;
 			productReference = 2D79BB803025696E000C8E92 /* HexEmblem.app */;
@@ -195,6 +211,8 @@
 			);
 			mainGroup = 2D79BB773025696E000C8E92;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2D79BB813025696E000C8E92 /* Products */;
 			projectDirPath = "";
@@ -406,8 +424,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -450,8 +468,8 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -615,6 +633,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D817CCB30256E66008AF97B /* BattleAnimationCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = BattleAnimationCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D79BB783025696E000C8E92 /* Project object */;
 }

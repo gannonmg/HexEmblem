@@ -1,0 +1,2165 @@
+{
+  "frameAssets" : [
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_000_main.png"
+        }
+      },
+      "sourceFile" : "Lance_000.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_001_main.png"
+        }
+      },
+      "sourceFile" : "Lance_001.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_002_main.png"
+        }
+      },
+      "sourceFile" : "Lance_002.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_003_main.png"
+        }
+      },
+      "sourceFile" : "Lance_003.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_004_main.png"
+        }
+      },
+      "sourceFile" : "Lance_004.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_005_main.png"
+        }
+      },
+      "sourceFile" : "Lance_005.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_006_main.png"
+        }
+      },
+      "sourceFile" : "Lance_006.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_007_main.png"
+        }
+      },
+      "sourceFile" : "Lance_007.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Lance_008_background.png",
+          "foreground" : "frames\/Lance_008_foreground.png"
+        }
+      },
+      "sourceFile" : "Lance_008.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Lance_009_background.png",
+          "foreground" : "frames\/Lance_009_foreground.png"
+        }
+      },
+      "sourceFile" : "Lance_009.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Lance_010_background.png",
+          "foreground" : "frames\/Lance_010_foreground.png"
+        }
+      },
+      "sourceFile" : "Lance_010.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Lance_011_background.png",
+          "foreground" : "frames\/Lance_011_foreground.png"
+        }
+      },
+      "sourceFile" : "Lance_011.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_012_main.png"
+        }
+      },
+      "sourceFile" : "Lance_012.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_013_main.png"
+        }
+      },
+      "sourceFile" : "Lance_013.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_014_main.png"
+        }
+      },
+      "sourceFile" : "Lance_014.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_015_main.png"
+        }
+      },
+      "sourceFile" : "Lance_015.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_016_main.png"
+        }
+      },
+      "sourceFile" : "Lance_016.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_017_main.png"
+        }
+      },
+      "sourceFile" : "Lance_017.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_018_main.png"
+        }
+      },
+      "sourceFile" : "Lance_018.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_019_main.png"
+        }
+      },
+      "sourceFile" : "Lance_019.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_020_main.png"
+        }
+      },
+      "sourceFile" : "Lance_020.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_021_main.png"
+        }
+      },
+      "sourceFile" : "Lance_021.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_022_main.png"
+        }
+      },
+      "sourceFile" : "Lance_022.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_023_main.png"
+        }
+      },
+      "sourceFile" : "Lance_023.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_024_main.png"
+        }
+      },
+      "sourceFile" : "Lance_024.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_025_main.png"
+        }
+      },
+      "sourceFile" : "Lance_025.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_026_main.png"
+        }
+      },
+      "sourceFile" : "Lance_026.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_027_main.png"
+        }
+      },
+      "sourceFile" : "Lance_027.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Lance_028_background.png",
+          "foreground" : "frames\/Lance_028_foreground.png"
+        }
+      },
+      "sourceFile" : "Lance_028.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_029_main.png"
+        }
+      },
+      "sourceFile" : "Lance_029.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_030_main.png"
+        }
+      },
+      "sourceFile" : "Lance_030.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_031_main.png"
+        }
+      },
+      "sourceFile" : "Lance_031.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Lance_032_background.png",
+          "foreground" : "frames\/Lance_032_foreground.png"
+        }
+      },
+      "sourceFile" : "Lance_032.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_033_main.png"
+        }
+      },
+      "sourceFile" : "Lance_033.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_034_main.png"
+        }
+      },
+      "sourceFile" : "Lance_034.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_035_main.png"
+        }
+      },
+      "sourceFile" : "Lance_035.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_036_main.png"
+        }
+      },
+      "sourceFile" : "Lance_036.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_037_main.png"
+        }
+      },
+      "sourceFile" : "Lance_037.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_038_main.png"
+        }
+      },
+      "sourceFile" : "Lance_038.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_039_main.png"
+        }
+      },
+      "sourceFile" : "Lance_039.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_040_main.png"
+        }
+      },
+      "sourceFile" : "Lance_040.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_041_main.png"
+        }
+      },
+      "sourceFile" : "Lance_041.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_042_main.png"
+        }
+      },
+      "sourceFile" : "Lance_042.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_043_main.png"
+        }
+      },
+      "sourceFile" : "Lance_043.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_044_main.png"
+        }
+      },
+      "sourceFile" : "Lance_044.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_045_main.png"
+        }
+      },
+      "sourceFile" : "Lance_045.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_046_main.png"
+        }
+      },
+      "sourceFile" : "Lance_046.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_047_main.png"
+        }
+      },
+      "sourceFile" : "Lance_047.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_048_main.png"
+        }
+      },
+      "sourceFile" : "Lance_048.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_049_main.png"
+        }
+      },
+      "sourceFile" : "Lance_049.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_050_main.png"
+        }
+      },
+      "sourceFile" : "Lance_050.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_051_main.png"
+        }
+      },
+      "sourceFile" : "Lance_051.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_052_main.png"
+        }
+      },
+      "sourceFile" : "Lance_052.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_053_main.png"
+        }
+      },
+      "sourceFile" : "Lance_053.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_054_main.png"
+        }
+      },
+      "sourceFile" : "Lance_054.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_055_main.png"
+        }
+      },
+      "sourceFile" : "Lance_055.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_056_main.png"
+        }
+      },
+      "sourceFile" : "Lance_056.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_057_main.png"
+        }
+      },
+      "sourceFile" : "Lance_057.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Lance_058_main.png"
+        }
+      },
+      "sourceFile" : "Lance_058.png"
+    }
+  ],
+  "id" : "HalberdierGwendolyn-F_Lance",
+  "preservedPalette" : [
+    {
+      "a" : 255,
+      "b" : 32,
+      "g" : 48,
+      "r" : 144
+    },
+    {
+      "a" : 255,
+      "b" : 32,
+      "g" : 72,
+      "r" : 208
+    },
+    {
+      "a" : 255,
+      "b" : 80,
+      "g" : 136,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 48,
+      "g" : 72,
+      "r" : 112
+    },
+    {
+      "a" : 255,
+      "b" : 80,
+      "g" : 128,
+      "r" : 192
+    },
+    {
+      "a" : 255,
+      "b" : 144,
+      "g" : 192,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 208,
+      "g" : 248,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 144,
+      "g" : 192,
+      "r" : 144
+    },
+    {
+      "a" : 255,
+      "b" : 40,
+      "g" : 40,
+      "r" : 40
+    },
+    {
+      "a" : 255,
+      "b" : 248,
+      "g" : 248,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 112,
+      "g" : 88,
+      "r" : 56
+    },
+    {
+      "a" : 255,
+      "b" : 184,
+      "g" : 160,
+      "r" : 112
+    },
+    {
+      "a" : 255,
+      "b" : 240,
+      "g" : 216,
+      "r" : 192
+    },
+    {
+      "a" : 255,
+      "b" : 120,
+      "g" : 24,
+      "r" : 144
+    },
+    {
+      "a" : 255,
+      "b" : 192,
+      "g" : 64,
+      "r" : 224
+    },
+    {
+      "a" : 255,
+      "b" : 232,
+      "g" : 144,
+      "r" : 240
+    }
+  ],
+  "renderSize" : {
+    "height" : 160,
+    "width" : 240
+  },
+  "sourceScript" : "Lance.txt",
+  "timelines" : [
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.26666666666666666,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : "rangedEquipped",
+      "rawModeNumber" : 11,
+      "title" : "Equiped with Ranged weapon"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "Start attack animation; need 07 right after this."
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "Start attack animation; need 03 right before this."
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Lance_018.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Lance_019.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Lance_020.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Lance_021.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C44",
+              "comment" : "Play short \"light emission\" SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Lance_022.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Lance_023.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5333333333333333,
+              "sourceFile" : "Lance_024.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Lance_024.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_025.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24",
+              "comment" : "Play sword slashing air SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_026.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_027.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C21",
+              "comment" : "Play hit SFE (sounds like Knight Lord with sword's hit)"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C15",
+              "comment" : "Slight vibration of screen"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C51",
+              "comment" : "Show brief white flash animation. Do NOT USE because conflict skill animation. alternative is C39."
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.23333333333333334,
+              "sourceFile" : "Lance_028.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_029.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_030.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_031.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C21",
+              "comment" : "Play hit SFE (sounds like Knight Lord with sword's hit)"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C15",
+              "comment" : "Slight vibration of screen"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.23333333333333334,
+              "sourceFile" : "Lance_032.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_031.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_033.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.4166666666666667,
+              "sourceFile" : "Lance_034.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_007.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C04",
+              "comment" : "Prepare HP depletion routine; needed to animate return to standing frame after hit"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C08",
+              "comment" : "Critical hit"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C1F",
+              "comment" : "Play hit SFE (sounds like Eliwood with sword's hit)"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C15",
+              "comment" : "Slight vibration of screen"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_008.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_011.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24",
+              "comment" : "Play sword slashing air SFE"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C2B",
+              "comment" : "Play armored unit \"leaping\" SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_012.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_013.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_014.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_015.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_016.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34",
+              "comment" : "Play heavy stepping SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_017.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "Begin opponent's turn after hit.next code 0D."
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "End of dodge animation. preceeded by 0x06"
+            }
+          }
+        }
+      ],
+      "modeID" : "meleeCritical",
+      "rawModeNumber" : 3,
+      "title" : "Melee Critical Animation"
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.26666666666666666,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : "standing",
+      "rawModeNumber" : 10,
+      "title" : "Standing motions"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "Start attack animation; need 07 right after this."
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "Start attack animation; need 03 right before this."
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_035.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C38",
+              "comment" : "Play heavy spear spinning SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_036.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_037.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_044.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_045.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C38",
+              "comment" : "Play heavy spear spinning SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_046.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_047.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_048.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_039.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_049.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_050.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_051.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C44",
+              "comment" : "Play short \"light emission\" SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Lance_052.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5333333333333333,
+              "sourceFile" : "Lance_039.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Lance_039.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24",
+              "comment" : "Play sword slashing air SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_040.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05",
+              "comment" : "Call spell associated with equipped weapon"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C08",
+              "comment" : "Critical hit"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5,
+              "sourceFile" : "Lance_041.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_042.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_043.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "Begin opponent's turn after hit.next code 0D."
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "End of dodge animation. preceeded by 0x06"
+            }
+          }
+        }
+      ],
+      "modeID" : "rangedCritical",
+      "rawModeNumber" : 6,
+      "title" : "Ranged Critical Animation"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C02",
+              "comment" : "Start of dodge"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_053.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E",
+              "comment" : "Start of dodging frames (should go after standing frame and before dodging animation)"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.3333333333333333,
+              "sourceFile" : "Lance_054.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_053.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "End of dodge animation. preceeded by 0x06"
+            }
+          }
+        }
+      ],
+      "modeID" : "meleeDodge",
+      "rawModeNumber" : 7,
+      "title" : "Dodge Melee Attack"
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.26666666666666666,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : "meleeEquipped",
+      "rawModeNumber" : 9,
+      "title" : "Equiped with Melee Weapon"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "Start attack animation; need 07 right after this."
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "Start attack animation; need 03 right before this."
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Lance_035.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C38",
+              "comment" : "Play heavy spear spinning SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_036.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_037.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_038.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5333333333333333,
+              "sourceFile" : "Lance_039.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Lance_039.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24",
+              "comment" : "Play sword slashing air SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_040.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05",
+              "comment" : "Call spell associated with equipped weapon"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5,
+              "sourceFile" : "Lance_041.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_042.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_043.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "Begin opponent's turn after hit.next code 0D."
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "End of dodge animation. preceeded by 0x06"
+            }
+          }
+        }
+      ],
+      "modeID" : "rangedAttack",
+      "rawModeNumber" : 5,
+      "title" : "Ranged Animation"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "Start attack animation; need 07 right after this."
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "Start attack animation; need 03 right before this."
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24",
+              "comment" : "Play sword slashing air SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5,
+              "sourceFile" : "Lance_005.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_006.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_007.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C04",
+              "comment" : "Prepare HP depletion routine; needed to animate return to standing frame after hit"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C1A",
+              "comment" : "Normal hit"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C21",
+              "comment" : "Play hit SFE (sounds like Knight Lord with sword's hit)"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C1A",
+              "comment" : "Normal hit"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_008.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_011.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24",
+              "comment" : "Play sword slashing air SFE"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C2B",
+              "comment" : "Play armored unit \"leaping\" SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_012.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_013.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_014.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_015.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_016.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34",
+              "comment" : "Play heavy stepping SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_017.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "Begin opponent's turn after hit.next code 0D."
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "End of dodge animation. preceeded by 0x06"
+            }
+          }
+        }
+      ],
+      "modeID" : "meleeAttack",
+      "rawModeNumber" : 1,
+      "title" : "Melee Animation"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C02",
+              "comment" : "Start of dodge"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_053.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E",
+              "comment" : "Start of dodging frames (should go after standing frame and before dodging animation)"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.3333333333333333,
+              "sourceFile" : "Lance_054.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_053.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "End of dodge animation. preceeded by 0x06"
+            }
+          }
+        }
+      ],
+      "modeID" : "rangedDodge",
+      "rawModeNumber" : 8,
+      "title" : "Dodge Ranged Attack"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "Start attack animation; need 07 right after this."
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "Start attack animation; need 03 right before this."
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24",
+              "comment" : "Play sword slashing air SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5,
+              "sourceFile" : "Lance_005.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_006.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_007.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C04",
+              "comment" : "Prepare HP depletion routine; needed to animate return to standing frame after hit"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_055.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_056.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_057.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_058.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24",
+              "comment" : "Play sword slashing air SFE"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C2B",
+              "comment" : "Play armored unit \"leaping\" SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_012.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_013.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_014.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_015.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_016.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34",
+              "comment" : "Play heavy stepping SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_017.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "Begin opponent's turn after hit.next code 0D."
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "End of dodge animation. preceeded by 0x06"
+            }
+          }
+        }
+      ],
+      "modeID" : "attackMissed",
+      "rawModeNumber" : 12,
+      "title" : "Attack Missed Animation"
+    }
+  ],
+  "warnings" : [
+
+  ]
+}
