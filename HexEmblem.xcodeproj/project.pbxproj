@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2D817CD230258539008AF97B /* BAPlayback in Frameworks */ = {isa = PBXBuildFile; productRef = 2D817CD130258539008AF97B /* BAPlayback */; };
 		2D817CD43025A762008AF97B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2D817CD33025A762008AF97B /* README.md */; };
+		2D817DBE302654FA008AF97B /* GameModels in Frameworks */ = {isa = PBXBuildFile; productRef = 2D817DBD302654FA008AF97B /* GameModels */; };
+		2D817DC13026550C008AF97B /* GameModels in Frameworks */ = {isa = PBXBuildFile; productRef = 2D817DC03026550C008AF97B /* GameModels */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,11 +31,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D6236E5302660A6005BD1DA /* CombatRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombatRole.swift; sourceTree = "<group>"; };
 		2D79BB803025696E000C8E92 /* HexEmblem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexEmblem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D79BB8D3025696F000C8E92 /* HexEmblemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexEmblemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D79BB973025696F000C8E92 /* HexEmblemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexEmblemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D817CAB30256C76008AF97B /* BattleAnimationCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = BattleAnimationCore; sourceTree = "<group>"; };
 		2D817CD33025A762008AF97B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D817DBC30265463008AF97B /* GameCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GameCore; sourceTree = "<group>"; };
+		2D817DC230265540008AF97B /* CombatCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CombatCore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -59,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D817DBE302654FA008AF97B /* GameModels in Frameworks */,
+				2D817DC13026550C008AF97B /* GameModels in Frameworks */,
 				2D817CD230258539008AF97B /* BAPlayback in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +90,8 @@
 		2D79BB773025696E000C8E92 = {
 			isa = PBXGroup;
 			children = (
+				2D817DC230265540008AF97B /* CombatCore */,
+				2D817DBC30265463008AF97B /* GameCore */,
 				2D817CD33025A762008AF97B /* README.md */,
 				2D817CAB30256C76008AF97B /* BattleAnimationCore */,
 				2D79BB823025696E000C8E92 /* HexEmblem */,
@@ -90,6 +99,7 @@
 				2D79BB9A3025696F000C8E92 /* HexEmblemUITests */,
 				2D817CCA30256E66008AF97B /* Frameworks */,
 				2D79BB813025696E000C8E92 /* Products */,
+				2D6236E5302660A6005BD1DA /* CombatRole.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +141,8 @@
 			name = HexEmblem;
 			packageProductDependencies = (
 				2D817CD130258539008AF97B /* BAPlayback */,
+				2D817DBD302654FA008AF97B /* GameModels */,
+				2D817DC03026550C008AF97B /* GameModels */,
 			);
 			productName = HexEmblem;
 			productReference = 2D79BB803025696E000C8E92 /* HexEmblem.app */;
@@ -216,6 +228,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				2D817CD030258538008AF97B /* XCLocalSwiftPackageReference "BattleAnimationCore" */,
+				2D817DBF3026550C008AF97B /* XCLocalSwiftPackageReference "GameCore" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2D79BB813025696E000C8E92 /* Products */;
@@ -644,12 +657,24 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = BattleAnimationCore;
 		};
+		2D817DBF3026550C008AF97B /* XCLocalSwiftPackageReference "GameCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = GameCore;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		2D817CD130258539008AF97B /* BAPlayback */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BAPlayback;
+		};
+		2D817DBD302654FA008AF97B /* GameModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GameModels;
+		};
+		2D817DC03026550C008AF97B /* GameModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GameModels;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
