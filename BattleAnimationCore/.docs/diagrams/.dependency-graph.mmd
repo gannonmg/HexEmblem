@@ -16,6 +16,13 @@ graph TD
     BAImportTool["`**BAImportTool**
     _executable product_`"]:::product
 
+    BAModel --> ScriptParser
+    %% BAModel --> ImportTooling
+    %% BAModel --> BAPlayback
+    %% ImageUtilities --> ImportTooling
+    %% ScriptParser --> ImportTooling
+    ImportTooling --> BAImportTool
+
     %% invisible hints (not drawn) — align nodes by role, not by depth
     ImageUtilities ~~~ ScriptParser
     ImportTooling ~~~ BAPlayback
