@@ -11,3 +11,6 @@ build/
 
 # Swift Package Manager
 .build/
+
+# Local Working Docs (like Claude Agent hand off for specific features)
+.localDocs/
