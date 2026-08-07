@@ -1,32 +1,25 @@
 ---
 config:
-  layout: elk
+layout: elk
 ---
 graph TD
     BAModel["`**BAModel**
-_shared contract types_`"]:::foundation
+    _shared contract types_`"]:::foundation
     ImageUtilities["`**ImageUtilities**
-_PNG I/O · pixel editing_`"]:::foundation
+    _PNG I/O · pixel editing_`"]:::foundation
     ScriptParser["`**ScriptParser**
-_FE script → BAScript_`"]:::internal
+    _FE script → BAScript_`"]:::internal
     ImportTooling["`**ImportTooling**
-_parse + format → manifest_`"]:::internal
+    _parse + format → manifest_`"]:::internal
     BAPlayback["`**BAPlayback**
-_library product_`"]:::product
+    _library product_`"]:::product
     BAImportTool["`**BAImportTool**
-_executable product_`"]:::product
-
-    BAModel --> ScriptParser
-    BAModel --> ImportTooling
-    BAModel --> BAPlayback
-    ImageUtilities --> ImportTooling
-    ScriptParser --> ImportTooling
-    ImportTooling --> BAImportTool
+    _executable product_`"]:::product
 
     %% invisible hints (not drawn) — align nodes by role, not by depth
     ImageUtilities ~~~ ScriptParser
     ImportTooling ~~~ BAPlayback
 
     classDef foundation fill:#cfe0f5,stroke:#3b6fb0,stroke-width:1px,color:#12233d;
-    classDef internal   fill:#f3e2c7,stroke:#b07d2b,stroke-width:1px,color:#3d2c10;
-    classDef product    fill:#cdeccd,stroke:#2f9e44,stroke-width:1px,color:#123a1c;
+    classDef internal fill:#f3e2c7,stroke:#b07d2b,stroke-width:1px,color:#3d2c10;
+    classDef product fill:#cdeccd,stroke:#2f9e44,stroke-width:1px,color:#123a1c;
