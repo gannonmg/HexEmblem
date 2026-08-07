@@ -6,6 +6,7 @@ targets so that import-time tooling (script parsing, image formatting) never
 ships inside the app — the app links only the playback surface.
 
 ## Dependency graph
+___
 
 Foundations (targets with no dependencies) sit on the top row; the package's
 exposed products sit on the bottom row. Arrows point **from a module to the

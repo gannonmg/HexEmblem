@@ -34,6 +34,10 @@ If I had unlimited skill, time, budget, whatever, here's what I'd love to see.
     - Forts + Unit "Leadership" skill to deploy defensive battalions.
 - Resource lines between your army and your territory.
 
+## Macro Dependency Graph
+___
+[Add macro scale graph here]
+
 ## Project setup
 ___
 Diagrams in this repo are authored as Mermaid source (`.mmd`) and rendered to
