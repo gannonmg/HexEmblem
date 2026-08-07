@@ -17,10 +17,10 @@ graph TD
     _executable product_`"]:::product
 
     BAModel --> ScriptParser
-    %% BAModel --> ImportTooling
-    %% BAModel --> BAPlayback
-    %% ImageUtilities --> ImportTooling
-    %% ScriptParser --> ImportTooling
+    BAModel --> ImportTooling
+    BAModel --> BAPlayback
+    ImageUtilities --> ImportTooling
+    ScriptParser --> ImportTooling
     ImportTooling --> BAImportTool
 
     %% invisible hints (not drawn) — align nodes by role, not by depth
