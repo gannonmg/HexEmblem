@@ -429,1110 +429,6 @@
     {
       "events" : [
         {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.016666666666666666,
-              "sourceFile" : "Bow_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01"
-            }
-          }
-        }
-      ],
-      "modeID" : "standing",
-      "rawModeNumber" : 10
-    },
-    {
-      "events" : [
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.016666666666666666,
-              "sourceFile" : "Bow_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01"
-            }
-          }
-        }
-      ],
-      "modeID" : "meleeEquipped",
-      "rawModeNumber" : 9
-    },
-    {
-      "events" : [
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C03"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C07"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Bow_000.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Bow_001.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_002.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_003.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_004.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_005.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_006.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_007.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_008.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_009.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_010.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_011.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C23"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_012.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.1,
-              "sourceFile" : "Bow_013.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_014.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Bow_015.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C19"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Bow_016.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.1,
-              "sourceFile" : "Bow_017.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.5,
-              "sourceFile" : "Bow_018.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_019.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C05"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_020.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_021.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.016666666666666666,
-              "sourceFile" : "Bow_022.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C06"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_023.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_024.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.016666666666666666,
-              "sourceFile" : "Bow_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0D"
-            }
-          }
-        }
-      ],
-      "modeID" : "rangedAttack",
-      "rawModeNumber" : 5
-    },
-    {
-      "events" : [
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.016666666666666666,
-              "sourceFile" : "Bow_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01"
-            }
-          }
-        }
-      ],
-      "modeID" : "rangedEquipped",
-      "rawModeNumber" : 11
-    },
-    {
-      "events" : [
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C53"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C03"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C07"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Bow_000.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Bow_001.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_002.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_003.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_004.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_005.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_006.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_007.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_008.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_009.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_010.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_011.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C23"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_012.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.1,
-              "sourceFile" : "Bow_013.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_014.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Bow_015.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C19"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Bow_016.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.1,
-              "sourceFile" : "Bow_017.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.5,
-              "sourceFile" : "Bow_018.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_019.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C05"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_020.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_021.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.016666666666666666,
-              "sourceFile" : "Bow_022.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C06"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_023.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_024.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.016666666666666666,
-              "sourceFile" : "Bow_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0D"
-            }
-          }
-        }
-      ],
-      "modeID" : "attackMissed",
-      "rawModeNumber" : 12
-    },
-    {
-      "events" : [
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C03"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C07"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Bow_000.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.4166666666666667,
-              "sourceFile" : "Bow_025.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.13333333333333333,
-              "sourceFile" : "Bow_026.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.1,
-              "sourceFile" : "Bow_027.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Bow_028.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C22"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_029.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_030.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_031.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_032.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.3333333333333333,
-              "sourceFile" : "Bow_033.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_034.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Bow_001.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_002.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_003.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_004.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_005.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_006.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_007.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_008.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_009.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_010.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_011.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C23"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_012.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_035.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_036.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_037.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C23"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_012.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_035.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_036.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_037.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_012.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.1,
-              "sourceFile" : "Bow_013.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_014.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Bow_015.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C19"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Bow_016.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.1,
-              "sourceFile" : "Bow_017.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.5,
-              "sourceFile" : "Bow_018.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_019.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C05"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_020.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Bow_021.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.016666666666666666,
-              "sourceFile" : "Bow_022.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C06"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_023.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_024.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.016666666666666666,
-              "sourceFile" : "Bow_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0D"
-            }
-          }
-        }
-      ],
-      "modeID" : "meleeCritical",
-      "rawModeNumber" : 3
-    },
-    {
-      "events" : [
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C02"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.016666666666666666,
-              "sourceFile" : "Bow_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0E"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_038.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.016666666666666666,
-              "sourceFile" : "Bow_039.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Bow_038.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0D"
-            }
-          }
-        }
-      ],
-      "modeID" : "meleeDodge",
-      "rawModeNumber" : 7
-    },
-    {
-      "events" : [
-        {
           "command" : {
             "_0" : {
               "code" : "C03"
@@ -1985,6 +881,521 @@
         {
           "frame" : {
             "_0" : {
+              "duration" : 0.4166666666666667,
+              "sourceFile" : "Bow_025.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Bow_026.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Bow_027.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Bow_028.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C22"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_029.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_030.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_031.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_032.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.3333333333333333,
+              "sourceFile" : "Bow_033.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_034.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Bow_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_005.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_006.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_007.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_011.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_012.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_035.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_036.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_037.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_012.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_035.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_036.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_037.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_012.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Bow_013.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_014.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Bow_015.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C19"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Bow_016.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Bow_017.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5,
+              "sourceFile" : "Bow_018.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_019.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_020.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_021.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_022.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_023.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_024.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D"
+            }
+          }
+        }
+      ],
+      "modeID" : "meleeCritical",
+      "rawModeNumber" : 3
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        }
+      ],
+      "modeID" : "rangedEquipped",
+      "rawModeNumber" : 11
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C02"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_038.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_039.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_038.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D"
+            }
+          }
+        }
+      ],
+      "modeID" : "rangedDodge",
+      "rawModeNumber" : 8
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
               "duration" : 0.06666666666666667,
               "sourceFile" : "Bow_001.png"
             }
@@ -2233,6 +1644,276 @@
         {
           "command" : {
             "_0" : {
+              "code" : "C03"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Bow_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_005.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_006.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_007.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_011.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_012.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Bow_013.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_014.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Bow_015.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C19"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Bow_016.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Bow_017.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5,
+              "sourceFile" : "Bow_018.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_019.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_020.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_021.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_022.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_023.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_024.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D"
+            }
+          }
+        }
+      ],
+      "modeID" : "rangedAttack",
+      "rawModeNumber" : 5
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
               "code" : "C02"
             }
           }
@@ -2291,8 +1972,327 @@
           }
         }
       ],
-      "modeID" : "rangedDodge",
-      "rawModeNumber" : 8
+      "modeID" : "meleeDodge",
+      "rawModeNumber" : 7
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        }
+      ],
+      "modeID" : "standing",
+      "rawModeNumber" : 10
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C53"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Bow_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_005.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_006.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_007.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_011.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_012.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Bow_013.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_014.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Bow_015.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C19"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Bow_016.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Bow_017.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5,
+              "sourceFile" : "Bow_018.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_019.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_020.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_021.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_022.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_023.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_024.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D"
+            }
+          }
+        }
+      ],
+      "modeID" : "attackMissed",
+      "rawModeNumber" : 12
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        }
+      ],
+      "modeID" : "meleeEquipped",
+      "rawModeNumber" : 9
     }
   ],
   "warnings" : [

@@ -133,76 +133,10 @@
     {
       "events" : [
         {
-          "command" : {
-            "_0" : {
-              "code" : "C53"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C03"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C07"
-            }
-          }
-        },
-        {
           "frame" : {
             "_0" : {
-              "duration" : 0.06666666666666667,
+              "duration" : 0.016666666666666666,
               "sourceFile" : "Unarmed_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C23"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Unarmed_001.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C19"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Unarmed_002.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C05"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Unarmed_002.png"
             }
           }
         },
@@ -212,236 +146,10 @@
               "code" : "C01"
             }
           }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C06"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Unarmed_001.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0D"
-            }
-          }
         }
       ],
-      "modeID" : "attackMissed",
-      "rawModeNumber" : 12
-    },
-    {
-      "events" : [
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C03"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C07"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Unarmed_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C23"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Unarmed_001.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C19"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Unarmed_002.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C05"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Unarmed_002.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C06"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Unarmed_001.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0D"
-            }
-          }
-        }
-      ],
-      "modeID" : "rangedAttack",
-      "rawModeNumber" : 5
-    },
-    {
-      "events" : [
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C03"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C07"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Unarmed_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C23"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Unarmed_001.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C19"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Unarmed_002.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C05"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Unarmed_002.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C06"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Unarmed_001.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0D"
-            }
-          }
-        }
-      ],
-      "modeID" : "meleeAttack",
-      "rawModeNumber" : 1
+      "modeID" : "standing",
+      "rawModeNumber" : 10
     },
     {
       "events" : [
@@ -463,6 +171,72 @@
       ],
       "modeID" : "meleeEquipped",
       "rawModeNumber" : 9
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C02"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Unarmed_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Unarmed_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Unarmed_002.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Unarmed_001.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D"
+            }
+          }
+        }
+      ],
+      "modeID" : "meleeDodge",
+      "rawModeNumber" : 7
     },
     {
       "events" : [
@@ -599,6 +373,13 @@
     {
       "events" : [
         {
+          "command" : {
+            "_0" : {
+              "code" : "C02"
+            }
+          }
+        },
+        {
           "frame" : {
             "_0" : {
               "duration" : 0.016666666666666666,
@@ -609,13 +390,153 @@
         {
           "command" : {
             "_0" : {
+              "code" : "C0E"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Unarmed_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Unarmed_002.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
               "code" : "C01"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Unarmed_001.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D"
             }
           }
         }
       ],
-      "modeID" : "rangedEquipped",
-      "rawModeNumber" : 11
+      "modeID" : "rangedDodge",
+      "rawModeNumber" : 8
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Unarmed_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Unarmed_001.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C19"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Unarmed_002.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Unarmed_002.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Unarmed_001.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D"
+            }
+          }
+        }
+      ],
+      "modeID" : "meleeAttack",
+      "rawModeNumber" : 1
     },
     {
       "events" : [
@@ -754,14 +675,28 @@
         {
           "command" : {
             "_0" : {
-              "code" : "C02"
+              "code" : "C53"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07"
             }
           }
         },
         {
           "frame" : {
             "_0" : {
-              "duration" : 0.016666666666666666,
+              "duration" : 0.06666666666666667,
               "sourceFile" : "Unarmed_000.png"
             }
           }
@@ -769,22 +704,44 @@
         {
           "command" : {
             "_0" : {
-              "code" : "C0E"
+              "code" : "C23"
             }
           }
         },
         {
           "frame" : {
             "_0" : {
-              "duration" : 0.05,
+              "duration" : 0.03333333333333333,
               "sourceFile" : "Unarmed_001.png"
             }
           }
         },
         {
+          "command" : {
+            "_0" : {
+              "code" : "C19"
+            }
+          }
+        },
+        {
           "frame" : {
             "_0" : {
-              "duration" : 0.016666666666666666,
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Unarmed_002.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
               "sourceFile" : "Unarmed_002.png"
             }
           }
@@ -793,6 +750,13 @@
           "command" : {
             "_0" : {
               "code" : "C01"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06"
             }
           }
         },
@@ -812,8 +776,8 @@
           }
         }
       ],
-      "modeID" : "rangedDodge",
-      "rawModeNumber" : 8
+      "modeID" : "attackMissed",
+      "rawModeNumber" : 12
     },
     {
       "events" : [
@@ -833,22 +797,29 @@
           }
         }
       ],
-      "modeID" : "standing",
-      "rawModeNumber" : 10
+      "modeID" : "rangedEquipped",
+      "rawModeNumber" : 11
     },
     {
       "events" : [
         {
           "command" : {
             "_0" : {
-              "code" : "C02"
+              "code" : "C03"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07"
             }
           }
         },
         {
           "frame" : {
             "_0" : {
-              "duration" : 0.016666666666666666,
+              "duration" : 0.06666666666666667,
               "sourceFile" : "Unarmed_000.png"
             }
           }
@@ -856,22 +827,44 @@
         {
           "command" : {
             "_0" : {
-              "code" : "C0E"
+              "code" : "C23"
             }
           }
         },
         {
           "frame" : {
             "_0" : {
-              "duration" : 0.05,
+              "duration" : 0.03333333333333333,
               "sourceFile" : "Unarmed_001.png"
             }
           }
         },
         {
+          "command" : {
+            "_0" : {
+              "code" : "C19"
+            }
+          }
+        },
+        {
           "frame" : {
             "_0" : {
-              "duration" : 0.016666666666666666,
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Unarmed_002.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
               "sourceFile" : "Unarmed_002.png"
             }
           }
@@ -880,6 +873,13 @@
           "command" : {
             "_0" : {
               "code" : "C01"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06"
             }
           }
         },
@@ -899,8 +899,8 @@
           }
         }
       ],
-      "modeID" : "meleeDodge",
-      "rawModeNumber" : 7
+      "modeID" : "rangedAttack",
+      "rawModeNumber" : 5
     }
   ],
   "warnings" : [

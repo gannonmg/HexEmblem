@@ -541,7 +541,7 @@
         {
           "frame" : {
             "_0" : {
-              "duration" : 0.016666666666666666,
+              "duration" : 0.26666666666666666,
               "sourceFile" : "Axe_000.png"
             }
           }
@@ -555,137 +555,17 @@
           }
         }
       ],
-      "modeID" : "rangedCritical",
-      "rawModeNumber" : 6,
-      "title" : "間接攻撃必殺時のモーション"
+      "modeID" : "standing",
+      "rawModeNumber" : 10,
+      "title" : "棒立ちモーション"
     },
     {
       "events" : [
         {
-          "command" : {
-            "_0" : {
-              "code" : "C03",
-              "comment" : "攻撃モーション開始 この後に07が来る"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C07",
-              "comment" : "攻撃モーション開始 この前に03が来る"
-            }
-          }
-        },
-        {
           "frame" : {
             "_0" : {
-              "duration" : 0.13333333333333333,
+              "duration" : 0.26666666666666666,
               "sourceFile" : "Axe_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C24",
-              "comment" : "剣で空を切る音"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_001.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_002.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_003.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_004.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.5,
-              "sourceFile" : "Axe_005.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_006.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_007.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C04",
-              "comment" : "攻撃が命中した時に、HPを減らす準備をする。命中後に立ちモーションへ戻す必要あり。"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C1A",
-              "comment" : "ノーマルヒットのエフェクト"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C21",
-              "comment" : "通常攻撃の効果音"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C1A",
-              "comment" : "ノーマルヒットのエフェクト"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_008.png"
             }
           }
         },
@@ -696,107 +576,66 @@
               "comment" : "NOP"
             }
           }
-        },
+        }
+      ],
+      "modeID" : "meleeEquipped",
+      "rawModeNumber" : 9,
+      "title" : "至近時棒立ちモーション"
+    },
+    {
+      "events" : [
         {
-          "frame" : {
+          "command" : {
             "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_009.png"
+              "code" : "C02",
+              "comment" : "回避モーションの始め"
             }
           }
         },
         {
           "frame" : {
             "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_010.png"
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_000.png"
             }
           }
         },
         {
           "frame" : {
             "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_011.png"
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_047.png"
             }
           }
         },
         {
           "command" : {
             "_0" : {
-              "code" : "C24",
-              "comment" : "剣で空を切る音"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C2B",
-              "comment" : "アーマー系の鎧音の再生"
+              "code" : "C0E",
+              "comment" : "回避フレームの開始。棒立ちフレームの後にこのコマンドを入れてください。"
             }
           }
         },
         {
           "frame" : {
             "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_012.png"
+              "duration" : 0.3333333333333333,
+              "sourceFile" : "Axe_048.png"
             }
           }
         },
         {
           "frame" : {
             "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_013.png"
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_047.png"
             }
           }
         },
         {
           "frame" : {
             "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_014.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_015.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_016.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C34",
-              "comment" : "足音の再生"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Axe_017.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.13333333333333333,
+              "duration" : 0.06666666666666667,
               "sourceFile" : "Axe_000.png"
             }
           }
@@ -804,8 +643,8 @@
         {
           "command" : {
             "_0" : {
-              "code" : "C06",
-              "comment" : "攻撃アニメ終了 後に0Dが来る"
+              "code" : "C01",
+              "comment" : "NOP"
             }
           }
         },
@@ -818,9 +657,9 @@
           }
         }
       ],
-      "modeID" : "meleeAttack",
-      "rawModeNumber" : 1,
-      "title" : "至近攻撃のヒット時のモーション"
+      "modeID" : "meleeDodge",
+      "rawModeNumber" : 7,
+      "title" : "被至近攻撃回避時のモーション"
     },
     {
       "events" : [
@@ -1312,29 +1151,6 @@
     {
       "events" : [
         {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.26666666666666666,
-              "sourceFile" : "Axe_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01",
-              "comment" : "NOP"
-            }
-          }
-        }
-      ],
-      "modeID" : "meleeEquipped",
-      "rawModeNumber" : 9,
-      "title" : "至近時棒立ちモーション"
-    },
-    {
-      "events" : [
-        {
           "command" : {
             "_0" : {
               "code" : "C02",
@@ -1416,56 +1232,128 @@
         {
           "command" : {
             "_0" : {
-              "code" : "C02",
-              "comment" : "回避モーションの始め"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Axe_000.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Axe_047.png"
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
             }
           }
         },
         {
           "command" : {
             "_0" : {
-              "code" : "C0E",
-              "comment" : "回避フレームの開始。棒立ちフレームの後にこのコマンドを入れてください。"
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
             }
           }
         },
         {
           "frame" : {
             "_0" : {
-              "duration" : 0.3333333333333333,
-              "sourceFile" : "Axe_048.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Axe_047.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
+              "duration" : 0.13333333333333333,
               "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24",
+              "comment" : "剣で空を切る音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5,
+              "sourceFile" : "Axe_005.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_006.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_007.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C04",
+              "comment" : "攻撃が命中した時に、HPを減らす準備をする。命中後に立ちモーションへ戻す必要あり。"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C1A",
+              "comment" : "ノーマルヒットのエフェクト"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C21",
+              "comment" : "通常攻撃の効果音"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C1A",
+              "comment" : "ノーマルヒットのエフェクト"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_008.png"
             }
           }
         },
@@ -1474,6 +1362,118 @@
             "_0" : {
               "code" : "C01",
               "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_011.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24",
+              "comment" : "剣で空を切る音"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C2B",
+              "comment" : "アーマー系の鎧音の再生"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_012.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_013.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_014.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_015.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_016.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34",
+              "comment" : "足音の再生"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_017.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
             }
           }
         },
@@ -1486,32 +1486,9 @@
           }
         }
       ],
-      "modeID" : "meleeDodge",
-      "rawModeNumber" : 7,
-      "title" : "被至近攻撃回避時のモーション"
-    },
-    {
-      "events" : [
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.26666666666666666,
-              "sourceFile" : "Axe_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01",
-              "comment" : "NOP"
-            }
-          }
-        }
-      ],
-      "modeID" : "standing",
-      "rawModeNumber" : 10,
-      "title" : "棒立ちモーション"
+      "modeID" : "meleeAttack",
+      "rawModeNumber" : 1,
+      "title" : "至近攻撃のヒット時のモーション"
     },
     {
       "events" : [
@@ -1532,32 +1509,9 @@
           }
         }
       ],
-      "modeID" : "rangedAttack",
-      "rawModeNumber" : 5,
-      "title" : "間接攻撃時のモーション"
-    },
-    {
-      "events" : [
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.26666666666666666,
-              "sourceFile" : "Axe_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01",
-              "comment" : "NOP"
-            }
-          }
-        }
-      ],
-      "modeID" : "rangedEquipped",
-      "rawModeNumber" : 11,
-      "title" : "間接時棒立ちモーション"
+      "modeID" : "rangedCritical",
+      "rawModeNumber" : 6,
+      "title" : "間接攻撃必殺時のモーション"
     },
     {
       "events" : [
@@ -1797,6 +1751,52 @@
       "modeID" : "attackMissed",
       "rawModeNumber" : 12,
       "title" : "攻撃ミス時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.26666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : "rangedEquipped",
+      "rawModeNumber" : 11,
+      "title" : "間接時棒立ちモーション"
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : "rangedAttack",
+      "rawModeNumber" : 5,
+      "title" : "間接攻撃時のモーション"
     }
   ],
   "warnings" : [

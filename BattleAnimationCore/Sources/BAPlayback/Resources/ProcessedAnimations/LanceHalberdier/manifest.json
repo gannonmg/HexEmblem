@@ -589,85 +589,6 @@
         {
           "command" : {
             "_0" : {
-              "code" : "C02",
-              "comment" : "Start of dodge"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Lance_000.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Lance_053.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0E",
-              "comment" : "Start of dodging frames (should go after standing frame and before dodging animation)"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.3333333333333333,
-              "sourceFile" : "Lance_054.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Lance_053.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Lance_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01",
-              "comment" : "NOP"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0D",
-              "comment" : "End of dodge animation. preceeded by 0x06"
-            }
-          }
-        }
-      ],
-      "modeID" : "rangedDodge",
-      "rawModeNumber" : 8,
-      "title" : "Dodge Ranged Attack"
-    },
-    {
-      "events" : [
-        {
-          "command" : {
-            "_0" : {
               "code" : "C03",
               "comment" : "Start attack animation; should be followed by 0x07"
             }
@@ -692,7 +613,7 @@
         {
           "frame" : {
             "_0" : {
-              "duration" : 0.05,
+              "duration" : 0.03333333333333333,
               "sourceFile" : "Lance_035.png"
             }
           }
@@ -725,7 +646,95 @@
           "frame" : {
             "_0" : {
               "duration" : 0.03333333333333333,
-              "sourceFile" : "Lance_038.png"
+              "sourceFile" : "Lance_044.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_045.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C38",
+              "comment" : "Refresh heavy spear spinning SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_046.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_047.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_048.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_039.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_049.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_050.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_051.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C44",
+              "comment" : "Refresh short \"light emission\" SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Lance_052.png"
             }
           }
         },
@@ -766,6 +775,14 @@
             "_0" : {
               "code" : "C05",
               "comment" : "Call spell associated with equipped weapon"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C08",
+              "comment" : "Critical hit"
             }
           }
         },
@@ -826,55 +843,9 @@
           }
         }
       ],
-      "modeID" : "rangedAttack",
-      "rawModeNumber" : 5,
-      "title" : "Ranged Animation"
-    },
-    {
-      "events" : [
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.26666666666666666,
-              "sourceFile" : "Lance_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01",
-              "comment" : "NOP"
-            }
-          }
-        }
-      ],
-      "modeID" : "meleeEquipped",
-      "rawModeNumber" : 9,
-      "title" : "Equiped with Melee Weapon"
-    },
-    {
-      "events" : [
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.26666666666666666,
-              "sourceFile" : "Lance_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01",
-              "comment" : "NOP"
-            }
-          }
-        }
-      ],
-      "modeID" : "standing",
-      "rawModeNumber" : 10,
-      "title" : "standing motions?"
+      "modeID" : "rangedCritical",
+      "rawModeNumber" : 6,
+      "title" : "Ranged Critical Animation"
     },
     {
       "events" : [
@@ -1294,233 +1265,9 @@
     {
       "events" : [
         {
-          "command" : {
-            "_0" : {
-              "code" : "C03",
-              "comment" : "Start attack animation; should be followed by 0x07"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C07",
-              "comment" : "Start attack animation; should be preceeded by 0x03"
-            }
-          }
-        },
-        {
           "frame" : {
             "_0" : {
-              "duration" : 0.1,
-              "sourceFile" : "Lance_000.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Lance_035.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C38",
-              "comment" : "Refresh heavy spear spinning SFE"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Lance_036.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Lance_037.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Lance_044.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Lance_045.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C38",
-              "comment" : "Refresh heavy spear spinning SFE"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Lance_046.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Lance_047.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Lance_048.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Lance_039.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Lance_049.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Lance_050.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Lance_051.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C44",
-              "comment" : "Refresh short \"light emission\" SFE"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.13333333333333333,
-              "sourceFile" : "Lance_052.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.5333333333333333,
-              "sourceFile" : "Lance_039.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Lance_039.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C24",
-              "comment" : "Refresh sword slashing air SFE"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Lance_040.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C05",
-              "comment" : "Call spell associated with equipped weapon"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C08",
-              "comment" : "Critical hit"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.5,
-              "sourceFile" : "Lance_041.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Lance_042.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Lance_043.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.1,
+              "duration" : 0.26666666666666666,
               "sourceFile" : "Lance_000.png"
             }
           }
@@ -1532,27 +1279,11 @@
               "comment" : "NOP"
             }
           }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C06",
-              "comment" : "Begin opponent's turn after hit.next code 0D."
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0D",
-              "comment" : "End of dodge animation. preceeded by 0x06"
-            }
-          }
         }
       ],
-      "modeID" : "rangedCritical",
-      "rawModeNumber" : 6,
-      "title" : "Ranged Critical Animation"
+      "modeID" : "rangedEquipped",
+      "rawModeNumber" : 11,
+      "title" : "Equiped with Ranged weapon"
     },
     {
       "events" : [
@@ -1629,9 +1360,9 @@
           }
         }
       ],
-      "modeID" : "meleeDodge",
-      "rawModeNumber" : 7,
-      "title" : "Dodge Melee Attack"
+      "modeID" : "rangedDodge",
+      "rawModeNumber" : 8,
+      "title" : "Dodge Ranged Attack"
     },
     {
       "events" : [
@@ -1899,6 +1630,252 @@
     {
       "events" : [
         {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "Start attack animation; should be followed by 0x07"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "Start attack animation; should be preceeded by 0x03"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Lance_035.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C38",
+              "comment" : "Refresh heavy spear spinning SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_036.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_037.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_038.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5333333333333333,
+              "sourceFile" : "Lance_039.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Lance_039.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24",
+              "comment" : "Refresh sword slashing air SFE"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_040.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05",
+              "comment" : "Call spell associated with equipped weapon"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5,
+              "sourceFile" : "Lance_041.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_042.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Lance_043.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "Begin opponent's turn after hit.next code 0D."
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "End of dodge animation. preceeded by 0x06"
+            }
+          }
+        }
+      ],
+      "modeID" : "rangedAttack",
+      "rawModeNumber" : 5,
+      "title" : "Ranged Animation"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C02",
+              "comment" : "Start of dodge"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_053.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E",
+              "comment" : "Start of dodging frames (should go after standing frame and before dodging animation)"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.3333333333333333,
+              "sourceFile" : "Lance_054.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_053.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "End of dodge animation. preceeded by 0x06"
+            }
+          }
+        }
+      ],
+      "modeID" : "meleeDodge",
+      "rawModeNumber" : 7,
+      "title" : "Dodge Melee Attack"
+    },
+    {
+      "events" : [
+        {
           "frame" : {
             "_0" : {
               "duration" : 0.26666666666666666,
@@ -1915,9 +1892,9 @@
           }
         }
       ],
-      "modeID" : "rangedEquipped",
-      "rawModeNumber" : 11,
-      "title" : "Equiped with Ranged weapon"
+      "modeID" : "standing",
+      "rawModeNumber" : 10,
+      "title" : "standing motions?"
     },
     {
       "events" : [
@@ -2157,6 +2134,29 @@
       "modeID" : "attackMissed",
       "rawModeNumber" : 12,
       "title" : "Attack Missed Animation"
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.26666666666666666,
+              "sourceFile" : "Lance_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : "meleeEquipped",
+      "rawModeNumber" : 9,
+      "title" : "Equiped with Melee Weapon"
     }
   ],
   "warnings" : [

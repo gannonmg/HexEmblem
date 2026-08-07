@@ -269,6 +269,505 @@
     {
       "events" : [
         {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Handaxe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : "standing",
+      "rawModeNumber" : 10,
+      "title" : "棒立ちモーション"
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Handaxe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : "meleeEquipped",
+      "rawModeNumber" : 9,
+      "title" : "至近時棒立ちモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C02",
+              "comment" : "回避モーションの始め"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Handaxe_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Handaxe_018.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E",
+              "comment" : "回避フレームの開始。棒立ちフレームの後にこのコマンドを入れてください。"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.3333333333333333,
+              "sourceFile" : "Handaxe_019.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Handaxe_018.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Handaxe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : "meleeDodge",
+      "rawModeNumber" : 7,
+      "title" : "被至近攻撃回避時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Handaxe_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Handaxe_001.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C38",
+              "comment" : "槍を回す音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_005.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Handaxe_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Handaxe_011.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Handaxe_012.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C44",
+              "comment" : "エリウッドクリティカル時の剣が光る音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Handaxe_013.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Handaxe_005.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C38",
+              "comment" : "槍を回す音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_014.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_015.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_016.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_017.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C38",
+              "comment" : "槍を回す音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_014.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_015.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_016.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_017.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.2,
+              "sourceFile" : "Handaxe_005.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24",
+              "comment" : "剣で空を切る音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_006.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05",
+              "comment" : "魔法の呼び出し"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5,
+              "sourceFile" : "Handaxe_007.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Handaxe_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Handaxe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : "meleeCritical",
+      "rawModeNumber" : 3,
+      "title" : "至近攻撃必殺時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C02",
+              "comment" : "回避モーションの始め"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Handaxe_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Handaxe_018.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E",
+              "comment" : "回避フレームの開始。棒立ちフレームの後にこのコマンドを入れてください。"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.3333333333333333,
+              "sourceFile" : "Handaxe_019.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Handaxe_018.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Handaxe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : "rangedDodge",
+      "rawModeNumber" : 8,
+      "title" : "被間接攻撃回避時のモーション"
+    },
+    {
+      "events" : [
+        {
           "command" : {
             "_0" : {
               "code" : "C03",
@@ -429,9 +928,9 @@
           }
         }
       ],
-      "modeID" : "attackMissed",
-      "rawModeNumber" : 12,
-      "title" : "攻撃ミス時のモーション"
+      "modeID" : "meleeAttack",
+      "rawModeNumber" : 1,
+      "title" : "至近攻撃のヒット時のモーション"
     },
     {
       "events" : [
@@ -891,304 +1390,9 @@
           }
         }
       ],
-      "modeID" : "rangedAttack",
-      "rawModeNumber" : 5,
-      "title" : "間接攻撃時のモーション"
-    },
-    {
-      "events" : [
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C03",
-              "comment" : "攻撃モーション開始 この後に07が来る"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C07",
-              "comment" : "攻撃モーション開始 この前に03が来る"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.1,
-              "sourceFile" : "Handaxe_000.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Handaxe_001.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C38",
-              "comment" : "槍を回す音"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_002.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_003.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_004.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_005.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Handaxe_010.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Handaxe_011.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Handaxe_012.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C44",
-              "comment" : "エリウッドクリティカル時の剣が光る音"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.13333333333333333,
-              "sourceFile" : "Handaxe_013.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.05,
-              "sourceFile" : "Handaxe_005.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C38",
-              "comment" : "槍を回す音"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_014.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_015.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_016.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_017.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C38",
-              "comment" : "槍を回す音"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_014.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_015.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_016.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_017.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.2,
-              "sourceFile" : "Handaxe_005.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C24",
-              "comment" : "剣で空を切る音"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_006.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C05",
-              "comment" : "魔法の呼び出し"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.5,
-              "sourceFile" : "Handaxe_007.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_008.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.03333333333333333,
-              "sourceFile" : "Handaxe_009.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.1,
-              "sourceFile" : "Handaxe_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01",
-              "comment" : "NOP"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C06",
-              "comment" : "攻撃アニメ終了 後に0Dが来る"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0D",
-              "comment" : "攻撃アニメ終了 前に06が来る"
-            }
-          }
-        }
-      ],
-      "modeID" : "meleeCritical",
-      "rawModeNumber" : 3,
-      "title" : "至近攻撃必殺時のモーション"
+      "modeID" : "attackMissed",
+      "rawModeNumber" : 12,
+      "title" : "攻撃ミス時のモーション"
     },
     {
       "events" : [
@@ -1209,32 +1413,9 @@
           }
         }
       ],
-      "modeID" : "meleeEquipped",
-      "rawModeNumber" : 9,
-      "title" : "至近時棒立ちモーション"
-    },
-    {
-      "events" : [
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.016666666666666666,
-              "sourceFile" : "Handaxe_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01",
-              "comment" : "NOP"
-            }
-          }
-        }
-      ],
-      "modeID" : "standing",
-      "rawModeNumber" : 10,
-      "title" : "棒立ちモーション"
+      "modeID" : "rangedEquipped",
+      "rawModeNumber" : 11,
+      "title" : "間接時棒立ちモーション"
     },
     {
       "events" : [
@@ -1399,190 +1580,9 @@
           }
         }
       ],
-      "modeID" : "meleeAttack",
-      "rawModeNumber" : 1,
-      "title" : "至近攻撃のヒット時のモーション"
-    },
-    {
-      "events" : [
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C02",
-              "comment" : "回避モーションの始め"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Handaxe_000.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Handaxe_018.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0E",
-              "comment" : "回避フレームの開始。棒立ちフレームの後にこのコマンドを入れてください。"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.3333333333333333,
-              "sourceFile" : "Handaxe_019.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Handaxe_018.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Handaxe_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01",
-              "comment" : "NOP"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0D",
-              "comment" : "攻撃アニメ終了 前に06が来る"
-            }
-          }
-        }
-      ],
-      "modeID" : "meleeDodge",
-      "rawModeNumber" : 7,
-      "title" : "被至近攻撃回避時のモーション"
-    },
-    {
-      "events" : [
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C02",
-              "comment" : "回避モーションの始め"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Handaxe_000.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Handaxe_018.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0E",
-              "comment" : "回避フレームの開始。棒立ちフレームの後にこのコマンドを入れてください。"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.3333333333333333,
-              "sourceFile" : "Handaxe_019.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Handaxe_018.png"
-            }
-          }
-        },
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.06666666666666667,
-              "sourceFile" : "Handaxe_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01",
-              "comment" : "NOP"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C0D",
-              "comment" : "攻撃アニメ終了 前に06が来る"
-            }
-          }
-        }
-      ],
-      "modeID" : "rangedDodge",
-      "rawModeNumber" : 8,
-      "title" : "被間接攻撃回避時のモーション"
-    },
-    {
-      "events" : [
-        {
-          "frame" : {
-            "_0" : {
-              "duration" : 0.016666666666666666,
-              "sourceFile" : "Handaxe_000.png"
-            }
-          }
-        },
-        {
-          "command" : {
-            "_0" : {
-              "code" : "C01",
-              "comment" : "NOP"
-            }
-          }
-        }
-      ],
-      "modeID" : "rangedEquipped",
-      "rawModeNumber" : 11,
-      "title" : "間接時棒立ちモーション"
+      "modeID" : "rangedAttack",
+      "rawModeNumber" : 5,
+      "title" : "間接攻撃時のモーション"
     }
   ],
   "warnings" : [

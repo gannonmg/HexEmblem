@@ -8,6 +8,8 @@
 import BAPlayback
 import SpriteKit
 
+// TODO: This should live in an adapter layer, not the main codebase.
+
 /// Adapts a BAPlaybackFrame and prepares for animation.
 struct PreparedFrame {
     let duration: TimeInterval
