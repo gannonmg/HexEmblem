@@ -11,18 +11,36 @@ import Foundation
 import ImportTooling
 import ScriptParser
 
+private struct ImportPlan: Sendable {
+    let animationID: String
+    let spriteSet: BASpriteSet
+    let variant: BAVariant
+    let sourceFolder: URL
+    let scriptURL: URL
+    let outputFolder: URL
+}
+
+private struct ImportOutcome: Sendable {
+    let plan: ImportPlan
+    let result: Result<BAManifest, Error>
+}
+
 @main
 struct BAImportTool {
-    static func main() {
+    static func main() async {
+        setvbuf(stdout, nil, _IOLBF, 0)   // line-buffer so piped output streams live
         do {
-            try run()
+            try await run()
         } catch {
             print("Import failed: \(error)")
             exit(1)
         }
     }
 
-    private static func run() throws {
+    private static func run() async throws {
+        // Log our start time for tracking how long the process takes
+        let started = Date.now
+
         // The tool should be run from the package root.
         let packageRoot = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
 
@@ -40,67 +58,158 @@ struct BAImportTool {
             return
         }
 
-        let importer = BAImporter()
-
-        var catalogEntries: [BACatalog.Entry] = []
-
-        print("Importing \(sourceFolders.count) animations from \(sourceRoot.lastPathComponent)\n")
-
-        for (index, sourceFolder) in sourceFolders.enumerated() {
+        // Serial planning of import work
+        let plans: [ImportPlan] = try sourceFolders.map { sourceFolder in
             let identity = sourceIdentity(for: sourceFolder, sourceRoot: sourceRoot)
-            let animationID = identity.animationID
-            let scriptURL = try findParseableScript(in: sourceFolder)
-            let outputFolder = outputRoot.appendingPathComponent(animationID)
-
-            // Remove stale generated files before re-importing.
-            if FileManager.default.fileExists(atPath: outputFolder.path) {
-                try FileManager.default.removeItem(at: outputFolder)
-            }
-
-            // Recreate the animation output folder.
-            try FileManager.default.createDirectory(
-                at: outputFolder,
-                withIntermediateDirectories: true
-            )
-
-            let manifest = try importer.importAnimation(
-                animationID: animationID,
+            return ImportPlan(
+                animationID: identity.animationID,
                 spriteSet: identity.spriteSet,
                 variant: identity.variant,
                 sourceFolder: sourceFolder,
-                scriptURL: scriptURL,
-                outputFolder: outputFolder
+                scriptURL: try findParseableScript(in: sourceFolder),
+                outputFolder: outputRoot.appendingPathComponent(identity.animationID)
             )
+        }
 
-            // Write the generated animation manifest next to the frames folder.
-            let manifestData = try JSONEncoder.prettyStable.encode(manifest)
-            try manifestData.write(to: outputFolder.appendingPathComponent("manifest.json"))
+        let outcomes = await processImportPlans(plans)
 
-            catalogEntries.append(
-                BACatalog.Entry(
-                    id: manifest.id,
-                    spriteSet: manifest.spriteSet,
-                    variant: manifest.variant,
-                    modes: manifest.timelines.map(\.modeID.kind),
-                    frameCount: manifest.frameAssets.count,
-                    renderSize: manifest.renderSize
-                )
-            )
+        // Split the outcomes based on success / failure
+        let (manifests, failures): ([BAManifest], [(id: String, error: Error)]) = outcomes
+            .reduce((manifests: [], errors: [])) { partialResult, outcome in
+                var copy = partialResult
+                switch outcome.result {
+                case .success(let manifest):
+                    copy.manifests.append(manifest)
+                case .failure(let error):
+                    copy.errors.append((id: outcome.plan.animationID,
+                                        error: error))
+                }
+                return copy
+            }
 
-            let counter = "[\(index + 1)/\(sourceFolders.count)]"
-            let slot = identity.variant.slot.map(\.description) ?? "unslotted"
-            print("\(counter) \(manifest.id)  [\(slot)]  \(manifest.frameAssets.count) frames, \(manifest.timelines.count) modes")
+        // Build a catalog of successful imports
+        let catalog = buildCatalog(from: manifests)
+
+        // Write the catalog to the root of the output folder
+        let catalogData = try JSONEncoder.prettyStable.encode(catalog)
+        try catalogData.write(to: outputRoot.appendingPathComponent("catalog.json"))
+
+        // Print report of successful results
+        let elapsed = String(format: "%.1fs", Date().timeIntervalSince(started))
+        print("""
+        Imported \(manifests.count)/\(plans.count) animations in \(elapsed)
+        Catalog: \(catalog.animations.count) entries → catalog.json
+        """)
+
+        // Print information about any failures
+        guard !failures.isEmpty else { exit(0) }
+
+        print("\nFailed (\(failures.count)):")
+        for failure in failures {
+            print("  \(failure.id) — \(failure.error.localizedDescription)")
+        }
+        exit(1)
+    }
+
+    private static func log(_ outcome: ImportOutcome, completed: Int, total: Int) {
+        let counter = "[\(completed)/\(total)]"
+
+        switch outcome.result {
+        case .success(let manifest):
+            let slot = outcome.plan.variant.slot.map { "\($0.weaponIDKind)" } ?? "unslotted"
+            print("\(counter) ✓ \(manifest.id)  [\(slot)]  \(manifest.frameAssets.count) frames, \(manifest.timelines.count) modes")
 
             for warning in manifest.warnings {
                 print("        ⚠︎ \(warning)")
             }
+
+        case .failure(let error):
+            print("\(counter) ✗ \(outcome.plan.animationID) - error \(error.localizedDescription)")
         }
+    }
 
-        let catalog = BACatalog(animations: catalogEntries.sorted { $0.id < $1.id })
-        let catalogData = try JSONEncoder.prettyStable.encode(catalog)
-        try catalogData.write(to: outputRoot.appendingPathComponent("catalog.json"))
+    private static func processImportPlans(_ plans: [ImportPlan]) async -> [ImportOutcome] {
+        // Determine how many workers we have for the import process
+        let workers = max(1, ProcessInfo.processInfo.activeProcessorCount)
+        print("Found \(plans.count) animations — importing with \(workers) workers\n")
 
-        print("\nImported \(catalog.animations.count) animations → catalog.json")
+        return await withTaskGroup(of: ImportOutcome.self) { group in
+            var collectedOutcomes: [ImportOutcome] = []
+            var next = 0
+
+            // Helper func for adding the task to the group
+            func addTask(for plan: ImportPlan) {
+                group.addTask {
+                    do {
+                        return try importAnimation(with: plan)
+                    } catch {
+                        return ImportOutcome(plan: plan, result: .failure(error))
+                    }
+                }
+            }
+
+            // Create an original pool of tasks, limited by the number of workers or the number of plans
+            while next < min(workers, plans.count) {
+                addTask(for: plans[next])
+                next += 1
+            }
+
+            // Wait for tasks in the group to finish, save their outcomes,
+            //     and begin a new task on the recently freed worker
+            while let outcome = await group.next() {
+                collectedOutcomes.append(outcome)
+                log(outcome, completed: collectedOutcomes.count, total: plans.count)
+
+                if next < plans.count {
+                    addTask(for: plans[next])
+                    next += 1
+                }
+            }
+
+            return collectedOutcomes
+        }
+    }
+
+    private static func importAnimation(with plan: ImportPlan) throws -> ImportOutcome {
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: plan.outputFolder.path) {
+            try fileManager.removeItem(at: plan.outputFolder)
+        }
+        try fileManager.createDirectory(
+            at: plan.outputFolder,
+            withIntermediateDirectories: true
+        )
+
+        let manifest = try BAImporter().importAnimation(
+            animationID: plan.animationID,
+            spriteSet: plan.spriteSet,
+            variant: plan.variant,
+            sourceFolder: plan.sourceFolder,
+            scriptURL: plan.scriptURL,
+            outputFolder: plan.outputFolder
+        )
+
+        let manifestData = try JSONEncoder.prettyStable.encode(manifest)
+        try manifestData.write(to: plan.outputFolder.appendingPathComponent("manifest.json"))
+
+        return ImportOutcome(plan: plan, result: .success(manifest))
+    }
+
+    private static func buildCatalog(from manifests: [BAManifest]) -> BACatalog {
+        return BACatalog(
+            animations: manifests
+                .map { manifest in
+                    BACatalog.Entry(
+                        id: manifest.id,
+                        spriteSet: manifest.spriteSet,
+                        variant: manifest.variant,
+                        modes: manifest.timelines.map(\.modeID.kind),
+                        frameCount: manifest.frameAssets.count,
+                        renderSize: manifest.renderSize
+                    )
+                }
+                .sorted { $0.id < $1.id }
+        )
     }
 
     private static func animationSourceFolders(in sourceRoot: URL) throws -> [URL] {

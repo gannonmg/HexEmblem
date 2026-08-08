@@ -55,8 +55,12 @@ extension BAWeaponID {
 }
 
 extension BAWeaponID: CustomStringConvertible {
+    public var description: String { weaponIDKind.description }
+}
+
+extension BAWeaponID.Kind: CustomStringConvertible {
     public var description: String {
-        switch weaponIDKind {
+        switch self {
         case .known(let knownKind): "\(knownKind)"
         case .unknown(let rawValue): "slot \(rawValue)"
         }
