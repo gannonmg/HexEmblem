@@ -13,12 +13,19 @@ public struct CombatStrike {
     public let strikerRole: CombatRole
     public let receiverRole: CombatRole
     public let result: StrikeResult
+    public let receiverRemainingHealth: Int
 
     public var totalDamage: Int { result.totalDamage }
 
-    public init(strikerRole: CombatRole, receiverRole: CombatRole, result: StrikeResult) {
+    public init(
+        strikerRole: CombatRole,
+        receiverRole: CombatRole,
+        result: StrikeResult,
+        receiverRemainingHealth: Int
+    ) {
         self.strikerRole = strikerRole
         self.receiverRole = receiverRole
         self.result = result
+        self.receiverRemainingHealth = receiverRemainingHealth
     }
 }

@@ -9,12 +9,12 @@ import Foundation
 import GameModels
 
 public struct CombatConfig {
-    public let initiator: CharacterUnit
-    public let responder: CharacterUnit
+    public let initiator: Combatant
+    public let responder: Combatant
     public let range: Int
     public let seed: Int
 
-    public init(initiator: CharacterUnit, responder: CharacterUnit, range: Int, seed: Int) {
+    public init(initiator: Combatant, responder: Combatant, range: Int, seed: Int) {
         self.initiator = initiator
         self.responder = responder
         self.range = range

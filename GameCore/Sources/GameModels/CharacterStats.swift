@@ -10,7 +10,7 @@ import Foundation
 /// A struct representing a Characters Stat Block.
 /// May represent either a character's "Base" stats acquired through natural growth,
 /// or a character's "Effective" stats after evaluation bonus from skills, weapons, and armor.
-public struct CharacterStatBlock: Sendable {
+public struct CharacterStatBlock: Codable, Sendable {
     private(set) var maxHp: Int // Maximum Health
     private(set) var strength: Int // Physical Attack
     private(set) var defense: Int // Physical Defense
@@ -65,7 +65,7 @@ public struct CharacterStatBlock: Sendable {
     }
 }
 
-public enum CharacterStat: Sendable {
+public enum CharacterStat: Codable, Sendable {
     case maxHp
     case strength
     case defense

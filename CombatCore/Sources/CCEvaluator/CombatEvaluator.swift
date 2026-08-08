@@ -43,8 +43,8 @@ public struct CombatEvaluator {
         )
     }
 
-    public func getCombatSummary() -> CombatSummary {
+    public func getCombatSummary() throws -> CombatSummary {
         let combatPlan = planner.buildCombatPlan()
-        return resolver.resolveCombatPlan(combatPlan)
+        return try resolver.resolveCombatPlan(combatPlan)
     }
 }

@@ -19,46 +19,51 @@ enum SanityTests {
         var seed = 0
 
         print("------------------ Begin Combat ------------------")
-        while initiator.isAlive && responder.isAlive {
-            print("Seed is \(seed)")
+        print("Seed is \(seed)")
+
+        var bothAlive = true
+        while bothAlive {
             let config = CombatConfig(
-                initiator: initiator,
-                responder: responder,
+                initiator: initiator.buildCombatant(),
+                responder: responder.buildCombatant(),
                 range: 1,
                 seed: seed
             )
 
             let evaluator = CombatEvaluator(config: config)
-            let summary = evaluator.getCombatSummary()
-            for strike in summary.strikes {
-                switch strike.result {
-                case .miss:
-                    print("\(String(describing: strike.strikerRole)) missed their attack")
-                case .hit:
-                    print("\(String(describing: strike.strikerRole)) dealt \(strike.totalDamage) to \(String(describing: strike.receiverRole))")
-                case .critical:
-                    print("\(String(describing: strike.strikerRole)) dealt \(strike.totalDamage) to \(String(describing: strike.receiverRole)) with a critical hit")
-                }
 
-                switch strike.strikerRole {
-                case .initiator:
-                    initiator.takeDamage(strike.totalDamage)
-                case .responder:
-                    responder.takeDamage(strike.totalDamage)
+            // force try ok for testing - shouldn't ever throw anyways
+            let summary = try! evaluator.getCombatSummary()
+            for event in summary.events {
+                switch event {
+                case .strike(let combatStrike):
+                    printStrike(combatStrike)
+                    switch combatStrike.receiverRole {
+                    case .initiator: initiator.takeDamage(combatStrike.totalDamage)
+                    case .responder: responder.takeDamage(combatStrike.totalDamage)
+                    }
+                case .defeat(let combatRole):
+                    print("\(combatRole) was defeated")
+                    bothAlive = false
                 }
-            }
-
-            switch summary.defeatedCharacterRole {
-            case .initiator:
-                print("Responder Won")
-            case .responder:
-                print("Initator Won")
-            default:
-                break
             }
 
             seed += 1
         }
         print("------------------- End Combat -------------------")
+    }
+
+    private static func printStrike(_ strike: CombatStrike) {
+        switch strike.result {
+        case .miss:
+            print("\(String(describing: strike.strikerRole)) missed their attack")
+        case .hit:
+            print("\(String(describing: strike.strikerRole)) hit \(String(describing: strike.receiverRole)) for \(strike.totalDamage) damage")
+            print("     \(strike.receiverRole) hp: \(strike.receiverRemainingHealth)")
+        case .critical:
+            print("\(String(describing: strike.strikerRole)) crit on \(String(describing: strike.receiverRole)) for \(strike.totalDamage) damage")
+            print("     \(strike.receiverRole) hp: \(strike.receiverRemainingHealth)")
+
+        }
     }
 }

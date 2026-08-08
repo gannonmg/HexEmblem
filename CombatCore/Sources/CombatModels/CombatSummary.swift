@@ -11,11 +11,14 @@ import GameModels
 /// The resolution of a round of combat between two characters.
 /// Contains the series of Strikes made as part of the encounter, and optionally the ID of a character who was defeated during the Combat.
 public struct CombatSummary {
-    public let strikes: [CombatStrike]
-    public var defeatedCharacterRole: CombatRole? = nil
+    public let events: [Event]
 
-    public init(strikes: [CombatStrike], defeatedCharacterRole: CombatRole? = nil) {
-        self.strikes = strikes
-        self.defeatedCharacterRole = defeatedCharacterRole
+    public init(events: [Event]) {
+        self.events = events
+    }
+
+    public enum Event {
+        case strike(CombatStrike)
+        case defeat(CombatRole)
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum CombatRole {
+public enum CombatRole: Codable, Sendable {
     case initiator
     case responder
 

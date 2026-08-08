@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum DamageType: Sendable {
+public enum DamageType: Codable, Sendable {
     case slashing, piercing, bludgeoning
     case fire, ice, lightning
     case acid, poison

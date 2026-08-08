@@ -79,7 +79,7 @@ public final class CharacterUnit {
             .reduce(0, +)
     }
 
-    public func critRateBonus() -> Double {
+    public var critRateBonus: Double {
         activeEffects()
             .compactMap {
                 guard case .critRateBonus(let percent) = $0 else { return nil }
@@ -88,16 +88,13 @@ public final class CharacterUnit {
             .reduce(0, +)
     }
 
-    public func critAvoidBonus() -> Double {
-        let equipmentBonus: Double = activeEffects()
+    public var critAvoidBonus: Double {
+        activeEffects()
             .compactMap {
                 guard case .critAvoidBonus(let percent) = $0 else { return nil }
                 return percent
             }
             .reduce(0, +)
-
-        let effectiveLuck = effectiveStats[.luck]
-        return equipmentBonus + Double(effectiveLuck)
     }
 
     public func activeEffects() -> [CharacterEffect] {

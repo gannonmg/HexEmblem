@@ -13,7 +13,7 @@ public enum StrikeResult {
     case hit(damageInstances: [DamageInstance])
     case critical(damageInstances: [DamageInstance])
 
-    var totalDamage: Int {
+    public var totalDamage: Int {
         switch self {
         case .miss:
             return 0

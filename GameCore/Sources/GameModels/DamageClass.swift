@@ -7,6 +7,6 @@
 
 import Foundation
 
-public enum DamageClass: Sendable {
+public enum DamageClass: Codable, Sendable {
     case physical, magical
 }

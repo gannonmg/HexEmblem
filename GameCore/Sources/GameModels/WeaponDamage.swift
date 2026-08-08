@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct WeaponDamage: Sendable {
+public struct WeaponDamage: Codable, Sendable {
     public let power: Int
     /// The stat that the character uses to determine damage
     /// Typically Str, Int, maybe Dex

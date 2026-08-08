@@ -24,9 +24,14 @@ import GameplayKit
 
 public final class CombatPlanResolver {
 
+    public enum Error: LocalizedError {
+        case untrackedHealth(role: CombatRole)
+    }
+
+    // MARK: - Parameters
     private let initiator: Combatant
     private let responder: Combatant
-    private var healthPool: [CombatRole: Int]
+    private var healthPool: CombatHealthTracker
     private let randomSource: GKMersenneTwisterRandomSource
 
     // MARK: - Init
@@ -38,40 +43,49 @@ public final class CombatPlanResolver {
         self.initiator = initiator
         self.responder = responder
 
-        self.healthPool = [
-            .initiator: initiator.initialHealth,
-            .responder: responder.initialHealth
-        ]
+        self.healthPool = CombatHealthTracker(
+            initiatorHealth: initiator.initialHealth,
+            responderHealth: responder.initialHealth
+        )
 
         self.randomSource = GKMersenneTwisterRandomSource(seed: UInt64(seed))
     }
 
-    public func resolveCombatPlan(_ plan: CombatPlan) -> CombatSummary {
-        var strikes: [CombatStrike] = []
+    public func resolveCombatPlan(_ plan: CombatPlan) throws(CombatPlanResolver.Error) -> CombatSummary {
+        var resolvedEvents: [CombatSummary.Event] = []
 
-        for event in plan.events {
-            let strike = buildStrike(
-                strikerRole: event.striker,
-                receiverRole: event.receiver
+        for planEvent in plan.events {
+            let result = try buildStrikeResult(
+                strikerRole: planEvent.striker,
+                receiverRole: planEvent.receiver
             )
-            strikes.append(strike)
-            applyDamage(strike.totalDamage, to: event.receiver)
 
-            guard isAlive(event.receiver) else {
-                return CombatSummary(
-                    strikes: strikes,
-                    defeatedCharacterRole: event.receiver
-                )
+            let remainingHealth = try healthPool.apply(
+                damage: result.totalDamage,
+                to: planEvent.receiver
+            )
+
+            resolvedEvents.append(.strike(
+                CombatStrike(
+                    strikerRole: planEvent.striker,
+                    receiverRole: planEvent.receiver,
+                    result: result,
+                    receiverRemainingHealth: remainingHealth)
+            ))
+
+            guard 0 < remainingHealth else {
+                resolvedEvents.append(.defeat(planEvent.receiver))
+                return CombatSummary(events: resolvedEvents)
             }
         }
 
-        return CombatSummary(strikes: strikes)
+        return CombatSummary(events: resolvedEvents)
     }
 
-    private func buildStrike(
+    private func buildStrikeResult(
         strikerRole: CombatRole,
         receiverRole: CombatRole
-    ) -> CombatStrike {
+    ) throws(CombatPlanResolver.Error) -> StrikeResult {
 
         let striker = combatant(for: strikerRole)
         let receiver = combatant(for: receiverRole)
@@ -85,13 +99,7 @@ public final class CombatPlanResolver {
             seed: randomSource.nextInt()
         )
 
-        guard strikeLands else {
-            return CombatStrike(
-                strikerRole: strikerRole,
-                receiverRole: receiverRole,
-                result: .miss
-            )
-        }
+        guard strikeLands else { return .miss }
 
         // If the attack hits, get an array of all the damage the weapon inflicts
         let damageInstances = striker.weaponDamage.map { damage in
@@ -120,13 +128,7 @@ public final class CombatPlanResolver {
             .hit(damageInstances: damageInstances)
         }
 
-        let strike = CombatStrike(
-            strikerRole: strikerRole,
-            receiverRole: receiverRole,
-            result: strikeResult
-        )
-
-        return strike
+        return strikeResult
     }
 
     // MARK: - Helpers
@@ -136,12 +138,30 @@ public final class CombatPlanResolver {
         case .responder: responder
         }
     }
+}
 
-    private func applyDamage(_ damage: Int, to combatantRole: CombatRole) {
-        healthPool[combatantRole, default: 0] -= damage
+private struct CombatHealthTracker {
+    private var healthPool: [CombatRole: Int]
+
+    init(
+        initiatorHealth: Int,
+        responderHealth: Int
+    ) {
+        self.healthPool = [
+            .initiator: initiatorHealth,
+            .responder: responderHealth
+        ]
     }
 
-    private func isAlive(_ combatantRole: CombatRole) -> Bool {
-        0 < healthPool[combatantRole, default: 0]
+    func getHealth(for role: CombatRole) throws(CombatPlanResolver.Error) -> Int {
+        guard let health = healthPool[role] else { throw .untrackedHealth(role: role) }
+        return max(0, health)
+    }
+
+    @discardableResult
+    mutating func apply(damage: Int, to combatantRole: CombatRole) throws(CombatPlanResolver.Error) -> Int {
+        let health = try getHealth(for: combatantRole)
+        healthPool[combatantRole] = health - damage
+        return try getHealth(for: combatantRole)
     }
 }
