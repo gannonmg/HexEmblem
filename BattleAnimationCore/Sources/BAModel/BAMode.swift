@@ -9,8 +9,7 @@ import Foundation
 
 // TODO: Clean up AI preserving both rawModeNumber and modeID (which is potentially .unknown)
 public struct BAMode: Codable, Hashable {
-    public let rawModeNumber: Int
-    public let id: BAModeID
+    public let modeID: BAModeID
     public let title: String?
     public let events: [BAScript.Event]
 
@@ -23,9 +22,14 @@ public struct BAMode: Codable, Hashable {
         }
     }
 
-    public init(rawModeNumber: Int, id: BAModeID, title: String?, events: [BAScript.Event]) {
-        self.rawModeNumber = rawModeNumber
-        self.id = id
+    public init(modeID: BAModeID, title: String?, events: [BAScript.Event]) {
+        self.modeID = modeID
+        self.title = title
+        self.events = events
+    }
+
+    public init(rawModeNumber: Int, title: String?, events: [BAScript.Event]) {
+        self.modeID = BAModeID(rawModeNumber: rawModeNumber)
         self.title = title
         self.events = events
     }

@@ -30,7 +30,7 @@ final class CombatScene: SKScene {
         addCharacterToScene(combatant, mirror: true)
 
         do {
-            try combatant.play(modeID: 1)
+            try combatant.play(mode: .meleeAttack)
         } catch {
             print("Failed to start idle combat animations: \(error)")
         }
@@ -55,7 +55,7 @@ final class CombatScene: SKScene {
 // MARK: - Scene Construction
 extension CombatScene {
     static func demoScene(size: CGSize) -> CombatScene {
-        let combatant = CombatantNode(animationID: "LanceHalberdier")
+        let combatant = CombatantNode(animationID: "Crossbow-Cowboy-M-by-MeatofJustice_5-Bow")
         let scene = CombatScene(size: size, combatant: combatant)
         scene.scaleMode = .aspectFill
         return scene

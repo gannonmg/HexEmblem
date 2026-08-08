@@ -1,0 +1,1333 @@
+{
+  "frameAssets" : [
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Bow_000_background.png",
+          "foreground" : "frames\/Bow_000_foreground.png"
+        }
+      },
+      "sourceFile" : "Bow_000.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Bow_001_main.png"
+        }
+      },
+      "sourceFile" : "Bow_001.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Bow_002_main.png"
+        }
+      },
+      "sourceFile" : "Bow_002.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Bow_003_main.png"
+        }
+      },
+      "sourceFile" : "Bow_003.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Bow_004_background.png",
+          "foreground" : "frames\/Bow_004_foreground.png"
+        }
+      },
+      "sourceFile" : "Bow_004.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Bow_005_background.png",
+          "foreground" : "frames\/Bow_005_foreground.png"
+        }
+      },
+      "sourceFile" : "Bow_005.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Bow_006_background.png",
+          "foreground" : "frames\/Bow_006_foreground.png"
+        }
+      },
+      "sourceFile" : "Bow_006.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Bow_007_main.png"
+        }
+      },
+      "sourceFile" : "Bow_007.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Bow_008_main.png"
+        }
+      },
+      "sourceFile" : "Bow_008.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Bow_009_main.png"
+        }
+      },
+      "sourceFile" : "Bow_009.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Bow_010_main.png"
+        }
+      },
+      "sourceFile" : "Bow_010.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Bow_011_main.png"
+        }
+      },
+      "sourceFile" : "Bow_011.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Bow_012_main.png"
+        }
+      },
+      "sourceFile" : "Bow_012.png"
+    }
+  ],
+  "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_5-Bow",
+  "preservedPalette" : [
+    {
+      "a" : 255,
+      "b" : 0,
+      "g" : 88,
+      "r" : 64
+    },
+    {
+      "a" : 255,
+      "b" : 8,
+      "g" : 120,
+      "r" : 88
+    },
+    {
+      "a" : 255,
+      "b" : 96,
+      "g" : 208,
+      "r" : 96
+    },
+    {
+      "a" : 255,
+      "b" : 72,
+      "g" : 96,
+      "r" : 136
+    },
+    {
+      "a" : 255,
+      "b" : 144,
+      "g" : 192,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 208,
+      "g" : 248,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 248,
+      "g" : 248,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 160,
+      "g" : 208,
+      "r" : 168
+    },
+    {
+      "a" : 255,
+      "b" : 40,
+      "g" : 40,
+      "r" : 40
+    },
+    {
+      "a" : 255,
+      "b" : 88,
+      "g" : 136,
+      "r" : 184
+    },
+    {
+      "a" : 255,
+      "b" : 216,
+      "g" : 88,
+      "r" : 40
+    },
+    {
+      "a" : 255,
+      "b" : 248,
+      "g" : 184,
+      "r" : 64
+    },
+    {
+      "a" : 255,
+      "b" : 248,
+      "g" : 248,
+      "r" : 128
+    },
+    {
+      "a" : 255,
+      "b" : 176,
+      "g" : 144,
+      "r" : 112
+    },
+    {
+      "a" : 255,
+      "b" : 216,
+      "g" : 184,
+      "r" : 152
+    },
+    {
+      "a" : 255,
+      "b" : 232,
+      "g" : 224,
+      "r" : 192
+    }
+  ],
+  "renderSize" : {
+    "height" : 160,
+    "width" : 240
+  },
+  "sourceScript" : "Bow.txt",
+  "spriteSet" : {
+    "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+    "gender" : "female",
+    "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+    "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+    "tag" : "Hero-Reskin"
+  },
+  "timelines" : [
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C18",
+              "comment" : "正面に回避する。背面ではなく正面に回避するには、C02の代わりにこの命令を使います"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E",
+              "comment" : "回避フレームの開始。棒立ちフレームの後にこのコマンドを入れてください。"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_011.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_012.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_011.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeDodge",
+        "rawModeNumber" : 7
+      },
+      "rawModeNumber" : 7,
+      "title" : "被至近攻撃回避時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_001.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23",
+              "comment" : "剣を振る音　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_003.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23",
+              "comment" : "剣を振る音　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_010.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23",
+              "comment" : "剣を振る音　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_004.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C19",
+              "comment" : "弓を引く音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.3333333333333333,
+              "sourceFile" : "Bow_005.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_006.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05",
+              "comment" : "魔法の呼び出し"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_007.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeCritical",
+        "rawModeNumber" : 3
+      },
+      "rawModeNumber" : 3,
+      "title" : "至近攻撃必殺時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_001.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23",
+              "comment" : "剣を振る音　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_003.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C19",
+              "comment" : "弓を引く音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.3333333333333333,
+              "sourceFile" : "Bow_005.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_006.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05",
+              "comment" : "魔法の呼び出し"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_007.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeAttack",
+        "rawModeNumber" : 1
+      },
+      "rawModeNumber" : 1,
+      "title" : "至近攻撃のヒット時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_001.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23",
+              "comment" : "剣を振る音　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_003.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C19",
+              "comment" : "弓を引く音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.3333333333333333,
+              "sourceFile" : "Bow_005.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_006.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05",
+              "comment" : "魔法の呼び出し"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_007.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedAttack",
+        "rawModeNumber" : 5
+      },
+      "rawModeNumber" : 5,
+      "title" : "間接攻撃時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeEquipped",
+        "rawModeNumber" : 9
+      },
+      "rawModeNumber" : 9,
+      "title" : "至近時棒立ちモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_001.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23",
+              "comment" : "剣を振る音　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_003.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C19",
+              "comment" : "弓を引く音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.3333333333333333,
+              "sourceFile" : "Bow_005.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_006.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05",
+              "comment" : "魔法の呼び出し"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_007.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "attackMissed",
+        "rawModeNumber" : 12
+      },
+      "rawModeNumber" : 12,
+      "title" : "攻撃ミス時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C18",
+              "comment" : "正面に回避する。背面ではなく正面に回避するには、C02の代わりにこの命令を使います"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E",
+              "comment" : "回避フレームの開始。棒立ちフレームの後にこのコマンドを入れてください。"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_011.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_012.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_011.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedDodge",
+        "rawModeNumber" : 8
+      },
+      "rawModeNumber" : 8,
+      "title" : "被間接攻撃回避時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedEquipped",
+        "rawModeNumber" : 11
+      },
+      "rawModeNumber" : 11,
+      "title" : "間接時棒立ちモーション"
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "standing",
+        "rawModeNumber" : 10
+      },
+      "rawModeNumber" : 10,
+      "title" : "棒立ちモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_001.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23",
+              "comment" : "剣を振る音　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Bow_003.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23",
+              "comment" : "剣を振る音　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_010.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23",
+              "comment" : "剣を振る音　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_004.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C19",
+              "comment" : "弓を引く音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.3333333333333333,
+              "sourceFile" : "Bow_005.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_006.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05",
+              "comment" : "魔法の呼び出し"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Bow_007.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Bow_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedCritical",
+        "rawModeNumber" : 6
+      },
+      "rawModeNumber" : 6,
+      "title" : "間接攻撃必殺時のモーション"
+    }
+  ],
+  "variant" : {
+    "name" : "Bow",
+    "rawFolder" : "5. Bow",
+    "slot" : 5
+  },
+  "warnings" : [
+
+  ]
+}

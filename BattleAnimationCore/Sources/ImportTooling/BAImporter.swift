@@ -20,6 +20,8 @@ public final class BAImporter {
 
     public func importAnimation(
         animationID: String,
+        spriteSet: BASpriteSet,
+        variant: BAVariant,
         sourceFolder: URL,
         scriptURL: URL,
         outputFolder: URL
@@ -35,17 +37,16 @@ public final class BAImporter {
         )
 
         // Unknown modes are preserved as warnings for now.
-        let usableModes = script.modes.filter { $0.id != .unknown }
+        let usableModes = script.modes.filter { $0.modeID.kind != .unknown }
 
         var warnings = script.modes
-            .filter { $0.id == .unknown }
-            .map { "Skipping unknown mode \($0.rawModeNumber)" }
+            .filter { $0.modeID.kind == .unknown }
+            .map { "Skipping unknown mode \(String(describing: $0.modeID))" }
 
         // Process each source frame only once, even if modes share it.
         let uniqueFrameFiles = Array(
             Set(usableModes.flatMap { $0.frames.map(\.filename) })
-        )
-            .sorted()
+        ).sorted()
 
         guard !uniqueFrameFiles.isEmpty else {
             throw BAImportError.noFramesFound
@@ -73,6 +74,8 @@ public final class BAImporter {
 
         return BAManifest(
             id: animationID,
+            spriteSet: spriteSet,
+            variant: variant,
             sourceScript: scriptURL.lastPathComponent,
             renderSize: .combatFrameSize,
             frameAssets: frameAssets,
@@ -181,8 +184,8 @@ public final class BAImporter {
         }
 
         return BAManifest.Timeline(
-            modeID: mode.id,
-            rawModeNumber: mode.rawModeNumber,
+            modeID: mode.modeID,
+            rawModeNumber: mode.modeID.rawModeNumber,
             title: mode.title,
             events: events
         )

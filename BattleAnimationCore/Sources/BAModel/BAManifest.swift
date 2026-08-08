@@ -10,8 +10,10 @@ import Foundation
 /// The manifest of what is in a processed animation's Resource folder.
 /// Created during animation import.
 /// Referenced during asset retrieval.
-public struct BAManifest: Codable {
+public struct BAManifest: Codable, Sendable {
     public let id: String
+    public let spriteSet: BASpriteSet
+    public let variant: BAVariant
     public let sourceScript: String
     public let renderSize: FrameSize
     public let frameAssets: [Frame.Asset]
@@ -20,8 +22,20 @@ public struct BAManifest: Codable {
     public let warnings: [String]
 
     // MARK: - Init
-    public init(id: String, sourceScript: String, renderSize: FrameSize, frameAssets: [Frame.Asset], timelines: [Timeline], preservedPalette: [RGBA], warnings: [String]) {
+    public init(
+        id: String,
+        spriteSet: BASpriteSet,
+        variant: BAVariant,
+        sourceScript: String,
+        renderSize: FrameSize,
+        frameAssets: [Frame.Asset],
+        timelines: [Timeline],
+        preservedPalette: [RGBA],
+        warnings: [String]
+    ) {
         self.id = id
+        self.spriteSet = spriteSet
+        self.variant = variant
         self.sourceScript = sourceScript
         self.renderSize = renderSize
         self.frameAssets = frameAssets
@@ -34,7 +48,7 @@ public struct BAManifest: Codable {
 // MARK: - BAManifest.Frame
 extension BAManifest {
     public enum Frame {
-        public struct Asset: Codable {
+        public struct Asset: Codable, Sendable {
             public let sourceFile: String
             public let layerType: LayerType
 
@@ -44,7 +58,7 @@ extension BAManifest {
             }
         }
 
-        public enum LayerType: Codable {
+        public enum LayerType: Codable, Sendable {
             case main(path: String)
             case piercing(foreground: String, background: String)
 
@@ -56,7 +70,7 @@ extension BAManifest {
             }
         }
 
-        public struct Event: Codable {
+        public struct Event: Codable, Sendable {
             public let sourceFile: String
             public let duration: TimeInterval
 
@@ -70,13 +84,13 @@ extension BAManifest {
 
 // MARK: - BAManifest.Timeline
 extension BAManifest {
-    public struct Timeline: Codable {
+    public struct Timeline: Codable, Sendable {
         public let modeID: BAModeID
         public let rawModeNumber: Int
         public let title: String?
         public let events: [Event]
 
-        public enum Event: Codable {
+        public enum Event: Codable, Sendable {
             case frame(Frame.Event)
             case command(BAScript.Command)
         }

@@ -1,0 +1,2760 @@
+{
+  "frameAssets" : [
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_000_background.png",
+          "foreground" : "frames\/Axe_000_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_000.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_001_background.png",
+          "foreground" : "frames\/Axe_001_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_001.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_002_background.png",
+          "foreground" : "frames\/Axe_002_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_002.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_003_background.png",
+          "foreground" : "frames\/Axe_003_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_003.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_004_background.png",
+          "foreground" : "frames\/Axe_004_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_004.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_005_background.png",
+          "foreground" : "frames\/Axe_005_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_005.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_006_background.png",
+          "foreground" : "frames\/Axe_006_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_006.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_007_background.png",
+          "foreground" : "frames\/Axe_007_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_007.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_008_background.png",
+          "foreground" : "frames\/Axe_008_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_008.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_009_background.png",
+          "foreground" : "frames\/Axe_009_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_009.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_010_background.png",
+          "foreground" : "frames\/Axe_010_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_010.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_011_background.png",
+          "foreground" : "frames\/Axe_011_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_011.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_012_background.png",
+          "foreground" : "frames\/Axe_012_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_012.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_013_background.png",
+          "foreground" : "frames\/Axe_013_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_013.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_014_background.png",
+          "foreground" : "frames\/Axe_014_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_014.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_015_background.png",
+          "foreground" : "frames\/Axe_015_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_015.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_016_background.png",
+          "foreground" : "frames\/Axe_016_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_016.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_017_background.png",
+          "foreground" : "frames\/Axe_017_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_017.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_018_background.png",
+          "foreground" : "frames\/Axe_018_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_018.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_019_background.png",
+          "foreground" : "frames\/Axe_019_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_019.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_020_background.png",
+          "foreground" : "frames\/Axe_020_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_020.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_021_background.png",
+          "foreground" : "frames\/Axe_021_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_021.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_022_background.png",
+          "foreground" : "frames\/Axe_022_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_022.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_023_background.png",
+          "foreground" : "frames\/Axe_023_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_023.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_024_background.png",
+          "foreground" : "frames\/Axe_024_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_024.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_025_background.png",
+          "foreground" : "frames\/Axe_025_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_025.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_026_background.png",
+          "foreground" : "frames\/Axe_026_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_026.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_027_background.png",
+          "foreground" : "frames\/Axe_027_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_027.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_028_background.png",
+          "foreground" : "frames\/Axe_028_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_028.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_029_background.png",
+          "foreground" : "frames\/Axe_029_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_029.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_030_background.png",
+          "foreground" : "frames\/Axe_030_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_030.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_031_background.png",
+          "foreground" : "frames\/Axe_031_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_031.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_032_background.png",
+          "foreground" : "frames\/Axe_032_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_032.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_033_background.png",
+          "foreground" : "frames\/Axe_033_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_033.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_034_background.png",
+          "foreground" : "frames\/Axe_034_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_034.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_035_background.png",
+          "foreground" : "frames\/Axe_035_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_035.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_036_background.png",
+          "foreground" : "frames\/Axe_036_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_036.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_037_background.png",
+          "foreground" : "frames\/Axe_037_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_037.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_038_background.png",
+          "foreground" : "frames\/Axe_038_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_038.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_039_background.png",
+          "foreground" : "frames\/Axe_039_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_039.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_040_background.png",
+          "foreground" : "frames\/Axe_040_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_040.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_041_background.png",
+          "foreground" : "frames\/Axe_041_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_041.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_042_background.png",
+          "foreground" : "frames\/Axe_042_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_042.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_043_background.png",
+          "foreground" : "frames\/Axe_043_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_043.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_044_background.png",
+          "foreground" : "frames\/Axe_044_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_044.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_045_background.png",
+          "foreground" : "frames\/Axe_045_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_045.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_046_background.png",
+          "foreground" : "frames\/Axe_046_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_046.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_047_background.png",
+          "foreground" : "frames\/Axe_047_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_047.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_048_background.png",
+          "foreground" : "frames\/Axe_048_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_048.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_049_background.png",
+          "foreground" : "frames\/Axe_049_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_049.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_050_background.png",
+          "foreground" : "frames\/Axe_050_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_050.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_051_background.png",
+          "foreground" : "frames\/Axe_051_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_051.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_052_background.png",
+          "foreground" : "frames\/Axe_052_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_052.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_053_background.png",
+          "foreground" : "frames\/Axe_053_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_053.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_054_background.png",
+          "foreground" : "frames\/Axe_054_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_054.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_055_background.png",
+          "foreground" : "frames\/Axe_055_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_055.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_056_background.png",
+          "foreground" : "frames\/Axe_056_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_056.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_057_background.png",
+          "foreground" : "frames\/Axe_057_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_057.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_058_background.png",
+          "foreground" : "frames\/Axe_058_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_058.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_059_background.png",
+          "foreground" : "frames\/Axe_059_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_059.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_060_background.png",
+          "foreground" : "frames\/Axe_060_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_060.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_061_background.png",
+          "foreground" : "frames\/Axe_061_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_061.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_062_main.png"
+        }
+      },
+      "sourceFile" : "Axe_062.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_063_main.png"
+        }
+      },
+      "sourceFile" : "Axe_063.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_064_main.png"
+        }
+      },
+      "sourceFile" : "Axe_064.png"
+    }
+  ],
+  "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_3-Axe-Armads",
+  "preservedPalette" : [
+    {
+      "a" : 255,
+      "b" : 0,
+      "g" : 88,
+      "r" : 64
+    },
+    {
+      "a" : 255,
+      "b" : 8,
+      "g" : 120,
+      "r" : 88
+    },
+    {
+      "a" : 255,
+      "b" : 96,
+      "g" : 208,
+      "r" : 96
+    },
+    {
+      "a" : 255,
+      "b" : 72,
+      "g" : 96,
+      "r" : 136
+    },
+    {
+      "a" : 255,
+      "b" : 144,
+      "g" : 192,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 208,
+      "g" : 248,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 248,
+      "g" : 248,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 160,
+      "g" : 208,
+      "r" : 168
+    },
+    {
+      "a" : 255,
+      "b" : 40,
+      "g" : 40,
+      "r" : 40
+    },
+    {
+      "a" : 255,
+      "b" : 88,
+      "g" : 136,
+      "r" : 184
+    },
+    {
+      "a" : 255,
+      "b" : 216,
+      "g" : 88,
+      "r" : 40
+    },
+    {
+      "a" : 255,
+      "b" : 248,
+      "g" : 184,
+      "r" : 64
+    },
+    {
+      "a" : 255,
+      "b" : 248,
+      "g" : 248,
+      "r" : 128
+    },
+    {
+      "a" : 255,
+      "b" : 176,
+      "g" : 144,
+      "r" : 112
+    },
+    {
+      "a" : 255,
+      "b" : 216,
+      "g" : 184,
+      "r" : 152
+    },
+    {
+      "a" : 255,
+      "b" : 232,
+      "g" : 224,
+      "r" : 192
+    }
+  ],
+  "renderSize" : {
+    "height" : 160,
+    "width" : 240
+  },
+  "sourceScript" : "Axe.txt",
+  "spriteSet" : {
+    "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+    "gender" : "female",
+    "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+    "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+    "tag" : "Hero-Reskin"
+  },
+  "timelines" : [
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedEquipped",
+        "rawModeNumber" : 11
+      },
+      "rawModeNumber" : 11,
+      "title" : "間接時棒立ちモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_004.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C42",
+              "comment" : "斧を振り回す短い音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_005.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C46",
+              "comment" : "斧を地面に叩きつける音 ずどん"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C14",
+              "comment" : "画面揺れる　大きい　アルマーズ"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_006.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_007.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.08333333333333333,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.21666666666666667,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.08333333333333333,
+              "sourceFile" : "Axe_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_011.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_012.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_013.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_014.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_015.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_016.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_017.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_018.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_019.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C42",
+              "comment" : "斧を振り回す短い音"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C04",
+              "comment" : "攻撃が命中した時に、HPを減らす準備をする。命中後に立ちモーションへ戻す必要あり。"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_020.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_021.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_023.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_024.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Axe_025.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_026.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_027.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_028.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_028.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34",
+              "comment" : "足音の再生"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_029.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_030.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "attackMissed",
+        "rawModeNumber" : 12
+      },
+      "rawModeNumber" : 12,
+      "title" : "攻撃ミス時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_031.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_032.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_033.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_034.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_035.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Axe_033.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Axe_034.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_035.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_033.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Axe_034.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Axe_035.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_036.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_037.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C42",
+              "comment" : "斧を振り回す短い音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_005.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C46",
+              "comment" : "斧を地面に叩きつける音 ずどん"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C14",
+              "comment" : "画面揺れる　大きい　アルマーズ"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_006.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_007.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.16666666666666666,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_038.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C41",
+              "comment" : "斧を振り回す音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Axe_039.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_040.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_041.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_042.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_043.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C30",
+              "comment" : "リンロードのクリティカル時の砂煙"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_044.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_045.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_046.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_047.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_048.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_049.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_050.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_051.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_052.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C14",
+              "comment" : "画面揺れる　大きい　アルマーズ"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C04",
+              "comment" : "攻撃が命中した時に、HPを減らす準備をする。命中後に立ちモーションへ戻す必要あり。"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C42",
+              "comment" : "斧を振り回す短い音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_053.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C1F",
+              "comment" : "クリティカルの効果音 ずどーん"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0A",
+              "comment" : "クリティカルヒット"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_021.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_054.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.25,
+              "sourceFile" : "Axe_055.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_056.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_057.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_058.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_059.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_060.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.08333333333333333,
+              "sourceFile" : "Axe_061.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.2,
+              "sourceFile" : "Axe_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_003.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_001.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeCritical",
+        "rawModeNumber" : 3
+      },
+      "rawModeNumber" : 3,
+      "title" : "至近攻撃必殺時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C02",
+              "comment" : "回避モーションの始め"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E",
+              "comment" : "回避フレームの開始。棒立ちフレームの後にこのコマンドを入れてください。"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_063.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_064.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_063.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedDodge",
+        "rawModeNumber" : 8
+      },
+      "rawModeNumber" : 8,
+      "title" : "被間接攻撃回避時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_004.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C42",
+              "comment" : "斧を振り回す短い音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_005.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C46",
+              "comment" : "斧を地面に叩きつける音 ずどん"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C14",
+              "comment" : "画面揺れる　大きい　アルマーズ"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_006.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_007.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.08333333333333333,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.21666666666666667,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.08333333333333333,
+              "sourceFile" : "Axe_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_011.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_012.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C20",
+              "comment" : "クリティカルの効果音 ずどーん"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_013.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_014.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_015.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_016.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_017.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_018.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_019.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C42",
+              "comment" : "斧を振り回す短い音"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C04",
+              "comment" : "攻撃が命中した時に、HPを減らす準備をする。命中後に立ちモーションへ戻す必要あり。"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C1A",
+              "comment" : "ノーマルヒットのエフェクト"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C1F",
+              "comment" : "クリティカルの効果音 ずどーん"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_020.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_021.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_023.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_024.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Axe_025.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_026.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_027.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_028.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_029.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34",
+              "comment" : "足音の再生"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_029.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_030.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeAttack",
+        "rawModeNumber" : 1
+      },
+      "rawModeNumber" : 1,
+      "title" : "至近攻撃のヒット時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeEquipped",
+        "rawModeNumber" : 9
+      },
+      "rawModeNumber" : 9,
+      "title" : "至近時棒立ちモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C02",
+              "comment" : "回避モーションの始め"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E",
+              "comment" : "回避フレームの開始。棒立ちフレームの後にこのコマンドを入れてください。"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_063.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_064.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_063.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeDodge",
+        "rawModeNumber" : 7
+      },
+      "rawModeNumber" : 7,
+      "title" : "被至近攻撃回避時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "standing",
+        "rawModeNumber" : 10
+      },
+      "rawModeNumber" : 10,
+      "title" : "棒立ちモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_032.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C41",
+              "comment" : "斧を振り回す音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Axe_033.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Axe_034.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Axe_035.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C41",
+              "comment" : "斧を振り回す音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Axe_033.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Axe_034.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Axe_035.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_036.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_037.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C41",
+              "comment" : "斧を振り回す音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_062.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_062.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_062.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05",
+              "comment" : "魔法の呼び出し"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_004.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_001.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedCritical",
+        "rawModeNumber" : 6
+      },
+      "rawModeNumber" : 6,
+      "title" : "間接攻撃必殺時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_004.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05",
+              "comment" : "魔法の呼び出し"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_004.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_001.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedAttack",
+        "rawModeNumber" : 5
+      },
+      "rawModeNumber" : 5,
+      "title" : "間接攻撃時のモーション"
+    }
+  ],
+  "variant" : {
+    "name" : "Axe",
+    "qualifier" : "Armads",
+    "rawFolder" : "3. Axe (Armads)",
+    "slot" : 3
+  },
+  "warnings" : [
+
+  ]
+}

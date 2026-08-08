@@ -5,7 +5,7 @@
 //  Created by Matt Gannon on 8/3/26.
 //
 
-public struct RGBA: Codable, Hashable {
+public struct RGBA: Codable, Hashable, Sendable {
     public var r: UInt8
     public var g: UInt8
     public var b: UInt8

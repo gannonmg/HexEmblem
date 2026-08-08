@@ -43,5 +43,9 @@ let package = Package(
             exclude: ["Resources/SourceAnimations"],
             resources: [.copy("Resources/ProcessedAnimations")]
         ),
+        .testTarget(
+            name: "BAPlaybackTests",
+            dependencies: ["BAPlayback", "BAModel"]
+        ),
     ]
 )

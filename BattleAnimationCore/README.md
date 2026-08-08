@@ -5,6 +5,14 @@ asset repo and playing them back in-game. The package is split into focused
 targets so that import-time tooling (script parsing, image formatting) never
 ships inside the app — the app links only the playback surface.
 
+## Attributions
+___
+- [Custom Halb] Halberdier +Axes [M] by TBA
+- [Custom Halb] Halberdier Gwendolyn [F] by UltraFenix
+- [HunterM] Hunter [M/F] by MeatOfJustice
+- [Custom Lance] Militia (Deserter) [M] by Alusq
+- [Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) [M/F] by tatata
+
 ## Dependency graph
 ___
 

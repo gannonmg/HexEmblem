@@ -1,0 +1,1900 @@
+{
+  "frameAssets" : [
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_000_main.png"
+        }
+      },
+      "sourceFile" : "Axe_000.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_001_main.png"
+        }
+      },
+      "sourceFile" : "Axe_001.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_002_main.png"
+        }
+      },
+      "sourceFile" : "Axe_002.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_003_main.png"
+        }
+      },
+      "sourceFile" : "Axe_003.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_004_main.png"
+        }
+      },
+      "sourceFile" : "Axe_004.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_005_main.png"
+        }
+      },
+      "sourceFile" : "Axe_005.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_006_main.png"
+        }
+      },
+      "sourceFile" : "Axe_006.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_007_main.png"
+        }
+      },
+      "sourceFile" : "Axe_007.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_008_main.png"
+        }
+      },
+      "sourceFile" : "Axe_008.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_009_main.png"
+        }
+      },
+      "sourceFile" : "Axe_009.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_010_main.png"
+        }
+      },
+      "sourceFile" : "Axe_010.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_011_main.png"
+        }
+      },
+      "sourceFile" : "Axe_011.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_012_main.png"
+        }
+      },
+      "sourceFile" : "Axe_012.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_013_main.png"
+        }
+      },
+      "sourceFile" : "Axe_013.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_014_background.png",
+          "foreground" : "frames\/Axe_014_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_014.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_015_background.png",
+          "foreground" : "frames\/Axe_015_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_015.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_016_background.png",
+          "foreground" : "frames\/Axe_016_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_016.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_017_background.png",
+          "foreground" : "frames\/Axe_017_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_017.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_018_main.png"
+        }
+      },
+      "sourceFile" : "Axe_018.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_019_main.png"
+        }
+      },
+      "sourceFile" : "Axe_019.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_020_main.png"
+        }
+      },
+      "sourceFile" : "Axe_020.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_021_main.png"
+        }
+      },
+      "sourceFile" : "Axe_021.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_022_main.png"
+        }
+      },
+      "sourceFile" : "Axe_022.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_023_main.png"
+        }
+      },
+      "sourceFile" : "Axe_023.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_024_main.png"
+        }
+      },
+      "sourceFile" : "Axe_024.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_025_main.png"
+        }
+      },
+      "sourceFile" : "Axe_025.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_026_main.png"
+        }
+      },
+      "sourceFile" : "Axe_026.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_027_main.png"
+        }
+      },
+      "sourceFile" : "Axe_027.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_028_main.png"
+        }
+      },
+      "sourceFile" : "Axe_028.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_029_main.png"
+        }
+      },
+      "sourceFile" : "Axe_029.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_030_main.png"
+        }
+      },
+      "sourceFile" : "Axe_030.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_031_main.png"
+        }
+      },
+      "sourceFile" : "Axe_031.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_032_main.png"
+        }
+      },
+      "sourceFile" : "Axe_032.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_033_background.png",
+          "foreground" : "frames\/Axe_033_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_033.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_034_main.png"
+        }
+      },
+      "sourceFile" : "Axe_034.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_035_main.png"
+        }
+      },
+      "sourceFile" : "Axe_035.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_036_main.png"
+        }
+      },
+      "sourceFile" : "Axe_036.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Axe_037_background.png",
+          "foreground" : "frames\/Axe_037_foreground.png"
+        }
+      },
+      "sourceFile" : "Axe_037.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_038_main.png"
+        }
+      },
+      "sourceFile" : "Axe_038.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_039_main.png"
+        }
+      },
+      "sourceFile" : "Axe_039.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_040_main.png"
+        }
+      },
+      "sourceFile" : "Axe_040.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_041_main.png"
+        }
+      },
+      "sourceFile" : "Axe_041.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_042_main.png"
+        }
+      },
+      "sourceFile" : "Axe_042.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_043_main.png"
+        }
+      },
+      "sourceFile" : "Axe_043.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_044_main.png"
+        }
+      },
+      "sourceFile" : "Axe_044.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_045_main.png"
+        }
+      },
+      "sourceFile" : "Axe_045.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_046_main.png"
+        }
+      },
+      "sourceFile" : "Axe_046.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_047_main.png"
+        }
+      },
+      "sourceFile" : "Axe_047.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_048_main.png"
+        }
+      },
+      "sourceFile" : "Axe_048.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_049_main.png"
+        }
+      },
+      "sourceFile" : "Axe_049.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_050_main.png"
+        }
+      },
+      "sourceFile" : "Axe_050.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_051_main.png"
+        }
+      },
+      "sourceFile" : "Axe_051.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_052_main.png"
+        }
+      },
+      "sourceFile" : "Axe_052.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Axe_053_main.png"
+        }
+      },
+      "sourceFile" : "Axe_053.png"
+    }
+  ],
+  "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA_3-Axe-Swing",
+  "preservedPalette" : [
+    {
+      "a" : 255,
+      "b" : 152,
+      "g" : 32,
+      "r" : 40
+    },
+    {
+      "a" : 255,
+      "b" : 184,
+      "g" : 80,
+      "r" : 56
+    },
+    {
+      "a" : 255,
+      "b" : 232,
+      "g" : 144,
+      "r" : 88
+    },
+    {
+      "a" : 255,
+      "b" : 48,
+      "g" : 72,
+      "r" : 112
+    },
+    {
+      "a" : 255,
+      "b" : 80,
+      "g" : 128,
+      "r" : 192
+    },
+    {
+      "a" : 255,
+      "b" : 144,
+      "g" : 192,
+      "r" : 240
+    },
+    {
+      "a" : 255,
+      "b" : 208,
+      "g" : 248,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 88,
+      "g" : 160,
+      "r" : 96
+    },
+    {
+      "a" : 255,
+      "b" : 40,
+      "g" : 40,
+      "r" : 40
+    },
+    {
+      "a" : 255,
+      "b" : 248,
+      "g" : 248,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 160,
+      "g" : 120,
+      "r" : 96
+    },
+    {
+      "a" : 255,
+      "b" : 224,
+      "g" : 184,
+      "r" : 160
+    },
+    {
+      "a" : 255,
+      "b" : 232,
+      "g" : 224,
+      "r" : 192
+    },
+    {
+      "a" : 255,
+      "b" : 40,
+      "g" : 88,
+      "r" : 104
+    },
+    {
+      "a" : 255,
+      "b" : 80,
+      "g" : 136,
+      "r" : 160
+    },
+    {
+      "a" : 255,
+      "b" : 120,
+      "g" : 192,
+      "r" : 224
+    }
+  ],
+  "renderSize" : {
+    "height" : 160,
+    "width" : 240
+  },
+  "sourceScript" : "Axe.txt",
+  "spriteSet" : {
+    "author" : "TBA",
+    "displayName" : "Halberdier +Axes",
+    "gender" : "male",
+    "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA",
+    "rawFolder" : "[Custom Halb] Halberdier +Axes [M] by TBA",
+    "tag" : "Custom Halb"
+  },
+  "timelines" : [
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C02"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_048.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.3333333333333333,
+              "sourceFile" : "Axe_049.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_048.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeDodge",
+        "rawModeNumber" : 7
+      },
+      "rawModeNumber" : 7
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.26666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedEquipped",
+        "rawModeNumber" : 11
+      },
+      "rawModeNumber" : 11
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedAttack",
+        "rawModeNumber" : 5
+      },
+      "rawModeNumber" : 5
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.26666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeEquipped",
+        "rawModeNumber" : 9
+      },
+      "rawModeNumber" : 9
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.26666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "standing",
+        "rawModeNumber" : 10
+      },
+      "rawModeNumber" : 10
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C02"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_048.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.3333333333333333,
+              "sourceFile" : "Axe_049.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_048.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedDodge",
+        "rawModeNumber" : 8
+      },
+      "rawModeNumber" : 8
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedCritical",
+        "rawModeNumber" : 6
+      },
+      "rawModeNumber" : 6
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.4166666666666667,
+              "sourceFile" : "Axe_005.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_006.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_007.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C38"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.16666666666666666,
+              "sourceFile" : "Axe_011.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_012.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_013.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C04"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C1A"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C21"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C1A"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_014.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_015.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_016.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_017.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C2B"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_018.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_019.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_020.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_021.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_023.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeAttack",
+        "rawModeNumber" : 1
+      },
+      "rawModeNumber" : 1
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_004.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.4166666666666667,
+              "sourceFile" : "Axe_005.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_006.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_007.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C38"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.16666666666666666,
+              "sourceFile" : "Axe_011.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_012.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_013.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C04"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_050.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_051.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_052.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_053.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C2B"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_018.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_019.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_020.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_021.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_023.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "attackMissed",
+        "rawModeNumber" : 12
+      },
+      "rawModeNumber" : 12
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_024.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_025.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_026.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_027.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C44"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_028.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_029.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5333333333333333,
+              "sourceFile" : "Axe_025.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_025.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_030.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_031.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_032.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C21"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C15"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C51"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.23333333333333334,
+              "sourceFile" : "Axe_033.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_034.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_035.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_036.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C21"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C15"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.23333333333333334,
+              "sourceFile" : "Axe_037.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_036.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_038.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Axe_039.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_040.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_041.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.1,
+              "sourceFile" : "Axe_042.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Axe_043.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.5,
+              "sourceFile" : "Axe_044.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_045.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_046.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Axe_047.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C04"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C08"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C1F"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C15"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_014.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_015.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_016.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_017.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C24"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C2B"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_018.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_019.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_020.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_021.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_022.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Axe_023.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.13333333333333333,
+              "sourceFile" : "Axe_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeCritical",
+        "rawModeNumber" : 3
+      },
+      "rawModeNumber" : 3
+    }
+  ],
+  "variant" : {
+    "name" : "Axe",
+    "qualifier" : "Swing",
+    "rawFolder" : "3. Axe (Swing)",
+    "slot" : 3
+  },
+  "warnings" : [
+
+  ]
+}

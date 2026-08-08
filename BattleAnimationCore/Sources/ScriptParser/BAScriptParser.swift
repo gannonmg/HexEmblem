@@ -60,7 +60,6 @@ public enum BAScriptParser {
             .map { (rawNumber, events) in
                 return BAMode(
                     rawModeNumber: rawNumber,
-                    id: BAModeID(rawModeNumber: rawNumber),
                     title: modeTitlesByID[rawNumber],
                     events: events
                 )
@@ -167,13 +166,13 @@ public enum BAScriptParser {
 
     private static func parseFrameLine(_ line: String) -> BAScript.FrameReference? {
         let partsWithoutComment = splitComment(line).body
-        let parts = partsWithoutComment.split(separator: " ", omittingEmptySubsequences: true)
+        let parts = partsWithoutComment.split(separator: " ", maxSplits: 2, omittingEmptySubsequences: true)
 
         guard parts.count >= 3 else { return nil }
         guard let ticks = Int(parts[0]) else { return nil }
 
         let flags = String(parts[1])
-        let filename = String(parts[2])
+        let filename = String(parts[2]).trimmingCharacters(in: .whitespaces)
 
         guard filename.lowercased().hasSuffix(".png") else { return nil }
 

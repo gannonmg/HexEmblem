@@ -1,0 +1,1322 @@
+{
+  "animations" : [
+    {
+      "frameCount" : 29,
+      "id" : "Crossbow-Cowboy-M-by-MeatofJustice_5-Bow",
+      "modes" : [
+        "meleeEquipped",
+        "standing",
+        "meleeCritical",
+        "rangedEquipped",
+        "meleeAttack",
+        "rangedDodge",
+        "attackMissed",
+        "rangedCritical",
+        "meleeDodge",
+        "rangedAttack"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "MeatofJustice",
+        "displayName" : "Cowboy",
+        "gender" : "male",
+        "id" : "Crossbow-Cowboy-M-by-MeatofJustice",
+        "rawFolder" : "[Crossbow] Cowboy [M] by MeatofJustice",
+        "tag" : "Crossbow"
+      },
+      "variant" : {
+        "name" : "Bow",
+        "rawFolder" : "5. Bow",
+        "slot" : 5
+      }
+    },
+    {
+      "frameCount" : 26,
+      "id" : "Crossbow-Cowboy-M-by-MeatofJustice_5-Bow-Gun",
+      "modes" : [
+        "rangedCritical",
+        "rangedAttack",
+        "meleeAttack",
+        "rangedDodge",
+        "meleeCritical",
+        "standing",
+        "attackMissed",
+        "meleeDodge",
+        "meleeEquipped",
+        "rangedEquipped"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "MeatofJustice",
+        "displayName" : "Cowboy",
+        "gender" : "male",
+        "id" : "Crossbow-Cowboy-M-by-MeatofJustice",
+        "rawFolder" : "[Crossbow] Cowboy [M] by MeatofJustice",
+        "tag" : "Crossbow"
+      },
+      "variant" : {
+        "name" : "Bow",
+        "qualifier" : "Gun",
+        "rawFolder" : "5. Bow (Gun)",
+        "slot" : 5
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "Crossbow-Cowboy-M-by-MeatofJustice_8-Unarmed",
+      "modes" : [
+        "meleeDodge",
+        "rangedCritical",
+        "rangedDodge",
+        "meleeEquipped",
+        "meleeAttack",
+        "rangedAttack",
+        "standing",
+        "rangedEquipped",
+        "attackMissed",
+        "meleeCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "MeatofJustice",
+        "displayName" : "Cowboy",
+        "gender" : "male",
+        "id" : "Crossbow-Cowboy-M-by-MeatofJustice",
+        "rawFolder" : "[Crossbow] Cowboy [M] by MeatofJustice",
+        "tag" : "Crossbow"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 59,
+      "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA_2-Lance",
+      "modes" : [
+        "meleeDodge",
+        "rangedEquipped",
+        "rangedAttack",
+        "meleeEquipped",
+        "standing",
+        "rangedDodge",
+        "rangedCritical",
+        "meleeAttack",
+        "attackMissed",
+        "meleeCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "TBA",
+        "displayName" : "Halberdier +Axes",
+        "gender" : "male",
+        "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA",
+        "rawFolder" : "[Custom Halb] Halberdier +Axes [M] by TBA",
+        "tag" : "Custom Halb"
+      },
+      "variant" : {
+        "name" : "Lance",
+        "rawFolder" : "2. Lance",
+        "slot" : 2
+      }
+    },
+    {
+      "frameCount" : 53,
+      "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA_3-Axe-Stab",
+      "modes" : [
+        "meleeDodge",
+        "rangedEquipped",
+        "rangedAttack",
+        "meleeEquipped",
+        "standing",
+        "rangedDodge",
+        "rangedCritical",
+        "meleeAttack",
+        "attackMissed",
+        "meleeCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "TBA",
+        "displayName" : "Halberdier +Axes",
+        "gender" : "male",
+        "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA",
+        "rawFolder" : "[Custom Halb] Halberdier +Axes [M] by TBA",
+        "tag" : "Custom Halb"
+      },
+      "variant" : {
+        "name" : "Axe",
+        "qualifier" : "Stab",
+        "rawFolder" : "3. Axe (Stab)",
+        "slot" : 3
+      }
+    },
+    {
+      "frameCount" : 53,
+      "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA_3-Axe-Stab-Magic",
+      "modes" : [
+        "meleeDodge",
+        "rangedEquipped",
+        "rangedAttack",
+        "meleeEquipped",
+        "standing",
+        "rangedDodge",
+        "rangedCritical",
+        "meleeAttack",
+        "attackMissed",
+        "meleeCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "TBA",
+        "displayName" : "Halberdier +Axes",
+        "gender" : "male",
+        "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA",
+        "rawFolder" : "[Custom Halb] Halberdier +Axes [M] by TBA",
+        "tag" : "Custom Halb"
+      },
+      "variant" : {
+        "name" : "Axe (Stab)",
+        "qualifier" : "Magic",
+        "rawFolder" : "3. Axe (Stab) (Magic)",
+        "slot" : 3
+      }
+    },
+    {
+      "frameCount" : 54,
+      "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA_3-Axe-Swing",
+      "modes" : [
+        "meleeDodge",
+        "rangedEquipped",
+        "rangedAttack",
+        "meleeEquipped",
+        "standing",
+        "rangedDodge",
+        "rangedCritical",
+        "meleeAttack",
+        "attackMissed",
+        "meleeCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "TBA",
+        "displayName" : "Halberdier +Axes",
+        "gender" : "male",
+        "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA",
+        "rawFolder" : "[Custom Halb] Halberdier +Axes [M] by TBA",
+        "tag" : "Custom Halb"
+      },
+      "variant" : {
+        "name" : "Axe",
+        "qualifier" : "Swing",
+        "rawFolder" : "3. Axe (Swing)",
+        "slot" : 3
+      }
+    },
+    {
+      "frameCount" : 54,
+      "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA_3-Axe-Swing-Magic",
+      "modes" : [
+        "meleeDodge",
+        "rangedEquipped",
+        "rangedAttack",
+        "meleeEquipped",
+        "standing",
+        "rangedDodge",
+        "rangedCritical",
+        "meleeAttack",
+        "attackMissed",
+        "meleeCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "TBA",
+        "displayName" : "Halberdier +Axes",
+        "gender" : "male",
+        "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA",
+        "rawFolder" : "[Custom Halb] Halberdier +Axes [M] by TBA",
+        "tag" : "Custom Halb"
+      },
+      "variant" : {
+        "name" : "Axe (Swing)",
+        "qualifier" : "Magic",
+        "rawFolder" : "3. Axe (Swing) (Magic)",
+        "slot" : 3
+      }
+    },
+    {
+      "frameCount" : 20,
+      "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA_4-Handaxe",
+      "modes" : [
+        "meleeDodge",
+        "rangedEquipped",
+        "rangedAttack",
+        "meleeEquipped",
+        "standing",
+        "rangedDodge",
+        "rangedCritical",
+        "meleeAttack",
+        "attackMissed",
+        "meleeCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "TBA",
+        "displayName" : "Halberdier +Axes",
+        "gender" : "male",
+        "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA",
+        "rawFolder" : "[Custom Halb] Halberdier +Axes [M] by TBA",
+        "tag" : "Custom Halb"
+      },
+      "variant" : {
+        "name" : "Handaxe",
+        "rawFolder" : "4. Handaxe",
+        "slot" : 4
+      }
+    },
+    {
+      "frameCount" : 21,
+      "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA_5-Bow",
+      "modes" : [
+        "attackMissed",
+        "rangedEquipped",
+        "meleeCritical",
+        "meleeEquipped",
+        "rangedDodge",
+        "rangedCritical",
+        "meleeAttack",
+        "rangedAttack",
+        "meleeDodge",
+        "standing"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "TBA",
+        "displayName" : "Halberdier +Axes",
+        "gender" : "male",
+        "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA",
+        "rawFolder" : "[Custom Halb] Halberdier +Axes [M] by TBA",
+        "tag" : "Custom Halb"
+      },
+      "variant" : {
+        "name" : "Bow",
+        "rawFolder" : "5. Bow",
+        "slot" : 5
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA_8-Unarmed",
+      "modes" : [
+        "attackMissed",
+        "rangedEquipped",
+        "meleeCritical",
+        "meleeEquipped",
+        "rangedDodge",
+        "rangedCritical",
+        "meleeAttack",
+        "rangedAttack",
+        "meleeDodge",
+        "standing"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "TBA",
+        "displayName" : "Halberdier +Axes",
+        "gender" : "male",
+        "id" : "Custom-Halb-Halberdier-Axes-M-by-TBA",
+        "rawFolder" : "[Custom Halb] Halberdier +Axes [M] by TBA",
+        "tag" : "Custom Halb"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 59,
+      "id" : "Custom-Halb-Halberdier-Gwendolyn-F-by-UltraFenix_2-Lance",
+      "modes" : [
+        "rangedDodge",
+        "meleeCritical",
+        "meleeAttack",
+        "standing",
+        "rangedCritical",
+        "rangedEquipped",
+        "rangedAttack",
+        "meleeDodge",
+        "meleeEquipped",
+        "attackMissed"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "UltraFenix",
+        "displayName" : "Halberdier Gwendolyn",
+        "gender" : "female",
+        "id" : "Custom-Halb-Halberdier-Gwendolyn-F-by-UltraFenix",
+        "rawFolder" : "[Custom Halb] Halberdier Gwendolyn [F] by UltraFenix",
+        "tag" : "Custom Halb"
+      },
+      "variant" : {
+        "name" : "Lance",
+        "rawFolder" : "2. Lance",
+        "slot" : 2
+      }
+    },
+    {
+      "frameCount" : 53,
+      "id" : "Custom-Halb-Halberdier-Gwendolyn-F-by-UltraFenix_3-Axe-Stab",
+      "modes" : [
+        "rangedDodge",
+        "meleeCritical",
+        "meleeAttack",
+        "standing",
+        "rangedCritical",
+        "rangedEquipped",
+        "rangedAttack",
+        "meleeDodge",
+        "meleeEquipped",
+        "attackMissed"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "UltraFenix",
+        "displayName" : "Halberdier Gwendolyn",
+        "gender" : "female",
+        "id" : "Custom-Halb-Halberdier-Gwendolyn-F-by-UltraFenix",
+        "rawFolder" : "[Custom Halb] Halberdier Gwendolyn [F] by UltraFenix",
+        "tag" : "Custom Halb"
+      },
+      "variant" : {
+        "name" : "Axe",
+        "qualifier" : "Stab",
+        "rawFolder" : "3. Axe (Stab)",
+        "slot" : 3
+      }
+    },
+    {
+      "frameCount" : 54,
+      "id" : "Custom-Halb-Halberdier-Gwendolyn-F-by-UltraFenix_3-Axe-Swing",
+      "modes" : [
+        "rangedDodge",
+        "meleeCritical",
+        "meleeAttack",
+        "standing",
+        "rangedCritical",
+        "rangedEquipped",
+        "rangedAttack",
+        "meleeDodge",
+        "meleeEquipped",
+        "attackMissed"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "UltraFenix",
+        "displayName" : "Halberdier Gwendolyn",
+        "gender" : "female",
+        "id" : "Custom-Halb-Halberdier-Gwendolyn-F-by-UltraFenix",
+        "rawFolder" : "[Custom Halb] Halberdier Gwendolyn [F] by UltraFenix",
+        "tag" : "Custom Halb"
+      },
+      "variant" : {
+        "name" : "Axe",
+        "qualifier" : "Swing",
+        "rawFolder" : "3. Axe (Swing)",
+        "slot" : 3
+      }
+    },
+    {
+      "frameCount" : 20,
+      "id" : "Custom-Halb-Halberdier-Gwendolyn-F-by-UltraFenix_4-Handaxe",
+      "modes" : [
+        "rangedDodge",
+        "meleeCritical",
+        "meleeAttack",
+        "standing",
+        "rangedCritical",
+        "rangedEquipped",
+        "rangedAttack",
+        "meleeDodge",
+        "meleeEquipped",
+        "attackMissed"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "UltraFenix",
+        "displayName" : "Halberdier Gwendolyn",
+        "gender" : "female",
+        "id" : "Custom-Halb-Halberdier-Gwendolyn-F-by-UltraFenix",
+        "rawFolder" : "[Custom Halb] Halberdier Gwendolyn [F] by UltraFenix",
+        "tag" : "Custom Halb"
+      },
+      "variant" : {
+        "name" : "Handaxe",
+        "rawFolder" : "4. Handaxe",
+        "slot" : 4
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "Custom-Halb-Halberdier-Gwendolyn-F-by-UltraFenix_8-Unarmed",
+      "modes" : [
+        "rangedDodge",
+        "meleeCritical",
+        "meleeAttack",
+        "standing",
+        "rangedCritical",
+        "rangedEquipped",
+        "rangedAttack",
+        "meleeDodge",
+        "meleeEquipped",
+        "attackMissed"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "UltraFenix",
+        "displayName" : "Halberdier Gwendolyn",
+        "gender" : "female",
+        "id" : "Custom-Halb-Halberdier-Gwendolyn-F-by-UltraFenix",
+        "rawFolder" : "[Custom Halb] Halberdier Gwendolyn [F] by UltraFenix",
+        "tag" : "Custom Halb"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 52,
+      "id" : "Custom-Lance-Militia-Deserter-F_2-Lance",
+      "modes" : [
+        "meleeEquipped",
+        "rangedCritical",
+        "standing",
+        "rangedEquipped",
+        "rangedDodge",
+        "meleeDodge",
+        "rangedAttack",
+        "meleeCritical",
+        "attackMissed",
+        "meleeAttack"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Militia (Deserter)",
+        "gender" : "female",
+        "id" : "Custom-Lance-Militia-Deserter-F",
+        "rawFolder" : "[Custom Lance] Militia (Deserter) [F]",
+        "tag" : "Custom Lance"
+      },
+      "variant" : {
+        "name" : "Lance",
+        "rawFolder" : "2. Lance",
+        "slot" : 2
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "Custom-Lance-Militia-Deserter-F_8-Unarmed",
+      "modes" : [
+        "rangedEquipped",
+        "attackMissed",
+        "meleeCritical",
+        "rangedDodge",
+        "meleeAttack",
+        "meleeEquipped",
+        "meleeDodge",
+        "standing",
+        "rangedCritical",
+        "rangedAttack"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Militia (Deserter)",
+        "gender" : "female",
+        "id" : "Custom-Lance-Militia-Deserter-F",
+        "rawFolder" : "[Custom Lance] Militia (Deserter) [F]",
+        "tag" : "Custom Lance"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 46,
+      "id" : "Custom-Lance-Militia-Deserter-M-by-Alusq_2-Lance",
+      "modes" : [
+        "meleeCritical",
+        "rangedCritical",
+        "meleeEquipped",
+        "meleeDodge",
+        "meleeAttack",
+        "standing",
+        "rangedEquipped",
+        "attackMissed",
+        "rangedDodge",
+        "rangedAttack"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "Alusq",
+        "displayName" : "Militia (Deserter)",
+        "gender" : "male",
+        "id" : "Custom-Lance-Militia-Deserter-M-by-Alusq",
+        "rawFolder" : "[Custom Lance] Militia (Deserter) [M] by Alusq",
+        "tag" : "Custom Lance"
+      },
+      "variant" : {
+        "name" : "Lance",
+        "rawFolder" : "2. Lance",
+        "slot" : 2
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "Custom-Lance-Militia-Deserter-M-by-Alusq_8-Unarmed",
+      "modes" : [
+        "attackMissed",
+        "rangedCritical",
+        "standing",
+        "rangedAttack",
+        "rangedEquipped",
+        "rangedDodge",
+        "meleeCritical",
+        "meleeAttack",
+        "meleeDodge",
+        "meleeEquipped"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "Alusq",
+        "displayName" : "Militia (Deserter)",
+        "gender" : "male",
+        "id" : "Custom-Lance-Militia-Deserter-M-by-Alusq",
+        "rawFolder" : "[Custom Lance] Militia (Deserter) [M] by Alusq",
+        "tag" : "Custom Lance"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 12,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_1-Knife",
+      "modes" : [
+        "rangedEquipped",
+        "attackMissed",
+        "meleeCritical",
+        "rangedDodge",
+        "meleeAttack",
+        "meleeEquipped",
+        "meleeDodge",
+        "standing",
+        "rangedCritical",
+        "rangedAttack"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "female",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Knife",
+        "rawFolder" : "1. Knife",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 186,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_1-Sword",
+      "modes" : [
+        "meleeDodge",
+        "meleeCritical",
+        "meleeAttack",
+        "rangedAttack",
+        "meleeEquipped",
+        "attackMissed",
+        "rangedDodge",
+        "rangedEquipped",
+        "standing",
+        "rangedCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "female",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "rawFolder" : "1. Sword",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 172,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_1-Sword-v2",
+      "modes" : [
+        "rangedEquipped",
+        "attackMissed",
+        "meleeCritical",
+        "rangedDodge",
+        "meleeAttack",
+        "meleeEquipped",
+        "meleeDodge",
+        "standing",
+        "rangedCritical",
+        "rangedAttack"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "female",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "qualifier" : "v2",
+        "rawFolder" : "1. Sword (v2)",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 188,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_3-Axe",
+      "modes" : [
+        "meleeDodge",
+        "meleeCritical",
+        "meleeAttack",
+        "rangedAttack",
+        "meleeEquipped",
+        "attackMissed",
+        "rangedDodge",
+        "rangedEquipped",
+        "standing",
+        "rangedCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "female",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Axe",
+        "rawFolder" : "3. Axe",
+        "slot" : 3
+      }
+    },
+    {
+      "frameCount" : 65,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_3-Axe-Armads",
+      "modes" : [
+        "rangedEquipped",
+        "attackMissed",
+        "meleeCritical",
+        "rangedDodge",
+        "meleeAttack",
+        "meleeEquipped",
+        "meleeDodge",
+        "standing",
+        "rangedCritical",
+        "rangedAttack"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "female",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Axe",
+        "qualifier" : "Armads",
+        "rawFolder" : "3. Axe (Armads)",
+        "slot" : 3
+      }
+    },
+    {
+      "frameCount" : 180,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_3-Axe-v2",
+      "modes" : [
+        "meleeDodge",
+        "meleeCritical",
+        "meleeAttack",
+        "rangedAttack",
+        "meleeEquipped",
+        "attackMissed",
+        "rangedDodge",
+        "rangedEquipped",
+        "standing",
+        "rangedCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "female",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Axe",
+        "qualifier" : "v2",
+        "rawFolder" : "3. Axe (v2)",
+        "slot" : 3
+      }
+    },
+    {
+      "frameCount" : 11,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_4-Handaxe",
+      "modes" : [
+        "rangedEquipped",
+        "attackMissed",
+        "meleeCritical",
+        "rangedDodge",
+        "meleeAttack",
+        "meleeEquipped",
+        "meleeDodge",
+        "standing",
+        "rangedCritical",
+        "rangedAttack"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "female",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Handaxe",
+        "rawFolder" : "4. Handaxe",
+        "slot" : 4
+      }
+    },
+    {
+      "frameCount" : 13,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_5-Bow",
+      "modes" : [
+        "meleeDodge",
+        "meleeCritical",
+        "meleeAttack",
+        "rangedAttack",
+        "meleeEquipped",
+        "attackMissed",
+        "rangedDodge",
+        "rangedEquipped",
+        "standing",
+        "rangedCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "female",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Bow",
+        "rawFolder" : "5. Bow",
+        "slot" : 5
+      }
+    },
+    {
+      "frameCount" : 8,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_6-Magic",
+      "modes" : [
+        "rangedEquipped",
+        "attackMissed",
+        "meleeCritical",
+        "rangedDodge",
+        "meleeAttack",
+        "meleeEquipped",
+        "meleeDodge",
+        "standing",
+        "rangedCritical",
+        "rangedAttack"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "female",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Magic",
+        "rawFolder" : "6. Magic",
+        "slot" : 6
+      }
+    },
+    {
+      "frameCount" : 5,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_7-Staff",
+      "modes" : [
+        "meleeDodge",
+        "meleeCritical",
+        "meleeAttack",
+        "rangedAttack",
+        "meleeEquipped",
+        "attackMissed",
+        "rangedDodge",
+        "rangedEquipped",
+        "standing",
+        "rangedCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "female",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Staff",
+        "rawFolder" : "7. Staff",
+        "slot" : 7
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_8-Unarmed",
+      "modes" : [
+        "rangedEquipped",
+        "attackMissed",
+        "meleeCritical",
+        "rangedDodge",
+        "meleeAttack",
+        "meleeEquipped",
+        "meleeDodge",
+        "standing",
+        "rangedCritical",
+        "rangedAttack"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "female",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_8-Unarmed-no-shield",
+      "modes" : [
+        "attackMissed",
+        "rangedCritical",
+        "standing",
+        "rangedAttack",
+        "rangedEquipped",
+        "rangedDodge",
+        "meleeCritical",
+        "meleeAttack",
+        "meleeDodge",
+        "meleeEquipped"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "female",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "qualifier" : "no shield",
+        "rawFolder" : "8. Unarmed (no shield)",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 172,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-M-by-tatata_1-Sword",
+      "modes" : [
+        "rangedEquipped",
+        "attackMissed",
+        "meleeCritical",
+        "rangedDodge",
+        "meleeAttack",
+        "meleeEquipped",
+        "meleeDodge",
+        "standing",
+        "rangedCritical",
+        "rangedAttack"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "tatata",
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "male",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-M-by-tatata",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) [M] by tatata",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "rawFolder" : "1. Sword",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 179,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-M-by-tatata_3-Axe",
+      "modes" : [
+        "meleeDodge",
+        "meleeCritical",
+        "meleeAttack",
+        "rangedAttack",
+        "meleeEquipped",
+        "attackMissed",
+        "rangedDodge",
+        "rangedEquipped",
+        "standing",
+        "rangedCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "tatata",
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "male",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-M-by-tatata",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) [M] by tatata",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Axe",
+        "rawFolder" : "3. Axe",
+        "slot" : 3
+      }
+    },
+    {
+      "frameCount" : 11,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-M-by-tatata_4-Handaxe",
+      "modes" : [
+        "rangedEquipped",
+        "attackMissed",
+        "meleeCritical",
+        "rangedDodge",
+        "meleeAttack",
+        "meleeEquipped",
+        "meleeDodge",
+        "standing",
+        "rangedCritical",
+        "rangedAttack"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "tatata",
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "male",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-M-by-tatata",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) [M] by tatata",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Handaxe",
+        "rawFolder" : "4. Handaxe",
+        "slot" : 4
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-M-by-tatata_8-Unarmed",
+      "modes" : [
+        "meleeDodge",
+        "meleeCritical",
+        "meleeAttack",
+        "rangedAttack",
+        "meleeEquipped",
+        "attackMissed",
+        "rangedDodge",
+        "rangedEquipped",
+        "standing",
+        "rangedCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "tatata",
+        "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+        "gender" : "male",
+        "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-M-by-tatata",
+        "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) [M] by tatata",
+        "tag" : "Hero-Reskin"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 40,
+      "id" : "HunterM-Hunter-F-by-MeatOfJustice_5-Bow",
+      "modes" : [
+        "meleeCritical",
+        "rangedCritical",
+        "meleeEquipped",
+        "meleeDodge",
+        "meleeAttack",
+        "standing",
+        "rangedEquipped",
+        "attackMissed",
+        "rangedDodge",
+        "rangedAttack"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "MeatOfJustice",
+        "displayName" : "Hunter",
+        "gender" : "female",
+        "id" : "HunterM-Hunter-F-by-MeatOfJustice",
+        "rawFolder" : "[HunterM] Hunter [F] by MeatOfJustice",
+        "tag" : "HunterM"
+      },
+      "variant" : {
+        "name" : "Bow",
+        "rawFolder" : "5. Bow",
+        "slot" : 5
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "HunterM-Hunter-F-by-MeatOfJustice_8-Unarmed",
+      "modes" : [
+        "meleeEquipped",
+        "rangedEquipped",
+        "rangedCritical",
+        "meleeDodge",
+        "meleeCritical",
+        "rangedAttack",
+        "rangedDodge",
+        "meleeAttack",
+        "standing",
+        "attackMissed"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "MeatOfJustice",
+        "displayName" : "Hunter",
+        "gender" : "female",
+        "id" : "HunterM-Hunter-F-by-MeatOfJustice",
+        "rawFolder" : "[HunterM] Hunter [F] by MeatOfJustice",
+        "tag" : "HunterM"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 40,
+      "id" : "HunterM-Hunter-M-by-MeatOfJustice_5-Bow",
+      "modes" : [
+        "meleeEquipped",
+        "rangedEquipped",
+        "rangedCritical",
+        "meleeDodge",
+        "meleeCritical",
+        "rangedAttack",
+        "rangedDodge",
+        "meleeAttack",
+        "standing",
+        "attackMissed"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "MeatOfJustice",
+        "displayName" : "Hunter",
+        "gender" : "male",
+        "id" : "HunterM-Hunter-M-by-MeatOfJustice",
+        "rawFolder" : "[HunterM] Hunter [M] by MeatOfJustice",
+        "tag" : "HunterM"
+      },
+      "variant" : {
+        "name" : "Bow",
+        "rawFolder" : "5. Bow",
+        "slot" : 5
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "HunterM-Hunter-M-by-MeatOfJustice_8-Unarmed",
+      "modes" : [
+        "rangedAttack",
+        "rangedCritical",
+        "rangedEquipped",
+        "meleeEquipped",
+        "rangedDodge",
+        "meleeAttack",
+        "attackMissed",
+        "standing",
+        "meleeDodge",
+        "meleeCritical"
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "MeatOfJustice",
+        "displayName" : "Hunter",
+        "gender" : "male",
+        "id" : "HunterM-Hunter-M-by-MeatOfJustice",
+        "rawFolder" : "[HunterM] Hunter [M] by MeatOfJustice",
+        "tag" : "HunterM"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    }
+  ],
+  "version" : 1
+}

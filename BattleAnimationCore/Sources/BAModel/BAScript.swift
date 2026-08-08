@@ -37,7 +37,7 @@ public struct BAScript {
         case command(Command)
     }
 
-    public struct Command: Codable, Hashable {
+    public struct Command: Codable, Hashable, Sendable {
         public let code: String
         public let comment: String?
 

@@ -1,0 +1,5125 @@
+{
+  "frameAssets" : [
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_000_main.png"
+        }
+      },
+      "sourceFile" : "Sword_000.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_001_main.png"
+        }
+      },
+      "sourceFile" : "Sword_001.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_002_main.png"
+        }
+      },
+      "sourceFile" : "Sword_002.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_003_main.png"
+        }
+      },
+      "sourceFile" : "Sword_003.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_004_main.png"
+        }
+      },
+      "sourceFile" : "Sword_004.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_005_main.png"
+        }
+      },
+      "sourceFile" : "Sword_005.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_006_main.png"
+        }
+      },
+      "sourceFile" : "Sword_006.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_007_main.png"
+        }
+      },
+      "sourceFile" : "Sword_007.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_008_main.png"
+        }
+      },
+      "sourceFile" : "Sword_008.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_009_main.png"
+        }
+      },
+      "sourceFile" : "Sword_009.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_010_main.png"
+        }
+      },
+      "sourceFile" : "Sword_010.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_011_main.png"
+        }
+      },
+      "sourceFile" : "Sword_011.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_012_main.png"
+        }
+      },
+      "sourceFile" : "Sword_012.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_013_main.png"
+        }
+      },
+      "sourceFile" : "Sword_013.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_014_main.png"
+        }
+      },
+      "sourceFile" : "Sword_014.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_015_main.png"
+        }
+      },
+      "sourceFile" : "Sword_015.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_016_main.png"
+        }
+      },
+      "sourceFile" : "Sword_016.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_017_background.png",
+          "foreground" : "frames\/Sword_017_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_017.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_018_background.png",
+          "foreground" : "frames\/Sword_018_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_018.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_019_background.png",
+          "foreground" : "frames\/Sword_019_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_019.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_020_background.png",
+          "foreground" : "frames\/Sword_020_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_020.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_021_background.png",
+          "foreground" : "frames\/Sword_021_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_021.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_022_background.png",
+          "foreground" : "frames\/Sword_022_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_022.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_023_background.png",
+          "foreground" : "frames\/Sword_023_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_023.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_024_background.png",
+          "foreground" : "frames\/Sword_024_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_024.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_025_background.png",
+          "foreground" : "frames\/Sword_025_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_025.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_026_main.png"
+        }
+      },
+      "sourceFile" : "Sword_026.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_027_main.png"
+        }
+      },
+      "sourceFile" : "Sword_027.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_028_main.png"
+        }
+      },
+      "sourceFile" : "Sword_028.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_029_main.png"
+        }
+      },
+      "sourceFile" : "Sword_029.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_030_main.png"
+        }
+      },
+      "sourceFile" : "Sword_030.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_031_main.png"
+        }
+      },
+      "sourceFile" : "Sword_031.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_032_main.png"
+        }
+      },
+      "sourceFile" : "Sword_032.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_033_main.png"
+        }
+      },
+      "sourceFile" : "Sword_033.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_034_main.png"
+        }
+      },
+      "sourceFile" : "Sword_034.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_035_main.png"
+        }
+      },
+      "sourceFile" : "Sword_035.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_036_main.png"
+        }
+      },
+      "sourceFile" : "Sword_036.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_037_main.png"
+        }
+      },
+      "sourceFile" : "Sword_037.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_038_main.png"
+        }
+      },
+      "sourceFile" : "Sword_038.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_039_main.png"
+        }
+      },
+      "sourceFile" : "Sword_039.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_040_main.png"
+        }
+      },
+      "sourceFile" : "Sword_040.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_041_main.png"
+        }
+      },
+      "sourceFile" : "Sword_041.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_042_main.png"
+        }
+      },
+      "sourceFile" : "Sword_042.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_043_main.png"
+        }
+      },
+      "sourceFile" : "Sword_043.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_044_main.png"
+        }
+      },
+      "sourceFile" : "Sword_044.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_045_main.png"
+        }
+      },
+      "sourceFile" : "Sword_045.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_046_main.png"
+        }
+      },
+      "sourceFile" : "Sword_046.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_047_main.png"
+        }
+      },
+      "sourceFile" : "Sword_047.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_048_main.png"
+        }
+      },
+      "sourceFile" : "Sword_048.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_049_main.png"
+        }
+      },
+      "sourceFile" : "Sword_049.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_050_main.png"
+        }
+      },
+      "sourceFile" : "Sword_050.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_051_main.png"
+        }
+      },
+      "sourceFile" : "Sword_051.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_052_main.png"
+        }
+      },
+      "sourceFile" : "Sword_052.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_053_main.png"
+        }
+      },
+      "sourceFile" : "Sword_053.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_054_main.png"
+        }
+      },
+      "sourceFile" : "Sword_054.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_055_main.png"
+        }
+      },
+      "sourceFile" : "Sword_055.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_056_main.png"
+        }
+      },
+      "sourceFile" : "Sword_056.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_057_main.png"
+        }
+      },
+      "sourceFile" : "Sword_057.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_058_main.png"
+        }
+      },
+      "sourceFile" : "Sword_058.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_059_main.png"
+        }
+      },
+      "sourceFile" : "Sword_059.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_060_main.png"
+        }
+      },
+      "sourceFile" : "Sword_060.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_061_main.png"
+        }
+      },
+      "sourceFile" : "Sword_061.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_062_main.png"
+        }
+      },
+      "sourceFile" : "Sword_062.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_063_main.png"
+        }
+      },
+      "sourceFile" : "Sword_063.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_064_main.png"
+        }
+      },
+      "sourceFile" : "Sword_064.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_065_main.png"
+        }
+      },
+      "sourceFile" : "Sword_065.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_066_main.png"
+        }
+      },
+      "sourceFile" : "Sword_066.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_067_main.png"
+        }
+      },
+      "sourceFile" : "Sword_067.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_068_main.png"
+        }
+      },
+      "sourceFile" : "Sword_068.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_069_main.png"
+        }
+      },
+      "sourceFile" : "Sword_069.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_070_main.png"
+        }
+      },
+      "sourceFile" : "Sword_070.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_071_main.png"
+        }
+      },
+      "sourceFile" : "Sword_071.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_072_main.png"
+        }
+      },
+      "sourceFile" : "Sword_072.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_073_main.png"
+        }
+      },
+      "sourceFile" : "Sword_073.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_074_main.png"
+        }
+      },
+      "sourceFile" : "Sword_074.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_075_main.png"
+        }
+      },
+      "sourceFile" : "Sword_075.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_076_main.png"
+        }
+      },
+      "sourceFile" : "Sword_076.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_077_main.png"
+        }
+      },
+      "sourceFile" : "Sword_077.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_078_main.png"
+        }
+      },
+      "sourceFile" : "Sword_078.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_079_main.png"
+        }
+      },
+      "sourceFile" : "Sword_079.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_080_main.png"
+        }
+      },
+      "sourceFile" : "Sword_080.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_081_main.png"
+        }
+      },
+      "sourceFile" : "Sword_081.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_082_main.png"
+        }
+      },
+      "sourceFile" : "Sword_082.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_083_main.png"
+        }
+      },
+      "sourceFile" : "Sword_083.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_084_main.png"
+        }
+      },
+      "sourceFile" : "Sword_084.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_085_main.png"
+        }
+      },
+      "sourceFile" : "Sword_085.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_086_main.png"
+        }
+      },
+      "sourceFile" : "Sword_086.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_087_main.png"
+        }
+      },
+      "sourceFile" : "Sword_087.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_088_main.png"
+        }
+      },
+      "sourceFile" : "Sword_088.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_089_main.png"
+        }
+      },
+      "sourceFile" : "Sword_089.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_090_main.png"
+        }
+      },
+      "sourceFile" : "Sword_090.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_091_main.png"
+        }
+      },
+      "sourceFile" : "Sword_091.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_092_main.png"
+        }
+      },
+      "sourceFile" : "Sword_092.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_093_main.png"
+        }
+      },
+      "sourceFile" : "Sword_093.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_094_main.png"
+        }
+      },
+      "sourceFile" : "Sword_094.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_095_main.png"
+        }
+      },
+      "sourceFile" : "Sword_095.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_096_main.png"
+        }
+      },
+      "sourceFile" : "Sword_096.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_097_main.png"
+        }
+      },
+      "sourceFile" : "Sword_097.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_098_main.png"
+        }
+      },
+      "sourceFile" : "Sword_098.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_099_main.png"
+        }
+      },
+      "sourceFile" : "Sword_099.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_100_main.png"
+        }
+      },
+      "sourceFile" : "Sword_100.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_101_main.png"
+        }
+      },
+      "sourceFile" : "Sword_101.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_102_main.png"
+        }
+      },
+      "sourceFile" : "Sword_102.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_103_main.png"
+        }
+      },
+      "sourceFile" : "Sword_103.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_104_main.png"
+        }
+      },
+      "sourceFile" : "Sword_104.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_105_main.png"
+        }
+      },
+      "sourceFile" : "Sword_105.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_106_main.png"
+        }
+      },
+      "sourceFile" : "Sword_106.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_107_main.png"
+        }
+      },
+      "sourceFile" : "Sword_107.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_108_main.png"
+        }
+      },
+      "sourceFile" : "Sword_108.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_109_main.png"
+        }
+      },
+      "sourceFile" : "Sword_109.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_110_main.png"
+        }
+      },
+      "sourceFile" : "Sword_110.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_111_main.png"
+        }
+      },
+      "sourceFile" : "Sword_111.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_112_main.png"
+        }
+      },
+      "sourceFile" : "Sword_112.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_113_main.png"
+        }
+      },
+      "sourceFile" : "Sword_113.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_114_main.png"
+        }
+      },
+      "sourceFile" : "Sword_114.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_115_main.png"
+        }
+      },
+      "sourceFile" : "Sword_115.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_116_main.png"
+        }
+      },
+      "sourceFile" : "Sword_116.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_117_main.png"
+        }
+      },
+      "sourceFile" : "Sword_117.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_118_main.png"
+        }
+      },
+      "sourceFile" : "Sword_118.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_119_main.png"
+        }
+      },
+      "sourceFile" : "Sword_119.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_120_main.png"
+        }
+      },
+      "sourceFile" : "Sword_120.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_121_main.png"
+        }
+      },
+      "sourceFile" : "Sword_121.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_122_main.png"
+        }
+      },
+      "sourceFile" : "Sword_122.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_123_main.png"
+        }
+      },
+      "sourceFile" : "Sword_123.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_124_main.png"
+        }
+      },
+      "sourceFile" : "Sword_124.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_125_main.png"
+        }
+      },
+      "sourceFile" : "Sword_125.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_126_main.png"
+        }
+      },
+      "sourceFile" : "Sword_126.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_127_main.png"
+        }
+      },
+      "sourceFile" : "Sword_127.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_128_background.png",
+          "foreground" : "frames\/Sword_128_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_128.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_129_background.png",
+          "foreground" : "frames\/Sword_129_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_129.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_130_background.png",
+          "foreground" : "frames\/Sword_130_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_130.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_131_background.png",
+          "foreground" : "frames\/Sword_131_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_131.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_132_background.png",
+          "foreground" : "frames\/Sword_132_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_132.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_133_background.png",
+          "foreground" : "frames\/Sword_133_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_133.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_134_background.png",
+          "foreground" : "frames\/Sword_134_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_134.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_135_background.png",
+          "foreground" : "frames\/Sword_135_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_135.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_136_background.png",
+          "foreground" : "frames\/Sword_136_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_136.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_137_background.png",
+          "foreground" : "frames\/Sword_137_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_137.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_138_background.png",
+          "foreground" : "frames\/Sword_138_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_138.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_139_background.png",
+          "foreground" : "frames\/Sword_139_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_139.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_140_background.png",
+          "foreground" : "frames\/Sword_140_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_140.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_141_background.png",
+          "foreground" : "frames\/Sword_141_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_141.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_142_background.png",
+          "foreground" : "frames\/Sword_142_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_142.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_143_background.png",
+          "foreground" : "frames\/Sword_143_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_143.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_144_background.png",
+          "foreground" : "frames\/Sword_144_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_144.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_145_background.png",
+          "foreground" : "frames\/Sword_145_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_145.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_146_background.png",
+          "foreground" : "frames\/Sword_146_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_146.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_147_background.png",
+          "foreground" : "frames\/Sword_147_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_147.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_148_background.png",
+          "foreground" : "frames\/Sword_148_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_148.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_149_background.png",
+          "foreground" : "frames\/Sword_149_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_149.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_150_background.png",
+          "foreground" : "frames\/Sword_150_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_150.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_151_background.png",
+          "foreground" : "frames\/Sword_151_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_151.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_152_background.png",
+          "foreground" : "frames\/Sword_152_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_152.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_153_background.png",
+          "foreground" : "frames\/Sword_153_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_153.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_154_background.png",
+          "foreground" : "frames\/Sword_154_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_154.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_155_background.png",
+          "foreground" : "frames\/Sword_155_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_155.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_156_background.png",
+          "foreground" : "frames\/Sword_156_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_156.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_157_background.png",
+          "foreground" : "frames\/Sword_157_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_157.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_158_background.png",
+          "foreground" : "frames\/Sword_158_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_158.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_159_background.png",
+          "foreground" : "frames\/Sword_159_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_159.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_160_background.png",
+          "foreground" : "frames\/Sword_160_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_160.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_161_background.png",
+          "foreground" : "frames\/Sword_161_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_161.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_162_background.png",
+          "foreground" : "frames\/Sword_162_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_162.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_163_background.png",
+          "foreground" : "frames\/Sword_163_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_163.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_164_background.png",
+          "foreground" : "frames\/Sword_164_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_164.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_165_background.png",
+          "foreground" : "frames\/Sword_165_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_165.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_166_background.png",
+          "foreground" : "frames\/Sword_166_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_166.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_167_background.png",
+          "foreground" : "frames\/Sword_167_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_167.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_168_background.png",
+          "foreground" : "frames\/Sword_168_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_168.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_169_background.png",
+          "foreground" : "frames\/Sword_169_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_169.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_170_background.png",
+          "foreground" : "frames\/Sword_170_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_170.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_171_background.png",
+          "foreground" : "frames\/Sword_171_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_171.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_172_background.png",
+          "foreground" : "frames\/Sword_172_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_172.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_173_background.png",
+          "foreground" : "frames\/Sword_173_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_173.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_174_background.png",
+          "foreground" : "frames\/Sword_174_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_174.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_175_background.png",
+          "foreground" : "frames\/Sword_175_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_175.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_176_background.png",
+          "foreground" : "frames\/Sword_176_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_176.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_177_background.png",
+          "foreground" : "frames\/Sword_177_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_177.png"
+    },
+    {
+      "layerType" : {
+        "piercing" : {
+          "background" : "frames\/Sword_178_background.png",
+          "foreground" : "frames\/Sword_178_foreground.png"
+        }
+      },
+      "sourceFile" : "Sword_178.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_179_main.png"
+        }
+      },
+      "sourceFile" : "Sword_179.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_180_main.png"
+        }
+      },
+      "sourceFile" : "Sword_180.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_181_main.png"
+        }
+      },
+      "sourceFile" : "Sword_181.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_182_main.png"
+        }
+      },
+      "sourceFile" : "Sword_182.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_183_main.png"
+        }
+      },
+      "sourceFile" : "Sword_183.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_184_main.png"
+        }
+      },
+      "sourceFile" : "Sword_184.png"
+    },
+    {
+      "layerType" : {
+        "main" : {
+          "path" : "frames\/Sword_185_main.png"
+        }
+      },
+      "sourceFile" : "Sword_185.png"
+    }
+  ],
+  "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F_1-Sword",
+  "preservedPalette" : [
+    {
+      "a" : 255,
+      "b" : 0,
+      "g" : 88,
+      "r" : 64
+    },
+    {
+      "a" : 255,
+      "b" : 8,
+      "g" : 120,
+      "r" : 88
+    },
+    {
+      "a" : 255,
+      "b" : 96,
+      "g" : 208,
+      "r" : 96
+    },
+    {
+      "a" : 255,
+      "b" : 72,
+      "g" : 96,
+      "r" : 136
+    },
+    {
+      "a" : 255,
+      "b" : 144,
+      "g" : 192,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 208,
+      "g" : 248,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 248,
+      "g" : 248,
+      "r" : 248
+    },
+    {
+      "a" : 255,
+      "b" : 160,
+      "g" : 208,
+      "r" : 168
+    },
+    {
+      "a" : 255,
+      "b" : 40,
+      "g" : 40,
+      "r" : 40
+    },
+    {
+      "a" : 255,
+      "b" : 88,
+      "g" : 136,
+      "r" : 184
+    },
+    {
+      "a" : 255,
+      "b" : 216,
+      "g" : 88,
+      "r" : 40
+    },
+    {
+      "a" : 255,
+      "b" : 248,
+      "g" : 184,
+      "r" : 64
+    },
+    {
+      "a" : 255,
+      "b" : 248,
+      "g" : 248,
+      "r" : 128
+    },
+    {
+      "a" : 255,
+      "b" : 176,
+      "g" : 144,
+      "r" : 112
+    },
+    {
+      "a" : 255,
+      "b" : 216,
+      "g" : 184,
+      "r" : 152
+    },
+    {
+      "a" : 255,
+      "b" : 232,
+      "g" : 224,
+      "r" : 192
+    }
+  ],
+  "renderSize" : {
+    "height" : 160,
+    "width" : 240
+  },
+  "sourceScript" : "Sword.txt",
+  "spriteSet" : {
+    "displayName" : "FE6 Armor +Basic Shield (Vanilla palette fix)",
+    "gender" : "female",
+    "id" : "Hero-Reskin-FE6-Armor-Basic-Shield-Vanilla-palette-fix-F",
+    "rawFolder" : "[Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) (F)",
+    "tag" : "Hero-Reskin"
+  },
+  "timelines" : [
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C02",
+              "comment" : "回避モーションの始め"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E",
+              "comment" : "回避フレームの開始。棒立ちフレームの後にこのコマンドを入れてください。"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_182.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_183.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_182.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeDodge",
+        "rawModeNumber" : 7
+      },
+      "rawModeNumber" : 7,
+      "title" : "被至近攻撃回避時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_068.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_069.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_070.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_071.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_072.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_073.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_074.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_075.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_076.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_077.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_078.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_079.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_080.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_081.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_082.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_083.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_084.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_085.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C42",
+              "comment" : "斧を振り回す短い音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_086.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_087.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_088.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_089.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_090.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_091.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_092.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_093.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_094.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_095.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_096.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_097.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_098.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_099.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34",
+              "comment" : "足音の再生"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C15",
+              "comment" : "画面揺れる　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_100.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_101.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_102.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_103.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_104.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_105.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_106.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_107.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_108.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_109.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_110.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_111.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_112.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_113.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_114.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_115.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_116.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_117.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_118.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_119.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_120.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_121.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_122.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_123.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_124.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_125.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_126.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23",
+              "comment" : "剣を振る音　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_127.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C04",
+              "comment" : "攻撃が命中した時に、HPを減らす準備をする。命中後に立ちモーションへ戻す必要あり。"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C1F",
+              "comment" : "クリティカルの効果音 ずどーん"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C08",
+              "comment" : "クリティカルヒット"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C23",
+              "comment" : "剣を振る音　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_128.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_129.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_130.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_131.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_132.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_133.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_134.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_128.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_129.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_130.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_131.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_132.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_133.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_134.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_128.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_129.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_130.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_131.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_132.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_133.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_134.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_128.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_129.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_130.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_131.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_132.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_133.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_134.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_128.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_129.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_130.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_131.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_132.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_133.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_134.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_128.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_129.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_130.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_131.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_132.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_133.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_134.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_135.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_136.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_137.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_138.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_139.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_140.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_141.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_142.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_143.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_144.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_145.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_146.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C43",
+              "comment" : "辺を鞘に入れる音　カチ"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_147.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_148.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_149.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_150.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_151.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_152.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_153.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_154.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_155.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_156.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_157.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_158.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_159.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_160.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_161.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_162.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_163.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_164.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_165.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_166.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_167.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_168.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_169.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_170.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_171.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_172.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_173.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_174.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_175.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_176.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_177.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_178.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_024.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Sword_025.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C15",
+              "comment" : "画面揺れる　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_026.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_027.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_028.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_029.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_030.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_031.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_032.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_033.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_034.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_035.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_036.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_037.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C37",
+              "comment" : "剣を鞘に入れる音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Sword_038.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_039.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_040.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_041.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_042.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_043.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_044.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_045.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_046.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_047.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_048.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_049.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_050.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_051.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_052.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_053.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_054.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_055.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_056.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_057.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_058.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_059.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_060.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34",
+              "comment" : "足音の再生"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C15",
+              "comment" : "画面揺れる　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.08333333333333333,
+              "sourceFile" : "Sword_061.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_062.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_063.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_064.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_065.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_065.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_066.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_067.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeCritical",
+        "rawModeNumber" : 3
+      },
+      "rawModeNumber" : 3,
+      "title" : "至近攻撃必殺時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_004.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C36",
+              "comment" : "リンロードの剣を抜く音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_005.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.08333333333333333,
+              "sourceFile" : "Sword_006.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_007.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Sword_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_011.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_012.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_013.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_014.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_015.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C22",
+              "comment" : "リンロードの剣を振る音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_016.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C04",
+              "comment" : "攻撃が命中した時に、HPを減らす準備をする。命中後に立ちモーションへ戻す必要あり。"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C20",
+              "comment" : "クリティカルの効果音 ずどーん"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C1A",
+              "comment" : "ノーマルヒットのエフェクト"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_017.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_018.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_019.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_020.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_021.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_022.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_023.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_024.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Sword_025.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_026.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C15",
+              "comment" : "画面揺れる　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_027.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_028.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_029.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_030.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_031.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_032.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_033.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_034.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_035.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_036.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_037.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C37",
+              "comment" : "剣を鞘に入れる音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Sword_038.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_039.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_040.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_041.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_042.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_043.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_044.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_045.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_046.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_047.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_048.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_049.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_050.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_051.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_052.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_053.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_054.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_055.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_056.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_057.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_058.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_059.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_060.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34",
+              "comment" : "足音の再生"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C15",
+              "comment" : "画面揺れる　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.08333333333333333,
+              "sourceFile" : "Sword_061.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_062.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_063.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_064.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_065.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_065.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_066.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_067.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeAttack",
+        "rawModeNumber" : 1
+      },
+      "rawModeNumber" : 1,
+      "title" : "至近攻撃のヒット時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C36",
+              "comment" : "リンロードの剣を抜く音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_179.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05",
+              "comment" : "魔法の呼び出し"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_180.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_179.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedAttack",
+        "rawModeNumber" : 5
+      },
+      "rawModeNumber" : 5,
+      "title" : "間接攻撃時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "meleeEquipped",
+        "rawModeNumber" : 9
+      },
+      "rawModeNumber" : 9,
+      "title" : "至近時棒立ちモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_000.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_001.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_002.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_003.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_004.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C36",
+              "comment" : "リンロードの剣を抜く音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_005.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.08333333333333333,
+              "sourceFile" : "Sword_006.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_007.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Sword_008.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_009.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_010.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_011.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_012.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_013.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_014.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_015.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C22",
+              "comment" : "リンロードの剣を振る音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_016.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C04",
+              "comment" : "攻撃が命中した時に、HPを減らす準備をする。命中後に立ちモーションへ戻す必要あり。"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_184.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_185.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_026.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C15",
+              "comment" : "画面揺れる　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_027.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_028.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_029.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_030.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_031.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_032.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_033.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_034.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_035.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_036.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_037.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C37",
+              "comment" : "剣を鞘に入れる音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.06666666666666667,
+              "sourceFile" : "Sword_038.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_039.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_040.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_041.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_042.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_043.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_044.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_045.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_046.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_047.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_048.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_049.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_050.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_051.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_052.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_053.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_054.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_055.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_056.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_057.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_058.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_059.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_060.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C34",
+              "comment" : "足音の再生"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C15",
+              "comment" : "画面揺れる　小さい"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.08333333333333333,
+              "sourceFile" : "Sword_061.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_062.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_063.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_064.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_065.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_065.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_066.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_067.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "attackMissed",
+        "rawModeNumber" : 12
+      },
+      "rawModeNumber" : 12,
+      "title" : "攻撃ミス時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C02",
+              "comment" : "回避モーションの始め"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0E",
+              "comment" : "回避フレームの開始。棒立ちフレームの後にこのコマンドを入れてください。"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_182.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_183.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_182.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedDodge",
+        "rawModeNumber" : 8
+      },
+      "rawModeNumber" : 8,
+      "title" : "被間接攻撃回避時のモーション"
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedEquipped",
+        "rawModeNumber" : 11
+      },
+      "rawModeNumber" : 11,
+      "title" : "間接時棒立ちモーション"
+    },
+    {
+      "events" : [
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "standing",
+        "rawModeNumber" : 10
+      },
+      "rawModeNumber" : 10,
+      "title" : "棒立ちモーション"
+    },
+    {
+      "events" : [
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C03",
+              "comment" : "攻撃モーション開始 この後に07が来る"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C07",
+              "comment" : "攻撃モーション開始 この前に03が来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_000.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C36",
+              "comment" : "リンロードの剣を抜く音"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_179.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_180.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_181.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_180.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_181.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_180.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_181.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_180.png"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.03333333333333333,
+              "sourceFile" : "Sword_181.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C05",
+              "comment" : "魔法の呼び出し"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.016666666666666666,
+              "sourceFile" : "Sword_180.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C01",
+              "comment" : "NOP"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C06",
+              "comment" : "攻撃アニメ終了 後に0Dが来る"
+            }
+          }
+        },
+        {
+          "frame" : {
+            "_0" : {
+              "duration" : 0.05,
+              "sourceFile" : "Sword_179.png"
+            }
+          }
+        },
+        {
+          "command" : {
+            "_0" : {
+              "code" : "C0D",
+              "comment" : "攻撃アニメ終了 前に06が来る"
+            }
+          }
+        }
+      ],
+      "modeID" : {
+        "kind" : "rangedCritical",
+        "rawModeNumber" : 6
+      },
+      "rawModeNumber" : 6,
+      "title" : "間接攻撃必殺時のモーション"
+    }
+  ],
+  "variant" : {
+    "name" : "Sword",
+    "rawFolder" : "1. Sword",
+    "slot" : 1
+  },
+  "warnings" : [
+
+  ]
+}
