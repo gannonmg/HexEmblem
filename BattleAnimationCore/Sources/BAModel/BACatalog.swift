@@ -20,7 +20,7 @@ public struct BACatalog: Codable, Sendable {
         public let id: String
         public let spriteSet: BASpriteSet
         public let variant: BAVariant
-        public let modes: [BAModeID.Kind]
+        public let modes: [BAModeID]
         public let frameCount: Int
         public let renderSize: FrameSize
 
@@ -28,7 +28,7 @@ public struct BACatalog: Codable, Sendable {
             id: String,
             spriteSet: BASpriteSet,
             variant: BAVariant,
-            modes: [BAModeID.Kind],
+            modes: [BAModeID],
             frameCount: Int,
             renderSize: FrameSize
         ) {
@@ -49,8 +49,8 @@ extension BACatalog {
 
     public func entry(
         spriteSetID: String,
-        slot: BAWeaponID,
-        qualifier: String? = nil
+        slot: BAWeaponSlot,
+        qualifier: BAVariant.Qualifier? = nil
     ) -> Entry? {
         let candidates = entries(spriteSetID: spriteSetID)
             .filter { $0.variant.slot == slot }
@@ -67,7 +67,7 @@ extension BACatalog {
 }
 
 extension BACatalog.Entry {
-    public func contains(_ kind: BAModeID.Kind) -> Bool {
-        modes.contains(kind)
+    public func contains(_ mode: BAModeID) -> Bool {
+        modes.contains(mode)
     }
 }

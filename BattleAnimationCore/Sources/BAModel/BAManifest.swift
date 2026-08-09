@@ -86,7 +86,6 @@ extension BAManifest {
 extension BAManifest {
     public struct Timeline: Codable, Sendable {
         public let modeID: BAModeID
-        public let rawModeNumber: Int
         public let title: String?
         public let events: [Event]
 
@@ -95,9 +94,12 @@ extension BAManifest {
             case command(BAScript.Command)
         }
 
-        public init(modeID: BAModeID, rawModeNumber: Int, title: String?, events: [Event]) {
+        public init(
+            modeID: BAModeID,
+            title: String?,
+            events: [Event]
+        ) {
             self.modeID = modeID
-            self.rawModeNumber = rawModeNumber
             self.title = title
             self.events = events
         }

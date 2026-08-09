@@ -10,6 +10,8 @@ import Foundation
 public final class CharacterUnit {
 
     public let characterID: CharacterID
+    /// Temporary value until we've decided how class, weapon, palettes, etc influence our decisions for animation selection
+    public let animationID: AnimationID
 
     // MARK: Stats
     public let baseStatBlock: CharacterStatBlock
@@ -17,8 +19,8 @@ public final class CharacterUnit {
     public private(set) lazy var currentHealth: Int = { effectiveStats.maxHp }()
 
     // MARK: Equipment
-    public var weapon: Weapon { .fists }
-    public var armor: Armor { .unarmored }
+    public var weapon: Weapon { _weapon ?? .fists }
+    public var armor: Armor { _armor ?? .unarmored }
 
     private var _weapon: Weapon?
     private var _armor: Armor?
@@ -26,11 +28,13 @@ public final class CharacterUnit {
     // MARK: - Init
     public init(
         characterID: CharacterID = CharacterID(),
+        animationID: AnimationID,
         baseStatBlock: CharacterStatBlock,
         weapon: Weapon? = nil,
         armor: Armor? = nil
     ) {
         self.characterID = characterID
+        self.animationID = animationID
         self.baseStatBlock = baseStatBlock
         self._weapon = weapon
         self._armor = armor
@@ -111,6 +115,7 @@ public final class CharacterUnit {
 extension CharacterUnit {
     @MainActor
     public static let gwendolyn = CharacterUnit(
+        animationID: .halberdierGwendolynFemale,
         baseStatBlock: .init(
             maxHp: 23,
             strength: 8,
@@ -121,12 +126,13 @@ extension CharacterUnit {
             dexterity: 4,
             luck: 6
         ),
-        weapon: .sword,
+        weapon: .lance,
         armor: .plate
     )
 
     @MainActor
     public static let badGuy = CharacterUnit(
+        animationID: .armorKnightMale,
         baseStatBlock: .init(
             maxHp: 27,
             strength: 6,
@@ -143,6 +149,7 @@ extension CharacterUnit {
 
     @MainActor
     public static let hunter = CharacterUnit(
+        animationID: .hunterFemale,
         baseStatBlock: .init(
             maxHp: 18,
             strength: 4,

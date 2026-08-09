@@ -29,7 +29,7 @@ public struct BAMode: Codable, Hashable {
     }
 
     public init(rawModeNumber: Int, title: String?, events: [BAScript.Event]) {
-        self.modeID = BAModeID(rawModeNumber: rawModeNumber)
+        self.modeID = BAModeID(rawValue: rawModeNumber)
         self.title = title
         self.events = events
     }

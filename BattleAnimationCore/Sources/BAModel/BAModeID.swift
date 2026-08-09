@@ -7,47 +7,68 @@
 
 import Foundation
 
-public struct BAModeID: Codable, Hashable, Sendable {
-    public let rawModeNumber: Int
-    public let kind: Kind
+public enum BAModeID: Codable, Hashable, Sendable {
+    case meleeAttack, meleeCritical
+    case rangedAttack, rangedCritical
+    case meleeDodge, rangedDodge
+    case meleeEquipped, standing, rangedEquipped
+    case attackMissed
+    case engineGenerated(Int)
+    case unknown(Int)
+}
 
-    public enum Kind: String, Codable, Hashable, Sendable {
-        case meleeAttack, meleeCritical
-        case rangedAttack, rangedCritical
-        case meleeDodge, rangedDodge
-        case meleeEquipped, standing, rangedEquipped
-        case attackMissed
-        case engineGenerated
-        case unknown
+extension BAModeID: RawRepresentable {
+    public init(rawValue: Int) {
+        self = switch rawValue {
+        case Self.meleeAttack.rawValue: .meleeAttack
+        case Self.meleeCritical.rawValue: .meleeCritical
+        case Self.rangedAttack.rawValue: .rangedAttack
+        case Self.rangedCritical.rawValue: .rangedCritical
+        case Self.meleeDodge.rawValue: .meleeDodge
+        case Self.rangedDodge.rawValue: .rangedDodge
+        case Self.meleeEquipped.rawValue: .meleeEquipped
+        case Self.standing.rawValue: .standing
+        case Self.rangedEquipped.rawValue: .rangedEquipped
+        case Self.attackMissed.rawValue: .attackMissed
+        case 2, 4: .engineGenerated(rawValue)
+        default: .unknown(rawValue)
+        }
     }
 
-    public init(rawModeNumber: Int) {
-        self.rawModeNumber = rawModeNumber
-        self.kind = switch rawModeNumber {
-        case 1: .meleeAttack
-        case 2, 4: .engineGenerated
-        case 3: .meleeCritical
-        case 5: .rangedAttack
-        case 6: .rangedCritical
-        case 7: .meleeDodge
-        case 8: .rangedDodge
-        case 9: .meleeEquipped
-        case 10: .standing
-        case 11: .rangedEquipped
-        case 12: .attackMissed
-        default: .unknown
+    public var rawValue: Int {
+        switch self {
+        case .meleeAttack: 1
+        case .meleeCritical: 3
+        case .rangedAttack: 5
+        case .rangedCritical: 6
+        case .meleeDodge: 7
+        case .rangedDodge: 8
+        case .meleeEquipped: 9
+        case .standing: 10
+        case .rangedEquipped: 11
+        case .attackMissed: 12
+        case .engineGenerated(let value), .unknown(let value): value
         }
     }
 }
 
-// MARK: - Mode fallbacks
-extension BAModeID.Kind {
+extension BAModeID {
+    public var isKnown: Bool {
+        switch self {
+        case .unknown: false
+        default: true
+        }
+    }
 
+    public var isUnknown: Bool { !isKnown }
+}
+
+extension BAModeID {
     /// Modes to substitute, in preference order, when an animation has no timeline for this mode.
     ///
     /// Resolution is done against a ``BACatalog/Entry``'s known modes before playback starts,
     /// so a missing mode is a lookup miss rather than a runtime failure.
-    public var fallbacks: [BAModeID.Kind] {
+    public var fallbacks: [BAModeID] {
         switch self {
         case .meleeAttack: []
         case .meleeCritical: [.meleeAttack]

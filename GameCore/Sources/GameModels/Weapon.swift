@@ -9,6 +9,7 @@ import Foundation
 
 public struct Weapon: Sendable {
     public let name: String
+    public let kind: Kind
     public let damage: [WeaponDamage]
     /// Effects on the character - stat boosts, crit rate/avoid, damage resistance, etc
     public let effects: [CharacterEffect]
@@ -16,12 +17,14 @@ public struct Weapon: Sendable {
 
     init(
         name: String,
+        kind: Kind,
         primaryDamage: WeaponDamage,
         damageRiders: [WeaponDamage] = [],
         effects: [CharacterEffect],
         range: WeaponRange
     ) {
         self.name = name
+        self.kind = kind
         self.damage = [primaryDamage] + damageRiders
         self.effects = effects
         self.range = range
@@ -38,10 +41,23 @@ extension WeaponDamage {
     }
 }
 
+extension Weapon {
+    public enum Kind: Sendable {
+        case sword
+        case lance
+        case axe
+        case bow
+        case magic
+        case staff
+        case unarmed
+    }
+}
+
 // MARK: - Basic Weapons
 extension Weapon {
     public static let fists = Weapon(
         name: "Fists",
+        kind: .unarmed,
         primaryDamage: .physicalDamage(power: 10, type: .bludgeoning),
         effects: [
             .toHitBonus(percent: 20),
@@ -51,6 +67,7 @@ extension Weapon {
 
     public static let sword = Weapon(
         name: "Sword",
+        kind: .sword,
         primaryDamage: .physicalDamage(power: 10, type: .slashing),
         effects: [
             .statBoost(.dexterity, amount: 1),
@@ -61,8 +78,34 @@ extension Weapon {
         range: .melee
     )
 
+    public static let lance = Weapon(
+        name: "Lance",
+        kind: .lance,
+        primaryDamage: .physicalDamage(power: 8, type: .piercing),
+        effects: [
+            .statBoost(.dexterity, amount: 1),
+            .toHitBonus(percent: 20),
+            .equipmentWeight(weight: 2),
+        ],
+        range: .melee
+    )
+
+    public static let magicAxe = Weapon(
+        name: "Magic Axe",
+        kind: .axe,
+        primaryDamage: .physicalDamage(power: 8, type: .piercing),
+        damageRiders: [.magicalDamage(power: 2, type: .fire)],
+        effects: [
+            .statBoost(.dexterity, amount: 1),
+            .toHitBonus(percent: 20),
+            .equipmentWeight(weight: 2),
+        ],
+        range: .melee
+    )
+
     public static let dagger = Weapon(
         name: "Dagger",
+        kind: .sword,
         primaryDamage: .physicalDamage(power: 4, type: .piercing),
         effects: [
             .statBoost(.dexterity, amount: 2),
@@ -75,6 +118,7 @@ extension Weapon {
 
     public static let bow = Weapon(
         name: "Bow",
+        kind: .bow,
         primaryDamage: .physicalDamage(power: 8, baseStat: .dexterity, type: .piercing),
         effects: [
             .toHitBonus(percent: 5),
@@ -86,6 +130,7 @@ extension Weapon {
 
     public static let lightningBolt = Weapon(
         name: "Lightning Bolt",
+        kind: .magic,
         primaryDamage: .magicalDamage(power: 15, type: .lightning),
         effects: [
             .toHitBonus(percent: -5),
@@ -97,6 +142,7 @@ extension Weapon {
 
     public static let fireStaff = Weapon(
         name: "Fire Staff",
+        kind: .magic,
         primaryDamage: .magicalDamage(power: 20, type: .fire),
         effects: [
             .statBoost(.intelligence, amount: 2),

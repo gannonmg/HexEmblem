@@ -116,7 +116,7 @@ struct BAImportTool {
 
         switch outcome.result {
         case .success(let manifest):
-            let slot = outcome.plan.variant.slot.map { "\($0.weaponIDKind)" } ?? "unslotted"
+            let slot = outcome.plan.variant.slot.map { "\($0)" } ?? "unslotted"
             print("\(counter) ✓ \(manifest.id)  [\(slot)]  \(manifest.frameAssets.count) frames, \(manifest.timelines.count) modes")
 
             for warning in manifest.warnings {
@@ -203,7 +203,7 @@ struct BAImportTool {
                         id: manifest.id,
                         spriteSet: manifest.spriteSet,
                         variant: manifest.variant,
-                        modes: manifest.timelines.map(\.modeID.kind),
+                        modes: manifest.timelines.map(\.modeID),
                         frameCount: manifest.frameAssets.count,
                         renderSize: manifest.renderSize
                     )

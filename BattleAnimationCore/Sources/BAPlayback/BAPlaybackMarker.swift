@@ -8,29 +8,9 @@
 import BAModel
 import Foundation
 
-public enum BAPlaybackEvent {
+public enum BAPlaybackEvent: Equatable {
     case frame(BAPlaybackFrame)
     case marker(BAPlaybackEvent.Marker)
-
-    // TODO: Namespace marker and frame into event
-    public struct Marker {
-        public let code: String
-        public let kind: Kind
-
-        public enum Kind: Sendable {
-            case impact
-            case castSpell
-            case armHPDepletion
-            case waitForHPDepletion
-            case beginOpponentTurn
-            case startAttack
-            case startDodge
-            case endDodge
-            case playSound   // SFE-glossed codes → drives audio engine
-            case screenEffect // vibration/flash/particle-glossed codes → drives visual layer
-            case unrecognized // no reliable gloss (C17, C53–55, C64, C71, C72, CC0, CDC, etc.)}
-        }
-    }
 }
 
 extension [BAPlaybackEvent] {
@@ -44,24 +24,34 @@ extension [BAPlaybackEvent] {
         firstIndex(of: .impact) ?? firstIndex(of: .castSpell)
     }
 
-    private func firstIndex(of kind: BAPlaybackEvent.Marker.Kind) -> Int? {
+    private func firstIndex(of wantedMarker: BAPlaybackEvent.Marker) -> Int? {
         firstIndex {
             guard case .marker(let marker) = $0 else { return false }
-            return marker.kind == kind
+            return wantedMarker == marker
         }
     }
 }
 
-// MARK: Init from BAScript.Command
-extension BAPlaybackEvent.Marker {
-    public init(command: BAScript.Command) {
-        self.init(code: command.code, kind: Kind(code: command.code))
+// MARK: BAPlaybackEvent.Marker
+extension BAPlaybackEvent {
+    public enum Marker: Equatable, Sendable {
+        case impact
+        case castSpell
+        case armHPDepletion
+        case waitForHPDepletion
+        case beginOpponentTurn
+        case startAttack
+        case startDodge
+        case endDodge
+        case playSound   // SFE-glossed codes → drives audio engine
+        case screenEffect // vibration/flash/particle-glossed codes → drives visual layer
+        case unrecognized(String) // no reliable gloss (C17, C53–55, C64, C71, C72, CC0, CDC, etc.)}
     }
 }
 
-extension BAPlaybackEvent.Marker.Kind {
+extension BAPlaybackEvent.Marker {
     public init(code: String) {
-        self = Self.byOpcode[code] ?? .unrecognized
+        self = Self.byOpcode[code] ?? .unrecognized(code)
     }
 
     /// Opcode → meaning, per the FEBuilderGBA `battleanime_85command_FE8` tables.
@@ -69,10 +59,10 @@ extension BAPlaybackEvent.Marker.Kind {
     /// The animator comments carried on `BAScript.Command` are never consulted — they are
     /// wrong often enough to be worse than useless (`C01` is commented "NOP" in every one of
     /// its 64,791 occurrences and actually means wait-for-HP-deplete).
-    private static let byOpcode: [String: BAPlaybackEvent.Marker.Kind] = {
-        var table: [String: BAPlaybackEvent.Marker.Kind] = [:]
+    private static let byOpcode: [String: BAPlaybackEvent.Marker] = {
+        var table: [String: BAPlaybackEvent.Marker] = [:]
 
-        func map(_ kind: BAPlaybackEvent.Marker.Kind, _ codes: String...) {
+        func map(_ kind: BAPlaybackEvent.Marker, _ codes: String...) {
             for code in codes {
                 table[code] = kind
             }

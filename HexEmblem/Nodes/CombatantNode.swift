@@ -73,7 +73,7 @@ final class CombatantNode: SKNode {
         }
     }
 
-    func play(mode: BAModeID.Kind, repeatForever: Bool = true) throws {
+    func play(mode: BAModeID, repeatForever: Bool = true) throws {
         let sequence = try animationAction(mode: mode)
         let action = repeatForever ? SKAction.repeatForever(sequence) : sequence
 
@@ -82,7 +82,7 @@ final class CombatantNode: SKNode {
     }
 
     // Plays one battle animation and returns after the final frame.
-    func playOnce(mode: BAModeID.Kind) async throws {
+    func playOnce(mode: BAModeID) async throws {
         let action = try animationAction(mode: mode)
 
         removeAction(forKey: animationKey)
@@ -95,11 +95,13 @@ final class CombatantNode: SKNode {
         }
     }
 
-    private func animationAction(mode: BAModeID.Kind) throws -> SKAction {
+    private func animationAction(mode: BAModeID) throws -> SKAction {
         let events = try BAProcessedAnimationStore.playableEvents(
             animationID: animationID,
             mode: mode
         )
+
+        events.forEach { print($0) }
 
         let frames: [BAPlaybackFrame] = events.compactMap {
             guard case let .frame(baPlaybackFrame) = $0 else { return nil }

@@ -5,7 +5,7 @@
 //  Created by Matt Gannon on 8/3/26.
 //
 
-// BAPlayback's public API is expressed in BAModel types (BAModeID, BACatalog, BAWeaponID),
+// BAPlayback's public API is expressed in BAModel types (BAModeID, BACatalog, BAWeaponSlot),
 // so consumers get them without a second import or a second linked product.
 @_exported import BAModel
 import Foundation
@@ -15,7 +15,7 @@ public enum BAProcessedAnimationStoreError: Error, Sendable {
     case catalogUnreadable(String)
     case animationNotFound(String)
     case manifestNotFound(String)
-    case noTimelineForMode(BAModeID.Kind)
+    case noTimelineForMode(BAModeID)
     case frameAssetNotFound(paths: [String])
 }
 
@@ -63,20 +63,20 @@ public enum BAProcessedAnimationStore {
     // MARK: - Playback
     public static func playableEvents(
         animationID: String,
-        mode: BAModeID.Kind
+        mode: BAModeID
     ) throws -> [BAPlaybackEvent] {
         try playableEvents(entry: try entry(animationID: animationID), mode: mode)
     }
 
     public static func playableEvents(
         entry: BACatalog.Entry,
-        mode: BAModeID.Kind
+        mode: BAModeID
     ) throws -> [BAPlaybackEvent] {
         // The catalog knows which modes exist, so fallback resolves before we touch the disk.
         let resolvedMode = try resolveMode(mode, in: entry)
         let manifest = try loadManifest(id: entry.id)
 
-        guard let timeline = manifest.timelines.first(where: { $0.modeID.kind == resolvedMode }) else {
+        guard let timeline = manifest.timelines.first(where: { $0.modeID == resolvedMode }) else {
             throw BAProcessedAnimationStoreError.noTimelineForMode(resolvedMode)
         }
 
@@ -95,33 +95,16 @@ public enum BAProcessedAnimationStore {
                 )
 
             case .command(let command):
-                return .marker(BAPlaybackEvent.Marker(command: command))
+                return .marker(BAPlaybackEvent.Marker(code: command.code))
             }
         }
     }
 
-//    public static func playableFrames(
-//        animationID: String,
-//        mode: BAModeID.Kind
-//    ) throws -> [BAPlaybackFrame] {
-//        try playableFrames(entry: try entry(animationID: animationID), mode: mode)
-//    }
-//
-//    public static func playableFrames(
-//        entry: BACatalog.Entry,
-//        mode: BAModeID.Kind
-//    ) throws -> [BAPlaybackFrame] {
-//        try playableEvents(entry: entry, mode: mode).compactMap {
-//            guard case .frame(let frame) = $0 else { return nil }
-//            return frame
-//        }
-//    }
-
     /// Walks the requested mode's fallback chain until it finds one the animation actually has.
     static func resolveMode(
-        _ requested: BAModeID.Kind,
+        _ requested: BAModeID,
         in entry: BACatalog.Entry
-    ) throws(BAProcessedAnimationStoreError) -> BAModeID.Kind {
+    ) throws(BAProcessedAnimationStoreError) -> BAModeID {
         for candidate in [requested] + requested.fallbacks where entry.contains(candidate) {
             return candidate
         }

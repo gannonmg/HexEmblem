@@ -37,10 +37,10 @@ public final class BAImporter {
         )
 
         // Unknown modes are preserved as warnings for now.
-        let usableModes = script.modes.filter { $0.modeID.kind != .unknown }
+        let usableModes = script.modes.filter(\.modeID.isKnown)
 
         var warnings = script.modes
-            .filter { $0.modeID.kind == .unknown }
+            .filter(\.modeID.isUnknown)
             .map { "Skipping unknown mode \(String(describing: $0.modeID))" }
 
         // Process each source frame only once, even if modes share it.
@@ -185,7 +185,6 @@ public final class BAImporter {
 
         return BAManifest.Timeline(
             modeID: mode.modeID,
-            rawModeNumber: mode.modeID.rawModeNumber,
             title: mode.title,
             events: events
         )
