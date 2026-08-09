@@ -26,7 +26,7 @@ struct BACatalogPlaybackTests {
 
         for entry in catalog.animations {
             for mode in entry.modes {
-                let frames = try BAProcessedAnimationStore.playableFrames(entry: entry, mode: mode)
+                let frames = try BAProcessedAnimationStore.playableEvents(entry: entry, mode: mode)
 
                 #expect(
                     !frames.isEmpty,
@@ -41,10 +41,13 @@ struct BACatalogPlaybackTests {
         let catalog = try BAProcessedAnimationStore.catalog()
 
         for entry in catalog.animations {
-            let frames = try BAProcessedAnimationStore.playableFrames(
+            let frames: [BAPlaybackFrame] = try BAProcessedAnimationStore.playableEvents(
                 entry: entry,
                 mode: .standing
-            )
+            ).compactMap { event in
+                guard case .frame(let baPlaybackFrame) = event else { return nil }
+                return baPlaybackFrame
+            }
 
             for frame in frames {
                 switch frame.layerURLs {
@@ -64,11 +67,11 @@ struct BACatalogPlaybackTests {
         let catalog = try BAProcessedAnimationStore.catalog()
         let entry = try #require(catalog.animations.first)
 
-        let byID = try BAProcessedAnimationStore.playableFrames(
+        let byID = try BAProcessedAnimationStore.playableEvents(
             animationID: entry.id,
             mode: .meleeAttack
         )
-        let byEntry = try BAProcessedAnimationStore.playableFrames(
+        let byEntry = try BAProcessedAnimationStore.playableEvents(
             entry: entry,
             mode: .meleeAttack
         )
@@ -79,7 +82,7 @@ struct BACatalogPlaybackTests {
     @Test("Unknown animation IDs throw rather than returning empty")
     func unknownAnimationThrows() {
         #expect(throws: BAProcessedAnimationStoreError.self) {
-            try BAProcessedAnimationStore.playableFrames(
+            try BAProcessedAnimationStore.playableEvents(
                 animationID: "LanceHalberdier",
                 mode: .meleeAttack
             )
@@ -113,5 +116,69 @@ struct BACatalogPlaybackTests {
 
         #expect(resolved.spriteSet.id == seed.spriteSet.id)
         #expect(resolved.variant.slot == seed.variant.slot)
+    }
+
+    @Test("Melee lance attack classifies the impact bracket and holds for HP drain")
+    func meleeAttackMarkerSpine() throws {
+        let events = try BAProcessedAnimationStore.playableEvents(
+            animationID: "Custom-Halb-Halberdier-Gwendolyn-F-by-UltraFenix_2-Lance",
+            mode: .meleeAttack
+        )
+
+        let markerKinds: [BAPlaybackEvent.Marker.Kind] = events.compactMap {
+            guard case .marker(let marker) = $0 else { return nil }
+            return marker.kind
+        }
+
+        #expect(markerKinds == [
+            .startAttack,
+            .startAttack,
+            .playSound,
+            .armHPDepletion,
+            .impact,
+            .playSound,
+            .impact,
+            .waitForHPDepletion,
+            .playSound,
+            .playSound,
+            .playSound,
+            .beginOpponentTurn,
+            .endDodge
+        ])
+
+        #expect(events.count == 32)
+
+        // Two impact markers, one damage beat — the first of the pair.
+        let impactCount = markerKinds.filter { $0 == .impact }.count
+        #expect(impactCount == 2)
+        #expect(events.firstDamageBeatIndex == events.firstIndex { event in
+            guard case .marker(let marker) = event else { return false }
+            return marker.kind == .impact
+        })
+    }
+
+    @Test("Ranged bow attack yields an interleaved, fully classified marker spine",)
+    func attackMarkerSpine() throws {
+        let events = try BAProcessedAnimationStore.playableEvents(
+            animationID: "Crossbow-Cowboy-M-by-MeatofJustice_5-Bow",
+            mode: .rangedAttack
+        )
+
+        let markerKinds: [BAPlaybackEvent.Marker.Kind] = events.compactMap {
+            guard case .marker(let marker) = $0 else { return nil }
+            return marker.kind
+        }
+
+        #expect(markerKinds == [
+            .startAttack,
+            .startAttack,
+            .castSpell,
+            .waitForHPDepletion,
+            .beginOpponentTurn,
+            .endDodge
+        ])
+
+        #expect(events.count == 24)
+        #expect(events.firstDamageBeatIndex != nil)
     }
 }

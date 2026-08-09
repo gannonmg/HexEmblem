@@ -61,18 +61,17 @@ public enum BAProcessedAnimationStore {
     }
 
     // MARK: - Playback
-
-    public static func playableFrames(
+    public static func playableEvents(
         animationID: String,
         mode: BAModeID.Kind
-    ) throws -> [BAPlaybackFrame] {
-        try playableFrames(entry: try entry(animationID: animationID), mode: mode)
+    ) throws -> [BAPlaybackEvent] {
+        try playableEvents(entry: try entry(animationID: animationID), mode: mode)
     }
 
-    public static func playableFrames(
+    public static func playableEvents(
         entry: BACatalog.Entry,
         mode: BAModeID.Kind
-    ) throws -> [BAPlaybackFrame] {
+    ) throws -> [BAPlaybackEvent] {
         // The catalog knows which modes exist, so fallback resolves before we touch the disk.
         let resolvedMode = try resolveMode(mode, in: entry)
         let manifest = try loadManifest(id: entry.id)
@@ -86,22 +85,37 @@ public enum BAProcessedAnimationStore {
             uniqueKeysWithValues: manifest.frameAssets.map { ($0.sourceFile, $0) }
         )
 
-        let frameEvents = timeline.events.compactMap {
-            switch $0 {
-            case .frame(let frameEvent): frameEvent
-            default: nil
+        return try timeline.events.compactMap { event in
+            switch event {
+            case .frame(let frameEvent):
+                guard let asset = assetsBySourceFile[frameEvent.sourceFile] else { return nil }
+                let layerURLs = try playbackLayerURLs(from: asset.layerType, animationID: entry.id)
+                return .frame(
+                    BAPlaybackFrame(duration: frameEvent.duration, layerURLs: layerURLs)
+                )
+
+            case .command(let command):
+                return .marker(BAPlaybackEvent.Marker(command: command))
             }
         }
-
-        return try frameEvents.compactMap { frameEvent in
-            guard let asset = assetsBySourceFile[frameEvent.sourceFile] else { return nil }
-            let layerURLs = try playbackLayerURLs(from: asset.layerType, animationID: entry.id)
-            return BAPlaybackFrame(
-                duration: frameEvent.duration,
-                layerURLs: layerURLs
-            )
-        }
     }
+
+//    public static func playableFrames(
+//        animationID: String,
+//        mode: BAModeID.Kind
+//    ) throws -> [BAPlaybackFrame] {
+//        try playableFrames(entry: try entry(animationID: animationID), mode: mode)
+//    }
+//
+//    public static func playableFrames(
+//        entry: BACatalog.Entry,
+//        mode: BAModeID.Kind
+//    ) throws -> [BAPlaybackFrame] {
+//        try playableEvents(entry: entry, mode: mode).compactMap {
+//            guard case .frame(let frame) = $0 else { return nil }
+//            return frame
+//        }
+//    }
 
     /// Walks the requested mode's fallback chain until it finds one the animation actually has.
     static func resolveMode(

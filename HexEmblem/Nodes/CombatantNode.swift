@@ -96,10 +96,15 @@ final class CombatantNode: SKNode {
     }
 
     private func animationAction(mode: BAModeID.Kind) throws -> SKAction {
-        let frames = try BAProcessedAnimationStore.playableFrames(
+        let events = try BAProcessedAnimationStore.playableEvents(
             animationID: animationID,
             mode: mode
         )
+
+        let frames: [BAPlaybackFrame] = events.compactMap {
+            guard case let .frame(baPlaybackFrame) = $0 else { return nil }
+            return baPlaybackFrame
+        }
 
         let preparedFrames = try frames.map { try PreparedFrame($0) }
 
