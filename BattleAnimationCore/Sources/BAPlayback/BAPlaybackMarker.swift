@@ -8,7 +8,7 @@
 import BAModel
 import Foundation
 
-public enum BAPlaybackEvent: Equatable {
+public enum BAPlaybackEvent: Equatable, Sendable {
     case frame(BAPlaybackFrame)
     case marker(BAPlaybackEvent.Marker)
 }

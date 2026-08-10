@@ -6,39 +6,62 @@
 //
 
 import BAPlayback
+import CCEvaluator
+import CombatModels
 import Foundation
 import GameModels
 import SpriteKit
 
+extension CombatPlaybackScriptBuilder.Config.Unit {
+    init(unit: CharacterUnit, startingHealth: Int, atRange encounterRange: Int) {
+        self.init(
+            animationID: unit.animationID,
+            initialHealth: startingHealth,
+            weaponSlot: unit.weapon.animationSlot(atRange: encounterRange),
+            weaponIsMagical: unit.weapon.hasMagicalDamage
+        )
+    }
+}
+
 extension CombatScene {
     @MainActor
     static func demoScene(size: CGSize) throws -> CombatScene {
-        let catalog = try BAProcessedAnimationStore.catalog()
+        let initiator: CharacterUnit = .gwendolyn
+//        let initiator: CharacterUnit = .hunter
 
-        let initiatorEntry = try BattleAnimationResolver.entry(
-            for: .gwendolyn,
-            atRange: 1,
-            in: catalog
+        let responder: CharacterUnit = .badGuy
+        let range = 1
+//        let range = 2
+
+        let combatConfig = CombatConfig(
+            initiator: initiator.buildCombatant(),
+            responder: responder.buildCombatant(),
+            range: range,
+            seed: 42
         )
 
-        let responderEntry = try BattleAnimationResolver.entry(
-            for: .badGuy,
-            atRange: 1,
-            in: catalog
-        )
+        let summary = try CombatEvaluator(config: combatConfig).getCombatSummary()
+        SanityTests.printCombatSummary(summary)
 
-        let scene = CombatScene(
-            size: size,
-            initiatorEvents: try BAProcessedAnimationStore.playableEvents(
-                entry: initiatorEntry,
-                mode: .meleeAttack
+        let builderConfig = CombatPlaybackScriptBuilder.Config(
+            initiator: .init(
+                unit: initiator,
+                startingHealth: combatConfig.initiator.initialHealth,
+                atRange: range
             ),
-            responderEvents: try BAProcessedAnimationStore.playableEvents(
-                entry: responderEntry,
-                mode: .meleeEquipped
-            )
+            responder: .init(
+                unit: responder,
+                startingHealth: combatConfig.responder.initialHealth,
+                atRange: range
+            ),
+            range: range,
+            catalog: try BAProcessedAnimationStore.catalog()
         )
 
+        let script = try CombatPlaybackScriptBuilder(config: builderConfig)
+            .buildScript(from: summary)
+
+        let scene = CombatScene(script: script, size: size)
         scene.scaleMode = .aspectFill
         return scene
     }

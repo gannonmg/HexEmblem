@@ -34,16 +34,16 @@ enum SanityTests {
 
             // force try ok for testing - shouldn't ever throw anyways
             let summary = try! evaluator.getCombatSummary()
+            printCombatSummary(summary)
+
             for event in summary.events {
                 switch event {
                 case .strike(let combatStrike):
-                    printStrike(combatStrike)
                     switch combatStrike.receiverRole {
                     case .initiator: initiator.takeDamage(combatStrike.totalDamage)
                     case .responder: responder.takeDamage(combatStrike.totalDamage)
                     }
-                case .defeat(let combatRole):
-                    print("\(combatRole) was defeated")
+                case .defeat:
                     bothAlive = false
                 }
             }
@@ -51,6 +51,17 @@ enum SanityTests {
             seed += 1
         }
         print("------------------- End Combat -------------------")
+    }
+
+    static func printCombatSummary(_ summary: CombatSummary) {
+        for event in summary.events {
+            switch event {
+            case .strike(let combatStrike):
+                printStrike(combatStrike)
+            case .defeat(let combatRole):
+                print("\(combatRole) was defeated")
+            }
+        }
     }
 
     private static func printStrike(_ strike: CombatStrike) {

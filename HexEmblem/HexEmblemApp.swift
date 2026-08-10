@@ -13,7 +13,7 @@ struct HexEmblemApp: App {
         WindowGroup {
             ContentView()
                 .onAppear {
-                    SanityTests.testCombatEvaluator()
+//                    SanityTests.testCombatEvaluator()
                 }
         }
     }

@@ -47,22 +47,15 @@ extension BACatalog {
         animations.filter { $0.spriteSet.id == spriteSetID }
     }
 
-    public func entry(
-        spriteSetID: String,
-        slot: BAWeaponSlot,
-        qualifier: BAVariant.Qualifier? = nil
-    ) -> Entry? {
-        let candidates = entries(spriteSetID: spriteSetID)
+    public func candidateEntries(spriteSetID: String, slot: BAWeaponSlot) -> [Entry] {
+        entries(spriteSetID: spriteSetID)
             .filter { $0.variant.slot == slot }
+    }
+}
 
-        if let qualifier {
-            if let exact = candidates.first(where: { $0.variant.qualifier == qualifier }) {
-                return exact
-            }
-        }
-
-        // Prefer the unqualified base variant, else whatever fills the slot.
-        return candidates.first { $0.variant.qualifier == nil } ?? candidates.first
+extension [BACatalog.Entry] {
+    public func qualifiedEntry(qualifier: BAVariant.Qualifier?) -> BACatalog.Entry? {
+        first(where: { $0.variant.qualifier == qualifier }) ?? first
     }
 }
 
