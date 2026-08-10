@@ -67,3 +67,19 @@ internal target (not vended) · 🟢 green = exposed product.
 Only `BAPlayback` and `BAImportTool` are vended as products. `BAPlayback`
 depends on `BAModel` alone, so the app never pulls in the parser or image
 tooling at runtime.
+
+## Current Failing Imports
+___
+Failed (11):
+  Dancer-Reskin-U-Dracodancer-V2-by-Sirknite31_8-Dragonstone — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 2.)
+  Dancer-Reskin-U-Dracodancer-V2-by-Sirknite31_8-Dragonstone — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 2.)
+  Dancer-Reskin-U-Dracodancer-V2-by-Sirknite31_8-Dragonstone — “Dancer-Reskin-U-Dracodancer-V2-by-Sirknite31_8-Dragonstone” couldn’t be removed because you don’t have permission to access it.
+  Dancer-Reskin-U-Dracodancer-V2-by-Sirknite31_8-Dragonstone — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 2.)
+  Dancer-Reskin-U-Dracodancer-V2-by-Sirknite31_8-Dragonstone — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 2.)
+  FE7-Eliwood-Base-T1-Vanilla-Weapons-M_1-Sword — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 0.)
+  FE7-Eliwood-Reskin-T2-Brave-M-by-RedBean_1-Sword-Durandal — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 0.)
+  FE7-Hector-Base-M-T2-Vanilla-Magic-by-Skitty_1-Sword-Binding-Blade — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 0.)
+  GK-Base-U-Vanilla-Weapons_5-Bow-ZoramineFae — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 0.)
+  General-Reskin-Baron-Cape-Weapons-M_4-Handaxe-Revamped-V2-0 — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 0.)
+  T1-Priest-Base-Vanilla-Priest-Magic-M_6-Magic-Yerek — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 0.)
+
