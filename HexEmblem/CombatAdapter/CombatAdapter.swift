@@ -69,3 +69,26 @@ enum BattleAnimationResolverError: Error {
     case spriteSetNotFound(AnimationID)
     case slotNotFound(animationID: AnimationID, slot: BAWeaponSlot)
 }
+
+// MARK: - CombatPlaybackScript
+struct CombatPlaybackScript {
+    let range: Int
+    let initiator: Side
+    let responder: Side
+    let beats: [Beat]
+    let defeated: CombatRole?
+
+    struct Side {
+        let role: CombatRole
+        let entry: BACatalog.Entry
+        let startingHealth: Int
+    }
+
+    struct Beat {
+        let attacker: CombatRole
+        let attackerEvents: [BAPlaybackEvent]
+        let defenderEvents: [BAPlaybackEvent]
+        let damage: Int
+        let defenderRemainingHealth: Int
+    }
+}

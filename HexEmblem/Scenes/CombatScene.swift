@@ -9,13 +9,19 @@ import BAPlayback
 import SpriteKit
 
 final class CombatScene: SKScene {
-    private let combatant: CombatantNode
+    private let initiator = CombatantNode()
+    private let responder = CombatantNode()
+
+    private let initiatorEvents: [BAPlaybackEvent]
+    private let responderEvents: [BAPlaybackEvent]
 
     init(
         size: CGSize,
-        combatant: CombatantNode
+        initiatorEvents: [BAPlaybackEvent],
+        responderEvents: [BAPlaybackEvent],
     ) {
-        self.combatant = combatant
+        self.initiatorEvents = initiatorEvents
+        self.responderEvents = responderEvents
         super.init(size: size)
     }
     
@@ -27,16 +33,18 @@ final class CombatScene: SKScene {
     override func didMove(to view: SKView) {
         backgroundColor = .darkGray
 
-        addCharacterToScene(combatant, mirror: true)
+        addCharacterToScene(initiator)
+        addCharacterToScene(responder)
 
         do {
-            try combatant.play(mode: .meleeAttack)
+            try initiator.play(events: initiatorEvents)
+            try responder.play(events: responderEvents)
         } catch {
-            print("Failed to start idle combat animations: \(error)")
+            print("Failed to start combat animations: \(error)")
         }
     }
 
-    private func addCharacterToScene(_ character: CombatantNode, mirror: Bool) {
+    private func addCharacterToScene(_ character: CombatantNode) {
         character.position = CGPoint(
             x: frame.midX,
             y: frame.midY
@@ -44,44 +52,12 @@ final class CombatScene: SKScene {
 
         character.setScale(3)
 
-        if mirror {
+        // Animations face left by default.
+        // Initiator should be on the left, facing/attacking right
+        if character == initiator {
             character.xScale *= -1.0
         }
 
         addChild(character)
-    }
-}
-
-// MARK: - Scene Construction
-extension CombatScene {
-    static func demoScene(size: CGSize) -> CombatScene {
-        let combatant = CombatantNode(animationID: "Crossbow-Cowboy-M-by-MeatofJustice_5-Bow")
-        let scene = CombatScene(size: size, combatant: combatant)
-        scene.scaleMode = .aspectFill
-        return scene
-    }
-
-    static func newScene(size: CGSize, combatant: CombatantNode) -> CombatScene {
-        let scene = CombatScene(size: size, combatant: combatant)
-        scene.scaleMode = .aspectFill
-        return scene
-    }
-}
-
-extension SKScene {
-    func transitionToCombatDemo() {
-        let combatScene = CombatScene.demoScene(size: size)
-        combatScene.scaleMode = .aspectFill
-        view?.presentScene(combatScene, transition: .combatSceneTransition)
-    }
-
-    func transitionToCombatScene(combatant: CombatantNode) {
-        let combatScene = CombatScene.newScene(
-            size: self.size,
-            combatant: combatant
-        )
-
-        combatScene.scaleMode = .aspectFill
-        view?.presentScene(combatScene, transition: .combatSceneTransition)
     }
 }
