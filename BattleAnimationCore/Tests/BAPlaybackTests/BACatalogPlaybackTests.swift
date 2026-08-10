@@ -125,9 +125,9 @@ struct BACatalogPlaybackTests {
             mode: .meleeAttack
         )
 
-        let markerKinds: [BAPlaybackEvent.Marker.Kind] = events.compactMap {
+        let markerKinds: [BAPlaybackEvent.Marker] = events.compactMap {
             guard case .marker(let marker) = $0 else { return nil }
-            return marker.kind
+            return marker
         }
 
         #expect(markerKinds == [
@@ -153,7 +153,7 @@ struct BACatalogPlaybackTests {
         #expect(impactCount == 2)
         #expect(events.firstDamageBeatIndex == events.firstIndex { event in
             guard case .marker(let marker) = event else { return false }
-            return marker.kind == .impact
+            return marker == .impact
         })
     }
 
@@ -164,9 +164,9 @@ struct BACatalogPlaybackTests {
             mode: .rangedAttack
         )
 
-        let markerKinds: [BAPlaybackEvent.Marker.Kind] = events.compactMap {
+        let markerKinds: [BAPlaybackEvent.Marker] = events.compactMap {
             guard case .marker(let marker) = $0 else { return nil }
-            return marker.kind
+            return marker
         }
 
         #expect(markerKinds == [
