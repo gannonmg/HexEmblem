@@ -16,11 +16,8 @@ final class CombatantNode: SKNode {
     private let backNode = LayerSpriteNode()
     private let frontNode = LayerSpriteNode()
 
-    init(initialZPosition: CGFloat = 0) {
+    override init() {
         super.init()
-
-        updateZPosition(to: initialZPosition)
-
         addChild(backNode)
         addChild(frontNode)
     }
@@ -83,6 +80,8 @@ final class CombatantNode: SKNode {
         case .double(let foreground, let background):
             backNode.showTexture(background)
             frontNode.showTexture(foreground)
+//            backNode.showTexture(foreground)
+//            frontNode.showTexture(background)
         }
     }
 

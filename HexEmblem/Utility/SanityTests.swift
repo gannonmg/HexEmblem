@@ -14,8 +14,8 @@ import GameModels
 
 enum SanityTests {
     static func testCombatEvaluator() {
-        let initiator: CharacterUnit = .gwendolyn
-        let responder: CharacterUnit = .badGuy
+        let initiator: CharacterUnit = .gwendolyn()
+        let responder: CharacterUnit = .badGuy()
         var seed = 0
 
         print("------------------ Begin Combat ------------------")

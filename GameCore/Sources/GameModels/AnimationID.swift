@@ -44,4 +44,13 @@ extension AnimationID {
     /// Hunter, male, by MeatOfJustice.
     /// Slots: 5 bow, 8 unarmed.
     public static let hunterMale: AnimationID = "HunterM-Hunter-M-by-MeatOfJustice"
+
+    /// General, ungendered
+    ///  All or most slots available with many alts
+    public static let generalVanilla: AnimationID = "General-Base-Vanilla-Weapons-U"
+
+    /// Bard (Nils), male. Long lead-in from the spell release to the HP barrier — useful for
+    /// testing the drain hold.
+    /// Slots: 6 magic, 7 staff (+ magic), 8 dragonstone/refresh/transform variants.
+    public static let bardNilsMale: AnimationID = "Bard-Base-M-Nils-Weapons"
 }

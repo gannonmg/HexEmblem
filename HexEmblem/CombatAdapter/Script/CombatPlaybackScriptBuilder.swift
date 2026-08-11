@@ -11,20 +11,6 @@ import GameModels
 
 final class CombatPlaybackScriptBuilder {
 
-    public struct Config {
-        public let initiator: Unit
-        public let responder: Unit
-        public let range: Int
-        public let catalog: BACatalog
-
-        public struct Unit {
-            let animationID: AnimationID
-            let initialHealth: Int
-            let weaponSlot: BAWeaponSlot
-            let weaponIsMagical: Bool
-        }
-    }
-
     private let config: Config
     private let initiatorEntry: BACatalog.Entry
     private let responderEntry: BACatalog.Entry

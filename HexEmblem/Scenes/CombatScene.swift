@@ -14,15 +14,18 @@ final class CombatScene: SKScene {
     private let responder = CombatantNode()
 
     private let script: CombatPlaybackScript
+    private let onDamage: @MainActor (CombatRole, Int) async -> Void
 
     init(
         script: CombatPlaybackScript,
-        size: CGSize
+        size: CGSize,
+        onDamage: @escaping @MainActor (CombatRole, Int) async -> Void
     ) {
         self.script = script
+        self.onDamage = onDamage
         super.init(size: size)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -33,6 +36,9 @@ final class CombatScene: SKScene {
 
         addCharacterToScene(initiator)
         addCharacterToScene(responder)
+
+        initiator.name = "initiator"
+        responder.name = "responder"
 
         do {
             try initiator.play(events: script.initiator.idleEvents)
@@ -46,12 +52,16 @@ final class CombatScene: SKScene {
         }
     }
 
+    override func update(_ currentTime: TimeInterval) {
+        speed = PlaybackDebug.shared.speed
+    }
+
     private func playCombat() async {
         print("beats: \(script.beats.count) — \(script.beats.map { "\($0.attacker) dmg \($0.damage)" })")
         do {
             for beat in script.beats {
                 print("     playing beat: \(beat.attacker)")
-                try await play(beat)
+                try await playBeat(beat)
             }
 
             try returnToIdle()
@@ -83,20 +93,28 @@ final class CombatScene: SKScene {
         addChild(character)
     }
 
-    /// The attacker swings alone up to the damage beat, then the defender reacts while the
-    /// attacker follows through.
-    private func play(_ beat: CombatPlaybackScript.Beat) async throws {
+    /// The attacker swings alone up to the damage beat. The defender reacts while the bar drains,
+    /// and the follow-through is held until the drain finishes — that hold is what `C01`
+    /// (wait-for-HP-deplete) waits on in the scripts.
+    private func playBeat(_ beat: CombatPlaybackScript.Beat) async throws {
+        let defenderRole = beat.attacker.opponent
+
         let attacker = node(for: beat.attacker)
-        let defender = node(for: beat.attacker.opponent)
+        let defender = node(for: defenderRole)
+
+        attacker.updateZPosition(to: 1)
+        defender.updateZPosition(to: 0.9)
 
         let (windUp, followThrough) = beat.attackerEvents.splitAtDamageBeat()
 
         try await attacker.playOnce(events: windUp)
 
         async let reaction: Void = defender.playOnce(events: beat.defenderEvents)
-        async let follow: Void = attacker.playOnce(events: followThrough)
+        async let drain: Void = onDamage(defenderRole, beat.defenderRemainingHealth)
 
-        _ = try await (reaction, follow)
+        _ = try await (reaction, drain)
+
+        try await attacker.playOnce(events: followThrough)
     }
 
     private func node(for role: CombatRole) -> CombatantNode {

@@ -16,7 +16,11 @@ public final class CharacterUnit {
     // MARK: Stats
     public let baseStatBlock: CharacterStatBlock
 
+    // Health tracking
     public private(set) lazy var currentHealth: Int = { effectiveStats.maxHp }()
+    public var maxHealth: Int { effectiveStats.maxHp }
+    /// Includes current and max health. Always correct at time of retrieval.
+    public var healthStatus: UnitHealthStatus { .init(currentHealth: currentHealth, maxHealth: maxHealth) }
 
     // MARK: Equipment
     public var weapon: Weapon { _weapon ?? .fists }
@@ -113,54 +117,76 @@ public final class CharacterUnit {
 }
 
 extension CharacterUnit {
-    @MainActor
-    public static let gwendolyn = CharacterUnit(
-        animationID: .halberdierGwendolynFemale,
-        baseStatBlock: .init(
-            maxHp: 23,
-            strength: 8,
-            defense: 6,
-            intelligence: 3,
-            willpower: 3,
-            speed: 8,
-            dexterity: 4,
-            luck: 6
-        ),
-        weapon: .lance,
-        armor: .plate
-    )
+    public static func gwendolyn() -> CharacterUnit {
+        CharacterUnit(
+            animationID: .halberdierGwendolynFemale,
+            baseStatBlock: .init(
+                maxHp: 23,
+                strength: 8,
+                defense: 6,
+                intelligence: 3,
+                willpower: 3,
+                speed: 8,
+                dexterity: 4,
+                luck: 6
+            ),
+            weapon: .lance,
+            armor: .plate
+        )
+    }
 
-    @MainActor
-    public static let badGuy = CharacterUnit(
-        animationID: .armorKnightMale,
-        baseStatBlock: .init(
-            maxHp: 27,
-            strength: 6,
-            defense: 7,
-            intelligence: 2,
-            willpower: 2,
-            speed: 3,
-            dexterity: 4,
-            luck: 0
-        ),
-        weapon: .sword,
-        armor: .plate
-    )
+    public static func badGuy() -> CharacterUnit {
+        CharacterUnit(
+            animationID: .generalVanilla, // .armorKnightMale,
+            baseStatBlock: .init(
+                maxHp: 27,
+                strength: 6,
+                defense: 7,
+                intelligence: 2,
+                willpower: 2,
+                speed: 3,
+                dexterity: 4,
+                luck: 0
+            ),
+            weapon: .lance,
+            armor: .plate
+        )
 
-    @MainActor
-    public static let hunter = CharacterUnit(
-        animationID: .hunterFemale,
-        baseStatBlock: .init(
-            maxHp: 18,
-            strength: 4,
-            defense: 4,
-            intelligence: 2,
-            willpower: 5,
-            speed: 9,
-            dexterity: 9,
-            luck: 5
-        ),
-        weapon: .bow,
-        armor: .leather
-    )
+    }
+
+    public static func hunter() -> CharacterUnit {
+        CharacterUnit(
+            animationID: .hunterFemale,
+            baseStatBlock: .init(
+                maxHp: 18,
+                strength: 4,
+                defense: 4,
+                intelligence: 2,
+                willpower: 5,
+                speed: 9,
+                dexterity: 9,
+                luck: 5
+            ),
+            weapon: .bow,
+            armor: .leather
+        )
+    }
+
+    public static func bard() -> CharacterUnit {
+        CharacterUnit(
+            animationID: .bardNilsMale,
+            baseStatBlock: .init(
+                maxHp: 18,
+                strength: 1,
+                defense: 3,
+                intelligence: 5,
+                willpower: 6,
+                speed: 7,
+                dexterity: 7,
+                luck: 8
+            ),
+            weapon: .lightningBolt,
+            armor: .leather
+        )
+    }
 }

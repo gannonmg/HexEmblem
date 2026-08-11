@@ -12,6 +12,12 @@ ___
 - [HunterM] Hunter [M/F] by MeatOfJustice
 - [Custom Lance] Militia (Deserter) [M] by Alusq
 - [Hero-Reskin] FE6 Armor +Basic Shield (Vanilla palette fix) [M/F] by tatata
++ (many more, need to automate list from imports)
+
+## Resources
+___
+- [The Communal Fire Emblem Graphics Repository](https://github.com/Klokinator/FE-Repo)
+- https://fe-battle-animations.neocities.org
 
 ## Dependency graph
 ___

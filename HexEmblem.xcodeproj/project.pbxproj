@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D6236EF302672F2005BD1DA /* CCEvaluator in Frameworks */ = {isa = PBXBuildFile; productRef = 2D6236EE302672F2005BD1DA /* CCEvaluator */; };
+		2D623763302A8AF9005BD1DA /* GameModels in Frameworks */ = {isa = PBXBuildFile; productRef = 2D817DBD302654FA008AF97B /* GameModels */; };
 		2D817CD230258539008AF97B /* BAPlayback in Frameworks */ = {isa = PBXBuildFile; productRef = 2D817CD130258539008AF97B /* BAPlayback */; };
 		2D817CD43025A762008AF97B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2D817CD33025A762008AF97B /* README.md */; };
 		2D817DC13026550C008AF97B /* GameModels in Frameworks */ = {isa = PBXBuildFile; productRef = 2D817DC03026550C008AF97B /* GameModels */; };
@@ -63,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D623763302A8AF9005BD1DA /* GameModels in Frameworks */,
 				2D6236EF302672F2005BD1DA /* CCEvaluator in Frameworks */,
 				2D817DC13026550C008AF97B /* GameModels in Frameworks */,
 				2D817CD230258539008AF97B /* BAPlayback in Frameworks */,
