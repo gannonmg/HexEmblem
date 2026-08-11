@@ -105,7 +105,7 @@ final class CombatScene: SKScene {
         attacker.updateZPosition(to: 1)
         defender.updateZPosition(to: 0.9)
 
-        let (windUp, followThrough) = beat.attackerEvents.splitAtDamageBeat()
+        let (windUp, followThrough) = beat.attackerEvents.splitAtHPDepletionHold()
 
         try await attacker.playOnce(events: windUp)
 

@@ -13,25 +13,6 @@ public enum BAPlaybackEvent: Equatable, Sendable {
     case marker(BAPlaybackEvent.Marker)
 }
 
-extension [BAPlaybackEvent] {
-    /// Index of the beat where damage lands.
-    ///
-    /// Animators signal the hit one of two ways and never both: an impact opcode, or `C05`
-    /// releasing the weapon's effect. The split is close to even across FE-Repo, so the
-    /// `castSpell` fallback is load-bearing, not an edge case. Where impact markers do appear
-    /// they often come in pairs bracketing a hit-flash — the first is the real hit.
-    public var firstDamageBeatIndex: Int? {
-        firstIndex(of: .impact) ?? firstIndex(of: .castSpell)
-    }
-
-    private func firstIndex(of wantedMarker: BAPlaybackEvent.Marker) -> Int? {
-        firstIndex {
-            guard case .marker(let marker) = $0 else { return false }
-            return wantedMarker == marker
-        }
-    }
-}
-
 // MARK: BAPlaybackEvent.Marker
 extension BAPlaybackEvent {
     public enum Marker: Equatable, Sendable {
@@ -43,9 +24,12 @@ extension BAPlaybackEvent {
         case startAttack
         case startDodge
         case endDodge
-        case playSound   // SFE-glossed codes → drives audio engine
-        case screenEffect // vibration/flash/particle-glossed codes → drives visual layer
-        case unrecognized(String) // no reliable gloss (C17, C53–55, C64, C71, C72, CC0, CDC, etc.)}
+        /// SFE-glossed codes → drives audio engine
+        case playSound
+        /// vibration/flash/particle-glossed codes → drives visual layer
+        case screenEffect
+        /// no reliable gloss (C17, C53–55, C64, C71, C72, CC0, CDC, etc.)}
+        case unrecognized(String)
     }
 }
 
