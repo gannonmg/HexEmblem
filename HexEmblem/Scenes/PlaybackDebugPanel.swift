@@ -21,7 +21,6 @@ struct PlaybackDebugPanel: View {
                 }
             }
             .pickerStyle(.segmented)
-            .frame(width: 300)
 
             ForEach(debug.layers.keys.sorted(), id: \.self) { name in
                 if let report = debug.layers[name] {

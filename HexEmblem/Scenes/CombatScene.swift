@@ -100,21 +100,32 @@ final class CombatScene: SKScene {
         let defenderRole = beat.attacker.opponent
 
         let attacker = node(for: beat.attacker)
-        let defender = node(for: defenderRole)
 
         attacker.updateZPosition(to: 1)
-        defender.updateZPosition(to: 0.9)
+        node(for: defenderRole).updateZPosition(to: 0.9)
 
         let (windUp, followThrough) = beat.attackerEvents.splitAtHPDepletionHold()
 
         try await attacker.playOnce(events: windUp)
 
-        async let reaction: Void = defender.playOnce(events: beat.defenderEvents)
-        async let drain: Void = onDamage(defenderRole, beat.defenderRemainingHealth)
+        async let reaction = react(defenderRole, events: beat.defenderEvents)
+        async let drain = onDamage(defenderRole, beat.defenderRemainingHealth)
 
         _ = try await (reaction, drain)
-
         try await attacker.playOnce(events: followThrough)
+    }
+
+    /// Every dodge stream ends on `C0D` — "return to standing" — and three quarters of them
+    /// leave a lean-away pose on the final frame. The idle has to be restored when the reaction
+    /// ends, not at the end of the exchange.
+    private func react(_ role: CombatRole, events: [BAPlaybackEvent]) async throws {
+        let defender = node(for: role)
+
+        try await defender.playOnce(events: events)
+
+        guard role != script.defeated else { return }
+
+        try defender.play(events: script.side(for: role).idleEvents)
     }
 
     private func node(for role: CombatRole) -> CombatantNode {

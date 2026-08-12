@@ -80,8 +80,6 @@ final class CombatantNode: SKNode {
         case .double(let foreground, let background):
             backNode.showTexture(background)
             frontNode.showTexture(foreground)
-//            backNode.showTexture(foreground)
-//            frontNode.showTexture(background)
         }
     }
 
