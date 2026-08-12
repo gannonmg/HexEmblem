@@ -8,18 +8,38 @@
 
 import BAModel
 import Foundation
+import GameModels
 import ImageUtilities
 import ScriptParser
 
-enum BAImportError: Error {
-    case noFramesFound
+enum BAImportError: LocalizedError {
+    case noFramesFound(folderName: String)
+    case unsupportedFrameSize(filename: String, width: Int, height: Int)
+    case paletteExceedsCapacity(animationID: String)
+    case paletteMismatch(animationID: String, frame: String, color: RGBA)
+    case paletteSwatchMismatch(animationID: String, frame: String)
+
+    var errorDescription: String? {
+        switch self {
+        case .noFramesFound(let folderName):
+            "No frames found for \(folderName)"
+        case .unsupportedFrameSize(let filename, let width, let height):
+            "Unsupported frame size \(width) x \(height) - file \(filename)"
+        case .paletteExceedsCapacity(let animationID):
+            "Palette exceeded capacity - \(animationID)"
+        case .paletteMismatch(let animationID, let frame, _):
+            "Mismatched palettes in \(animationID) - frame \(frame)"
+        case .paletteSwatchMismatch(let animationID, let frame):
+            "Swatch mismatch in \(animationID) - frame \(frame)"
+        }
+    }
 }
 
 public final class BAImporter {
     public init() {}
 
     public func importAnimation(
-        animationID: String,
+        animationID: AnimationID,
         spriteSet: BASpriteSet,
         variant: BAVariant,
         sourceFolder: URL,
@@ -49,20 +69,42 @@ public final class BAImporter {
         ).sorted()
 
         guard !uniqueFrameFiles.isEmpty else {
-            throw BAImportError.noFramesFound
+            throw BAImportError.noFramesFound(folderName: sourceFolder.relativePath)
         }
-
-        var preservedPalette: [RGBA] = []
 
         let framesFolder = outputFolder.appendingPathComponent("frames")
 
-        // Convert unique FE source frames into SpriteKit-friendly PNG assets.
-        let frameAssets = try uniqueFrameFiles.compactMap { filename in
-            try processFrameAsset(
+        var paletteBuilder = PaletteTableBuilder()
+        var establishedSwatch: [RGBA]?
+
+        let frameAssets = try uniqueFrameFiles.compactMap { filename -> BAManifest.Frame.Asset? in
+            let sourceURL = sourceFolder.appendingPathComponent(filename)
+            let image = try PNGLoader.load(from: sourceURL)
+            let swatch = image.extractTopRightPalette()
+
+            if let establishedSwatch {
+                guard swatch == establishedSwatch else {
+                    throw BAImportError.paletteSwatchMismatch(animationID: animationID, frame: filename)
+                }
+            } else {
+                var normalizedSwatch = swatch
+                normalizedSwatch[7] = RGBA(
+                    r: normalizedSwatch[7].r,
+                    g: normalizedSwatch[7].g,
+                    b: normalizedSwatch[7].b,
+                    a: 0
+                )
+                paletteBuilder.establish(from: normalizedSwatch)
+                establishedSwatch = swatch
+            }
+
+            return try processFrameAsset(
+                image: image,
                 filename: filename,
                 sourceFolder: sourceFolder,
                 framesFolder: framesFolder,
-                preservedPalette: &preservedPalette,
+                animationID: animationID,
+                paletteBuilder: paletteBuilder,
                 warnings: &warnings
             )
         }
@@ -80,28 +122,24 @@ public final class BAImporter {
             renderSize: .combatFrameSize,
             frameAssets: frameAssets,
             timelines: timelines,
-            preservedPalette: preservedPalette,
+            paletteTable: paletteBuilder.table,
             warnings: warnings
         )
     }
 
     private func processFrameAsset(
+        image: PixelImage,
         filename: String,
         sourceFolder: URL,
         framesFolder: URL,
-        preservedPalette: inout [RGBA],
+        animationID: AnimationID,
+        paletteBuilder: PaletteTableBuilder,
         warnings: inout [String]
-    ) throws -> BAManifest.Frame.Asset? {
+    ) throws -> BAManifest.Frame.Asset {
+
         // Load the original community-format PNG.
         let sourceURL = sourceFolder.appendingPathComponent(filename)
         let image = try PNGLoader.load(from: sourceURL)
-
-        // Preserve the embedded palette marker for later palette work.
-        let palette = image.extractTopRightPalette()
-
-        if preservedPalette.isEmpty {
-            preservedPalette = palette
-        }
 
         // The actual top-right pixel is the chroma/transparent color.
         let transparentColor = image.pixel(x: image.width - 1, y: 0)
@@ -117,30 +155,25 @@ public final class BAImporter {
         switch FrameClassifier.classify(width: image.width, height: image.height) {
         case .normal:
             // Normal frames contain one visible 240x160 layer.
-            let fileName = "\(sourceStem)_main.png"
-            let relativePath = "frames/\(fileName)"
-            let outputURL = framesFolder.appendingPathComponent(fileName)
-
             let processed = image
                 .cropped(x: 0, y: 0, width: 240, height: 160)
                 .replacingColorWithTransparency(transparentColor)
 
-            try PNGWriter.write(png: processed, to: outputURL)
+            let pngPath = try writePNG(
+                for: processed, animationID: animationID, framesFolder: framesFolder, stem: sourceStem, qualifier: .main
+            )
+
+            let palettePath = try writePaletteIndex(
+                for: processed, paletteBuilder: paletteBuilder, animationID: animationID, framesFolder: framesFolder, stem: sourceStem, qualifier: .main
+            )
 
             return BAManifest.Frame.Asset(
                 sourceFile: filename,
-                layerType: .main(path: relativePath)
+                layerType: .single(pngPath),
+                paletteLayers: .single(palettePath)
             )
 
         case .piercing:
-            // Piercing frames contain separate background and foreground layers.
-            let backgroundName = "\(sourceStem)_background.png"
-            let foregroundName = "\(sourceStem)_foreground.png"
-            let backgroundPath = "frames/\(backgroundName)"
-            let foregroundPath = "frames/\(foregroundName)"
-            let backgroundURL = framesFolder.appendingPathComponent(backgroundName)
-            let foregroundURL = framesFolder.appendingPathComponent(foregroundName)
-
             // The left 240px region is drawn in front of the defender.
             let foreground = image
                 .cropped(x: 0, y: 0, width: 240, height: 160)
@@ -151,19 +184,64 @@ public final class BAImporter {
                 .cropped(x: 240, y: 0, width: 240, height: 160)
                 .replacingColorWithTransparency(transparentColor)
 
-            try PNGWriter.write(png: background, to: backgroundURL)
-            try PNGWriter.write(png: foreground, to: foregroundURL)
+            // Write the PNGs
+            let fgPath = try writePNG(
+                for: foreground, animationID: animationID, framesFolder: framesFolder, stem: sourceStem, qualifier: .foreground
+            )
+            let bgPath = try writePNG(
+                for: background, animationID: animationID, framesFolder: framesFolder, stem: sourceStem, qualifier: .background
+            )
+
+            // Store the palettes
+            let fgPalettePath = try writePaletteIndex(
+                for: foreground, paletteBuilder: paletteBuilder, animationID: animationID, framesFolder: framesFolder, stem: sourceStem, qualifier: .foreground
+            )
+            let bgPalettePath = try writePaletteIndex(
+                for: background, paletteBuilder: paletteBuilder, animationID: animationID, framesFolder: framesFolder, stem: sourceStem, qualifier: .background
+            )
 
             return BAManifest.Frame.Asset(
                 sourceFile: filename,
-                layerType: .piercing(foreground: foregroundPath, background: backgroundPath)
+                layerType: .dual(foreground: fgPath, background: bgPath),
+                paletteLayers: .dual(foreground: fgPalettePath, background: bgPalettePath)
             )
 
         case .unsupported(let width, let height):
             // Unsupported sizes are skipped but reported in the manifest.
-            warnings.append("Unsupported frame size \(width)x\(height): \(filename)")
-            return nil
+            throw BAImportError.unsupportedFrameSize(filename: filename, width: width, height: height)
         }
+    }
+
+    private enum FilePathQualifier: String {
+        case main, foreground, background
+    }
+
+    private func writePNG(
+        for image: PixelImage,
+        animationID: AnimationID,
+        framesFolder: URL,
+        stem: String,
+        qualifier: FilePathQualifier
+    ) throws -> String {
+        let fileName = "\(stem)_\(qualifier.rawValue).png"
+        let url = framesFolder.appendingPathComponent(fileName)
+        try PNGWriter.write(png: image, to: url)
+        return "frames/\(fileName)"
+    }
+
+    private func writePaletteIndex(
+        for image: PixelImage,
+        paletteBuilder: PaletteTableBuilder,
+        animationID: AnimationID,
+        framesFolder: URL,
+        stem: String,
+        qualifier: FilePathQualifier
+    ) throws -> String {
+        let fileName = "\(stem)_\(qualifier.rawValue).idx"
+        let indices = try paletteBuilder.indices(for: image, frame: fileName, animationID: animationID)
+        let url = framesFolder.appendingPathComponent(fileName)
+        try IndexBufferWriter.write(indices: indices, to: url)
+        return "frames/\(fileName)"
     }
 
     private func makeTimeline(from mode: BAMode) -> BAManifest.Timeline {

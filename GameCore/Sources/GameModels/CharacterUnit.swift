@@ -189,4 +189,22 @@ extension CharacterUnit {
             armor: .leather
         )
     }
+
+    public static func assassin() -> CharacterUnit {
+        CharacterUnit(
+            animationID: .assassin,
+            baseStatBlock: .init(
+                maxHp: 20,
+                strength: 4,
+                defense: 3,
+                intelligence: 3,
+                willpower: 5,
+                speed: 12,
+                dexterity: 10,
+                luck: 8
+            ),
+            weapon: .dagger,
+            armor: .leather
+        )
+    }
 }

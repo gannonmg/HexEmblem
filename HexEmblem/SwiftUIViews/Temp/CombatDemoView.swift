@@ -14,7 +14,11 @@ struct CombatDemoView: View {
 
     private static let sceneSize = CGSize(width: 960, height: 640)
 
-    @State private var model = CombatEncounterModel.demo(range: 1)
+    @State private var model = CombatEncounterModel.demo(
+        leftUnit: .assassin(),
+        rightUnit: .bard(),
+        range: 1
+    )
     @State private var combatScene: CombatScene?
     @State private var seed: Int = 0
 

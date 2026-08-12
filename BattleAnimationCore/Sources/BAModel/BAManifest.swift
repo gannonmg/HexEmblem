@@ -18,7 +18,7 @@ public struct BAManifest: Codable, Sendable {
     public let renderSize: FrameSize
     public let frameAssets: [Frame.Asset]
     public let timelines: [Timeline]
-    public let preservedPalette: [RGBA]
+    public let paletteTable: [RGBA]
     public let warnings: [String]
 
     // MARK: - Init
@@ -30,7 +30,7 @@ public struct BAManifest: Codable, Sendable {
         renderSize: FrameSize,
         frameAssets: [Frame.Asset],
         timelines: [Timeline],
-        preservedPalette: [RGBA],
+        paletteTable: [RGBA],
         warnings: [String]
     ) {
         self.id = id
@@ -40,33 +40,35 @@ public struct BAManifest: Codable, Sendable {
         self.renderSize = renderSize
         self.frameAssets = frameAssets
         self.timelines = timelines
-        self.preservedPalette = preservedPalette
+        self.paletteTable = paletteTable
         self.warnings = warnings
     }
+}
+
+public enum AnimationLayer<T: Codable & Sendable>: Codable, Sendable {
+    case single(T)
+    case dual(foreground: T, background: T)
 }
 
 // MARK: - BAManifest.Frame
 extension BAManifest {
     public enum Frame {
-        public struct Asset: Codable, Sendable {
-            public let sourceFile: String
-            public let layerType: LayerType
+        public typealias PathStorage = AnimationLayer<String>
 
-            public init(sourceFile: String, layerType: LayerType) {
+        public struct Asset: Codable, Sendable {
+
+            public let sourceFile: String
+            public let layerType: AnimationLayer<String>
+            public let paletteLayers: AnimationLayer<String>
+
+            public init(
+                sourceFile: String,
+                layerType: AnimationLayer<String>,
+                paletteLayers: AnimationLayer<String>
+            ) {
                 self.sourceFile = sourceFile
                 self.layerType = layerType
-            }
-        }
-
-        public enum LayerType: Codable, Sendable {
-            case main(path: String)
-            case piercing(foreground: String, background: String)
-
-            public var paths: [String] {
-                switch self {
-                case .main(let path): [path]
-                case .piercing(let foreground, let background): [foreground, background]
-                }
+                self.paletteLayers = paletteLayers
             }
         }
 
@@ -78,6 +80,15 @@ extension BAManifest {
                 self.sourceFile = sourceFile
                 self.duration = duration
             }
+        }
+    }
+}
+
+extension BAManifest.Frame.PathStorage {
+    public var paths: [String] {
+        switch self {
+        case .single(let path): [path]
+        case .dual(let foreground, let background): [foreground, background]
         }
     }
 }

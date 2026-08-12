@@ -17,6 +17,10 @@ let package = Package(
             targets: ["BAImportTool"]
         ),
     ],
+    dependencies: [
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.5.0"),
+        .package(path: "../GameCore"),
+    ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
@@ -31,17 +35,24 @@ let package = Package(
         ),
         .target(
             name: "ImportTooling",
-            dependencies: ["ScriptParser", "ImageUtilities", "BAModel"]
+            dependencies: [
+                "ScriptParser",
+                "ImageUtilities",
+                "BAModel",
+                .product(name: "GameModels", package: "GameCore"),
+            ]
         ),
         .executableTarget(
             name: "BAImportTool",
-            dependencies: ["ImportTooling"]
+            dependencies: [
+                "ImportTooling",
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
+            ]
         ),
         .target(
             name: "BAPlayback",
             dependencies: ["BAModel"],
-            exclude: ["Resources/SourceAnimations"],
-            resources: [.copy("Resources/ProcessedAnimations")]
+            resources: [.copy("Resources/animations.bapack")]
         ),
         .testTarget(
             name: "BAPlaybackTests",

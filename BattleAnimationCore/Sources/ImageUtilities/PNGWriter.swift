@@ -56,3 +56,10 @@ public enum PNGWriter {
         }
     }
 }
+
+public enum IndexBufferWriter {
+    /// Writes one byte per pixel, row-major, matching the sibling PNG's dimensions.
+    public static func write(indices: [UInt8], to url: URL) throws {
+        try Data(indices).write(to: url, options: .atomic)
+    }
+}

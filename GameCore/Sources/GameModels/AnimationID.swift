@@ -53,4 +53,7 @@ extension AnimationID {
     /// testing the drain hold.
     /// Slots: 6 magic, 7 staff (+ magic), 8 dragonstone/refresh/transform variants.
     public static let bardNilsMale: AnimationID = "Bard-Base-M-Nils-Weapons"
+
+    // Assassin-Base-Jaffar-Vanilla-Weapons-M
+    public static let assassin: AnimationID = "Assassin-Base-Jaffar-Vanilla-Weapons-M"
 }

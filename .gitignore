@@ -18,3 +18,4 @@ build/
 # Do not store BattleAnimations on Github. Keep folders in place as example.
 BattleAnimationCore/Sources/BAPlayback/Resources/SourceAnimations/
 BattleAnimationCore/Sources/BAPlayback/Resources/ProcessedAnimations
+*.bapack

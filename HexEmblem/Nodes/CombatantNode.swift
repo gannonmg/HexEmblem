@@ -112,11 +112,11 @@ enum LayerTextures {
 
 extension SKTexture {
     static func load(
-        imageURL: URL,
+        imageData: Data,
         filteringMode: SKTextureFilteringMode = .nearest
     ) throws -> SKTexture {
-        guard let image = NSImage(contentsOf: imageURL) else {
-            fatalError("Could not find image for url \(imageURL)")
+        guard let image = NSImage(data: imageData) else {
+            fatalError("Could not find image for url") // \(imageURL)")
         }
 
         let texture = SKTexture(image: image)

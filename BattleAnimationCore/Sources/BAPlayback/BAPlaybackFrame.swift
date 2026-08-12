@@ -11,10 +11,10 @@ import Foundation
 
 public struct BAPlaybackFrame: Equatable, Sendable {
     public let duration: TimeInterval
-    public let layerURLs: LayerURLs
+    public let layerData: LayerData
 
-    public enum LayerURLs: Equatable, Sendable {
-        case single(URL)
-        case double(foreground: URL, background: URL)
+    public enum LayerData: Equatable, Sendable {
+        case single(Data)
+        case double(foreground: Data, background: Data)
     }
 }

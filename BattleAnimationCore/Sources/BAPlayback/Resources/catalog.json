@@ -1,0 +1,1637 @@
+{
+  "animations" : [
+    {
+      "frameCount" : 24,
+      "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M_1-Knife",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Jaffar Vanilla +Weapons",
+        "gender" : "male",
+        "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M",
+        "rawFolder" : "[Assassin-Base] Jaffar Vanilla +Weapons [M]",
+        "tag" : "Assassin-Base"
+      },
+      "variant" : {
+        "name" : "Knife",
+        "rawFolder" : "1. Knife",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 82,
+      "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M_1-Knife-Alt",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Jaffar Vanilla +Weapons",
+        "gender" : "male",
+        "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M",
+        "rawFolder" : "[Assassin-Base] Jaffar Vanilla +Weapons [M]",
+        "tag" : "Assassin-Base"
+      },
+      "variant" : {
+        "name" : "Knife",
+        "qualifier" : "Alt",
+        "rawFolder" : "1. Knife (Alt)",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 77,
+      "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M_1-Sword",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Jaffar Vanilla +Weapons",
+        "gender" : "male",
+        "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M",
+        "rawFolder" : "[Assassin-Base] Jaffar Vanilla +Weapons [M]",
+        "tag" : "Assassin-Base"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "rawFolder" : "1. Sword",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 108,
+      "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M_1-Sword-Alt",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Jaffar Vanilla +Weapons",
+        "gender" : "male",
+        "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M",
+        "rawFolder" : "[Assassin-Base] Jaffar Vanilla +Weapons [M]",
+        "tag" : "Assassin-Base"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "qualifier" : "Alt",
+        "rawFolder" : "1. Sword (Alt)",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 77,
+      "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M_1-Sword-Fixed-Animation",
+      "modes" : [
+        6,
+        12,
+        5,
+        11,
+        1,
+        3,
+        8,
+        9,
+        10,
+        7
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Jaffar Vanilla +Weapons",
+        "gender" : "male",
+        "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M",
+        "rawFolder" : "[Assassin-Base] Jaffar Vanilla +Weapons [M]",
+        "tag" : "Assassin-Base"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "qualifier" : "Fixed Animation",
+        "rawFolder" : "1. Sword (Fixed Animation)",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 108,
+      "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M_1-Sword-Jojaffar",
+      "modes" : [
+        6,
+        12,
+        5,
+        11,
+        1,
+        3,
+        8,
+        9,
+        10,
+        7
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Jaffar Vanilla +Weapons",
+        "gender" : "male",
+        "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M",
+        "rawFolder" : "[Assassin-Base] Jaffar Vanilla +Weapons [M]",
+        "tag" : "Assassin-Base"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "qualifier" : "Jojaffar",
+        "rawFolder" : "1. Sword (Jojaffar)",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 86,
+      "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M_1-Sword-Melee-Fix-Ranged-Knife-Combo",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Jaffar Vanilla +Weapons",
+        "gender" : "male",
+        "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M",
+        "rawFolder" : "[Assassin-Base] Jaffar Vanilla +Weapons [M]",
+        "tag" : "Assassin-Base"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "qualifier" : "Melee Fix + Ranged Knife Combo",
+        "rawFolder" : "1. Sword (Melee Fix + Ranged Knife Combo)",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 23,
+      "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M_5-Bow",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Jaffar Vanilla +Weapons",
+        "gender" : "male",
+        "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M",
+        "rawFolder" : "[Assassin-Base] Jaffar Vanilla +Weapons [M]",
+        "tag" : "Assassin-Base"
+      },
+      "variant" : {
+        "name" : "Bow",
+        "rawFolder" : "5. Bow",
+        "slot" : 5
+      }
+    },
+    {
+      "frameCount" : 15,
+      "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M_5-Bow-Gun",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Jaffar Vanilla +Weapons",
+        "gender" : "male",
+        "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M",
+        "rawFolder" : "[Assassin-Base] Jaffar Vanilla +Weapons [M]",
+        "tag" : "Assassin-Base"
+      },
+      "variant" : {
+        "name" : "Bow",
+        "qualifier" : "Gun",
+        "rawFolder" : "5. Bow (Gun)",
+        "slot" : 5
+      }
+    },
+    {
+      "frameCount" : 29,
+      "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M_5-Bow-Lyn-Style",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Jaffar Vanilla +Weapons",
+        "gender" : "male",
+        "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M",
+        "rawFolder" : "[Assassin-Base] Jaffar Vanilla +Weapons [M]",
+        "tag" : "Assassin-Base"
+      },
+      "variant" : {
+        "name" : "Bow",
+        "qualifier" : "Lyn Style",
+        "rawFolder" : "5. Bow (Lyn Style)",
+        "slot" : 5
+      }
+    },
+    {
+      "frameCount" : 21,
+      "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M_6-Magic",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Jaffar Vanilla +Weapons",
+        "gender" : "male",
+        "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M",
+        "rawFolder" : "[Assassin-Base] Jaffar Vanilla +Weapons [M]",
+        "tag" : "Assassin-Base"
+      },
+      "variant" : {
+        "name" : "Magic",
+        "rawFolder" : "6. Magic",
+        "slot" : 6
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M_8-Unarmed",
+      "modes" : [
+        6,
+        12,
+        5,
+        11,
+        1,
+        3,
+        8,
+        9,
+        10,
+        7
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Jaffar Vanilla +Weapons",
+        "gender" : "male",
+        "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M",
+        "rawFolder" : "[Assassin-Base] Jaffar Vanilla +Weapons [M]",
+        "tag" : "Assassin-Base"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M_8-Unarmed-Fixed-Animation",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Jaffar Vanilla +Weapons",
+        "gender" : "male",
+        "id" : "Assassin-Base-Jaffar-Vanilla-Weapons-M",
+        "rawFolder" : "[Assassin-Base] Jaffar Vanilla +Weapons [M]",
+        "tag" : "Assassin-Base"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "qualifier" : "Fixed Animation",
+        "rawFolder" : "8. Unarmed (Fixed Animation)",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 77,
+      "id" : "Assassin-Reskin-Hood-M-by-Jey-the-Count_1-Sword",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "Jey the Count",
+        "displayName" : "Hood",
+        "gender" : "male",
+        "id" : "Assassin-Reskin-Hood-M-by-Jey-the-Count",
+        "rawFolder" : "[Assassin-Reskin] Hood [M] by Jey the Count",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "rawFolder" : "1. Sword",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 29,
+      "id" : "Assassin-Reskin-Hood-M-by-Jey-the-Count_5-Bow",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "Jey the Count",
+        "displayName" : "Hood",
+        "gender" : "male",
+        "id" : "Assassin-Reskin-Hood-M-by-Jey-the-Count",
+        "rawFolder" : "[Assassin-Reskin] Hood [M] by Jey the Count",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Bow",
+        "rawFolder" : "5. Bow",
+        "slot" : 5
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "Assassin-Reskin-Hood-M-by-Jey-the-Count_8-Unarmed",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "Jey the Count",
+        "displayName" : "Hood",
+        "gender" : "male",
+        "id" : "Assassin-Reskin-Hood-M-by-Jey-the-Count",
+        "rawFolder" : "[Assassin-Reskin] Hood [M] by Jey the Count",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 84,
+      "id" : "Assassin-Reskin-Marisa-F-by-Redbean_1-Sword",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "Redbean",
+        "displayName" : "Marisa",
+        "gender" : "female",
+        "id" : "Assassin-Reskin-Marisa-F-by-Redbean",
+        "rawFolder" : "[Assassin-Reskin] Marisa [F] by Redbean",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "rawFolder" : "1. Sword",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 83,
+      "id" : "Assassin-Reskin-Marisa-F-by-Redbean_1-Sword-Knife-Ranged",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "Redbean",
+        "displayName" : "Marisa",
+        "gender" : "female",
+        "id" : "Assassin-Reskin-Marisa-F-by-Redbean",
+        "rawFolder" : "[Assassin-Reskin] Marisa [F] by Redbean",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "qualifier" : "Knife Ranged",
+        "rawFolder" : "1. Sword (Knife Ranged)",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 4,
+      "id" : "Assassin-Reskin-Marisa-F-by-Redbean_8-Unarmed",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "Redbean",
+        "displayName" : "Marisa",
+        "gender" : "female",
+        "id" : "Assassin-Reskin-Marisa-F-by-Redbean",
+        "rawFolder" : "[Assassin-Reskin] Marisa [F] by Redbean",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 78,
+      "id" : "Assassin-Reskin-Matthew-M-by-Greentea_1-Sword",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "Greentea",
+        "displayName" : "Matthew",
+        "gender" : "male",
+        "id" : "Assassin-Reskin-Matthew-M-by-Greentea",
+        "rawFolder" : "[Assassin-Reskin] Matthew [M] by Greentea",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "rawFolder" : "1. Sword",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 60,
+      "id" : "Assassin-Reskin-Matthew-M-by-Greentea_1-Sword-alt-motion",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "Greentea",
+        "displayName" : "Matthew",
+        "gender" : "male",
+        "id" : "Assassin-Reskin-Matthew-M-by-Greentea",
+        "rawFolder" : "[Assassin-Reskin] Matthew [M] by Greentea",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "qualifier" : "alt motion",
+        "rawFolder" : "1. Sword (alt motion)",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "Assassin-Reskin-Matthew-M-by-Greentea_8-Unarmed",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "Greentea",
+        "displayName" : "Matthew",
+        "gender" : "male",
+        "id" : "Assassin-Reskin-Matthew-M-by-Greentea",
+        "rawFolder" : "[Assassin-Reskin] Matthew [M] by Greentea",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 94,
+      "id" : "Assassin-Reskin-Ponytail-Bow-F_1-Knife",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Ponytail +Bow",
+        "gender" : "female",
+        "id" : "Assassin-Reskin-Ponytail-Bow-F",
+        "rawFolder" : "[Assassin-Reskin] Ponytail +Bow [F]",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Knife",
+        "rawFolder" : "1. Knife",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 78,
+      "id" : "Assassin-Reskin-Ponytail-Bow-F_1-Sword",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Ponytail +Bow",
+        "gender" : "female",
+        "id" : "Assassin-Reskin-Ponytail-Bow-F",
+        "rawFolder" : "[Assassin-Reskin] Ponytail +Bow [F]",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "rawFolder" : "1. Sword",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 18,
+      "id" : "Assassin-Reskin-Ponytail-Bow-F_5-Bow",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Ponytail +Bow",
+        "gender" : "female",
+        "id" : "Assassin-Reskin-Ponytail-Bow-F",
+        "rawFolder" : "[Assassin-Reskin] Ponytail +Bow [F]",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Bow",
+        "rawFolder" : "5. Bow",
+        "slot" : 5
+      }
+    },
+    {
+      "frameCount" : 29,
+      "id" : "Assassin-Reskin-Ponytail-Bow-F_5-Bow-Lyn-Bow",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Ponytail +Bow",
+        "gender" : "female",
+        "id" : "Assassin-Reskin-Ponytail-Bow-F",
+        "rawFolder" : "[Assassin-Reskin] Ponytail +Bow [F]",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Bow",
+        "qualifier" : "Lyn Bow",
+        "rawFolder" : "5. Bow (Lyn Bow)",
+        "slot" : 5
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "Assassin-Reskin-Ponytail-Bow-F_8-Unarmed",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Ponytail +Bow",
+        "gender" : "female",
+        "id" : "Assassin-Reskin-Ponytail-Bow-F",
+        "rawFolder" : "[Assassin-Reskin] Ponytail +Bow [F]",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 73,
+      "id" : "Assassin-Reskin-Ponytail-Skirt-F_1-Knife",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Ponytail +Skirt",
+        "gender" : "female",
+        "id" : "Assassin-Reskin-Ponytail-Skirt-F",
+        "rawFolder" : "[Assassin-Reskin] Ponytail +Skirt [F]",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Knife",
+        "rawFolder" : "1. Knife",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 64,
+      "id" : "Assassin-Reskin-Ponytail-Skirt-F_1-Sword",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Ponytail +Skirt",
+        "gender" : "female",
+        "id" : "Assassin-Reskin-Ponytail-Skirt-F",
+        "rawFolder" : "[Assassin-Reskin] Ponytail +Skirt [F]",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "rawFolder" : "1. Sword",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 18,
+      "id" : "Assassin-Reskin-Ponytail-Skirt-F_5-Bow",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Ponytail +Skirt",
+        "gender" : "female",
+        "id" : "Assassin-Reskin-Ponytail-Skirt-F",
+        "rawFolder" : "[Assassin-Reskin] Ponytail +Skirt [F]",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Bow",
+        "rawFolder" : "5. Bow",
+        "slot" : 5
+      }
+    },
+    {
+      "frameCount" : 3,
+      "id" : "Assassin-Reskin-Ponytail-Skirt-F_8-Unarmed",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Ponytail +Skirt",
+        "gender" : "female",
+        "id" : "Assassin-Reskin-Ponytail-Skirt-F",
+        "rawFolder" : "[Assassin-Reskin] Ponytail +Skirt [F]",
+        "tag" : "Assassin-Reskin"
+      },
+      "variant" : {
+        "name" : "Unarmed",
+        "rawFolder" : "8. Unarmed",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 71,
+      "id" : "Assassin-Variant-Bow-Stylish-Assassin-F-by-Tíxamas_1-Sword",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "Tíxamas",
+        "displayName" : "Bow Stylish Assassin",
+        "gender" : "female",
+        "id" : "Assassin-Variant-Bow-Stylish-Assassin-F-by-Tíxamas",
+        "rawFolder" : "[Assassin-Variant] Bow Stylish Assassin [F] by Tíxamas",
+        "tag" : "Assassin-Variant"
+      },
+      "variant" : {
+        "name" : "Sword",
+        "rawFolder" : "1. Sword",
+        "slot" : 1
+      }
+    },
+    {
+      "frameCount" : 46,
+      "id" : "Assassin-Variant-Bow-Stylish-Assassin-F-by-Tíxamas_5-Bow",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "author" : "Tíxamas",
+        "displayName" : "Bow Stylish Assassin",
+        "gender" : "female",
+        "id" : "Assassin-Variant-Bow-Stylish-Assassin-F-by-Tíxamas",
+        "rawFolder" : "[Assassin-Variant] Bow Stylish Assassin [F] by Tíxamas",
+        "tag" : "Assassin-Variant"
+      },
+      "variant" : {
+        "name" : "Bow",
+        "rawFolder" : "5. Bow",
+        "slot" : 5
+      }
+    },
+    {
+      "frameCount" : 26,
+      "id" : "Bard-Base-M-Elffin-Weapons_6-Magic",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Elffin +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Elffin-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Elffin +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Magic",
+        "rawFolder" : "6. Magic",
+        "slot" : 6
+      }
+    },
+    {
+      "frameCount" : 24,
+      "id" : "Bard-Base-M-Elffin-Weapons_6-Magic-SaintRubenio",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Elffin +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Elffin-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Elffin +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Magic",
+        "qualifier" : "SaintRubenio",
+        "rawFolder" : "6. Magic (SaintRubenio)",
+        "slot" : 6
+      }
+    },
+    {
+      "frameCount" : 26,
+      "id" : "Bard-Base-M-Elffin-Weapons_6-Magic-Test-2",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Elffin +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Elffin-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Elffin +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Magic",
+        "qualifier" : "Test 2",
+        "rawFolder" : "6. Magic (Test 2)",
+        "slot" : 6
+      }
+    },
+    {
+      "frameCount" : 36,
+      "id" : "Bard-Base-M-Elffin-Weapons_6-Magic-Yerek",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Elffin +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Elffin-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Elffin +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Magic {Yerek}",
+        "rawFolder" : "6. Magic {Yerek}",
+        "slot" : 6
+      }
+    },
+    {
+      "frameCount" : 25,
+      "id" : "Bard-Base-M-Elffin-Weapons_8-Refresh",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Elffin +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Elffin-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Elffin +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Refresh",
+        "rawFolder" : "8. Refresh",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 33,
+      "id" : "Bard-Base-M-Elffin-Weapons_8-Refresh-FE6-Bird-Sfx",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Elffin +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Elffin-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Elffin +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Refresh (FE6)",
+        "qualifier" : "Bird Sfx",
+        "rawFolder" : "8. Refresh (FE6)(Bird Sfx)",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 24,
+      "id" : "Bard-Base-M-Elffin-Weapons_8-Refresh-FE7-8",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Elffin +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Elffin-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Elffin +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Refresh",
+        "qualifier" : "FE7-8",
+        "rawFolder" : "8. Refresh (FE7-8)",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 33,
+      "id" : "Bard-Base-M-Nils-Weapons_6-Magic",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Nils +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Nils-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Nils +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Magic",
+        "rawFolder" : "6. Magic",
+        "slot" : 6
+      }
+    },
+    {
+      "frameCount" : 6,
+      "id" : "Bard-Base-M-Nils-Weapons_7-Staff",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Nils +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Nils-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Nils +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Staff",
+        "rawFolder" : "7. Staff",
+        "slot" : 7
+      }
+    },
+    {
+      "frameCount" : 13,
+      "id" : "Bard-Base-M-Nils-Weapons_7-Staff-Magic",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Nils +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Nils-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Nils +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Staff",
+        "qualifier" : "+Magic",
+        "rawFolder" : "7. Staff (+Magic)",
+        "slot" : 7
+      }
+    },
+    {
+      "frameCount" : 21,
+      "id" : "Bard-Base-M-Nils-Weapons_8-Dragonstone",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Nils +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Nils-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Nils +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Dragonstone",
+        "rawFolder" : "8. Dragonstone",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 32,
+      "id" : "Bard-Base-M-Nils-Weapons_8-Refresh",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Nils +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Nils-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Nils +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Refresh",
+        "rawFolder" : "8. Refresh",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 21,
+      "id" : "Bard-Base-M-Nils-Weapons_8-Revert-Fire",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Nils +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Nils-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Nils +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Revert",
+        "qualifier" : "Fire",
+        "rawFolder" : "8. Revert (Fire)",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 19,
+      "id" : "Bard-Base-M-Nils-Weapons_8-Revert-Ice",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Nils +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Nils-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Nils +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Revert",
+        "qualifier" : "Ice",
+        "rawFolder" : "8. Revert (Ice)",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 21,
+      "id" : "Bard-Base-M-Nils-Weapons_8-Transform-Fire",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Nils +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Nils-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Nils +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Transform",
+        "qualifier" : "Fire",
+        "rawFolder" : "8. Transform (Fire)",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 19,
+      "id" : "Bard-Base-M-Nils-Weapons_8-Transform-Ice",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Nils +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Nils-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Nils +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Transform",
+        "qualifier" : "Ice",
+        "rawFolder" : "8. Transform (Ice)",
+        "slot" : 8
+      }
+    },
+    {
+      "frameCount" : 19,
+      "id" : "Bard-Base-M-Nils-Weapons_8-Transform-Ice-Alt-SFX",
+      "modes" : [
+        9,
+        10,
+        12,
+        1,
+        7,
+        3,
+        5,
+        11,
+        6,
+        8
+      ],
+      "renderSize" : {
+        "height" : 160,
+        "width" : 240
+      },
+      "spriteSet" : {
+        "displayName" : "Nils +Weapons",
+        "gender" : "male",
+        "id" : "Bard-Base-M-Nils-Weapons",
+        "rawFolder" : "[Bard-Base] [M] Nils +Weapons",
+        "tag" : "Bard-Base"
+      },
+      "variant" : {
+        "name" : "Transform",
+        "qualifier" : "Ice - Alt SFX",
+        "rawFolder" : "8. Transform (Ice - Alt SFX)",
+        "slot" : 8
+      }
+    }
+  ],
+  "version" : 1
+}

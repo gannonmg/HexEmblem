@@ -57,6 +57,28 @@ public struct PixelImage {
 
         return PixelImage(width: width, height: height, pixels: converted)
     }
+
+    /// Reduces this image's flat RGBA pixels to a per-pixel palette index and
+    /// the color table it indexes into, in first-seen order.
+    public func indexedRepresentation() -> (indices: [UInt8], table: [RGBA]) {
+        var table: [RGBA] = []
+        var lookup: [RGBA: UInt8] = [:]
+        var indices: [UInt8] = []
+        indices.reserveCapacity(pixels.count)
+
+        for pixel in pixels {
+            if let existing = lookup[pixel] {
+                indices.append(existing)
+            } else {
+                let newIndex = UInt8(table.count)
+                table.append(pixel)
+                lookup[pixel] = newIndex
+                indices.append(newIndex)
+            }
+        }
+
+        return (indices, table)
+    }
 }
 
 extension RGBA {

@@ -18,15 +18,23 @@ struct PreparedFrame {
     init(_ frame: BAPlaybackFrame) throws {
         duration = frame.duration
 
-        layerTextures = switch frame.layerURLs {
-        case .single(let url):
-                .single(try .load(imageURL: url))
-
-        case .double(let foregroundURL, let backgroundURL):
+        layerTextures = switch frame.layerData {
+        case .single(let data):
+                .single(try .load(imageData: data))
+        case .double(let foregroundData, let backgroundData):
                 .double(
-                    foreground: try .load(imageURL: foregroundURL),
-                    background: try .load(imageURL: backgroundURL)
+                    foreground: try .load(imageData: foregroundData),
+                    background: try .load(imageData: backgroundData)
                 )
         }
+//        {
+//        case .single(let url):
+//                .single(try .load(imageURL: url))
+//        case .double(let foregroundURL, let backgroundURL):
+//                .double(
+//                    foreground: try .load(imageURL: foregroundURL),
+//                    background: try .load(imageURL: backgroundURL)
+//                )
+//        }
     }
 }
