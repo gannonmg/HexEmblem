@@ -319,7 +319,16 @@ struct BAImportTool: AsyncParsableCommand {
     private struct SourceIdentity {
         let spriteSet: BASpriteSet
         let variant: BAVariant
-        var animationID: String { "\(spriteSet.id)_\(variant.idComponent)" }
+        let subPathComponents: [String]
+
+        var animationID: String {
+            let suffix = subPathComponents
+                .map { BASpriteSet.slug($0) }
+                .joined(separator: "-")
+            return suffix.isEmpty
+            ? "\(spriteSet.id)_\(variant.idComponent)"
+            : "\(spriteSet.id)_\(variant.idComponent)-\(suffix)"
+        }
     }
 
     private static func sourceIdentity(for sourceFolder: URL, sourceRoot: URL) -> SourceIdentity {
@@ -330,8 +339,9 @@ struct BAImportTool: AsyncParsableCommand {
 
         let spriteSet = BASpriteSet(folderName: components.first ?? relativePath)
         let variant = BAVariant(folderName: components.count > 1 ? components[1] : "")
+        let subPathComponents = components.count > 2 ? Array(components[2...]) : []
 
-        return SourceIdentity(spriteSet: spriteSet, variant: variant)
+        return SourceIdentity(spriteSet: spriteSet, variant: variant, subPathComponents: subPathComponents)
     }
 }
 

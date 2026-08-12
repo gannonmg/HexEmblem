@@ -25,12 +25,12 @@ enum BAImportError: LocalizedError {
             "No frames found for \(folderName)"
         case .unsupportedFrameSize(let filename, let width, let height):
             "Unsupported frame size \(width) x \(height) - file \(filename)"
-        case .paletteExceedsCapacity(let animationID):
-            "Palette exceeded capacity - \(animationID)"
-        case .paletteMismatch(let animationID, let frame, _):
-            "Mismatched palettes in \(animationID) - frame \(frame)"
-        case .paletteSwatchMismatch(let animationID, let frame):
-            "Swatch mismatch in \(animationID) - frame \(frame)"
+        case .paletteExceedsCapacity:
+            "Palette exceeded capacity"
+        case .paletteMismatch(_, let frame, _):
+            "Mismatched palettes in frame [\(frame)]"
+        case .paletteSwatchMismatch(_, let frame):
+            "Swatch mismatch in frame [\(frame)]"
         }
     }
 }
@@ -252,7 +252,7 @@ public final class BAImporter {
                 return .frame(
                     BAManifest.Frame.Event(
                         sourceFile: frame.filename,
-                        duration: frame.durationSeconds
+                        durationTicks: frame.durationTicks
                     )
                 )
 

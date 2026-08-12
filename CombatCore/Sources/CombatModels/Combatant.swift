@@ -12,7 +12,7 @@ public struct Combatant: CombatPlanParticipant, Codable, Sendable {
     public let characterID: CharacterID
 
     /// Health at beginning of this combat
-    public let initialHealth: Int
+    public let initialHealthStatus: UnitHealthStatus
 
     // Weapon / Armor effects
     public let weaponDamage: [WeaponDamage]

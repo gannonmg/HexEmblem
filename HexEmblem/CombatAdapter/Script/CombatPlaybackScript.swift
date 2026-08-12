@@ -7,6 +7,7 @@
 
 import BAPlayback
 import CombatModels
+import GameModels
 
 struct CombatPlaybackScript {
     let initiator: Side
@@ -16,7 +17,7 @@ struct CombatPlaybackScript {
 
     struct Side {
         let role: CombatRole
-        let startingHealth: Int
+        let healthStatus: UnitHealthStatus
         let idleEvents: [BAPlaybackEvent]
     }
 

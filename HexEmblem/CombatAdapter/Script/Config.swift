@@ -18,7 +18,7 @@ extension CombatPlaybackScriptBuilder {
 
         public struct Unit {
             let animationID: AnimationID
-            let initialHealth: Int
+            let healthStatus: UnitHealthStatus
             let weaponSlot: BAWeaponSlot
             let weaponIsMagical: Bool
         }
@@ -26,10 +26,10 @@ extension CombatPlaybackScriptBuilder {
 }
 
 extension CombatPlaybackScriptBuilder.Config.Unit {
-    init(unit: CharacterUnit, startingHealth: Int, atRange encounterRange: Int) {
+    init(unit: CharacterUnit, healthStatus: UnitHealthStatus, atRange encounterRange: Int) {
         self.init(
             animationID: unit.animationID,
-            initialHealth: startingHealth,
+            healthStatus: healthStatus,
             weaponSlot: unit.weapon.animationSlot(atRange: encounterRange),
             weaponIsMagical: unit.weapon.hasMagicalDamage
         )

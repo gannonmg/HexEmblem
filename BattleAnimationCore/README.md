@@ -76,16 +76,32 @@ tooling at runtime.
 
 ## Current Failing Imports
 ___
-Failed (11):
-  Dancer-Reskin-U-Dracodancer-V2-by-Sirknite31_8-Dragonstone — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 2.)
-  Dancer-Reskin-U-Dracodancer-V2-by-Sirknite31_8-Dragonstone — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 2.)
-  Dancer-Reskin-U-Dracodancer-V2-by-Sirknite31_8-Dragonstone — “Dancer-Reskin-U-Dracodancer-V2-by-Sirknite31_8-Dragonstone” couldn’t be removed because you don’t have permission to access it.
-  Dancer-Reskin-U-Dracodancer-V2-by-Sirknite31_8-Dragonstone — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 2.)
-  Dancer-Reskin-U-Dracodancer-V2-by-Sirknite31_8-Dragonstone — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 2.)
+Failed (14):
   FE7-Eliwood-Base-T1-Vanilla-Weapons-M_1-Sword — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 0.)
   FE7-Eliwood-Reskin-T2-Brave-M-by-RedBean_1-Sword-Durandal — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 0.)
-  FE7-Hector-Base-M-T2-Vanilla-Magic-by-Skitty_1-Sword-Binding-Blade — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 0.)
-  GK-Base-U-Vanilla-Weapons_5-Bow-ZoramineFae — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 0.)
-  General-Reskin-Baron-Cape-Weapons-M_4-Handaxe-Revamped-V2-0 — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 0.)
-  T1-Priest-Base-Vanilla-Priest-Magic-M_6-Magic-Yerek — The operation couldn’t be completed. (ImageUtilities.PixelImageError error 0.)
+  FE7-Hector-Base-M-T2-Vanilla-Magic-by-Skitty_1-Sword-Binding-Blade 
+    — The operation couldn’t be completed [PixelImageError.cannotCreateImageSource]
+  FE8-Ephraim-Base-T1-Vanilla-Repack-Weapons-Manakete-F_8-Revert 
+    — Mismatched palettes in frame [Revert_000_main.idx]
+  FE8-Ephraim-Base-T1-Vanilla-Repack-Weapons-Manakete-M_8-Revert 
+    — Mismatched palettes in - frame [Revert_000_main.idx]
+  FE8-Ephraim-Base-T1-Vanilla-Repack-Weapons-Manakete-F_8-Transform 
+    — Mismatched palettes in - frame [Transform_042_main.idx]
+  FE8-Ephraim-Base-T1-Vanilla-Repack-Weapons-Manakete-M_8-Transform 
+    — Mismatched palettes in - frame [Transform_042_main.idx]
+  GK-Base-U-Vanilla-Weapons_5-Bow-ZoramineFae 
+    — The operation couldn’t be completed [PixelImageError.cannotCreateImageSource]
+  General-Reskin-Baron-Cape-Weapons-M_1-Sword 
+    — Swatch mismatch in [frame Sword_001.png]
+  General-Reskin-Baron-Cape-Weapons-M_4-Handaxe-Revamped-V2-0 
+    — The operation couldn’t be completed [PixelImageError.cannotCreateImageSource]
+  General-Reskin-Baron-Cape-Weapons-M_8-Unarmed 
+    — Mismatched palettes in [frame Unarmed_000_main.idx]
+  Marshall-Zelgius-v3-M-by-Nuramon_1-Sword 
+    — Swatch mismatch in [frame Sword_047.png]
+  Sword-FE16-Custom-Mortal-Savant-F-by-Nuramon_8-Unarmed 
+    — Mismatched palettes in [frame Unarmed_000_main.idx]
+  T1-Priest-Base-Vanilla-Priest-Magic-M_6-Magic-Yerek 
+    — The operation couldn’t be completed [PixelImageError.cannotCreateImageSource]
 
+Error: hadImportFailures(amount: 14)

@@ -52,7 +52,10 @@ let package = Package(
         .target(
             name: "BAPlayback",
             dependencies: ["BAModel"],
-            resources: [.copy("Resources/animations.bapack")]
+            resources: [
+                .copy("Resources/animations.bapack"),
+                .process("Resources/catalog.json"),
+            ]
         ),
         .testTarget(
             name: "BAPlaybackTests",

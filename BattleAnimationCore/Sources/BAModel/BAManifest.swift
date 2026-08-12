@@ -74,11 +74,11 @@ extension BAManifest {
 
         public struct Event: Codable, Sendable {
             public let sourceFile: String
-            public let duration: TimeInterval
+            public let durationTicks: Int
 
-            public init(sourceFile: String, duration: TimeInterval) {
+            public init(sourceFile: String, durationTicks: Int) {
                 self.sourceFile = sourceFile
-                self.duration = duration
+                self.durationTicks = durationTicks
             }
         }
     }

@@ -21,10 +21,6 @@ public struct BAScript {
         public let flags: String
         public let filename: String
 
-        public var durationSeconds: TimeInterval {
-            TimeInterval(durationTicks) / 60.0
-        }
-
         public init(durationTicks: Int, flags: String, filename: String) {
             self.durationTicks = durationTicks
             self.flags = flags

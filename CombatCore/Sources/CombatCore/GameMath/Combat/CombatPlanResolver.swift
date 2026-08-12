@@ -44,8 +44,8 @@ public final class CombatPlanResolver {
         self.responder = responder
 
         self.healthPool = CombatHealthTracker(
-            initiatorHealth: initiator.initialHealth,
-            responderHealth: responder.initialHealth
+            initiatorHealth: initiator.initialHealthStatus.currentHealth,
+            responderHealth: responder.initialHealthStatus.currentHealth
         )
 
         self.randomSource = GKMersenneTwisterRandomSource(seed: UInt64(seed))

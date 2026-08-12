@@ -60,7 +60,7 @@ public struct BASpriteSet: Codable, Hashable, Sendable {
         self.id = BASpriteSet.slug(raw)
     }
 
-    static func slug(_ value: String) -> String {
+    public static func slug(_ value: String) -> String {
         let mapped = value.map { $0.isLetter || $0.isNumber ? $0 : "-" }
         return String(mapped)
             .split(separator: "-", omittingEmptySubsequences: true)

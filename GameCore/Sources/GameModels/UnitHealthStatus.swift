@@ -5,7 +5,7 @@
 //  Created by Matt Gannon on 8/10/26.
 //
 
-public struct UnitHealthStatus: Sendable {
+public struct UnitHealthStatus: Codable, Sendable {
     public let currentHealth: Int
     public let maxHealth: Int
 

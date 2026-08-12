@@ -16,7 +16,7 @@ extension CharacterUnit: CombatantProvider {
     public func buildCombatant() -> Combatant {
         Combatant(
             characterID: characterID,
-            initialHealth: currentHealth,
+            initialHealthStatus: healthStatus,
             weaponDamage: weapon.damage,
             weaponRange: weapon.range,
             resistances: getResistances(),

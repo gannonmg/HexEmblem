@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PlaybackDebugPanel: View {
 
-    private static let speeds: [CGFloat] = [1, 0.5, 0.25]
+    private static let speeds: [Double] = [1, 0.5, 0.25]
 
     @Bindable private var debug = PlaybackDebug.shared
 
@@ -17,7 +17,7 @@ struct PlaybackDebugPanel: View {
         VStack(alignment: .leading, spacing: 6) {
             Picker("Speed", selection: $debug.speed) {
                 ForEach(Self.speeds, id: \.self) { speed in
-                    Text(String(format: "%gx", Double(speed))).tag(speed)
+                    Text(String(format: "%gx", speed)).tag(speed)
                 }
             }
             .pickerStyle(.segmented)

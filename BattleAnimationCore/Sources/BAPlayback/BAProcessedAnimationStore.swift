@@ -120,7 +120,7 @@ public enum BAProcessedAnimationStore {
                 guard let asset = assetsBySourceFile[frameEvent.sourceFile] else { return nil }
                 let layerData = try playbackLayerData(from: asset.layerType, animationID: entry.id)
                 return .frame(
-                    BAPlaybackFrame(duration: frameEvent.duration, layerData: layerData)
+                    BAPlaybackFrame(ticks: frameEvent.durationTicks, layerData: layerData)
                 )
 
             case .command(let command):

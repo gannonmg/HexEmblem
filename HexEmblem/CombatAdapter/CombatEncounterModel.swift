@@ -71,12 +71,12 @@ extension CombatEncounterModel {
         let builderConfig = CombatPlaybackScriptBuilder.Config(
             initiator: .init(
                 unit: initiator,
-                startingHealth: combatConfig.initiator.initialHealth,
+                healthStatus: combatConfig.initiator.initialHealthStatus,
                 atRange: range
             ),
             responder: .init(
                 unit: responder,
-                startingHealth: combatConfig.responder.initialHealth,
+                healthStatus: combatConfig.responder.initialHealthStatus,
                 atRange: range
             ),
             range: range,

@@ -16,20 +16,40 @@ public enum BAPlaybackEvent: Equatable, Sendable {
 // MARK: BAPlaybackEvent.Marker
 extension BAPlaybackEvent {
     public enum Marker: Equatable, Sendable {
-        case impact
-        case castSpell
-        case armHPDepletion
-        case waitForHPDepletion
-        case beginOpponentTurn
-        case startAttack
-        case startDodge
-        case endDodge
-        /// SFE-glossed codes → drives audio engine
+        case waitForHPDepletion      // C01
+        case waitForDodgeStart       // C02
+        case waitForForwardDodge     // C18
+        case waitForAttackStart      // C03
+        case armHPDepletion          // C04  — barrier, and what releases the opponent's dodge
+        case castSpell               // C05  — barrier
+        case unmodelledBarrier(String) // C13, C2D, C39, C52
+        case beginDodgeFrames        // C0E  — signal, not a barrier
+        case startAttackEffects      // C07  — signal, not a barrier
+        case beginOpponentRound      // C06  — signal: releases the opponent's next round
+        case endDodge                // C0D
+        case impact                  // C1A, C08–C0C
         case playSound
-        /// vibration/flash/particle-glossed codes → drives visual layer
         case screenEffect
-        /// no reliable gloss (C17, C53–55, C64, C71, C72, CC0, CDC, etc.)}
         case unrecognized(String)
+    }
+}
+
+extension BAPlaybackEvent.Marker {
+    /// The ten opcodes `animedrv.c` rewinds the script cursor on. A cursor that reaches one
+    /// of these re-executes it every frame until something clears its release flag.
+    public var isBarrier: Bool {
+        switch self {
+        case .waitForHPDepletion,
+                .waitForDodgeStart,
+                .waitForForwardDodge,
+                .waitForAttackStart,
+                .armHPDepletion,
+                .castSpell,
+                .unmodelledBarrier:
+            return true
+        default:
+            return false
+        }
     }
 }
 
@@ -38,7 +58,10 @@ extension BAPlaybackEvent.Marker {
         self = Self.byOpcode[code] ?? .unrecognized(code)
     }
 
-    /// Opcode → meaning, per the FEBuilderGBA `battleanime_85command_FE8` tables.
+    /// Opcode → meaning, per the FEBuilderGBA `battleanime_85command_FE8` tables, with the
+    /// barrier/signal split taken from the FE8 decompilation: `animedrv.c` rewinds the script
+    /// cursor on exactly ten opcodes, and `banim-main.c` holds each one until a flag the other
+    /// combatant sets clears it.
     ///
     /// The animator comments carried on `BAScript.Command` are never consulted — they are
     /// wrong often enough to be worse than useless (`C01` is commented "NOP" in every one of
@@ -52,21 +75,32 @@ extension BAPlaybackEvent.Marker {
             }
         }
 
-        // Structural — these drive timing and must be right.
-        map(.impact, "C08", "C09", "C0A", "C0B", "C0C", "C1A")
-        map(.castSpell, "C05")
-        map(.armHPDepletion, "C04")
+        // Barriers — the cursor spins here until its release flag is set.
         map(.waitForHPDepletion, "C01")
-        map(.beginOpponentTurn, "C06")
+        map(.waitForDodgeStart, "C02")
+        map(.waitForAttackStart, "C03")
+        map(.armHPDepletion, "C04")
+        map(.castSpell, "C05")
+        map(.waitForForwardDodge, "C18")
+
+        // Barriers with no modelled release condition. Absent from FE-Repo except C2D (12)
+        // and C52 (1), but an interpreter that walks past them isn't following the script.
+        for code in ["C13", "C2D", "C39", "C52"] {
+            table[code] = .unmodelledBarrier(code)
+        }
+
+        // Signals — queued for the outer layer, never block the cursor.
+        map(.impact, "C08", "C09", "C0A", "C0B", "C0C", "C1A")
+        map(.beginOpponentRound, "C06")
+        map(.startAttackEffects, "C07")
+        map(.beginDodgeFrames, "C0E")
         map(.endDodge, "C0D")
-        map(.startDodge, "C02", "C0E", "C18")
-        map(.startAttack, "C03", "C07")
 
         // Screen effects — vibration, flash, and scripted particle/prop animations.
         map(
             .screenEffect,
             "C14", "C15", "C26", "C27", "C2C", "C2E", "C2F", "C30",
-            "C31", "C32", "C39", "C3D", "C47", "C4E", "C50", "C51"
+            "C31", "C32", "C3D", "C47", "C4E", "C50", "C51"
         )
 
         // SFE-glossed codes — playable sounds.

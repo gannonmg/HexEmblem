@@ -39,17 +39,18 @@ final class CombatPlaybackScriptBuilder {
                 defeated = role
             }
         }
+
         let idleMode = BattleAnimationResolver.idleMode(at: config.range)
 
         let initiatorSide = CombatPlaybackScript.Side(
             role: .initiator,
-            startingHealth: config.initiator.initialHealth,
+            healthStatus: config.initiator.healthStatus,
             idleEvents: try playbackEvents(for: .initiator, mode: idleMode)
         )
 
         let responderSide = CombatPlaybackScript.Side(
             role: .responder,
-            startingHealth: config.responder.initialHealth,
+            healthStatus: config.responder.healthStatus,
             idleEvents: try playbackEvents(for: .responder, mode: idleMode)
         )
 
