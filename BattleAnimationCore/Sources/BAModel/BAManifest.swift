@@ -45,11 +45,6 @@ public struct BAManifest: Codable, Sendable {
     }
 }
 
-public enum AnimationLayer<T: Codable & Sendable>: Codable, Sendable {
-    case single(T)
-    case dual(foreground: T, background: T)
-}
-
 // MARK: - BAManifest.Frame
 extension BAManifest {
     public enum Frame {

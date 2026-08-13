@@ -6,7 +6,7 @@
 //
 
 public struct UnitHealthStatus: Codable, Sendable {
-    public let currentHealth: Int
+    public private(set) var currentHealth: Int
     public let maxHealth: Int
 
     public init(currentHealth: Int, maxHealth: Int) {

@@ -140,8 +140,12 @@ extension UnitHealthStatus {
 
     var reducedByOne: UnitHealthStatus {
         UnitHealthStatus(
-            currentHealth: Swift.max(currentHealth - 1, 0),
+            currentHealth: max(currentHealth - 1, 0),
             maxHealth: maxHealth
         )
+    }
+
+    mutating func reduceByOne() {
+        self = self.reducedByOne
     }
 }

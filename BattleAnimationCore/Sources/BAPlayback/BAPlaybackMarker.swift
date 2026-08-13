@@ -13,6 +13,17 @@ public enum BAPlaybackEvent: Equatable, Sendable {
     case marker(BAPlaybackEvent.Marker)
 }
 
+extension BAPlaybackEvent: CustomStringConvertible {
+    public var description: String {
+        switch self {
+        case .frame(let frame):
+            "Event.Frame: (\(frame.ticks) ticks)"
+        case .marker(let marker):
+            "Event.Marker: isBarrier: \(marker.isBarrier), \(String(describing: marker))"
+        }
+    }
+}
+
 // MARK: BAPlaybackEvent.Marker
 extension BAPlaybackEvent {
     public enum Marker: Equatable, Sendable {
@@ -63,9 +74,7 @@ extension BAPlaybackEvent.Marker {
     /// cursor on exactly ten opcodes, and `banim-main.c` holds each one until a flag the other
     /// combatant sets clears it.
     ///
-    /// The animator comments carried on `BAScript.Command` are never consulted — they are
-    /// wrong often enough to be worse than useless (`C01` is commented "NOP" in every one of
-    /// its 64,791 occurrences and actually means wait-for-HP-deplete).
+    /// The animator comments carried on `BAScript.Command` are never consulted.
     private static let byOpcode: [String: BAPlaybackEvent.Marker] = {
         var table: [String: BAPlaybackEvent.Marker] = [:]
 

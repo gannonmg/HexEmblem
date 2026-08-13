@@ -145,7 +145,7 @@ public enum BAProcessedAnimationStore {
     private static func playbackLayerData(
         from assetPaths: BAManifest.Frame.PathStorage,
         animationID: String
-    ) throws(BAProcessedAnimationStoreError) -> BAPlaybackFrame.LayerData {
+    ) throws(BAProcessedAnimationStoreError) -> AnimationLayer<Data> {
         switch assetPaths {
         case .single(let path):
             guard let pathData = imageData(path: path, animationID: animationID) else {
@@ -159,7 +159,7 @@ public enum BAProcessedAnimationStore {
             else {
                 throw .frameAssetNotFound(paths: assetPaths.paths)
             }
-            return .double(foreground: fgPathData, background: bgPathData)
+            return .dual(foreground: fgPathData, background: bgPathData)
         }
     }
 }

@@ -32,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D623843302C12B1005BD1DA /* AnimationLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationLayer.swift; sourceTree = "<group>"; };
 		2D79BB803025696E000C8E92 /* HexEmblem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexEmblem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D79BB8D3025696F000C8E92 /* HexEmblemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexEmblemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D79BB973025696F000C8E92 /* HexEmblemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HexEmblemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +101,7 @@
 				2D79BB9A3025696F000C8E92 /* HexEmblemUITests */,
 				2D817CCA30256E66008AF97B /* Frameworks */,
 				2D79BB813025696E000C8E92 /* Products */,
+				2D623843302C12B1005BD1DA /* AnimationLayer.swift */,
 			);
 			sourceTree = "<group>";
 		};

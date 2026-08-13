@@ -10,14 +10,14 @@ import GameModels
 
 /// The resolution of a round of combat between two characters.
 /// Contains the series of Strikes made as part of the encounter, and optionally the ID of a character who was defeated during the Combat.
-public struct CombatSummary {
+public struct CombatSummary: Codable {
     public let events: [Event]
 
-    public init(events: [Event]) {
+    package init(events: [Event]) {
         self.events = events
     }
 
-    public enum Event {
+    public enum Event: Codable {
         case strike(CombatStrike)
         case defeat(CombatRole)
     }

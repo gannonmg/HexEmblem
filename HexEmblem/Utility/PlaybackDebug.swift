@@ -15,7 +15,6 @@ final class PlaybackDebug {
 
     static let shared = PlaybackDebug()
 
-//    var speed: CGFloat = 1
     var speed: Double = 1
 
     private(set) var layers: [String: LayerReport] = [:]

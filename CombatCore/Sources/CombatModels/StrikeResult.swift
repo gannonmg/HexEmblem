@@ -8,7 +8,7 @@
 import Foundation
 import GameRules
 
-public enum StrikeResult {
+public enum StrikeResult: Codable {
     case miss
     case hit(damageInstances: [DamageInstance])
     case critical(damageInstances: [DamageInstance])

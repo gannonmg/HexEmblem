@@ -75,7 +75,3 @@ extension CombatEncounterModel {
         CombatEncounterModel(leftUnit: leftUnit, rightUnit: rightUnit, range: range)
     }
 }
-
-#Preview {
-    ContentView()
-}

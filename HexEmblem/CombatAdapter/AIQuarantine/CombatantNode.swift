@@ -66,7 +66,7 @@ final class CombatantNode: SKNode {
             preparedFrames.map { frame in
                 SKAction.sequence([
                     .run { [weak self] in self?.apply(frame) },
-                    .wait(forDuration: frame.duration)
+                    .wait(forDuration: frame.duration / .seconds(1))
                 ])
             }
         )
@@ -77,7 +77,7 @@ final class CombatantNode: SKNode {
         case .single(let texture):
             backNode.resetTexture()
             frontNode.showTexture(texture)
-        case .double(let foreground, let background):
+        case .dual(let foreground, let background):
             backNode.showTexture(background)
             frontNode.showTexture(foreground)
         }
@@ -89,36 +89,4 @@ final class CombatantNode: SKNode {
         frontNode.resetTexture()
     }
 }
-
-final class LayerSpriteNode: SKSpriteNode {
-    func showTexture(_ texture: SKTexture) {
-        self.texture = texture
-        self.size = texture.size()
-        self.isHidden = false
-    }
-
-    func resetTexture() {
-        self.texture = nil
-        self.isHidden = true
-    }
-}
-
-enum LayerTextures {
-    case single(SKTexture)
-    case double(foreground: SKTexture, background: SKTexture)
-}
-
-extension SKTexture {
-    static func load(
-        imageData: Data,
-        filteringMode: SKTextureFilteringMode = .nearest
-    ) throws -> SKTexture {
-        guard let image = NSImage(data: imageData) else {
-            fatalError("Could not find image for url") // \(imageURL)")
-        }
-
-        let texture = SKTexture(image: image)
-        texture.filteringMode = filteringMode
-        return texture
-    }
-}
+public typealias LayerTextures = AnimationLayer<SKTexture>

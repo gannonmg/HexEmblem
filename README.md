@@ -38,6 +38,13 @@ If I had unlimited skill, time, budget, whatever, here's what I'd love to see.
 ___
 [Add macro scale graph here]
 
+## Project Guidelines
+___
+1. Type names should not include "attacker" or "defender". 
+    - A 1v1 combat encounter is instead composed up of an `initiator` and a `responder`.
+    - Both the `initiator` or the `responder` may make an attack(s) during a combat encounter. These singular attacks are called `strikes`.
+    - The units involved in a `strike` are the `striker` and the `receiver`.
+
 ## Project setup
 ___
 Diagrams in this repo are authored as Mermaid source (`.mmd`) and rendered to

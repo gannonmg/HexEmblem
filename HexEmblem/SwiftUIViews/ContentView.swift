@@ -11,7 +11,10 @@ import SwiftUI
 // at 300x400 points
 struct ContentView: View {
     var body: some View {
-        CombatDemoView()
+        Color.gray.frame(maxWidth: .infinity, maxHeight: .infinity)
+            .overlay {
+                MGCombatDemoHost()
+            }
     }
 }
 

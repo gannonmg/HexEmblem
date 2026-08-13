@@ -9,7 +9,7 @@ import Foundation
 
 /// Data representation of a Strike inflicted (or missed) in Combat.
 /// Contains the Striker and Receiver IDs, the result of the Strike attempt, and total damage inflicted.
-public struct CombatStrike {
+public struct CombatStrike: Codable {
     public let strikerRole: CombatRole
     public let receiverRole: CombatRole
     public let result: StrikeResult

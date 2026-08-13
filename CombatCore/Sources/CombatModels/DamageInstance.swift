@@ -11,7 +11,7 @@ import GameModels
 /// Indivudal instance of damage inflicted by a Strike
 ///
 /// A Strike will minimally contain one of these. A weapon that inflicts multiple types of damage will contain multiple.
-public struct DamageInstance {
+public struct DamageInstance: Codable {
     public let amount: Int
     public let type: DamageType
 

@@ -18,6 +18,7 @@ enum BattleAnimationResolver {
         let catalog: BACatalog
     }
 
+    /// Retrieve the specific animation sequence within a spriteset
     static func entry(request: EntryRequest) throws(BattleAnimationResolverError) -> BACatalog.Entry {
         // Ensure we have a sprite set at all for this unit
         guard !request.catalog.entries(spriteSetID: request.animationID).isEmpty else {

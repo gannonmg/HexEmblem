@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import Observation
 
+@Observable
 public final class CharacterUnit {
 
     public let characterID: CharacterID
@@ -17,7 +19,7 @@ public final class CharacterUnit {
     public let baseStatBlock: CharacterStatBlock
 
     // Health tracking
-    public private(set) lazy var currentHealth: Int = { effectiveStats.maxHp }()
+    public private(set) var currentHealth: Int
     public var maxHealth: Int { effectiveStats.maxHp }
     /// Includes current and max health. Always correct at time of retrieval.
     public var healthStatus: UnitHealthStatus { .init(currentHealth: currentHealth, maxHealth: maxHealth) }
@@ -34,10 +36,12 @@ public final class CharacterUnit {
         characterID: CharacterID = CharacterID(),
         animationID: AnimationID,
         baseStatBlock: CharacterStatBlock,
+        currentHealth: Int? = nil,
         weapon: Weapon? = nil,
         armor: Armor? = nil
     ) {
         self.characterID = characterID
+        self.currentHealth = currentHealth ?? baseStatBlock.maxHp
         self.animationID = animationID
         self.baseStatBlock = baseStatBlock
         self._weapon = weapon
@@ -48,6 +52,15 @@ public final class CharacterUnit {
     public func takeDamage(_ damage: Int) {
         let damage = max(damage, 0)
         currentHealth = max(currentHealth - damage, 0)
+    }
+
+    public func restoreHealth(_ amount: Int) {
+        let amount = max(amount, 0)
+        currentHealth = min(currentHealth + amount, maxHealth)
+    }
+
+    public func fullyRestoreHealth() {
+        currentHealth = maxHealth
     }
 
     public var isAlive: Bool { 0 < currentHealth }
@@ -130,7 +143,7 @@ extension CharacterUnit {
                 dexterity: 4,
                 luck: 6
             ),
-            weapon: .lance,
+            weapon: .magicAxe,
             armor: .plate
         )
     }

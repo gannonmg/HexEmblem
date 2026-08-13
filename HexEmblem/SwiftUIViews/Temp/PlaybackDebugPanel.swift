@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PlaybackDebugPanel: View {
 
-    private static let speeds: [Double] = [1, 0.5, 0.25]
+    private static let speeds: [Double] = [1, 0.75, 0.5]
 
     @Bindable private var debug = PlaybackDebug.shared
 
