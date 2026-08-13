@@ -1,5 +1,5 @@
 //
-//  MGCombatantNode.swift
+//  CombatantNode.swift
 //  HexEmblem
 //
 //  Created by Matt Gannon on 8/12/26.
@@ -9,7 +9,7 @@ import BAPlayback
 import CombatModels
 import SpriteKit
 
-final class MGCombatantNode: SKNode {
+final class CombatantNode: SKNode {
 
     private let backgroundNode = LayerSpriteNode()
     private let foregroundNode = LayerSpriteNode()

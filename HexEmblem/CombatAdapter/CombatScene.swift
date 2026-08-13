@@ -1,5 +1,5 @@
 //
-//  MGCombatScene.swift
+//  CombatScene.swift
 //  HexEmblem
 //
 //  Created by Matt Gannon on 8/12/26.
@@ -27,11 +27,11 @@ struct CombatantDatum<T> {
     }
 }
 
-final class MGCombatScene: SKScene {
+final class CombatScene: SKScene {
     typealias CPAScript = CombatPlaybackAdapter.Script
 
-    private let initiatorNode = MGCombatantNode(role: .initiator)
-    private let responderNode = MGCombatantNode(role: .responder)
+    private let initiatorNode = CombatantNode(role: .initiator)
+    private let responderNode = CombatantNode(role: .responder)
 
     // MARK: - Init
     private let script: CPAScript
@@ -70,7 +70,7 @@ final class MGCombatScene: SKScene {
         }
     }
 
-    private func addCharacterToScene(_ character: MGCombatantNode) {
+    private func addCharacterToScene(_ character: CombatantNode) {
         character.position = CGPoint(
             x: frame.midX,
             y: frame.midY
@@ -146,7 +146,7 @@ final class MGCombatScene: SKScene {
         bgNode.updateZPosition(to: z - 0.1)
     }
 
-    private func node(for role: CombatRole) -> MGCombatantNode {
+    private func node(for role: CombatRole) -> CombatantNode {
         switch role {
         case .initiator: initiatorNode
         case .responder: responderNode

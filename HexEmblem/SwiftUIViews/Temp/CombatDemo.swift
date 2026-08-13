@@ -1,5 +1,5 @@
 //
-//  MGCombatDemo.swift
+//  CombatDemo.swift
 //  HexEmblem
 //
 //  Created by Matt Gannon on 8/12/26.
@@ -11,7 +11,7 @@ import GameModels
 import SpriteKit
 import SwiftUI
 
-struct MGCombatDemoHost: View {
+struct CombatDemoHost: View {
     let good: CharacterUnit = .gwendolyn()
     let evil: CharacterUnit = .badGuy()
     var initiator: CharacterUnit { goodTurn ? good : evil }
@@ -33,7 +33,7 @@ struct MGCombatDemoHost: View {
             HealthBarView(title: "Evil", health: evil.healthStatus)
         }
         .sheet(item: $currentScript) { script in
-            MGCombatDemo(
+            CombatDemo(
                 script: script
             )
         }
@@ -123,12 +123,12 @@ struct MGCombatDemoHost: View {
     }
 }
 
-struct MGCombatDemo: View {
+struct CombatDemo: View {
     @Environment(\.dismiss) private var dismiss
 
     @State private var initiatorHealthStatus: UnitHealthStatus
     @State private var responderHealthStatus: UnitHealthStatus
-    @State private var combatScene: MGCombatScene?
+    @State private var combatScene: CombatScene?
     private let frameSize: CGSize = .combatFrame * 2.5
 
     // MARK: Init
@@ -168,7 +168,7 @@ struct MGCombatDemo: View {
     }
 
     private func playCombatScript(_ script: CombatPlaybackAdapter.Script) async {
-        let scene = MGCombatScene(
+        let scene = CombatScene(
             size: frameSize,
             script: script,
             onDamage: onDamage(to:amount:)

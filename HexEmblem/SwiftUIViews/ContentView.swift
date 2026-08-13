@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         Color.gray.frame(maxWidth: .infinity, maxHeight: .infinity)
             .overlay {
-                MGCombatDemoHost()
+                CombatDemoHost()
             }
     }
 }
