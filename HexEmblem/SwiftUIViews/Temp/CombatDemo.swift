@@ -5,15 +5,18 @@
 //  Created by Matt Gannon on 8/12/26.
 //
 
+import BAPlayback
+import CombatAnimationAdapter
 import CCEvaluator
 import CombatModels
+import GameDebug
 import GameModels
 import SpriteKit
 import SwiftUI
 
 struct CombatDemoHost: View {
     let good: CharacterUnit = .gwendolyn()
-    let evil: CharacterUnit = .badGuy()
+    let evil: CharacterUnit = .assassin() // .badGuy()
     var initiator: CharacterUnit { goodTurn ? good : evil }
     var responder: CharacterUnit { goodTurn ? evil : good }
     var range: Int { initiator.weapon.range.lowerBound }
@@ -41,6 +44,12 @@ struct CombatDemoHost: View {
         .overlay(alignment: .topLeading) {
             PlaybackDebugPanel()
                 .padding()
+        }
+        .onAppear {
+            Task.detached {
+                // Preload the catalog to avoid hang on first combat
+                try BAProcessedAnimationStore.catalog()
+            }
         }
     }
 
@@ -96,25 +105,17 @@ struct CombatDemoHost: View {
         let summary = try CombatEvaluator(config: config)
             .getCombatSummary()
 
-        summary.debugPrint()
+//        summary.debugPrint()
         return summary
     }
 
     private func buildPlaybackScript(with summary: CombatSummary) throws -> CombatPlaybackAdapter.Script {
-        let playbackConfig = try CombatPlaybackAdapter.Config(
-            initiator: .init(
-                animationID: initiator.animationID,
-                healthStatus: initiator.healthStatus,
-                weaponSlot: initiator.weapon.animationSlot(atRange: range),
-                weaponIsMagical: initiator.weapon.hasMagicalDamage
-            ),
-            responder: .init(
-                animationID: responder.animationID,
-                healthStatus: responder.healthStatus,
-                weaponSlot: responder.weapon.animationSlot(atRange: range),
-                weaponIsMagical: responder.weapon.hasMagicalDamage
-            ),
-            range: range
+        let catalog = try BAProcessedAnimationStore.catalog()
+        let playbackConfig = CombatPlaybackAdapter.Config(
+            initiator: .init(characterUnit: initiator, range: range),
+            responder: .init(characterUnit: responder, range: range),
+            range: range,
+            catalog: catalog
         )
 
         let script = try CombatPlaybackAdapter(config: playbackConfig)

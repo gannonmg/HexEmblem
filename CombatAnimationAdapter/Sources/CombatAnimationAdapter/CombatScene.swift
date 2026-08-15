@@ -10,16 +10,16 @@ import CombatModels
 import Foundation
 import SpriteKit
 
-struct CombatantDatum<T> {
+public struct CombatantDatum<T> {
     private let initiatorDatum: T
     private let responderDatum: T
 
-    init(_ builder: (CombatRole) throws -> T) rethrows {
+    public init(_ builder: (CombatRole) throws -> T) rethrows {
         self.initiatorDatum = try builder(.initiator)
         self.responderDatum = try builder(.responder)
     }
 
-    func `for`(_ role: CombatRole) -> T {
+    public func `for`(_ role: CombatRole) -> T {
         switch role {
         case .initiator: initiatorDatum
         case .responder: responderDatum
@@ -27,7 +27,7 @@ struct CombatantDatum<T> {
     }
 }
 
-final class CombatScene: SKScene {
+public final class CombatScene: SKScene {
     typealias CPAScript = CombatPlaybackAdapter.Script
 
     private let initiatorNode = CombatantNode(role: .initiator)
@@ -37,7 +37,7 @@ final class CombatScene: SKScene {
     private let script: CPAScript
     private let onDamage: @MainActor (CombatRole, Int) async -> Void
 
-    init(
+    public init(
         size: CGSize,
         script: CombatPlaybackAdapter.Script,
         onDamage: @escaping @MainActor (CombatRole, Int) async -> Void
@@ -88,7 +88,7 @@ final class CombatScene: SKScene {
     }
 
     // MARK: - Playback
-    func beginPlayback() async {
+    public func beginPlayback() async {
         do {
             for beat in script.beats {
                 try await playBeat(beat)
@@ -141,7 +141,7 @@ final class CombatScene: SKScene {
     private func setZPositions(striker: CombatRole) {
         let (fgNode, bgNode) = (node(for: striker), node(for: striker.opponent))
 
-        let z: CGFloat = 1
+        let z: CGFloat = 2
         fgNode.updateZPosition(to: z)
         bgNode.updateZPosition(to: z - 0.1)
     }

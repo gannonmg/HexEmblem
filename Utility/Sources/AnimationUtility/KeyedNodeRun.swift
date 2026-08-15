@@ -9,17 +9,18 @@ import SpriteKit
 
 /// Pairs one SKAction key with async/await. `run` awaits the action's completion;
 /// `cancel` resumes that await if something else preempts the key, instead of leaking it.
-final class KeyedNodeRun {
+@MainActor
+public final class KeyedNodeRun {
     private weak var node: SKNode?
     private let key: String
     private var continuation: CheckedContinuation<Void, Never>?
 
-    init(node: SKNode, key: String) {
+    public init(node: SKNode, key: String) {
         self.node = node
         self.key = key
     }
 
-    func run(_ action: SKAction) async {
+    public func run(_ action: SKAction) async {
         cancel()
         await withCheckedContinuation { continuation in
             self.continuation = continuation
@@ -28,12 +29,12 @@ final class KeyedNodeRun {
         }
     }
 
-    func nonBlockingRun(_ action: SKAction) {
+    public func nonBlockingRun(_ action: SKAction) {
         cancel()
         node?.run(action, withKey: key)
     }
 
-    func cancel() {
+    public func cancel() {
         node?.removeAction(forKey: key)
         resume()
     }

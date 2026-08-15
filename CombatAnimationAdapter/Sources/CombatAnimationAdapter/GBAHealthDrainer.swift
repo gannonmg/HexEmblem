@@ -5,6 +5,8 @@
 //  Created by Matt Gannon on 8/12/26.
 //
 
+import GameDebug
+
 public enum GBAClock {
     public static let frameDuration: Duration = .seconds(1) / 59.7275
 
@@ -14,7 +16,7 @@ public enum GBAClock {
 }
 
 /// Classic, stepped drain feeling timer. Good for full screen animations.
-enum GBAHealthDrainer: HealthDrainTimer {
+public enum GBAHealthDrainer: HealthDrainTimer {
 
     private static let ticksPerHealthPoint = 2
     private static let minimumDrainTicks = 30
@@ -24,7 +26,7 @@ enum GBAHealthDrainer: HealthDrainTimer {
 
     /// The GBA engine drains one HP every 2 frames at ~59.73 fps, and holds the barrier for at
     /// least 30 frames however small the hit — FE8 `EfxHpBar_DeclineToDeath`.
-    static func drainHealth(
+    public static func drainHealth(
         amount damage: Int,
         reduceHealthAction: () -> Void
     ) async {

@@ -18,7 +18,7 @@ import GameModels
 
 
 // MARK: - CombatPlaybackAdapter
-final class CombatPlaybackAdapter {
+public final class CombatPlaybackAdapter {
 
     private var eventCache: [String: [BAPlaybackEvent]] = [:]
 
@@ -27,7 +27,7 @@ final class CombatPlaybackAdapter {
     private let initiatorEntry: BACatalog.Entry
     private let responderEntry: BACatalog.Entry
 
-    init(config: Config) throws {
+    public init(config: Config) throws {
         self.config = config
 
         let initiatorRequest = config.entryRequest(for: .initiator)
@@ -38,7 +38,7 @@ final class CombatPlaybackAdapter {
     }
 
     // MARK: Public access surface
-    func adapt(_ summary: CombatSummary) throws -> Script {
+    public func adapt(_ summary: CombatSummary) throws -> Script {
         var beats: [Script.Beat] = []
         var defeatedRole: CombatRole?
 
@@ -138,17 +138,17 @@ extension CombatPlaybackAdapter {
         public let range: Int
         public let catalog: BACatalog
 
-        init(initiator: Unit, responder: Unit, range: Int) throws {
+        public init(initiator: Unit, responder: Unit, range: Int, catalog: BACatalog) {
             self.initiator = initiator
             self.responder = responder
             self.range = range
-            self.catalog = try BAProcessedAnimationStore.catalog()
+            self.catalog = catalog // try BAProcessedAnimationStore.catalog()
         }
     }
 
-    struct Script: Identifiable {
-        let id = UUID()
-        let startingHealth: CombatantDatum<UnitHealthStatus>
+    public struct Script: Identifiable {
+        public let id = UUID()
+        public let startingHealth: CombatantDatum<UnitHealthStatus>
         let idleEvents: CombatantDatum<[BAPlaybackEvent]>
         let beats: [Beat]
         let defeated: CombatRole?
@@ -161,6 +161,13 @@ extension CombatPlaybackAdapter.Config {
         let healthStatus: UnitHealthStatus
         let weaponSlot: BAWeaponSlot
         let weaponIsMagical: Bool
+
+        public init(characterUnit: CharacterUnit, range: Int) {
+            self.animationID = characterUnit.animationID
+            self.healthStatus = characterUnit.healthStatus
+            self.weaponSlot = characterUnit.weapon.animationSlot(atRange: range)
+            self.weaponIsMagical = characterUnit.weapon.hasMagicalDamage
+        }
     }
 }
 

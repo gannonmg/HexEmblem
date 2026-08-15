@@ -4,49 +4,38 @@
 import PackageDescription
 
 let package = Package(
-    name: "CombatCore",
+    name: "CombatAnimationAdapter",
     platforms: [.macOS(.v15), .iOS(.v16)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "CCEvaluator",
-            targets: ["CCEvaluator"]
-        ),
-        .library(
-            name: "CombatModels",
-            targets: ["CombatModels"]
+            name: "CAAdapter",
+            targets: ["CombatAnimationAdapter"]
         ),
     ],
     dependencies: [
-        .package(path: "../GameCore")
+        .package(path: "../BattleAnimationCore"),
+        .package(path: "../CombatCore"),
+        .package(path: "../GameCore"),
+        .package(path: "../GameDebug"),
+        .package(path: "../Utility"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "CombatModels",
+            name: "CombatAnimationAdapter",
             dependencies: [
+                .product(name: "GameDebug", package: "GameDebug"),
+                .product(name: "BAPlayback", package: "BattleAnimationCore"),
+                .product(name: "CombatModels", package: "CombatCore"),
                 .product(name: "GameModels", package: "GameCore"),
-                .product(name: "GameRules", package: "GameCore"),
-            ]
-        ),
-        .target(
-            name: "CombatCore",
-            dependencies: [
-                "CombatModels",
-                .product(name: "GameModels", package: "GameCore"),
-            ]
-        ),
-        .target(
-            name: "CCEvaluator",
-            dependencies: [
-                "CombatCore",
-                "CombatModels",
-            ]
+                .product(name: "AnimationUtility", package: "Utility"),
+            ],
         ),
         .testTarget(
-            name: "CombatCoreTests",
-            dependencies: ["CombatCore"]
+            name: "CombatAnimationAdapterTests",
+            dependencies: ["CombatAnimationAdapter"]
         ),
     ],
     swiftLanguageModes: [.v6]

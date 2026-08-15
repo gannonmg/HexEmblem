@@ -5,6 +5,8 @@
 //  Created by Matt Gannon on 8/11/26.
 //
 
+import GameDebug
+
 protocol HealthDrainTimer {
     static func drainHealth(
         amount damage: Int,
