@@ -8,14 +8,19 @@
 import GameModels
 import SwiftUI
 
-struct HealthBarView: View {
+public struct HealthBarView: View {
 
     private static let barSize = CGSize(width: 160, height: 14)
 
     let title: String
     let health: UnitHealthStatus
 
-    var body: some View {
+    public init(title: String, health: UnitHealthStatus) {
+        self.title = title
+        self.health = health
+    }
+
+    public var body: some View {
         VStack(spacing: 4) {
             Text(title)
                 .font(.caption)

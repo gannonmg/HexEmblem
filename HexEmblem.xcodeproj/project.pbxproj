@@ -685,26 +685,6 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2D1D8E203030D6B400EE6852 /* AnimationUtility */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = AnimationUtility;
-		};
-		2D6236EE302672F2005BD1DA /* CCEvaluator */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = CCEvaluator;
-		};
-		2D817CD130258539008AF97B /* BAPlayback */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BAPlayback;
-		};
-		2D817DBD302654FA008AF97B /* GameModels */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GameModels;
-		};
-		2D817DC03026550C008AF97B /* GameModels */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GameModels;
-		};
 		2D9E797A3030DA7D0044F053 /* GameModels */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GameModels;

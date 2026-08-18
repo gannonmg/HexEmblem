@@ -10,26 +10,20 @@ import CombatModels
 import Foundation
 import SpriteKit
 
-public struct CombatantDatum<T> {
-    private let initiatorDatum: T
-    private let responderDatum: T
-
-    public init(_ builder: (CombatRole) throws -> T) rethrows {
-        self.initiatorDatum = try builder(.initiator)
-        self.responderDatum = try builder(.responder)
-    }
-
-    public func `for`(_ role: CombatRole) -> T {
-        switch role {
-        case .initiator: initiatorDatum
-        case .responder: responderDatum
-        }
-    }
-}
-
 public final class CombatScene: SKScene {
+
     typealias CPAScript = CombatPlaybackAdapter.Script
 
+    // MARK: - Layout
+    private enum Layout {
+        static let backgroundZ: CGFloat = -100
+        static let strikerZ: CGFloat = 2
+        static let receiverZ: CGFloat = strikerZ - 0.5
+
+        static let characterScale: CGFloat = 3
+    }
+
+    // MARK: - Local vars
     private let initiatorNode = CombatantNode(role: .initiator)
     private let responderNode = CombatantNode(role: .responder)
 
@@ -48,6 +42,7 @@ public final class CombatScene: SKScene {
 
         // Setup
         addCombatants()
+        addBackground()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -71,12 +66,8 @@ public final class CombatScene: SKScene {
     }
 
     private func addCharacterToScene(_ character: CombatantNode) {
-        character.position = CGPoint(
-            x: frame.midX,
-            y: frame.midY
-        )
-
-        character.setScale(3)
+        character.position = size.center
+        character.setScale(Layout.characterScale)
 
         // Animations face left by default.
         // Initiator should be on the left, facing/attacking right
@@ -85,6 +76,28 @@ public final class CombatScene: SKScene {
         }
 
         addChild(character)
+    }
+
+    // MARK: - Background
+    private func addBackground() {
+        guard let url = Bundle.module.url(forResource: "bbgf", withExtension: "png", subdirectory: "Assets") else {
+            print("Failed to get url")
+            return
+        }
+
+        guard let source = CGImageSourceCreateWithURL(url as CFURL, nil),
+              let cgImage = CGImageSourceCreateImageAtIndex(source, 0, nil)
+        else {
+            print("Failed to get source image")
+            return
+        }
+
+        let backgroundTexture = SKTexture(cgImage: cgImage)
+        let background = SKSpriteNode(texture: backgroundTexture)
+        background.zPosition = Layout.backgroundZ
+        background.position = size.center
+        background.setScale(Layout.characterScale)
+        addChild(background)
     }
 
     // MARK: - Playback
@@ -139,11 +152,10 @@ public final class CombatScene: SKScene {
     ///
     /// Desired layering is: Striker FG, Receiver FG, Str BG, Rec BG.
     private func setZPositions(striker: CombatRole) {
-        let (fgNode, bgNode) = (node(for: striker), node(for: striker.opponent))
+        let (strikerNode, receiverNode) = (node(for: striker), node(for: striker.opponent))
 
-        let z: CGFloat = 2
-        fgNode.updateZPosition(to: z)
-        bgNode.updateZPosition(to: z - 0.1)
+        strikerNode.updateZPosition(to: Layout.strikerZ)
+        receiverNode.updateZPosition(to: Layout.receiverZ)
     }
 
     private func node(for role: CombatRole) -> CombatantNode {

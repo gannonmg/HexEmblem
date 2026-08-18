@@ -12,6 +12,14 @@ let package = Package(
             name: "AnimationUtility",
             targets: ["AnimationUtility"]
         ),
+        .library(
+            name: "HECommon",
+            targets: ["HECommon"]
+        ),
+        .library(
+            name: "SwiftUIUtility",
+            targets: ["SwiftUIUtility"]
+        ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -19,7 +27,12 @@ let package = Package(
         .target(
             name: "AnimationUtility"
         ),
-
+        .target(
+            name: "HECommon"
+        ),
+        .target(
+            name: "SwiftUIUtility"
+        ),
     ],
     swiftLanguageModes: [.v6]
 )

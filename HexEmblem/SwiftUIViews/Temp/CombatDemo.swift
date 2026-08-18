@@ -5,13 +5,11 @@
 //  Created by Matt Gannon on 8/12/26.
 //
 
-import BAPlayback
 import CombatAnimationAdapter
 import CCEvaluator
 import CombatModels
 import GameDebug
 import GameModels
-import SpriteKit
 import SwiftUI
 
 struct CombatDemoHost: View {
@@ -21,7 +19,7 @@ struct CombatDemoHost: View {
     var responder: CharacterUnit { goodTurn ? evil : good }
     var range: Int { initiator.weapon.range.lowerBound }
 
-    @State var currentScript: CombatPlaybackAdapter.Script?
+    @State var combatConfig: CombatViewScene.Config?
     @State private var round: Int = 0
     @State private var goodTurn: Bool = true
 
@@ -35,21 +33,13 @@ struct CombatDemoHost: View {
             }
             HealthBarView(title: "Evil", health: evil.healthStatus)
         }
-        .sheet(item: $currentScript) { script in
-            CombatDemo(
-                script: script
-            )
+        .sheet(item: $combatConfig) { config in
+            CombatViewScene(config: config)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .overlay(alignment: .topLeading) {
             PlaybackDebugPanel()
                 .padding()
-        }
-        .onAppear {
-            Task.detached {
-                // Preload the catalog to avoid hang on first combat
-                try BAProcessedAnimationStore.catalog()
-            }
         }
     }
 
@@ -59,13 +49,17 @@ struct CombatDemoHost: View {
     }
 
     private func executeRound() {
-        guard currentScript == nil else { return }
+        guard combatConfig == nil else { return }
         do {
             // Build the combat summary
             let summary = try getCombatSummary()
 
-            // Build the animation script from the combat data
-            self.currentScript = try buildPlaybackScript(with: summary)
+            self.combatConfig = .init(
+                initiator: initiator,
+                responder: responder,
+                combatSummary: summary,
+                range: range
+            )
 
             // Immediately apply the damage to the actual units
             // (eventually allows for skipping of combat animations)
@@ -104,97 +98,7 @@ struct CombatDemoHost: View {
 
         let summary = try CombatEvaluator(config: config)
             .getCombatSummary()
-
-//        summary.debugPrint()
         return summary
-    }
-
-    private func buildPlaybackScript(with summary: CombatSummary) throws -> CombatPlaybackAdapter.Script {
-        let catalog = try BAProcessedAnimationStore.catalog()
-        let playbackConfig = CombatPlaybackAdapter.Config(
-            initiator: .init(characterUnit: initiator, range: range),
-            responder: .init(characterUnit: responder, range: range),
-            range: range,
-            catalog: catalog
-        )
-
-        let script = try CombatPlaybackAdapter(config: playbackConfig)
-            .adapt(summary)
-        return script
-    }
-}
-
-struct CombatDemo: View {
-    @Environment(\.dismiss) private var dismiss
-
-    @State private var initiatorHealthStatus: UnitHealthStatus
-    @State private var responderHealthStatus: UnitHealthStatus
-    @State private var combatScene: CombatScene?
-    private let frameSize: CGSize = .combatFrame * 2.5
-
-    // MARK: Init
-    let script: CombatPlaybackAdapter.Script
-
-    init(script: CombatPlaybackAdapter.Script) {
-        self.script = script
-        self.initiatorHealthStatus = script.startingHealth.for(.initiator)
-        self.responderHealthStatus = script.startingHealth.for(.responder)
-    }
-
-    var body: some View {
-        Group {
-            if let combatScene {
-                SpriteView(
-                    scene: combatScene,
-                    debugOptions: [.showsFPS, .showsNodeCount]
-                )
-                .id(ObjectIdentifier(combatScene))
-            } else {
-                Color.black
-            }
-        }
-        .frame(size: frameSize)
-        .border(.blue.opacity(0.5), width: 3)
-        .overlay(alignment: .top) {
-            HStack {
-                HealthBarView(title: "Init", health: initiatorHealthStatus)
-                HealthBarView(title: "Resp", health: responderHealthStatus)
-            }
-            .padding(.top)
-        }
-        .task {
-            await playCombatScript(script)
-            dismiss()
-        }
-    }
-
-    private func playCombatScript(_ script: CombatPlaybackAdapter.Script) async {
-        let scene = CombatScene(
-            size: frameSize,
-            script: script,
-            onDamage: onDamage(to:amount:)
-        )
-        scene.scaleMode = .aspectFit
-        combatScene = scene
-        await scene.beginPlayback()
-    }
-
-    private func onDamage(to role: CombatRole, amount: Int) async {
-        print("Applying \(amount) damage to \(role)")
-        await GBAHealthDrainer.drainHealth(amount: amount) {
-            switch role {
-            case .initiator: initiatorHealthStatus.reduceByOne()
-            case .responder: responderHealthStatus.reduceByOne()
-            }
-        }
-    }
-}
-
-extension CGSize {
-    static let combatFrame = CGSize(width: 240, height: 160)
-
-    static func *(lhs: CGSize, rhs: CGFloat) -> CGSize {
-        CGSize(width: lhs.width * rhs, height: lhs.height * rhs)
     }
 }
 

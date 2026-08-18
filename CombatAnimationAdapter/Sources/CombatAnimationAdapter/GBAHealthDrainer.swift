@@ -28,14 +28,14 @@ public enum GBAHealthDrainer: HealthDrainTimer {
     /// least 30 frames however small the hit — FE8 `EfxHpBar_DeclineToDeath`.
     public static func drainHealth(
         amount damage: Int,
-        reduceHealthAction: () -> Void
+        reduceHealthAction: @MainActor () -> Void
     ) async {
         guard 0 < damage else { return }
 
         for _ in 0..<damage {
             let sleepDuration = damageDuration / PlaybackDebug.shared.speed
             try? await Task.sleep(for: sleepDuration)
-            reduceHealthAction()
+            await reduceHealthAction()
         }
 
         let holdTicks = remainingDrainTicks(damage: damage)

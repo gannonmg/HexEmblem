@@ -10,7 +10,7 @@ import GameDebug
 protocol HealthDrainTimer {
     static func drainHealth(
         amount damage: Int,
-        reduceHealthAction: () -> Void
+        reduceHealthAction: @MainActor () -> Void
     ) async
 }
 
@@ -25,11 +25,11 @@ enum ModernHealthDrainer: HealthDrainTimer {
 
     static func drainHealth(
         amount damage: Int,
-        reduceHealthAction: () -> Void
+        reduceHealthAction: @MainActor () -> Void
     ) async {
         guard 0 < damage else { return }
         for _ in 0..<damage {
-            reduceHealthAction()
+            await reduceHealthAction()
             try? await Task.sleep(for: Self.drainTickDuration)
         }
     }

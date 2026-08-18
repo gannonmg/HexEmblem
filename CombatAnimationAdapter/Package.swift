@@ -26,12 +26,16 @@ let package = Package(
         .target(
             name: "CombatAnimationAdapter",
             dependencies: [
-                .product(name: "GameDebug", package: "GameDebug"),
                 .product(name: "BAPlayback", package: "BattleAnimationCore"),
+                .product(name: "CCEvaluator", package: "CombatCore"),
                 .product(name: "CombatModels", package: "CombatCore"),
+                .product(name: "GameDebug", package: "GameDebug"),
                 .product(name: "GameModels", package: "GameCore"),
                 .product(name: "AnimationUtility", package: "Utility"),
+                .product(name: "HECommon", package: "Utility"),
+                .product(name: "SwiftUIUtility", package: "Utility"),
             ],
+            resources: [.copy("Assets")],
         ),
         .testTarget(
             name: "CombatAnimationAdapterTests",
