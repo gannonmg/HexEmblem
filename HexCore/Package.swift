@@ -4,20 +4,23 @@
 import PackageDescription
 
 let package = Package(
-    name: "GameDebug",
-    platforms: [.macOS(.v15), .iOS(.v16)],
+    name: "HexCore",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "GameDebug",
-            targets: ["GameDebug"]
+            name: "HexCore",
+            targets: ["HexCore"]
         ),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "GameDebug"
+            name: "HexCore"
+        ),
+        .testTarget(
+            name: "HexCoreTests",
+            dependencies: ["HexCore"]
         ),
     ],
     swiftLanguageModes: [.v6]
