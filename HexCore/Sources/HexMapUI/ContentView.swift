@@ -44,6 +44,7 @@ public struct ContentView: View {
     public var body: some View {
         VStack {
             HexGrid(data: cells, hexOrientation: orientation) { $0.color }
+                .frame(maxHeight: .infinity)
             Toggle("Pointy", isOn: isPointyTop)
         }
         .padding()

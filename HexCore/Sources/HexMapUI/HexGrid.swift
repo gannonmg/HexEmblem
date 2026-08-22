@@ -8,7 +8,7 @@
 import HexCore
 import SwiftUI
 
-// Handles clipping the content to hexagons as well as enforcing that each element has an axialCoordinate
+/// Handles clipping the content to hexagons as well as enforcing that each element has an axialCoordinate
 struct HexGrid<Data, ID, Content>: View
 where Data: RandomAccessCollection,
       Data.Element: AxialCoordinateProviding,
@@ -52,6 +52,6 @@ extension HexGrid where ID == Data.Element.ID, Data.Element: Identifiable {
         hexOrientation: HexOrientation = .pointyTop,
         @ViewBuilder content: @escaping (Data.Element) -> Content
     ) {
-        self.init(data: data, id: \.id, content: content)
+        self.init(data: data, id: \.id, hexOrientation: hexOrientation, content: content)
     }
 }

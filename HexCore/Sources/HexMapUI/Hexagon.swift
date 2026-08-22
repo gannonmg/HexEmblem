@@ -16,7 +16,10 @@ struct Hexagon: Shape, HexShapeProviding {
 
         let center = CGPoint(x: rect.midX, y: rect.midY)
         let width = min(rect.width, rect.height * Self.aspectRatio(for: orientation))
-        let size = width / 2
+        let size = switch orientation {
+        case .pointyTop: width / Self.edgeToEdgeRatio
+        case .flatTop: width / Self.pointToPointRatio
+        }
 
         let corners = (0..<6)
             .map { corner(center: center, size: size, cornerIndex: $0) }
