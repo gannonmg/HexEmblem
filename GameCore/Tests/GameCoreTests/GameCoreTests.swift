@@ -6,3 +6,8 @@ import Testing
     // Swift Testing Documentation
     // https://developer.apple.com/documentation/testing
 }
+
+@Test
+func gameCoreTest() async throws {
+    
+}
