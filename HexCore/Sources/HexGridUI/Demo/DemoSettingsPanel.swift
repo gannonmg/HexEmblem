@@ -26,9 +26,11 @@ private struct DemoSettingsPanel: ViewModifier {
     }
 
     func body(content: Content) -> some View {
-        content
-            .overlay(alignment: .topLeading) {
-                GeometryReader { proxy in
+        content.overlay(alignment: .topLeading) {
+            GeometryReader { proxy in
+                VStack(alignment: .leading) {
+                    FPSDisplay()
+
                     DisclosureGroup("Settings", isExpanded: $isExpanded) {
                         VStack(alignment: .leading) {
                             Toggle("Pointy Top", isOn: $viewModel.isPointyTop)
@@ -39,15 +41,16 @@ private struct DemoSettingsPanel: ViewModifier {
                             MapShapePanel(viewModel: $viewModel)
                         }
                     }
-                    .padding()
-                    .background {
-                        RoundedRectangle(cornerRadius: 12)
-                            .foregroundStyle(.black.opacity(0.3))
-                    }
-                    .padding()
-                    .frame(width: proxy.size.width / 3)
                 }
+                .padding()
+                .background {
+                    RoundedRectangle(cornerRadius: 12)
+                        .foregroundStyle(.black.opacity(0.3))
+                }
+                .padding()
+                .frame(width: proxy.size.width / 3)
             }
+        }
     }
 
     @ViewBuilder
