@@ -16,6 +16,7 @@
 		2D9E79853030DAAF0044F053 /* BAPlayback in Frameworks */ = {isa = PBXBuildFile; productRef = 2D9E79843030DAAF0044F053 /* BAPlayback */; };
 		2D9E798B3030DAEC0044F053 /* CAAdapter in Frameworks */ = {isa = PBXBuildFile; productRef = 2D9E798A3030DAEC0044F053 /* CAAdapter */; };
 		2DE18DBB30379038005A074F /* Outline.md in Resources */ = {isa = PBXBuildFile; fileRef = 2DE18DBA30379038005A074F /* Outline.md */; };
+		2DF402C1303A740C006A3E3E /* HexGridUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2DF402C0303A740C006A3E3E /* HexGridUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 			files = (
 				2D9E797D3030DA7D0044F053 /* GameRules in Frameworks */,
 				2D9E79803030DA950044F053 /* CCEvaluator in Frameworks */,
+				2DF402C1303A740C006A3E3E /* HexGridUI in Frameworks */,
 				2D9E79823030DA950044F053 /* CombatModels in Frameworks */,
 				2D9E79853030DAAF0044F053 /* BAPlayback in Frameworks */,
 				2D9E798B3030DAEC0044F053 /* CAAdapter in Frameworks */,
@@ -150,6 +152,7 @@
 				2D9E79843030DAAF0044F053 /* BAPlayback */,
 				2D9E798A3030DAEC0044F053 /* CAAdapter */,
 				2D58544C3035293D00903C56 /* HexCore */,
+				2DF402C0303A740C006A3E3E /* HexGridUI */,
 			);
 			productName = HexEmblem;
 			productReference = 2D79BB803025696E000C8E92 /* HexEmblem.app */;
@@ -724,6 +727,11 @@
 		2D9E798A3030DAEC0044F053 /* CAAdapter */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CAAdapter;
+		};
+		2DF402C0303A740C006A3E3E /* HexGridUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D58544B3035293D00903C56 /* XCLocalSwiftPackageReference "HexCore" */;
+			productName = HexGridUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

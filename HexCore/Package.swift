@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "HexCore",
-    platforms: [.macOS(.v15), .iOS(.v16)],
+    platforms: [.macOS(.v26), .iOS(.v26)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -13,8 +13,8 @@ let package = Package(
             targets: ["HexCore"]
         ),
         .library(
-            name: "HexMapUI",
-            targets: ["HexMapUI"]
+            name: "HexGridUI",
+            targets: ["HexGridUI"]
         ),
     ],
     dependencies: [
@@ -30,7 +30,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "HexMapUI",
+            name: "HexGridUI",
             dependencies: ["HexCore"],
         ),
         .testTarget(
@@ -40,3 +40,20 @@ let package = Package(
     ],
     swiftLanguageModes: [.v6]
 )
+
+//.executable(
+//    name: "HexGridExampleApp",
+//    targets: ["HexGridExampleApp"]
+//),
+//.executableTarget(
+//    name: "HexGridExampleApp",
+//    dependencies: ["HexGridUI"],
+//),
+//.library(
+//    name: "HexMapUI",
+//    targets: ["HexMapUI"]
+//),
+//.target(
+//    name: "HexMapUI",
+//    dependencies: ["HexCore"],
+//),

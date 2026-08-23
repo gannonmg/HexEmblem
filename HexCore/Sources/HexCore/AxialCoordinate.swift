@@ -21,3 +21,7 @@ public struct AxialCoordinate: Hashable, Sendable {
         self.r = r
     }
 }
+
+extension AxialCoordinate: AxialCoordinateProviding {
+    public var axialCoordinate: AxialCoordinate { self }
+}

@@ -99,15 +99,23 @@ final class LayerSpriteNode: SKSpriteNode {
 }
 
 extension SKTexture {
+    enum LoadError: Error {
+        case cannotCreateImageSource
+        case cannotReadImage
+    }
+
     static func load(
         imageData: Data,
         filteringMode: SKTextureFilteringMode = .nearest
-    ) throws -> SKTexture {
-        guard let image = NSImage(data: imageData) else {
-            fatalError("Could not find image for url") // \(imageURL)")
+    ) throws(LoadError) -> SKTexture {
+        guard let source = CGImageSourceCreateWithData(imageData as CFData, nil) else {
+            throw .cannotCreateImageSource
+        }
+        guard let cgImage = CGImageSourceCreateImageAtIndex(source, 0, nil) else {
+            throw .cannotReadImage
         }
 
-        let texture = SKTexture(image: image)
+        let texture = SKTexture(cgImage: cgImage)
         texture.filteringMode = filteringMode
         return texture
     }

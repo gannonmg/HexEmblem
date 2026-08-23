@@ -36,13 +36,14 @@ where Data: RandomAccessCollection,
         HexLayout(hexOrientation: hexOrientation) {
             ForEach(data, id: id) { element in
                 content(element)
-                    .clipShape(Hexagon(orientation: hexOrientation))
+                    .clipShape(Hexagon(orientation: .flatTop))
                     .layoutValue(
                         key: AxialCoordinateLayoutValueKey.self,
                         value: element.axialCoordinate
                     )
             }
         }
+        .rotationEffect(hexOrientation.rotationFromFlatTop)
     }
 }
 
