@@ -8,71 +8,44 @@
 import CoreGraphics
 import HexCore
 
-public struct HexGridLayout<Cell: AxialCoordinateProviding> {
-    public struct Placement: Identifiable {
-        public let id: AxialCoordinate
-        public let cell: Cell
-        public let position: CGPoint
-    }
-
-    public let placements: [Placement]
-    public let hexSize: CGSize
-    public let contentSize: CGSize
+public struct HexGridLayout {
+    public let contentRect: CGRect
     public let orientation: HexOrientation
 
     public init(
-        cells: some Sequence<Cell>,
-        hexRadius: CGFloat,
+        cells: some Sequence<some AxialCoordinateProviding>,
         orientation: HexOrientation
     ) {
         self.orientation = orientation
 
-        let hexSize = CGSize(
-            width: Hex.width(radius: hexRadius, orientation: orientation),
-            height: Hex.height(radius: hexRadius, orientation: orientation)
-        )
-
-        self.hexSize = hexSize
-
-        let frames = Self.frames(for: Array(cells), hexRadius: hexRadius, hexSize: hexSize, orientation: orientation)
-        let contentRect = frames.reduce(CGRect.null) { $0.union($1) }
+        let contentRect = Self.buildContentRect(from: cells, orientation: orientation)
 
         guard !contentRect.isNull else {
-            self.placements = []
-            self.contentSize = .zero
+            self.contentRect = .zero
             return
         }
 
-        self.contentSize = contentRect.size
-        self.placements = zip(cells, frames).map { cell, frame in
-            Placement(
-                id: cell.axialCoordinate,
-                cell: cell,
-                position: CGPoint(
-                    x: frame.midX - contentRect.minX,
-                    y: frame.midY - contentRect.minY
-                )
-            )
-        }
+        self.contentRect = contentRect
     }
 
-    private static func frames(
-        for cells: [some AxialCoordinateProviding],
-        hexRadius: CGFloat,
-        hexSize: CGSize,
+    private static func buildContentRect(
+        from cells: some Sequence<some AxialCoordinateProviding>,
         orientation: HexOrientation
-    ) -> [CGRect] {
-        cells.map { cell in
-            let center = switch orientation {
-            case .pointyTop: HexScreenMath.pointyHexToPixel(axialCoordinate: cell.axialCoordinate, size: hexRadius)
-            case .flatTop: HexScreenMath.flatHexToPixel(axialCoordinate: cell.axialCoordinate, size: hexRadius)
+    ) -> CGRect {
+        let hexSize = Hexagon.fractionalSize(for: orientation)
+
+        let contentRect: CGRect = cells
+            .reduce(CGRect.null) { partialResult, cell in
+                let center = HexScreenMath.hexToCartesianPoint(axialCoordinate: cell, orientation: orientation)
+                let cellRect = CGRect(
+                    x: center.x - hexSize.width / 2,
+                    y: center.y - hexSize.height / 2,
+                    width: hexSize.width,
+                    height: hexSize.height
+                )
+                return partialResult.union(cellRect)
             }
-            return CGRect(
-                x: center.x - hexSize.width / 2,
-                y: center.y - hexSize.height / 2,
-                width: hexSize.width,
-                height: hexSize.height
-            )
-        }
+
+        return contentRect
     }
 }

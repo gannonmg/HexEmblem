@@ -14,19 +14,50 @@ public enum HexScreenMath {
      Ultimately, it's just clearer and easier to debug to keep them separated.
      */
 
-    // MARK: - Hex to Pixel (center coordinate)
-    public static func pointyHexToPixel(axialCoordinate coord: AxialCoordinate, size: CGFloat) -> CGPoint {
+    // MARK: - Hex to fractional point (equivalent to size = 1)
+    public static func hexToCartesianPoint(
+        axialCoordinate coord: some AxialCoordinateProviding,
+        orientation: HexOrientation
+    ) -> CGPoint {
+        switch orientation {
+        case .pointyTop: pointyHexToCartesianPoint(axialCoordinate: coord)
+        case .flatTop: flatHexToCartesianPoint(axialCoordinate: coord)
+        }
+    }
+
+    public static func pointyHexToCartesianPoint(
+        axialCoordinate coord: some AxialCoordinateProviding
+    ) -> CGPoint {
+        let coord = coord.axialCoordinate
         let (q, r) = (CGFloat(coord.q), CGFloat(coord.r))
         let x = sqrt(3) * (q + r/2)
         let y = 3 * r/2
-        return CGPoint(x: x * size, y: y * size)
+        return CGPoint(x: x, y: y)
     }
 
-    public static func flatHexToPixel(axialCoordinate coord: AxialCoordinate, size: CGFloat) -> CGPoint {
+    public static func flatHexToCartesianPoint(
+        axialCoordinate coord: some AxialCoordinateProviding
+    ) -> CGPoint {
+        let coord = coord.axialCoordinate
         let (q, r) = (CGFloat(coord.q), CGFloat(coord.r))
         let x = 3 * q/2
         let y = sqrt(3) * (r + q/2)
-        return CGPoint(x: x * size, y: y * size)
+        return CGPoint(x: x, y: y)
+    }
+
+    // MARK: - Hex to Pixel (center coordinate)
+    public static func pointyHexToPixel(
+        axialCoordinate coord: some AxialCoordinateProviding,
+        size: CGFloat
+    ) -> CGPoint {
+        pointyHexToCartesianPoint(axialCoordinate: coord) * size
+    }
+
+    public static func flatHexToPixel(
+        axialCoordinate coord: some AxialCoordinateProviding,
+        size: CGFloat
+    ) -> CGPoint {
+        flatHexToCartesianPoint(axialCoordinate: coord) * size
     }
 
     // MARK: - Pixel (touch/click) input to Hex
@@ -72,5 +103,12 @@ public enum HexScreenMath {
         }
 
         return AxialCoordinate(q: Int(q), r: Int(r))
+    }
+}
+
+// MARK: - CGPoint
+extension CGPoint {
+    static func * (point: CGPoint, mult: CGFloat) -> CGPoint {
+        CGPoint(x: point.x * mult, y: point.y * mult)
     }
 }

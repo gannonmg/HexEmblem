@@ -11,39 +11,88 @@ import SwiftUI
 /// Places a set of hexes and lets the caller decide what each one looks like.
 struct HexGridView<Cell: AxialCoordinateProviding, CellContent: View>: View {
     @Environment(\.scrollVisibleRect) private var visibleRect
-    
-    private let layout: HexGridLayout<Cell>
+
+    private struct PlacedCell: Identifiable {
+        let id: AxialCoordinate
+        let cell: Cell
+        let position: CGPoint
+    }
+
+    // MARK: Init
+    private let cells: [Cell]
+    private let layout: HexGridLayout
+    private let hexRadius: CGFloat
     private let cellContent: (Cell) -> CellContent
 
     init(
-        cells: some Sequence<Cell>,
+        cells: [Cell],
+        layout: HexGridLayout,
         hexRadius: CGFloat,
-        orientation: HexOrientation,
         @ViewBuilder cellContent: @escaping (Cell) -> CellContent
     ) {
-        self.layout = HexGridLayout(cells: cells, hexRadius: hexRadius, orientation: orientation)
+        self.cells = cells
+        self.layout = layout
+        self.hexRadius = hexRadius
         self.cellContent = cellContent
     }
 
-    var body: some View {
-        ZStack {
-            ForEach(visiblePlacements) { placement in
-                cellContent(placement.cell)
-                    .frame(size: layout.hexSize)
-                    .clipShape(Hexagon(orientation: layout.orientation))
-                    .position(placement.position)
-            }
-        }
-        .frame(size: layout.contentSize)
+    // MARK: Computed size helpers
+    private var unitHexSize: CGSize { Hexagon.fractionalSize(for: layout.orientation) }
+
+    private var hexSize: CGSize {
+        CGSize(width: unitHexSize.width * hexRadius, height: unitHexSize.height * hexRadius)
     }
 
-    private var visiblePlacements: [HexGridLayout<Cell>.Placement] {
-        guard let visibleRect else { return layout.placements }
-        let cullRect = visibleRect.insetBy(
-            dx: -layout.hexSize.width,
-            dy: -layout.hexSize.height
+    private var contentSize: CGSize {
+        CGSize(
+            width: layout.contentRect.width * hexRadius,
+            height: layout.contentRect.height * hexRadius
         )
+    }
 
-        return layout.placements.filter { cullRect.contains($0.position) }
+    // MARK: Body
+    var body: some View {
+        ZStack {
+            ForEach(visibleCells) { placed in
+                cellContent(placed.cell)
+                    .frame(size: hexSize)
+                    .clipShape(Hexagon(orientation: layout.orientation))
+                    .position(placed.position)
+            }
+        }
+        .frame(size: contentSize)
+    }
+
+    /// Culls in unit space — one division on the rect instead of scaling every cell.
+    private var visibleCells: [PlacedCell] {
+        let cullRect = visibleRect.map { rect in
+            CGRect(
+                x: rect.minX / hexRadius,
+                y: rect.minY / hexRadius,
+                width: rect.width / hexRadius,
+                height: rect.height / hexRadius
+            )
+            .insetBy(dx: -unitHexSize.width, dy: -unitHexSize.height)
+        }
+
+        return cells.compactMap { cell in
+            let point = HexScreenMath.hexToCartesianPoint(
+                axialCoordinate: cell,
+                orientation: layout.orientation
+            )
+            // Shift out of lattice space so the content's top-left is the origin.
+            let unitPosition = CGPoint(
+                x: point.x - layout.contentRect.minX,
+                y: point.y - layout.contentRect.minY
+            )
+
+            if let cullRect, !cullRect.contains(unitPosition) { return nil }
+
+            return PlacedCell(
+                id: cell.axialCoordinate,
+                cell: cell,
+                position: CGPoint(x: unitPosition.x * hexRadius, y: unitPosition.y * hexRadius)
+            )
+        }
     }
 }

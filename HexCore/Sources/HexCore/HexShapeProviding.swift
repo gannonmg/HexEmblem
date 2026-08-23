@@ -14,9 +14,14 @@ extension HexShapeProviding {
 
     // Helpers
     public static func aspectRatio(for orientation: HexOrientation) -> CGFloat {
+        let size = fractionalSize(for: orientation)
+        return size.width / size.height
+    }
+
+    public static func fractionalSize(for orientation: HexOrientation) -> CGSize {
         switch orientation {
-        case .pointyTop: edgeToEdgeRatio / pointToPointRatio
-        case .flatTop: pointToPointRatio / edgeToEdgeRatio
+        case .pointyTop: CGSize(width: edgeToEdgeRatio, height: pointToPointRatio)
+        case .flatTop: CGSize(width: pointToPointRatio, height: edgeToEdgeRatio)
         }
     }
 

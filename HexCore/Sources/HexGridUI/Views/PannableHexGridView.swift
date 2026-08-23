@@ -27,8 +27,9 @@ public struct PannableHexGridView<Cell: AxialCoordinateProviding, CellContent: V
     }
 
     public var body: some View {
+        let layout = HexGridLayout(cells: cells, orientation: orientation)
         PannableScrollView([.horizontal, .vertical]) {
-            HexGridView(cells: cells, hexRadius: hexRadius, orientation: orientation, cellContent: cellContent)
+            HexGridView(cells: cells, layout: layout, hexRadius: hexRadius, cellContent: cellContent)
         }
     }
 }
