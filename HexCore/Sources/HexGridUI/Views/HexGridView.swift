@@ -8,8 +8,31 @@
 import HexCore
 import SwiftUI
 
+// Temporary thin layer to supply to Canvas before introducing more complex tiles
+public struct HexCellStyle {
+    public var fill: GraphicsContext.Shading
+    public var stroke: GraphicsContext.Shading?
+    public var lineWidth: CGFloat
+    public var label: Text?
+    public var labelShading: GraphicsContext.Shading
+
+    public init(
+        fill: GraphicsContext.Shading,
+        stroke: GraphicsContext.Shading? = nil,
+        lineWidth: CGFloat = 1,
+        label: Text? = nil,
+        labelShading: GraphicsContext.Shading = .color(.white)
+    ) {
+        self.fill = fill
+        self.stroke = stroke
+        self.lineWidth = lineWidth
+        self.label = label
+        self.labelShading = labelShading
+    }
+}
+
 /// Places a set of hexes and lets the caller decide what each one looks like.
-struct HexGridView<Cell: AxialCoordinateProviding, CellContent: View>: View {
+struct HexGridView<Cell: AxialCoordinateProviding>: View {
     @Environment(\.scrollVisibleRect) private var visibleRect
 
     private struct PlacedCell: Identifiable {
@@ -22,18 +45,18 @@ struct HexGridView<Cell: AxialCoordinateProviding, CellContent: View>: View {
     private let cells: [Cell]
     private let layout: HexGridLayout
     private let hexRadius: CGFloat
-    private let cellContent: (Cell) -> CellContent
+    private let style: (Cell) -> HexCellStyle
 
     init(
         cells: [Cell],
         layout: HexGridLayout,
         hexRadius: CGFloat,
-        @ViewBuilder cellContent: @escaping (Cell) -> CellContent
+        style: @escaping (Cell) -> HexCellStyle
     ) {
         self.cells = cells
         self.layout = layout
         self.hexRadius = hexRadius
-        self.cellContent = cellContent
+        self.style = style
     }
 
     // MARK: Computed size helpers
@@ -52,12 +75,31 @@ struct HexGridView<Cell: AxialCoordinateProviding, CellContent: View>: View {
 
     // MARK: Body
     var body: some View {
-        ZStack {
-            ForEach(visibleCells) { placed in
-                cellContent(placed.cell)
-                    .frame(size: hexSize)
-                    .clipShape(Hexagon(orientation: layout.orientation))
-                    .position(placed.position)
+        Canvas { context, _ in
+            // Built once at the current scale; every cell is a translation of it.
+            let template = Hexagon(orientation: layout.orientation)
+                .path(in: CGRect(origin: .zero, size: hexSize))
+
+            for placed in visibleCells {
+                let style = style(placed.cell)
+                let path = template.applying(
+                    CGAffineTransform(
+                        translationX: placed.position.x - hexSize.width / 2,
+                        y: placed.position.y - hexSize.height / 2
+                    )
+                )
+
+                context.fill(path, with: style.fill)
+
+                if let stroke = style.stroke {
+                    context.stroke(path, with: stroke, lineWidth: style.lineWidth)
+                }
+
+                if let label = style.label {
+                    var resolved = context.resolve(label)
+                    resolved.shading = style.labelShading
+                    context.draw(resolved, at: placed.position, anchor: .center)
+                }
             }
         }
         .frame(size: contentSize)
