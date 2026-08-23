@@ -49,13 +49,14 @@ public struct PannableHexDemoView: View {
     // MARK: Content
     public var body: some View {
         PannableHexGridView(cells: viewModel.cells, hexRadius: viewModel.hexRadius, orientation: orientation) { cell in
-            Hexagon(orientation: orientation)
+            // PannableHexGridView is agnostic to the shape and size of the content you pass here.
+            // It will clip whatever Content to an appropriately sized hexagon.
+            cell.color
                 .overlay {
                     Text("\(cell.axialCoordinate.q), \(cell.axialCoordinate.r)")
                         .foregroundStyle(.white)
                         .opacity(viewModel.showCoordinates ? 1 : 0)
                 }
-                .foregroundStyle(cell.color)
                 .transition(.opacity)
         }
         .animation(.default, value: orientation)
