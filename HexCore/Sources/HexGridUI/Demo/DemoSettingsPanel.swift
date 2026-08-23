@@ -20,11 +20,9 @@ private struct DemoSettingsPanel: ViewModifier {
     @State private var isExpanded: Bool = true
 
     @Binding var viewModel: PannableHexDemoViewModel
-    @State private var diskRadiusFloat: CGFloat
 
     init(viewModel: Binding<PannableHexDemoViewModel>) {
         self._viewModel = viewModel
-        self.diskRadiusFloat = CGFloat(viewModel.diskRadius.wrappedValue)
     }
 
     func body(content: Content) -> some View {
@@ -37,8 +35,8 @@ private struct DemoSettingsPanel: ViewModifier {
                                 .fixedSize()
                             Toggle("Show Coordinates", isOn: $viewModel.showCoordinates)
                                 .fixedSize()
-                            diskRadiusSlider
                             hexRadiusSlider
+                            MapShapePanel(viewModel: $viewModel)
                         }
                     }
                     .padding()
@@ -53,29 +51,12 @@ private struct DemoSettingsPanel: ViewModifier {
     }
 
     @ViewBuilder
-    private var diskRadiusSlider: some View {
-        HStack {
-            Text("Disk Radius: \(Int(diskRadiusFloat))")
-            Slider(
-                value: $diskRadiusFloat,
-                in: 0...30,
-                step: 1,
-                label: {
-                    Text("Disk Radius: \(Int(diskRadiusFloat))")
-                },
-                onEditingChanged: { changed in
-                    viewModel.diskRadius = Int(diskRadiusFloat)
-                }
-            )
-        }
-    }
-
-    @ViewBuilder
     private var hexRadiusSlider: some View {
         HStack {
             Text("Hex Radius: \(Int(viewModel.hexRadius))")
             Slider(value: $viewModel.hexRadius, in: 20...150, step: 5)
         }
     }
-
 }
+
+

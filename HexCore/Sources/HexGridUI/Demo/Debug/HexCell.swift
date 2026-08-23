@@ -13,20 +13,19 @@ public struct ColoredHexCell: Identifiable, AxialCoordinateProviding {
     public let axialCoordinate: AxialCoordinate
     public let color: Color
 
-    init(axialCoordinate: AxialCoordinate, diskRadius: Int) {
+    init(axialCoordinate: AxialCoordinate, span: Int) {
         self.axialCoordinate = axialCoordinate
-        self.color = Self.polarColor(for: axialCoordinate, diskRadius: diskRadius)
+        self.color = Self.polarColor(for: axialCoordinate, span: span)
     }
 
     /// Maps the signed cube coordinates straight onto RGB. Because `q + r + s == 0` for every
     /// hex, the three channels always sum to 1.5 — so the disk reads as a six-way hue wheel,
     /// one primary or secondary per hex direction, neutral gray at the origin.
-    private static func color(for coordinate: AxialCoordinate, diskRadius: Int) -> Color {
-        guard diskRadius > 0 else { return .gray }
-        let span = CGFloat(diskRadius * 2)
+    private static func color(for coordinate: AxialCoordinate, span: Int) -> Color {
+        guard span > 0 else { return .gray }
 
         func normalized(_ value: Int) -> CGFloat {
-            (CGFloat(value) + CGFloat(diskRadius)) / span
+            (CGFloat(value) + CGFloat(span)/2) / span
         }
 
         return Color(
@@ -36,8 +35,8 @@ public struct ColoredHexCell: Identifiable, AxialCoordinateProviding {
         )
     }
 
-    private static func polarColor(for coordinate: AxialCoordinate, diskRadius: Int) -> Color {
-        guard diskRadius > 0 else { return .gray }
+    private static func polarColor(for coordinate: AxialCoordinate, span: Int) -> Color {
+        guard span > 0 else { return .gray }
         let origin = AxialCoordinate(q: 0, r: 0)
         let ring = CGFloat(coordinate.distance(from: origin))
 
@@ -48,7 +47,7 @@ public struct ColoredHexCell: Identifiable, AxialCoordinateProviding {
 
         return Color(
             hue: (turns + 1).truncatingRemainder(dividingBy: 1),
-            saturation: ring / CGFloat(diskRadius),
+            saturation: ring / CGFloat(span) / 2,
             brightness: 0.775
         )
     }

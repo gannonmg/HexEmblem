@@ -8,12 +8,22 @@
 import HexCore
 import SwiftUI
 
+enum HexMapShape: Equatable {
+    case disk(radius: Int)
+    case grid(col: Int, row: Int)
+}
+
 @Observable
 final class PannableHexDemoViewModel {
+    // MARK: Computed
+    var orientation: HexOrientation { HexOrientation(isPointy: isPointyTop) }
 
-    var diskRadius: Int {
+    var mapShape: HexMapShape {
         didSet {
-            self.cells = ColoredHexFactory.cells(diskRadius: diskRadius)
+            self.cells = Self.cells(
+                for: mapShape,
+                orientation: HexOrientation(isPointy: isPointyTop)
+            )
         }
     }
     var hexRadius: CGFloat
@@ -22,22 +32,32 @@ final class PannableHexDemoViewModel {
     private(set) var cells: [ColoredHexCell]
 
     init(
-        diskRadius: Int = 3,
+        mapShape: HexMapShape = .grid(col: 30, row: 10),
         hexRadius: CGFloat = 50,
         isPointyTop: Bool = true,
         showCoordinates: Bool = true,
     ) {
-        self.diskRadius = diskRadius
+        self.mapShape = mapShape
         self.hexRadius = hexRadius
         self.isPointyTop = isPointyTop
         self.showCoordinates = showCoordinates
-        self.cells = ColoredHexFactory.cells(diskRadius: diskRadius)
+        self.cells = Self.cells(
+            for: mapShape,
+            orientation: HexOrientation(isPointy: isPointyTop)
+        )
+    }
+
+    private static func cells(for mapShape: HexMapShape, orientation: HexOrientation) -> [ColoredHexCell] {
+        switch mapShape {
+        case .disk(let radius):
+            ColoredHexFactory.disk(radius: radius)
+        case .grid(let col, let row):
+            ColoredHexFactory.grid(col: col, row: row, orientation: orientation)
+        }
     }
 }
 
 public struct PannableHexDemoView: View {
-    // MARK: Computed
-    private var orientation: HexOrientation { viewModel.isPointyTop ? .pointyTop : .flatTop }
 
     // MARK: Init
     @State private var viewModel: PannableHexDemoViewModel
@@ -48,7 +68,7 @@ public struct PannableHexDemoView: View {
 
     // MARK: Content
     public var body: some View {
-        PannableHexGridView(cells: viewModel.cells, hexRadius: viewModel.hexRadius, orientation: orientation) { cell in
+        PannableHexGridView(cells: viewModel.cells, hexRadius: viewModel.hexRadius, orientation: viewModel.orientation) { cell in
             // PannableHexGridView is agnostic to the shape and size of the content you pass here.
             // It will clip whatever Content to an appropriately sized hexagon.
             cell.color
@@ -59,7 +79,8 @@ public struct PannableHexDemoView: View {
                 }
                 .transition(.opacity)
         }
-        .animation(.default, value: orientation)
+        .animation(.default, value: viewModel.orientation)
+        .animation(.default, value: viewModel.mapShape)
         .animation(.default, value: viewModel.showCoordinates)
         .animation(.default, value: viewModel.hexRadius)
         .settingsPanel(vm: $viewModel)

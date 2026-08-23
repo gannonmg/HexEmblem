@@ -7,4 +7,10 @@
 
 import Foundation
 
-public enum HexOrientation: Sendable { case pointyTop, flatTop }
+public enum HexOrientation: Sendable {
+    case pointyTop, flatTop
+
+    public init(isPointy: Bool) {
+        self = isPointy ? .pointyTop : .flatTop
+    }
+}

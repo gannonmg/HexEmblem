@@ -8,11 +8,19 @@
 import HexCore
 
 public enum ColoredHexFactory {
-    public static func cells(diskRadius: Int) -> [ColoredHexCell] {
+    public static func disk(radius: Int) -> [ColoredHexCell] {
         let cells: [ColoredHexCell] = AxialCoordinate
-            .disk(center: AxialCoordinate(q: 0, r: 0), radius: diskRadius)
+            .disk(center: AxialCoordinate(q: 0, r: 0), radius: radius)
             .sorted { ($0.r, $0.q) < ($1.r, $1.q) }
-            .map { ColoredHexCell(axialCoordinate: $0, diskRadius: diskRadius) }
+            .map { ColoredHexCell(axialCoordinate: $0, span: radius * 2) }
+        return cells
+    }
+
+    static func grid(col: Int, row: Int, orientation: HexOrientation) -> [ColoredHexCell] {
+        let cells: [ColoredHexCell] = AxialCoordinate
+            .rectangle(columns: col, rows: row, orientation: orientation)
+            .sorted { ($0.r, $0.q) < ($1.r, $1.q) }
+            .map { ColoredHexCell(axialCoordinate: $0, span: max(col, row)) }
         return cells
     }
 }
