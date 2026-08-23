@@ -9,7 +9,12 @@ import SwiftUI
 
 // MARK: - Access
 extension View {
-    func mousePannable(vm: Binding<PannableScrollViewModel>) -> some View {
+    /// Click-and-drag panning, macOS only. `NSScrollView` ignores a pressed left-drag, so this
+    /// can't collide with its own recognizer.
+    ///
+    /// This gesture is otherwise already handled by an iOS/iPadOS finger drag, or macOS two-finger drag,
+    /// so the modifier is a no-op there.
+    func mouseDragPannable(vm: Binding<PannableScrollViewModel>) -> some View {
         self.modifier(PannableMouseDragModifier(vm: vm))
     }
 }

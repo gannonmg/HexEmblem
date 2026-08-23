@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-private struct MapShapePanel: View {
+struct MapShapePanel: View {
     private enum MapStyle: String, CaseIterable, Hashable, Identifiable {
         var id: MapStyle { self }
         case grid, disk

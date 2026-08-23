@@ -43,7 +43,7 @@ struct PannableScrollView<Content: View>: View {
             guard oldValue != newValue else { return }
             vm.geometry = newValue
         }
-        .mousePannable(vm: $vm)
+        .mouseDragPannable(vm: $vm)
     }
 }
 
