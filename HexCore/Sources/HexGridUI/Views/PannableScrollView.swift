@@ -100,12 +100,10 @@ struct PannableScrollView<Content: View>: View {
                 withAnimation(
                     .interpolatingSpring(
                         duration: 0.8,
-//                        duration: 3.0,
                         bounce: 0,
                         initialVelocity: distance > 0 ? speed / distance : 0
                     )
                 ) {
-//                    scrollPosition.scrollTo(point: target)
                     momentumTask = momentumTask(released: released, exitVelocity: exitVelocity)
                 }
             }
