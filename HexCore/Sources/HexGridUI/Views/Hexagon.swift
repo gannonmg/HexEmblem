@@ -9,54 +9,59 @@ import HexCore
 import SwiftUI
 
 public struct Hexagon: Shape, HexShapeProviding {
-    let orientation: HexOrientation
+    /// A percent represented by a float `0...1` to aide in interpolating the rotation angle for animation
+    /// `0` represents no rotation and a flat top hex
+    /// `1` represents 30º rotation and a pointy top hex
+    private var hexRotationPercent: CGFloat
+    public var animatableData: CGFloat {
+        get { hexRotationPercent }
+        set { hexRotationPercent = newValue }
+    }
 
     public init(orientation: HexOrientation) {
-        self.orientation = orientation
+        self.hexRotationPercent = switch orientation {
+        case .flatTop: 0
+        case .pointyTop: 1
+        }
     }
 
     public func path(in rect: CGRect) -> Path {
         var path = Path()
 
         let center = CGPoint(x: rect.midX, y: rect.midY)
-        let width = min(rect.width, rect.height * Self.aspectRatio(for: orientation))
-        let size = switch orientation {
-        case .pointyTop: width / Self.edgeToEdgeRatio
-        case .flatTop: width / Self.pointToPointRatio
-        }
+        let width = min(rect.width, rect.height * interpolatedAspectRatio)
+        let radius = width / interpolatedRadiusRatio
 
         let corners = (0..<6)
-            .map { corner(center: center, size: size, cornerIndex: $0) }
+            .map { corner(center: center, radius: radius, cornerIndex: $0) }
 
         path.move(to: corners[0])
         corners[1..<6].forEach { point in
             path.addLine(to: point)
         }
-
         path.closeSubpath()
 
         return path
     }
 
-    private func corner(center: CGPoint, size: CGFloat, cornerIndex: Int) -> CGPoint {
-        let angleDegree = switch orientation {
-        case .pointyTop: pointyTopCornerDegree(for: cornerIndex)
-        case .flatTop: flatTopCornerDegree(for: cornerIndex)
-        }
+    private var interpolatedAspectRatio: CGFloat {
+        let pointy = Self.aspectRatio(for: .pointyTop)
+        let flat = Self.aspectRatio(for: .flatTop)
+        return flat + (pointy - flat) * hexRotationPercent
+    }
 
-        let angleRadian: CGFloat = CGFloat.pi / 180 * CGFloat(angleDegree)
-        let cornerPoint = CGPoint(
-            x: center.x + size * cos(angleRadian),
-            y: center.y + size * sin(angleRadian)
+    /// Pointy top inscribes edge-to-edge across the width; flat top inscribes point-to-point.
+    private var interpolatedRadiusRatio: CGFloat {
+        Self.pointToPointRatio + (Self.edgeToEdgeRatio - Self.pointToPointRatio) * hexRotationPercent
+    }
+
+    private func corner(center: CGPoint, radius: CGFloat, cornerIndex: Int) -> CGPoint {
+        let angleOffset: CGFloat = 30 * hexRotationPercent
+        let angleDegree: CGFloat = 60 * cornerIndex - angleOffset
+        let angleRadian = CGFloat.pi / 180 * angleDegree
+        return CGPoint(
+            x: center.x + radius * cos(angleRadian),
+            y: center.y + radius * sin(angleRadian)
         )
-        return cornerPoint
-    }
-
-    private func flatTopCornerDegree(for cornerIndex: Int) -> Int {
-        60 * cornerIndex
-    }
-
-    private func pointyTopCornerDegree(for cornerIndex: Int) -> Int {
-        60 * cornerIndex - 30
     }
 }
