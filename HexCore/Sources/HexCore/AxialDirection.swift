@@ -26,3 +26,12 @@ public enum AxialDirection: CaseIterable {
         }
     }
 }
+
+extension AxialDirection {
+    /// True when a cell always sorts before its neighbor in this direction under the
+    /// `(r, q)` ordering used for edge dedupe. Derived from the offset, not hardcoded.
+    public var ownsSharedEdge: Bool {
+        let offset = offsetCoordinate
+        return (0, 0) < (offset.r, offset.q)
+    }
+}

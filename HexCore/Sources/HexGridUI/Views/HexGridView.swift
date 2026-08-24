@@ -31,7 +31,6 @@ struct HexGridView<Cell: AxialCoordinateProviding>: View {
         let gridLine = appearance.gridLine
 
         Canvas { context, _ in
-
             let start = CFAbsoluteTimeGetCurrent()
             defer {
                 let elapsed = (CFAbsoluteTimeGetCurrent() - start) * 1000
@@ -39,8 +38,14 @@ struct HexGridView<Cell: AxialCoordinateProviding>: View {
             }
 
             // Built once at the current scale; every cell is a translation of it.
+            // Neighbours share an edge exactly, so antialiased fills leave a sub-pixel seam.
+            // Growing each hex by half a smidge makes them overlap instead.
+            let widthBuffer: CGFloat = 1
+            let heightBuffer = widthBuffer * geometry.hexSizeRatio.width / geometry.hexSizeRatio.height
+            let fillSize = CGSize(width: hexSize.width + widthBuffer,
+                                  height: hexSize.height + heightBuffer)
             let template = Hexagon(orientation: layout.orientation)
-                .path(in: CGRect(origin: .zero, size: hexSize))
+                .path(in: CGRect(origin: .zero, size: fillSize))
 
 
             var gridPath = Path()
@@ -59,8 +64,21 @@ struct HexGridView<Cell: AxialCoordinateProviding>: View {
                 context.fill(path, with: style.fill)
 
                 if let gridLine, 0 < gridLine.width {
-                    gridPath.addPath(path)
+                    let coordinate = placed.cell.axialCoordinate
+
+                    for direction in directions {
+                        if !direction.ownsSharedEdge {
+                            let offset = direction.offsetCoordinate
+                            let neighbor = AxialCoordinate(q: coordinate.q + offset.q, r: coordinate.r + offset.r)
+                            guard !coordinateSet.contains(neighbor) else { continue }
+                        }
+
+                        let pathEdge = geometry.edge(facing: direction, from: placed.position)
+                        gridPath.move(to: pathEdge.start)
+                        gridPath.addLine(to: pathEdge.end)
+                    }
                 }
+
                 if let label = style.label {
                     var resolved = context.resolve(label)
                     resolved.shading = style.labelShading
@@ -69,7 +87,11 @@ struct HexGridView<Cell: AxialCoordinateProviding>: View {
             }
 
             if let gridLine {
-                context.stroke(gridPath, with: gridLine.shading, lineWidth: gridLine.width)
+                context.stroke(
+                    gridPath,
+                    with: gridLine.shading,
+                    style: StrokeStyle(lineWidth: gridLine.width, lineCap: .round)
+                )
             }
         }
         .frame(size: geometry.contentSize)
