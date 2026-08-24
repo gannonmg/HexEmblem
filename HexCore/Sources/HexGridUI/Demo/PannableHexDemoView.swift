@@ -80,7 +80,7 @@ public struct PannableHexDemoView: View {
     public var body: some View {
         PannableHexGridView(
             cells: viewModel.cells,
-            hexRadius: viewModel.hexRadius,
+            hexRadius: $viewModel.hexRadius,
             orientation: viewModel.orientation,
             gridLine: viewModel.gridLines
         ) { cell in
