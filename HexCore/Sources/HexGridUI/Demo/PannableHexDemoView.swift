@@ -18,29 +18,36 @@ final class PannableHexDemoViewModel {
     // MARK: Computed
     var orientation: HexOrientation { HexOrientation(isPointy: isPointyTop) }
 
+    var showGrid: Bool = true
+    var showCoordinates: Bool = false
+    var hexRadius: CGFloat = 50
+
     var mapShape: HexMapShape {
+        didSet { rebuildCells() }
+    }
+
+    var isPointyTop: Bool {
         didSet {
-            self.cells = Self.cells(
-                for: mapShape,
-                orientation: HexOrientation(isPointy: isPointyTop)
-            )
+            guard case .grid = mapShape else { return }
+            rebuildCells()
         }
     }
-    var hexRadius: CGFloat
-    var isPointyTop: Bool
-    var showCoordinates: Bool
+
     private(set) var cells: [ColoredHexCell]
 
     init(
         mapShape: HexMapShape = .disk(radius: 30),
-        hexRadius: CGFloat = 50,
-        isPointyTop: Bool = true,
-        showCoordinates: Bool = true,
+        isPointyTop: Bool = true
     ) {
         self.mapShape = mapShape
-        self.hexRadius = hexRadius
         self.isPointyTop = isPointyTop
-        self.showCoordinates = showCoordinates
+        self.cells = Self.cells(
+            for: mapShape,
+            orientation: HexOrientation(isPointy: isPointyTop)
+        )
+    }
+
+    private func rebuildCells() {
         self.cells = Self.cells(
             for: mapShape,
             orientation: HexOrientation(isPointy: isPointyTop)
