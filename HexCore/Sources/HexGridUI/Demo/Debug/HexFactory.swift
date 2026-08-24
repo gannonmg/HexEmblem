@@ -11,7 +11,7 @@ public enum ColoredHexFactory {
     public static func disk(radius: Int) -> [ColoredHexCell] {
         let cells: [ColoredHexCell] = AxialCoordinate
             .disk(center: AxialCoordinate(q: 0, r: 0), radius: radius)
-            .sorted { ($0.r, $0.q) < ($1.r, $1.q) }
+            .sorted { $0 < $1 }
             .map { ColoredHexCell(axialCoordinate: $0, span: radius * 2) }
         return cells
     }
@@ -19,8 +19,9 @@ public enum ColoredHexFactory {
     static func grid(col: Int, row: Int, orientation: HexOrientation) -> [ColoredHexCell] {
         let cells: [ColoredHexCell] = AxialCoordinate
             .rectangle(columns: col, rows: row, orientation: orientation)
-            .sorted { ($0.r, $0.q) < ($1.r, $1.q) }
+            .sorted { $0 < $1 }
             .map { ColoredHexCell(axialCoordinate: $0, span: max(col, row)) }
         return cells
     }
 }
+

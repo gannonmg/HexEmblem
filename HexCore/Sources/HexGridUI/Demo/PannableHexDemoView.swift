@@ -18,6 +18,9 @@ final class PannableHexDemoViewModel {
     // MARK: Computed
     var orientation: HexOrientation { HexOrientation(isPointy: isPointyTop) }
 
+    var gridLines: HexGridLine? { showGrid ? HexGridLine() : nil }
+
+
     var showGrid: Bool = true
     var showCoordinates: Bool = false
     var hexRadius: CGFloat = 50
@@ -75,10 +78,14 @@ public struct PannableHexDemoView: View {
 
     // MARK: Content
     public var body: some View {
-        PannableHexGridView(cells: viewModel.cells, hexRadius: viewModel.hexRadius, orientation: viewModel.orientation) { cell in
+        PannableHexGridView(
+            cells: viewModel.cells,
+            hexRadius: viewModel.hexRadius,
+            orientation: viewModel.orientation,
+            gridLine: viewModel.gridLines
+        ) { cell in
             HexCellStyle(
                 fill: .color(cell.color),
-                stroke: .color(.black.opacity(0.25)),
                 label: viewModel.showCoordinates
                 ? Text("\(cell.axialCoordinate.q), \(cell.axialCoordinate.r)")
                 : nil

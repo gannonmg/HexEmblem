@@ -32,8 +32,9 @@ public struct Hexagon: Shape, HexShapeProviding {
         let width = min(rect.width, rect.height * interpolatedAspectRatio)
         let radius = width / interpolatedRadiusRatio
 
-        let corners = (0..<6)
-            .map { corner(center: center, radius: radius, cornerIndex: $0) }
+        let corners = AxialDirection.allCases.map { direction in
+            center.offset(distance: radius, angle: cornerAngle(facing: direction))
+        }
 
         path.move(to: corners[0])
         corners[1..<6].forEach { point in
@@ -55,13 +56,12 @@ public struct Hexagon: Shape, HexShapeProviding {
         Self.pointToPointRatio + (Self.edgeToEdgeRatio - Self.pointToPointRatio) * hexRotationPercent
     }
 
-    private func corner(center: CGPoint, radius: CGFloat, cornerIndex: Int) -> CGPoint {
-        let angleOffset: CGFloat = 30 * hexRotationPercent
-        let angleDegree: CGFloat = 60 * cornerIndex - angleOffset
-        let angleRadian = CGFloat.pi / 180 * angleDegree
-        return CGPoint(
-            x: center.x + radius * cos(angleRadian),
-            y: center.y + radius * sin(angleRadian)
-        )
+    /// Corners sit halfway between adjacent neighbor headings, so the drawn shape comes from
+    /// the same direction table that finds neighbors. Flat and pointy headings differ by
+    /// exactly 30°, which is what `hexRotationPercent` interpolates between.
+    private func cornerAngle(facing direction: AxialDirection) -> Angle {
+        let flat = direction.angle(for: .flatTop).radians
+        let pointy = direction.angle(for: .pointyTop).radians
+        return .radians(flat + (pointy - flat) * hexRotationPercent + .pi / 6)
     }
 }

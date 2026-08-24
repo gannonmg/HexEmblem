@@ -13,18 +13,24 @@ extension AxialCoordinate {
         AxialCoordinate.distance(lhs: self, rhs: coordinate)
     }
 
-    public func offsetBy(q qOffset: Int, r rOffset: Int) -> AxialCoordinate {
-        Self.offsetCoordinate(of: self, byQ: qOffset, r: rOffset)
+    public func neighbors() -> Set<AxialCoordinate> { AxialCoordinate.neighbors(of: self)  }
+}
+
+extension AxialCoordinateProviding {
+    public static func + (lhs: Self, rhs: some AxialCoordinateProviding) -> AxialCoordinate {
+        let (lhs, rhs) = (lhs.axialCoordinate, rhs.axialCoordinate)
+        return AxialCoordinate(q: lhs.q + rhs.q, r: lhs.r + rhs.r)
     }
 
-    public func neighbors() -> Set<AxialCoordinate> { AxialCoordinate.neighbors(of: self)  }
+    public static func < (lhs: Self, rhs: some AxialCoordinateProviding) -> Bool {
+        let (lhs, rhs) = (lhs.axialCoordinate, rhs.axialCoordinate)
+        return (lhs.r, lhs.q) < (rhs.r, rhs.q)
+    }
 }
 
 // MARK: - Static Implementations
 extension AxialCoordinate {
-    private static var directions: [(q: Int, r: Int)] {
-        [(1, -1), (1, 0), (0, 1), (-1, 1), (-1, 0), (0, -1)]
-    }
+    public static var directions: [AxialCoordinate] { AxialDirection.allCases.map(\.offsetCoordinate) }
 
     // MARK: Distance
     public static func distance(lhs: AxialCoordinate, rhs: AxialCoordinate) -> Int {
@@ -38,11 +44,7 @@ extension AxialCoordinate {
     // MARK: Neighbors
     /// Returns exactly 6 neighbors, all distance 1, beginning with the NorthEast neighbors
     public static func neighbors(of coordinate: AxialCoordinate) -> Set<AxialCoordinate> {
-        Set(directions.map { offsetCoordinate(of: coordinate, byQ: $0, r: $1) })
-    }
-
-    public static func offsetCoordinate(of coordinate: AxialCoordinate, byQ qOffset: Int, r rOffset: Int) -> AxialCoordinate {
-        AxialCoordinate(q: coordinate.q + qOffset, r: coordinate.r + rOffset)
+        Set(directions.map { coordinate + $0 })
     }
 
     /// A rectangular block of coordinates centered as closely as possible on `(0,0)`.
@@ -94,7 +96,7 @@ extension AxialCoordinate {
             let maxR = min(radius, (-q + radius))
 
             for r in minR...maxR {
-                let member = self.offsetCoordinate(of: center, byQ: q, r: r)
+                let member = center + AxialCoordinate(q: q, r: r)
                 results.insert(member)
             }
         }
@@ -111,18 +113,16 @@ extension AxialCoordinate {
             fatalError("Directions should always have 6 values")
         }
 
-        var current = offsetCoordinate(
-            of: center,
-            byQ: radius * startingDirection.q,
-            r: radius * startingDirection.r
-        )
+        let startingQ = radius * startingDirection.q
+        let startingR = radius * startingDirection.r
+        var current = center + AxialCoordinate(q: startingQ, r: startingR)
 
         let directionsCount = directions.count
         directions.indices.forEach { i in
             let direction = directions[(i+2) % directionsCount]
             (0..<radius).forEach { _ in
                 results.insert(current)
-                current = offsetCoordinate(of: current, byQ: direction.q, r: direction.r)
+                current = current + direction
             }
         }
 

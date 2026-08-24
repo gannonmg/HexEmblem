@@ -9,28 +9,35 @@ import HexCore
 import SwiftUI
 
 public struct PannableHexGridView<Cell: AxialCoordinateProviding>: View {
-    private let cells: [Cell]
-    private let hexRadius: CGFloat
-    private let orientation: HexOrientation
-    private let style: (Cell) -> HexCellStyle
+    let cells: [Cell]
+    let geometry: HexGridGeometry<Cell>
+    let appearance: HexGridAppearance<Cell>
 
     public init(
         cells: [Cell],
         hexRadius: CGFloat,
         orientation: HexOrientation,
+        gridLine: HexGridLine? = nil,
         style: @escaping (Cell) -> HexCellStyle
-
     ) {
         self.cells = cells
-        self.hexRadius = hexRadius
-        self.orientation = orientation
-        self.style = style
+        self.geometry = HexGridGeometry(
+            layout: HexGridLayout(cells: cells, orientation: orientation),
+            hexRadius: hexRadius
+        )
+        self.appearance = HexGridAppearance(
+            gridLine: gridLine,
+            style: style
+        )
     }
 
     public var body: some View {
-        let layout = HexGridLayout(cells: cells, orientation: orientation)
         PannableScrollView([.horizontal, .vertical]) {
-            HexGridView(cells: cells, layout: layout, hexRadius: hexRadius, style: style)
+            HexGridView(
+                cells: cells,
+                geometry: geometry,
+                appearance: appearance
+            )
         }
     }
 }

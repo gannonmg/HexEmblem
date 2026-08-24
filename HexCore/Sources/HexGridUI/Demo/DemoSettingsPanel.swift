@@ -35,6 +35,8 @@ private struct DemoSettingsPanel: ViewModifier {
                         VStack(alignment: .leading) {
                             Toggle("Pointy Top", isOn: $viewModel.isPointyTop)
                                 .fixedSize()
+                            Toggle("Show Grid", isOn: $viewModel.showGrid)
+                                .fixedSize()
                             Toggle("Show Coordinates", isOn: $viewModel.showCoordinates)
                                 .fixedSize()
                             hexRadiusSlider
