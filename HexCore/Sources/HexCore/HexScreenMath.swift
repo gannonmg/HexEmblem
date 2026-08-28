@@ -105,7 +105,3 @@ public enum HexScreenMath {
         return AxialCoordinate(q: Int(q), r: Int(r))
     }
 }
-
-// MARK: - CGPoint
-extension CGPoint {
-}
