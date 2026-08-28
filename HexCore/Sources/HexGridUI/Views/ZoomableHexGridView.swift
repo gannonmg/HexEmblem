@@ -11,15 +11,21 @@ import SwiftUI
 struct ZoomableHexGridView<Cell: AxialCoordinateProviding>: View {
     @State private var visibleRect: CGRect?
 
-    private let layout: HexGridLayout<Cell>
+    @State private var layout: HexGridLayout<Cell>
     private let appearance: HexGridAppearance<Cell>
     @Binding var hexRadius: CGFloat
+    private let radiusRange: ClosedRange<CGFloat>
+
+    @State private var zoomResetToken: Int = 0
+    private let zoomRange: ClosedRange<CGFloat> = 0.75...1.33
 
     var body: some View {
         ZoomableScrollView(
-            zoomRange: ZoomableHexMapDefaults.zoomRange,
+            zoomRange: zoomRange,
+            onZoomChange: zoomChanged(_:_:),
+            zoomResetToken: zoomResetToken,
             onVisibleRectChange: { rect in
-                self.visibleRect = rect
+//                self.visibleRect = rect
             },
             content: {
                 HexGridCanvas(
@@ -31,6 +37,24 @@ struct ZoomableHexGridView<Cell: AxialCoordinateProviding>: View {
 //                .environment(\.scrollVisibleRect, visibleRect)
             }
         )
+    }
+
+    private func zoomChanged(_ zoomScale: CGFloat, _ zoomEnded: Bool) {
+        print("Zoom scale: \(zoomScale)")
+
+        // If zoom scale is in our zoom range, ignore - stagger redraw efforts
+        if zoomRange.contains(zoomScale) { return }
+
+        // Calculate the current hex radius displayed
+        var visibleRadius = zoomScale * layout.hexRadius
+        guard radiusRange.contains(visibleRadius) else { return }
+        self.hexRadius = visibleRadius
+
+        // Rebuild layout with the displayed radius, triggering a rebuild
+        self.layout = layout.rebuilt(with: visibleRadius)
+
+        // Set the ScrollViews zoom scale back to 1
+        zoomResetToken += 1
     }
 }
 
@@ -60,5 +84,6 @@ extension ZoomableHexGridView {
             style: style
         )
         self._hexRadius = hexRadius
+        self.radiusRange = radiusRange
     }
 }

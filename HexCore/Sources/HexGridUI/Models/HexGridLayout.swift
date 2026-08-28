@@ -62,3 +62,12 @@ struct HexGridLayout<Cell: AxialCoordinateProviding> {
         self.contentRect = CGRect(origin: .zero, size: fractionalRect.size * hexRadius)
     }
 }
+
+// MARK: - Radius updates
+extension HexGridLayout {
+    func rebuilt(with newRadius: CGFloat) -> HexGridLayout<Cell> {
+        let originalCells = placedCells.map(\.cell)
+        let layout = HexGridLayout(cells: originalCells, orientation: orientation, hexRadius: newRadius)
+        return layout
+    }
+}

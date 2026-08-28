@@ -11,17 +11,23 @@ import UIKit
 struct ZoomableScrollView<Content: View>: UIViewRepresentable {
     let zoomRange: ClosedRange<CGFloat>
     let showsScrollIndicators: Bool
+    let onZoomChange: (_ scale: CGFloat, _ ended: Bool) -> Void
+    let zoomResetToken: Int
     let onVisibleRectChange: (CGRect) -> Void
     let content: Content
 
     init(
         zoomRange: ClosedRange<CGFloat>,
         showsScrollIndicators: Bool = false,
+        onZoomChange: @escaping (_ scale: CGFloat, _ ended: Bool) -> Void,
+        zoomResetToken: Int,
         onVisibleRectChange: @escaping (CGRect) -> Void,
         @ViewBuilder content: () -> Content
     ) {
         self.zoomRange = zoomRange
         self.showsScrollIndicators = showsScrollIndicators
+        self.onZoomChange = onZoomChange
+        self.zoomResetToken = zoomResetToken
         self.onVisibleRectChange = onVisibleRectChange
         self.content = content()
     }
@@ -34,7 +40,6 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
         scrollView.contentLayoutGuide.pinSubviewToEdges(subview: hosting.view)
         hosting.view.backgroundColor = .systemPink
         scrollView.backgroundColor = .systemOrange
-
         return scrollView
     }
 
@@ -43,6 +48,7 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
         context.coordinator.hostingController?.rootView = content
         scrollView.minimumZoomScale = zoomRange.lowerBound
         scrollView.maximumZoomScale = zoomRange.upperBound
+        context.coordinator.resetZoomIfNeeded(in: scrollView)
     }
 
     private func buildScrollView(delegate: UIScrollViewDelegate) -> UIScrollView {
@@ -69,11 +75,13 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
 
     final class Coordinator: NSObject, UIScrollViewDelegate {
         var hostingController: UIHostingController<Content>?
-
         var owner: ZoomableScrollView
+        private var lastZoomResetToken: Int
+        private var isApplyingZoomReset: Bool = false
 
         init(owner: ZoomableScrollView) {
             self.owner = owner
+            self.lastZoomResetToken = owner.zoomResetToken
         }
 
         // MARK: UIScrollViewDelegate
@@ -82,17 +90,22 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
         }
 
         func scrollViewDidZoom(_ scrollView: UIScrollView) {
+            guard !isApplyingZoomReset else { return }
             reportChange(in: scrollView)
-            print("zoom: \(scrollView.zoomScale)")
+            reportZoomScale(scrollView.zoomScale, zoomEnded: false)
         }
 
         func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
-            // Commit the zoom
             reportChange(in: scrollView)
+            reportZoomScale(scrollView.zoomScale, zoomEnded: true)
         }
 
         func scrollViewDidScroll(_ scrollView: UIScrollView) {
             reportChange(in: scrollView)
+        }
+
+        private func reportZoomScale(_ scale: CGFloat, zoomEnded: Bool) {
+            owner.onZoomChange(scale, zoomEnded)
         }
 
         private func reportChange(in scrollView: UIScrollView) {
@@ -107,6 +120,14 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
             )
 
             owner.onVisibleRectChange(visibleRect)
+        }
+
+        func resetZoomIfNeeded(in scrollView: UIScrollView) {
+            guard lastZoomResetToken != owner.zoomResetToken else { return }
+            lastZoomResetToken = owner.zoomResetToken
+            isApplyingZoomReset = true
+            scrollView.setZoomScale(1, animated: false)
+            isApplyingZoomReset = false
         }
     }
 }
