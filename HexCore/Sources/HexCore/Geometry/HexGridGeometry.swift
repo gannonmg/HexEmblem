@@ -9,18 +9,19 @@ import Algorithms
 import Foundation
 
 // Constants and Calculations specifically focused on the relative layout of a hex grid, irregardless to actual pixel size.
-// All math is done assuming radius = 1
+// All math is done assuming radius = 1.
+// As of now, this should not be doing any computations involving actual hex radius.
 public struct HexGridGeometry {
-    enum Constants {
+    public enum Constants {
         // Small computation save. Otherwise, allCases must build its array with each call.
         // Measurable if small impact when displaying ~1000+ hexes.
-        static let directions = AxialDirection.allCases
-        static let circumradius: CGFloat = 2
-        static let inradius: CGFloat = sqrt(3)
+        public static let directions = AxialDirection.allCases
+        public static let circumradius: CGFloat = 2
+        public static let inradius: CGFloat = sqrt(3)
 
         // Calculated
-        static let fractionalPointySize = CGSize(width: inradius, height: circumradius)
-        static let fractionalFlatSize = CGSize(width: circumradius, height: inradius)
+        public static let fractionalPointySize = CGSize(width: inradius, height: circumradius)
+        public static let fractionalFlatSize = CGSize(width: circumradius, height: inradius)
 
         private static let pointyHexSizeRatio: CGFloat = {
             let size = fractionalPointySize
@@ -42,6 +43,11 @@ extension HexGridGeometry {
     public struct EdgeOffset : Sendable, Hashable {
         public let start: CGPoint
         public let end: CGPoint
+
+        public init(start: CGPoint, end: CGPoint) {
+            self.start = start
+            self.end = end
+        }
     }
 
     private typealias CornerContainer = [HexOrientation: [AxialDirection: CGPoint]]
@@ -118,14 +124,5 @@ extension HexGridGeometry {
             }
 
         return contentRect
-    }
-}
-
-extension HexGridGeometry.EdgeOffset {
-    public func scaled(by hexRadius: CGFloat) -> Self {
-        return Self(
-            start: start * hexRadius,
-            end: end * hexRadius
-        )
     }
 }

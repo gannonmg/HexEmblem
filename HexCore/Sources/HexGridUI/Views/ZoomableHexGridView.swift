@@ -11,13 +11,9 @@ import SwiftUI
 struct ZoomableHexGridView<Cell: AxialCoordinateProviding>: View {
     @State private var visibleRect: CGRect?
 
-    let cells: [Cell]
-    let fractionalPositions: [AxialCoordinate: CGPoint]
-    let contentRect: CGRect
-    @Binding var hexRadius: CGFloat
-    let radiusRange: ClosedRange<CGFloat>
-    let orientation: HexOrientation
+    private let layout: HexGridLayout<Cell>
     private let appearance: HexGridAppearance<Cell>
+    @Binding var hexRadius: CGFloat
 
     var body: some View {
         ZoomableScrollView(
@@ -27,15 +23,10 @@ struct ZoomableHexGridView<Cell: AxialCoordinateProviding>: View {
             },
             content: {
                 HexGridCanvas(
-                    cells: cells,
-                    orientation: orientation,
-                    hexRadius: hexRadius,
-                    contentRect: contentRect,
-                    fractionalPositions: fractionalPositions,
+                    layout: layout,
                     appearance: appearance
                 )
                 .background(.green.opacity(0.7))
-                .frame(size: contentRect.size)
                 .background(.blue.opacity(0.7))
 //                .environment(\.scrollVisibleRect, visibleRect)
             }
@@ -63,24 +54,11 @@ extension ZoomableHexGridView {
         gridLine: HexGridLine? = nil,
         style: @escaping (Cell) -> HexCellStyle
     ) {
-        self.cells = cells
-        self.fractionalPositions = Dictionary(uniqueKeysWithValues: cells.map { cell in
-            let fractionalPosition = HexScreenMath.hexToCartesianPoint(
-                axialCoordinate: cell,
-                orientation: orientation
-            )
-            return (cell.axialCoordinate, fractionalPosition)
-        })
-
-        self.orientation = orientation
+        self.layout = HexGridLayout(cells: cells, orientation: orientation, hexRadius: hexRadius.wrappedValue)
         self.appearance = HexGridAppearance(
             gridLine: gridLine,
             style: style
         )
-
         self._hexRadius = hexRadius
-        self.radiusRange = radiusRange
-        let fractionalRect = HexGridGeometry.deriveContentRect(from: cells, orientation: orientation)
-        self.contentRect = CGRect(origin: .zero, size: fractionalRect.size * hexRadius.wrappedValue)
     }
 }
