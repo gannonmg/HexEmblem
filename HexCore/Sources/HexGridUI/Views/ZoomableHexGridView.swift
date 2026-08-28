@@ -16,14 +16,14 @@ struct ZoomableHexGridView<Cell: AxialCoordinateProviding>: View {
     @Binding var hexRadius: CGFloat
     private let radiusRange: ClosedRange<CGFloat>
 
-    @State private var zoomResetToken: Int = 0
+    @State private var zoomResetRequest: ZoomResetRequest?
     private let zoomRange: ClosedRange<CGFloat> = 0.75...1.33
 
     var body: some View {
         ZoomableScrollView(
             zoomRange: zoomRange,
-            onZoomChange: zoomChanged(_:_:),
-            zoomResetToken: zoomResetToken,
+            onZoomEvent: zoomChanged(event:),
+            zoomResetRequest: zoomResetRequest,
             onVisibleRectChange: { rect in
 //                self.visibleRect = rect
             },
@@ -39,32 +39,33 @@ struct ZoomableHexGridView<Cell: AxialCoordinateProviding>: View {
         )
     }
 
-    private func zoomChanged(_ zoomScale: CGFloat, _ zoomEnded: Bool) {
-        print("Zoom scale: \(zoomScale)")
+    private func zoomChanged(event: ZoomEvent) {
+        let zoomScale = event.scale
 
         // If zoom scale is in our zoom range, ignore - stagger redraw efforts
-        if zoomRange.contains(zoomScale) { return }
+        guard event.didEnd || !zoomRange.contains(zoomScale) else { return }
 
         // Calculate the current hex radius displayed
-        var visibleRadius = zoomScale * layout.hexRadius
-        guard radiusRange.contains(visibleRadius) else { return }
-        self.hexRadius = visibleRadius
+        let oldRadius = layout.hexRadius
+        let newRadius = zoomScale * oldRadius
+        guard radiusRange.contains(newRadius) else { return }
+        self.hexRadius = newRadius
 
         // Rebuild layout with the displayed radius, triggering a rebuild
-        self.layout = layout.rebuilt(with: visibleRadius)
+        self.layout = layout.rebuilt(with: newRadius)
 
-        // Set the ScrollViews zoom scale back to 1
-        zoomResetToken += 1
-    }
-}
+        // Compute the new content anchor
+        // ie, translate the content anchor from the previous layout to a corrected content offset for our new layout
+        // Viewport anchor is where in the scroll's visible bounds the new content anchor should appear.
+        let radiusRatio = newRadius / oldRadius
+        let newContentAnchor = event.contentAnchor * radiusRatio
 
-extension CGAffineTransform {
-    static func translation(with point: CGPoint) -> Self {
-        CGAffineTransform(translationX: point.x, y: point.y)
-    }
-
-    func translated(by point: CGPoint) -> Self {
-        self.translatedBy(x: point.x, y: point.y)
+        let nextRequestId = (zoomResetRequest?.id ?? 0) + 1
+        self.zoomResetRequest = ZoomResetRequest(
+            id: nextRequestId,
+            anchorInContent: newContentAnchor,
+            anchorInViewport: event.viewportAnchor
+        )
     }
 }
 

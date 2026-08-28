@@ -5,29 +5,49 @@
 //  Created by Matt Gannon on 8/27/26.
 //
 
+import HexCore // Currently owns some CoreGraphics utility funcs. Should be abstracted out
 import SwiftUI
 import UIKit
+
+struct ZoomEvent {
+    let scale: CGFloat
+    let didEnd: Bool
+    let contentAnchor: CGPoint
+    /// The point in the zoomable content’s own coordinate space that should remain visually stable across the zoom commit.
+    let viewportAnchor: CGPoint
+}
+
+struct ZoomResetRequest: Equatable {
+    let id: Int
+    /// The point in the zoomable content’s own coordinate space that should remain visually stable across the zoom commit.
+    /// Derived from `ZoomEvent.contentAnchor` updated with the newly applied content scale (in our case, hex radius)
+    let anchorInContent: CGPoint
+    /// The point in the zoomable content’s own coordinate space that should remain visually stable across the zoom commit.
+    ///
+    /// This is received from a `ZoomEvent` and serves as the constant between `Event` -> `Request`
+    let anchorInViewport: CGPoint
+}
 
 struct ZoomableScrollView<Content: View>: UIViewRepresentable {
     let zoomRange: ClosedRange<CGFloat>
     let showsScrollIndicators: Bool
-    let onZoomChange: (_ scale: CGFloat, _ ended: Bool) -> Void
-    let zoomResetToken: Int
+    let onZoomEvent: (ZoomEvent) -> Void
+    let zoomResetRequest: ZoomResetRequest?
     let onVisibleRectChange: (CGRect) -> Void
     let content: Content
 
     init(
         zoomRange: ClosedRange<CGFloat>,
         showsScrollIndicators: Bool = false,
-        onZoomChange: @escaping (_ scale: CGFloat, _ ended: Bool) -> Void,
-        zoomResetToken: Int,
+        onZoomEvent: @escaping (ZoomEvent) -> Void,
+        zoomResetRequest: ZoomResetRequest?,
         onVisibleRectChange: @escaping (CGRect) -> Void,
         @ViewBuilder content: () -> Content
     ) {
         self.zoomRange = zoomRange
         self.showsScrollIndicators = showsScrollIndicators
-        self.onZoomChange = onZoomChange
-        self.zoomResetToken = zoomResetToken
+        self.onZoomEvent = onZoomEvent
+        self.zoomResetRequest = zoomResetRequest
         self.onVisibleRectChange = onVisibleRectChange
         self.content = content()
     }
@@ -76,12 +96,12 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
     final class Coordinator: NSObject, UIScrollViewDelegate {
         var hostingController: UIHostingController<Content>?
         var owner: ZoomableScrollView
-        private var lastZoomResetToken: Int
+        private var lastZoomResetRequest: ZoomResetRequest?
         private var isApplyingZoomReset: Bool = false
 
         init(owner: ZoomableScrollView) {
             self.owner = owner
-            self.lastZoomResetToken = owner.zoomResetToken
+            self.lastZoomResetRequest = owner.zoomResetRequest
         }
 
         // MARK: UIScrollViewDelegate
@@ -92,20 +112,31 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
         func scrollViewDidZoom(_ scrollView: UIScrollView) {
             guard !isApplyingZoomReset else { return }
             reportChange(in: scrollView)
-            reportZoomScale(scrollView.zoomScale, zoomEnded: false)
+            reportZoomScale(in: scrollView, zoomEnded: false)
         }
 
         func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
             reportChange(in: scrollView)
-            reportZoomScale(scrollView.zoomScale, zoomEnded: true)
+            reportZoomScale(in: scrollView, zoomEnded: true)
         }
 
         func scrollViewDidScroll(_ scrollView: UIScrollView) {
             reportChange(in: scrollView)
         }
 
-        private func reportZoomScale(_ scale: CGFloat, zoomEnded: Bool) {
-            owner.onZoomChange(scale, zoomEnded)
+        private func reportZoomScale(in scrollView: UIScrollView, zoomEnded: Bool) {
+            guard let gesture = scrollView.pinchGestureRecognizer else { return }
+            let pinchLocationInScrollView = gesture.location(in: scrollView)
+            let viewportAnchor = pinchLocationInScrollView - scrollView.bounds.origin
+            let contentAnchor = gesture.location(in: hostingController?.view)
+
+            let event = ZoomEvent(
+                scale: scrollView.zoomScale,
+                didEnd: zoomEnded,
+                contentAnchor: contentAnchor,
+                viewportAnchor: viewportAnchor
+            )
+            owner.onZoomEvent(event)
         }
 
         private func reportChange(in scrollView: UIScrollView) {
@@ -123,10 +154,18 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
         }
 
         func resetZoomIfNeeded(in scrollView: UIScrollView) {
-            guard lastZoomResetToken != owner.zoomResetToken else { return }
-            lastZoomResetToken = owner.zoomResetToken
+            // Ensure we have a fresh reset request
+            guard let request = owner.zoomResetRequest,
+                  lastZoomResetRequest?.id != request.id
+            else { return }
+
+            // Store new request as most recent
+            lastZoomResetRequest = owner.zoomResetRequest
+
+            // Block update reports from zoom interactions until we are done with our reset
             isApplyingZoomReset = true
             scrollView.setZoomScale(1, animated: false)
+            scrollView.contentOffset = request.anchorInContent - request.anchorInViewport
             isApplyingZoomReset = false
         }
     }
