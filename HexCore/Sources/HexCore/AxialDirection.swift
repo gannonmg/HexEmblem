@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum AxialDirection: CaseIterable {
+public enum AxialDirection: CaseIterable, Hashable, Sendable {
     case qPlusRMinus    // ( 1, -1)
     case qPlus          // ( 1,  0)
     case rPlus          // ( 0,  1)

@@ -32,9 +32,8 @@ public struct Hexagon: Shape, HexShapeProviding {
         let width = min(rect.width, rect.height * interpolatedAspectRatio)
         let radius = width / interpolatedRadiusRatio
 
-        let corners = AxialDirection.allCases.map { direction in
-            center.offset(distance: radius, angle: cornerAngle(facing: direction))
-        }
+        let corners = HexGridGeometry.fractionalCornerOffsets(for: .pointyTop)
+            .map { $0 * radius }
 
         path.move(to: corners[0])
         corners[1..<6].forEach { point in

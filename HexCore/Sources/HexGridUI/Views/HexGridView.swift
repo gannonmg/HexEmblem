@@ -12,15 +12,11 @@ import SwiftUI
 struct HexGridView<Cell: AxialCoordinateProviding>: View {
     @Environment(\.scrollVisibleRect) private var visibleRect
 
-    private struct PlacedCell: Identifiable {
-        let id: AxialCoordinate
-        let cell: Cell
-        let position: CGPoint
-    }
+    typealias PlacedCell = HexGridGeometryOld<Cell>.PlacedCell
 
     // MARK: Init
     let cells: [Cell]
-    let geometry: HexGridGeometry<Cell>
+    let geometry: HexGridGeometryOld<Cell>
     let appearance: HexGridAppearance<Cell>
 
     // MARK: Body
@@ -31,70 +27,86 @@ struct HexGridView<Cell: AxialCoordinateProviding>: View {
         let gridLine = appearance.gridLine
 
         Canvas { context, _ in
-            let start = CFAbsoluteTimeGetCurrent()
-            defer {
-                let elapsed = (CFAbsoluteTimeGetCurrent() - start) * 1000
-                print(String(format: "draw %.2f ms, %d cells", elapsed, placed.count))
-            }
-
-            // Built once at the current scale; every cell is a translation of it.
-            // Neighbours share an edge exactly, so antialiased fills leave a sub-pixel seam.
-            // Growing each hex by half a smidge makes them overlap instead.
-            let widthBuffer: CGFloat = 1
-            let heightBuffer = widthBuffer * geometry.hexSizeRatio.width / geometry.hexSizeRatio.height
-            let fillSize = CGSize(width: hexSize.width + widthBuffer,
-                                  height: hexSize.height + heightBuffer)
-            let template = Hexagon(orientation: layout.orientation)
-                .path(in: CGRect(origin: .zero, size: fillSize))
-
-
-            var gridPath = Path()
-            let coordinateSet = Set(placed.map(\.cell.axialCoordinate))
-            let directions = AxialDirection.allCases
-
-            for placed in placed {
-                let style = appearance.style(placed.cell)
-                let path = template.applying(
-                    CGAffineTransform(
-                        translationX: placed.position.x - hexSize.width / 2,
-                        y: placed.position.y - hexSize.height / 2
-                    )
-                )
-
-                context.fill(path, with: style.fill)
-
-                if let gridLine, 0 < gridLine.width {
-                    let coordinate = placed.cell.axialCoordinate
-
-                    for direction in directions {
-                        if !direction.ownsSharedEdge {
-                            let offset = direction.offsetCoordinate
-                            let neighbor = AxialCoordinate(q: coordinate.q + offset.q, r: coordinate.r + offset.r)
-                            guard !coordinateSet.contains(neighbor) else { continue }
-                        }
-
-                        let pathEdge = geometry.edge(facing: direction, from: placed.position)
-                        gridPath.move(to: pathEdge.start)
-                        gridPath.addLine(to: pathEdge.end)
-                    }
-                }
-
-                if let label = style.label {
-                    var resolved = context.resolve(label)
-                    resolved.shading = style.labelShading
-                    context.draw(resolved, at: placed.position, anchor: .center)
-                }
-            }
-
-            if let gridLine {
-                context.stroke(
-                    gridPath,
-                    with: gridLine.shading,
-                    style: StrokeStyle(lineWidth: gridLine.width, lineCap: .round)
-                )
-            }
+            draw(layout: layout, hexSize: hexSize, placed: placed, gridLine: gridLine, context: context)
         }
         .frame(size: geometry.contentSize)
-        .drawingGroup()
+//        .drawingGroup()
+        .border(.red, width: 3)
+    }
+
+    private func draw(
+        layout: HexGridLayout,
+        hexSize: CGSize,
+        placed: [PlacedCell],
+        gridLine: HexGridLine?,
+        context: GraphicsContext
+    ) {
+        // Keep an eye on cavas draw times while building feature
+        let start = CFAbsoluteTimeGetCurrent()
+        defer {
+            let elapsed = (CFAbsoluteTimeGetCurrent() - start) * 1000
+            print(String(format: "draw %.2f ms, %d cells", elapsed, placed.count))
+        }
+
+        // Add a tiny, proprtional buffer to close gaps between hexes caused by aliasing
+        let fillSize = hexSize * (1/hexSize.width)
+        let template = Hexagon(orientation: layout.orientation)
+            .path(in: CGRect(origin: .zero, size: fillSize))
+
+
+        var gridPath = Path()
+        let coordinateSet = Set(placed.map(\.cell.axialCoordinate))
+        let directions = AxialDirection.allCases
+
+        for placed in placed {
+//            let style = appearance.style(placed.cell)
+//            let path = template.applying(
+//                CGAffineTransform(
+//                    translationX: placed.position.x - hexSize.width / 2,
+//                    y: placed.position.y - hexSize.height / 2
+//                )
+//            )
+//
+//            context.fill(path, with: style.fill)
+
+            if let gridLine, 0 < gridLine.width {
+                extendGridPath(&gridPath, placedCell: placed, coordinateSet: coordinateSet, directions: directions)
+            }
+
+//            if let label = style.label {
+//                var resolved = context.resolve(label)
+//                resolved.shading = style.labelShading
+//                context.draw(resolved, at: placed.position, anchor: .center)
+//            }
+        }
+
+        if let gridLine {
+            context.stroke(
+                gridPath,
+                with: gridLine.shading,
+                style: StrokeStyle(lineWidth: gridLine.width, lineCap: .round)
+            )
+        }
+    }
+
+    private func extendGridPath(
+        _ gridPath: inout Path,
+        placedCell: PlacedCell,
+        coordinateSet: Set<AxialCoordinate>,
+        directions: [AxialDirection]
+    ) {
+        let coordinate = placedCell.cell.axialCoordinate
+        for direction in directions {
+            if !direction.ownsSharedEdge {
+                let offset = direction.offsetCoordinate
+                let neighbor = AxialCoordinate(q: coordinate.q + offset.q, r: coordinate.r + offset.r)
+                guard !coordinateSet.contains(neighbor) else { continue }
+            }
+
+            let pathEdge = geometry.edge(facing: direction, from: placedCell.position)
+            gridPath.move(to: pathEdge.start)
+            gridPath.addLine(to: pathEdge.end)
+        }
     }
 }
+

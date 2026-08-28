@@ -20,7 +20,6 @@ final class PannableHexDemoViewModel {
 
     var gridLines: HexGridLine? { showGrid ? HexGridLine() : nil }
 
-
     var showGrid: Bool = true
     var showCoordinates: Bool = false
     var hexRadius: CGFloat = 50
@@ -39,7 +38,7 @@ final class PannableHexDemoViewModel {
     private(set) var cells: [ColoredHexCell]
 
     init(
-        mapShape: HexMapShape = .disk(radius: 30),
+        mapShape: HexMapShape = .disk(radius: 3),
         isPointyTop: Bool = true
     ) {
         self.mapShape = mapShape
@@ -78,7 +77,7 @@ public struct PannableHexDemoView: View {
 
     // MARK: Content
     public var body: some View {
-        PannableHexGridView(
+        ZoomableHexGridView(
             cells: viewModel.cells,
             hexRadius: $viewModel.hexRadius,
             orientation: viewModel.orientation,

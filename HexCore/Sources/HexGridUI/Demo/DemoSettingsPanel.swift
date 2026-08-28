@@ -26,32 +26,27 @@ private struct DemoSettingsPanel: ViewModifier {
     }
 
     func body(content: Content) -> some View {
-        content.overlay(alignment: .topLeading) {
-            GeometryReader { proxy in
-                VStack(alignment: .leading) {
-                    FPSDisplay()
+        content.overlay(alignment: .bottomTrailing) {
+            VStack(alignment: .leading) {
+                FPSDisplay()
 
-                    DisclosureGroup("Settings", isExpanded: $isExpanded) {
-                        VStack(alignment: .leading) {
-                            Toggle("Pointy Top", isOn: $viewModel.isPointyTop)
-                                .fixedSize()
-                            Toggle("Show Grid", isOn: $viewModel.showGrid)
-                                .fixedSize()
-                            Toggle("Show Coordinates", isOn: $viewModel.showCoordinates)
-                                .fixedSize()
-                            hexRadiusSlider
-                            MapShapePanel(viewModel: $viewModel)
-                        }
+                DisclosureGroup("Settings", isExpanded: $isExpanded) {
+                    VStack(alignment: .leading) {
+                        Toggle("Pointy Top", isOn: $viewModel.isPointyTop)
+                        Toggle("Show Grid", isOn: $viewModel.showGrid)
+                        Toggle("Show Coordinates", isOn: $viewModel.showCoordinates)
+                        hexRadiusSlider
+                        MapShapePanel(viewModel: $viewModel)
                     }
                 }
-                .padding()
-                .background {
-                    RoundedRectangle(cornerRadius: 12)
-                        .foregroundStyle(.black.opacity(0.3))
-                }
-                .padding()
-                .frame(width: proxy.size.width / 3)
             }
+            .padding()
+            .background {
+                RoundedRectangle(cornerRadius: 12)
+                    .foregroundStyle(.black.opacity(0.3))
+            }
+            .padding()
+            .containerRelativeFrame([.horizontal]) { w, _ in w / 3 }
         }
     }
 

@@ -8,32 +8,43 @@
 import HexCore
 import SwiftUI
 
+enum ZoomableHexMapDefaults {
+    static let zoomRange: ClosedRange<CGFloat> = 0.7...5
+}
+/*
 public struct PannableHexGridView<Cell: AxialCoordinateProviding>: View {
-
     private let cells: [Cell]
     @State private var geometry: HexGridGeometry<Cell>
     private let appearance: HexGridAppearance<Cell>
+    @State private var visibleRect: CGRect?
 
     /// Binding for hexRadius that exposes an internal value unless a binding is passed to override it.
     ///
     /// Similar implementation to how `ScrollView` handles `.scrollPosition()`
-    @State private var internalHexRadius: CGFloat
-    private let externalHexRadius: Binding<CGFloat>?
-    private var hexRadius: Binding<CGFloat> { externalHexRadius ?? $internalHexRadius }
+    @Overridable var hexRadius: CGFloat
     private let radiusRange: ClosedRange<CGFloat>
 
     public var body: some View {
-        PannableScrollView([.horizontal, .vertical]) {
-            HexGridView(
-                cells: cells,
-                geometry: geometry,
-                appearance: appearance
-            )
-        }
-        .hexMagnifier(radius: hexRadius, in: radiusRange)
-        .onChange(of: hexRadius.wrappedValue) { oldValue, newValue in
-            let layout = geometry.layout
-            self.geometry = HexGridGeometry(layout: layout, hexRadius: hexRadius.wrappedValue)
+        ZoomableScrollView(
+            zoomRange: ZoomableHexMapDefaults.zoomRange,
+            onVisibleRectChange: { rect in
+                print("Rect did change: \(rect.alignedDebugString)")
+                self.visibleRect = rect
+            },
+            content: {
+                HexGridView(
+                    cells: cells,
+                    geometry: geometry,
+                    appearance: appearance
+                )
+                .environment(\.scrollVisibleRect, visibleRect)
+                .background(.blue.opacity(0.7))
+                .onGeometryChange(for: CGSize.self) { $0.size }
+                action: { print("HGV Size Change: \($0.alignedDebugString)") }
+            }
+        )
+        .onChange(of: hexRadius) {
+            self.geometry = HexGridGeometry(layout: geometry.layout, hexRadius: hexRadius)
         }
     }
 }
@@ -58,8 +69,7 @@ extension PannableHexGridView {
             style: style
         )
 
-        self.externalHexRadius = nil
-        self.internalHexRadius = hexRadius
+        self.hexRadius = hexRadius
         self.radiusRange = radiusRange
     }
 
@@ -81,8 +91,9 @@ extension PannableHexGridView {
             style: style
         )
 
-        self.externalHexRadius = hexRadius
-        self.internalHexRadius = hexRadius.wrappedValue
+        self._hexRadius = Overridable(hexRadius)
         self.radiusRange = radiusRange
     }
 }
+*/
+

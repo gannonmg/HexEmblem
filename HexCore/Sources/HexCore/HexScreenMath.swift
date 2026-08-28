@@ -108,7 +108,4 @@ public enum HexScreenMath {
 
 // MARK: - CGPoint
 extension CGPoint {
-    static func * (point: CGPoint, mult: CGFloat) -> CGPoint {
-        CGPoint(x: point.x * mult, y: point.y * mult)
-    }
 }

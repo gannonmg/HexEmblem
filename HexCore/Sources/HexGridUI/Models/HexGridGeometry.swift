@@ -8,15 +8,11 @@
 import HexCore
 import SwiftUI
 
-struct HexGridGeometry<Cell: AxialCoordinateProviding> {
+struct HexGridGeometryOld<Cell: AxialCoordinateProviding> {
     struct PlacedCell: Identifiable {
         let id: AxialCoordinate
         let cell: Cell
         let position: CGPoint
-    }
-
-    struct CornerOffset {
-
     }
 
     struct EdgeOffset {
@@ -46,7 +42,8 @@ struct HexGridGeometry<Cell: AxialCoordinateProviding> {
         let hexSizeRatio = Hexagon.fractionalSize(for: layout.orientation)
         self.hexSizeRatio = hexSizeRatio
         self.hexSize = hexSizeRatio * hexRadius
-        self.edgeOffsets = Self.precomputeEdgeOffsets(orientation: layout.orientation, hexRadius: hexRadius)
+        self.edgeOffsets = [:]
+//        Self.precomputeEdgeOffsets(orientation: layout.orientation, hexRadius: hexRadius)
     }
 
     /// Lattice position shifted so the content's top-left is the origin, at radius 1.
@@ -67,25 +64,6 @@ struct HexGridGeometry<Cell: AxialCoordinateProviding> {
         return CGPoint(x: unit.x * hexRadius, y: unit.y * hexRadius)
     }
 
-//    func hexPath(at center: CGPoint) -> Path {
-//        Hexagon(orientation: layout.orientation)
-//            .path(in: CGRect(
-//                x: center.x - hexSize.width / 2,
-//                y: center.y - hexSize.height / 2,
-//                width: hexSize.width,
-//                height: hexSize.height
-//            ))
-//    }
-
-//    func corners(center: CGPoint) -> [CGPoint] {
-//        directions.map { direction in
-//            center.offset(
-//                distance: hexRadius,
-//                angle: .radians(direction.angle(for: layout.orientation).radians + .pi / 6)
-//            )
-//        }
-//    }
-
     /// The edge facing `AxialCoordinate.directions[direction]`.
     func edge(facing direction: AxialDirection, from center: CGPoint) -> (start: CGPoint, end: CGPoint) {
         guard let offset = edgeOffsets[direction] else { return (center, center) }
@@ -95,22 +73,19 @@ struct HexGridGeometry<Cell: AxialCoordinateProviding> {
         )
     }
 
+    /*
     private static func precomputeEdgeOffsets(
         orientation: HexOrientation,
         hexRadius: CGFloat
     ) -> [AxialDirection: EdgeOffset] {
         Dictionary(uniqueKeysWithValues: AxialDirection.allCases.map { direction in
             let radians = direction.angle(for: orientation).radians
-            return (
-                direction,
-                EdgeOffset(
-                    start: CGPoint.zero.offset(distance: hexRadius, angle: .radians(radians - .pi / 6)),
-                    end: CGPoint.zero.offset(distance: hexRadius, angle: .radians(radians + .pi / 6))
-                )
-            )
+            let start = CGPoint.zero.offset(distance: hexRadius, angle: .radians(radians - .pi / 6))
+            let end = CGPoint.zero.offset(distance: hexRadius, angle: .radians(radians + .pi / 6))
+            return (direction, EdgeOffset(start: start, end: end))
         })
     }
-
+*/
     func visibleCells(
         from cells: [Cell],
         in visibleRect: CGRect?
@@ -134,21 +109,5 @@ struct HexGridGeometry<Cell: AxialCoordinateProviding> {
                 position: CGPoint(x: unitPosition.x * hexRadius, y: unitPosition.y * hexRadius)
             )
         }
-    }
-}
-
-extension CGSize {
-    static func * (lhs: Self, rhs: CGFloat) -> Self {
-        CGSize(width: lhs.width * rhs, height: lhs.height * rhs)
-    }
-}
-
-extension CGPoint {
-    /// The point `distance` away at `angle`, measured from the +x axis.
-    public func offset(distance: CGFloat, angle: Angle) -> CGPoint {
-        CGPoint(
-            x: x + distance * cos(angle.radians),
-            y: y + distance * sin(angle.radians)
-        )
     }
 }
