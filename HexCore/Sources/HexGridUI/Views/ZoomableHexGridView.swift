@@ -11,10 +11,10 @@ import SwiftUI
 struct ZoomableHexGridView<Cell: AxialCoordinateProviding>: View {
     @State private var visibleRect: CGRect?
 
-    @State private var layout: HexGridLayout<Cell>
-    private let appearance: HexGridAppearance<Cell>
+    let layout: HexGridLayout<Cell>
     @Binding var hexRadius: CGFloat
-    private let radiusRange: ClosedRange<CGFloat>
+    let appearance: HexGridAppearance<Cell>
+    var radiusRange: ClosedRange<CGFloat> = 20...200
 
     @State private var zoomResetRequest: ZoomResetRequest?
     private let zoomRange: ClosedRange<CGFloat> = 0.75...1.33
@@ -51,9 +51,6 @@ struct ZoomableHexGridView<Cell: AxialCoordinateProviding>: View {
         guard radiusRange.contains(newRadius) else { return }
         self.hexRadius = newRadius
 
-        // Rebuild layout with the displayed radius, triggering a rebuild
-        self.layout = layout.rebuilt(with: newRadius)
-
         // Compute the new content anchor
         // ie, translate the content anchor from the previous layout to a corrected content offset for our new layout
         // Viewport anchor is where in the scroll's visible bounds the new content anchor should appear.
@@ -66,25 +63,5 @@ struct ZoomableHexGridView<Cell: AxialCoordinateProviding>: View {
             anchorInContent: newContentAnchor,
             anchorInViewport: event.viewportAnchor
         )
-    }
-}
-
-// MARK: - Init
-extension ZoomableHexGridView {
-    public init(
-        cells: [Cell],
-        hexRadius: Binding<CGFloat>,
-        radiusRange: ClosedRange<CGFloat> = 20...200,
-        orientation: HexOrientation,
-        gridLine: HexGridLine? = nil,
-        style: @escaping (Cell) -> HexCellStyle
-    ) {
-        self.layout = HexGridLayout(cells: cells, orientation: orientation, hexRadius: hexRadius.wrappedValue)
-        self.appearance = HexGridAppearance(
-            gridLine: gridLine,
-            style: style
-        )
-        self._hexRadius = hexRadius
-        self.radiusRange = radiusRange
     }
 }

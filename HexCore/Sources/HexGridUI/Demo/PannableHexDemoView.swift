@@ -77,12 +77,8 @@ public struct PannableHexDemoView: View {
 
     // MARK: Content
     public var body: some View {
-        ZoomableHexGridView(
-            cells: viewModel.cells,
-            hexRadius: $viewModel.hexRadius,
-            orientation: viewModel.orientation,
-            gridLine: viewModel.gridLines
-        ) { cell in
+        let layout = HexGridLayout(cells: viewModel.cells, orientation: viewModel.orientation, hexRadius: viewModel.hexRadius)
+        let style: (ColoredHexCell) -> HexCellStyle = { cell in
             HexCellStyle(
                 fill: .color(cell.color),
                 label: viewModel.showCoordinates
@@ -90,6 +86,13 @@ public struct PannableHexDemoView: View {
                 : nil
             )
         }
+        let appearance = HexGridAppearance(gridLine: viewModel.gridLines, style: style)
+
+        ZoomableHexGridView(
+            layout: layout,
+            hexRadius: $viewModel.hexRadius,
+            appearance: appearance
+        )
         .animation(.default, value: viewModel.orientation)
         .animation(.default, value: viewModel.mapShape)
         .animation(.default, value: viewModel.showCoordinates)
