@@ -27,7 +27,7 @@ struct HexGridCanvas<Cell: AxialCoordinateProviding>: View {
             drawHexes(in: context)
             drawGridLines(in: context)
         }
-        .frame(size: layout.contentRect.size)
+        .frame(size: layout.scaledContentSize)
     }
 }
 
@@ -48,10 +48,7 @@ extension HexGridCanvas {
         let template = buildHexTemplate()
 
         for placedCell in layout.placedCells {
-            let path = template.applying(
-                .translation(with: placedCell.scaledPosition)
-                .translated(by: layout.contentRect.center)
-            )
+            let path = template.applying(.translation(with: placedCell.canvasOrigin))
             let style = appearance.style(placedCell.cell)
             context.fill(path, with: style.fill)
         }
@@ -89,11 +86,11 @@ extension HexGridCanvas {
 
                 let edge = HexGridGeometry.fractionalEdgeOffset(
                     at: direction,
-                    fractionalPosition: placedCell.fractionalPosition,
+                    fractionalPosition: placedCell.fractionalContentCenter,
                     orientation: layout.orientation
                 )
                     .scaled(by: layout.hexRadius)
-                    .offset(by: layout.contentRect.center)
+                    .offset(by: layout.contentOriginInCanvas)
 
                 path.move(to: edge.start)
                 path.addLine(to: edge.end)

@@ -13,8 +13,12 @@ import SwiftUI
 struct HexGridLayout<Cell: AxialCoordinateProviding> {
     struct PlacedCell {
         let cell: Cell
-        let fractionalPosition: CGPoint
-        let scaledPosition: CGPoint
+        /// The cell center in fractional hex coordinates.
+        let fractionalContentCenter: CGPoint
+        /// The cell center in scaled hex coordinates and unadjuseted scaledContentBounds, before shifting into the Canvas frame.
+        let contentCenter: CGPoint
+        /// The cell center in final Canvas coordinates, where the canvas origin is top-left.
+        let canvasOrigin: CGPoint
         var axialCoordinate: AxialCoordinate { cell.axialCoordinate }
     }
 
@@ -22,43 +26,86 @@ struct HexGridLayout<Cell: AxialCoordinateProviding> {
 
     /// The orientation of the cells in the grid. Either pointy or flat top.
     let orientation: HexOrientation
-
-    /// The scaled circumradius (center to corner distance and edge length) of each hexagon
+    /// The scaled circumradius, meaning the center-to-corner distance and edge length of each hexagon.
     let hexRadius: CGFloat
-
-    /// The scaled size of the hex based on fractionalSize(orientation) and hexRadius
+    /// The scaled size of each hexagon's bounding box for the current orientation.
     let hexSize: CGSize
-
+    /// The set of axial coordinates included in this layout, used for neighbor and edge checks.
     let coordinateSet: Set<AxialCoordinate>
-
-    /// The scaled, edge-to-edge area requirements for drawing the full grid.
-    ///
-    /// Note: The origin is (0,0), meaning we must translate from a centered (0,0) system.
-    let contentRect: CGRect
+    /// The unscaled bounds of all hexes in fractional hex coordinates, preserving negative origins.
+    let fractionalContentBounds: CGRect
+    /// The scaled bounds of all hexes in hex coordinates, preserving negative origins.
+    let scaledContentBounds: CGRect
+    /// The final drawable size of the Canvas after shifting content bounds into top-left canvas space.
+    let scaledContentSize: CGSize
+    /// The one translation from scaled, centered hex coordinates into top-left Canvas coordinates.
+    let contentOriginInCanvas: CGPoint
 
     init(
         cells: [Cell],
         orientation: HexOrientation,
         hexRadius: CGFloat
     ) {
-        self.placedCells = cells.map { cell in
-            let fractionalPosition = HexScreenMath.hexToCartesianPoint(
-                axialCoordinate: cell,
-                orientation: orientation
-            )
-            let scaledPosition = fractionalPosition * hexRadius
-            return PlacedCell(cell: cell, fractionalPosition: fractionalPosition, scaledPosition: scaledPosition)
-        }
-
         self.orientation = orientation
         self.hexRadius = hexRadius
 
         // Fractional hex size is sqrt(3):2 or 2:sqrt(3) depending on orientation
         self.hexSize = Hexagon.fractionalSize(for: orientation) * hexRadius
 
+        // Store coordinates once so drawing can check neighboring cells without rebuilding the set.
         self.coordinateSet = Set(cells.map(\.axialCoordinate))
 
-        let fractionalRect = HexGridGeometry.deriveContentRect(from: cells, orientation: orientation)
-        self.contentRect = CGRect(origin: .zero, size: fractionalRect.size * hexRadius)
+        // Preserve the true fractional content bounds so asymmetric maps keep their real origin.
+        self.fractionalContentBounds = HexGridGeometry.deriveContentRect(
+            from: cells, orientation: orientation
+        )
+
+        // Scale the fractional content bounds into pixel-sized content coordinates without changing the origin.
+        self.scaledContentBounds = fractionalContentBounds * hexRadius
+
+        // The canvas only needs the positive drawable size; the origin shift is stored separately.
+        self.scaledContentSize = scaledContentBounds.size
+
+        // Shift scaled content coordinates so the content bounds' top-left corner lands at canvas zero.
+        let contentOriginInCanvas = CGPoint(x: -scaledContentBounds.minX, y: -scaledContentBounds.minY)
+        self.contentOriginInCanvas = contentOriginInCanvas
+
+        self.placedCells = Self.buildPlacedCells(
+            from: cells,
+            orientation: orientation,
+            hexRadius: hexRadius,
+            hexSize: hexSize,
+            contentOriginInCanvas: contentOriginInCanvas
+        )
+    }
+
+    private static func buildPlacedCells(
+        from cells: [Cell],
+        orientation: HexOrientation,
+        hexRadius: CGFloat,
+        hexSize: CGSize,
+        contentOriginInCanvas: CGPoint
+    ) -> [PlacedCell] {
+        cells.map { cell in
+            // Convert axial coordinates into a center point in fractional hex space.
+            let fractionalContentCenter = HexScreenMath.hexToCartesianPoint(
+                axialCoordinate: cell,
+                orientation: orientation
+            )
+
+            // Scale the fractional content center by the current hex radius.
+            let contentCenter = fractionalContentCenter * hexRadius
+            // Shift the content center into top-left Canvas coordinates.
+            let canvasCenter = contentCenter + contentOriginInCanvas
+            // Shift over by half a hex since we are now measuring by frame origin instead of center.
+            let canvasOrigin = canvasCenter - CGPoint(x: hexSize.width/2, y: hexSize.height/2)
+
+            return PlacedCell(
+                cell: cell,
+                fractionalContentCenter: fractionalContentCenter,
+                contentCenter: contentCenter,
+                canvasOrigin: canvasOrigin
+            )
+        }
     }
 }

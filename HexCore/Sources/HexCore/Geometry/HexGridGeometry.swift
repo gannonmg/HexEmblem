@@ -16,19 +16,21 @@ public struct HexGridGeometry {
         // Small computation save. Otherwise, allCases must build its array with each call.
         // Measurable if small impact when displaying ~1000+ hexes.
         public static let directions = AxialDirection.allCases
+        /// 2
         public static let circumradius: CGFloat = 2
+        /// sqrt(3)
         public static let inradius: CGFloat = sqrt(3)
 
         // Calculated
         public static let fractionalPointySize = CGSize(width: inradius, height: circumradius)
         public static let fractionalFlatSize = CGSize(width: circumradius, height: inradius)
 
-        private static let pointyHexSizeRatio: CGFloat = {
+        public static let pointyHexSizeRatio: CGFloat = {
             let size = fractionalPointySize
             return size.width / size.height
         }()
 
-        private static let flatHexSizeRatio: CGFloat = {
+        public static let flatHexSizeRatio: CGFloat = {
             let size = fractionalFlatSize
             return size.width / size.height
         }()

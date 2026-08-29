@@ -32,8 +32,7 @@ public struct Hexagon: Shape, HexShapeProviding {
         let width = min(rect.width, rect.height * interpolatedAspectRatio)
         let radius = width / interpolatedRadiusRatio
 
-        let corners = HexGridGeometry.fractionalCornerOffsets(for: .pointyTop)
-            .map { $0 * radius }
+        let corners = cornerAngles().map { center.offset(distance: radius, angle: $0) }
 
         path.move(to: corners[0])
         corners[1..<6].forEach { point in
@@ -45,22 +44,51 @@ public struct Hexagon: Shape, HexShapeProviding {
     }
 
     private var interpolatedAspectRatio: CGFloat {
-        let pointy = Self.aspectRatio(for: .pointyTop)
-        let flat = Self.aspectRatio(for: .flatTop)
-        return flat + (pointy - flat) * hexRotationPercent
+        let pointy = HexGridGeometry.Constants.pointyHexSizeRatio
+        let flat = HexGridGeometry.Constants.flatHexSizeRatio
+        return interpolatedValue(pointy: pointy, flat: flat)
     }
 
-    /// Pointy top inscribes edge-to-edge across the width; flat top inscribes point-to-point.
     private var interpolatedRadiusRatio: CGFloat {
-        Self.pointToPointRatio + (Self.edgeToEdgeRatio - Self.pointToPointRatio) * hexRotationPercent
+        let pointy = HexGridGeometry.Constants.inradius // pointy top width is edge to edge
+        let flat = HexGridGeometry.Constants.circumradius // flat top width is point to point
+        return interpolatedValue(pointy: pointy, flat: flat)
     }
+
+    // Store computed & ordered corners for path calculations
+    private static let pointyAngles = HexGridGeometry.Constants.directions.map { $0.angle(for: .pointyTop) }
+    private static let flatAngles = HexGridGeometry.Constants.directions.map { $0.angle(for: .flatTop) }
+    private static let anglePairs = zip(pointyAngles, flatAngles)
 
     /// Corners sit halfway between adjacent neighbor headings, so the drawn shape comes from
     /// the same direction table that finds neighbors. Flat and pointy headings differ by
     /// exactly 30°, which is what `hexRotationPercent` interpolates between.
-    private func cornerAngle(facing direction: AxialDirection) -> Angle {
-        let flat = direction.angle(for: .flatTop).radians
-        let pointy = direction.angle(for: .pointyTop).radians
-        return .radians(flat + (pointy - flat) * hexRotationPercent + .pi / 6)
+    private func cornerAngles() -> [Angle] {
+        Self.anglePairs.map { .radians(interpolatedValue(pointy: $0.radians, flat: $1.radians) + .pi / 6) }
+    }
+
+    private func interpolatedValue(pointy: CGFloat, flat: CGFloat) -> CGFloat {
+        flat + (pointy - flat) * hexRotationPercent
+    }
+}
+
+extension AxialDirection {
+    /// Heading toward this neighbor, straight from the pixel math.
+    func angle(for orientation: HexOrientation) -> Angle {
+        let point = HexScreenMath.hexToCartesianPoint(
+            axialCoordinate: offsetCoordinate,
+            orientation: orientation
+        )
+        return Angle(radians: atan2(point.y, point.x))
+    }
+}
+
+extension CGPoint {
+    /// The point `distance` away at `angle`, measured from the +x axis.
+    func offset(distance: CGFloat, angle: Angle) -> CGPoint {
+        CGPoint(
+            x: x + distance * cos(angle.radians),
+            y: y + distance * sin(angle.radians)
+        )
     }
 }
