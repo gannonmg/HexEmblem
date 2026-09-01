@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// Helper type to associate named directions to their relative offsets from the source.
+/// Used for defining corner and edge specifics.
 public enum AxialDirection: CaseIterable, Hashable, Sendable {
     case qPlusRMinus    // ( 1, -1)
     case qPlus          // ( 1,  0)

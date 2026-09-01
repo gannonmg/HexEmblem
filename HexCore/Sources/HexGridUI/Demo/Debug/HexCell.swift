@@ -5,6 +5,7 @@
 //  Created by Matt Gannon on 8/22/26.
 //
 
+import HECommon
 import HexCore
 import SwiftUI
 

@@ -9,6 +9,7 @@ import Foundation
 import HeapModule
 
 extension AxialCoordinate {
+    // MARK: Reachable
     /// Finds all reachable coordinates in a weight graph/map of hex nodes
     public func reachable(
         movement: Int,
@@ -54,7 +55,7 @@ extension AxialCoordinate {
         return Set(costSoFar.keys)
     }
 
-    // Path
+    // MARK: Path
     private struct FrontierNode: Comparable {
         let coordinate: AxialCoordinate
         let priority: Int

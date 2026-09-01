@@ -7,9 +7,10 @@
 
 import Algorithms
 import Foundation
+import HECommon
 
 // Copy of SwiftUI's Angle helper for hex corner math
-struct HexAngle: Sendable {
+struct HexAngle: Sendable, RadianProviding {
     let radians: Double
     let degrees: Double
 
@@ -30,20 +31,10 @@ struct HexAngle: Sendable {
 extension AxialDirection {
     /// Heading toward this neighbor, straight from the pixel math.
     func angle(for orientation: HexOrientation) -> HexAngle {
-        let point = HexScreenMath.hexToCartesianPoint(
+        let point = HexGeometry.hexToCartesianPoint(
             axialCoordinate: offsetCoordinate,
             orientation: orientation
         )
         return HexAngle(radians: atan2(point.y, point.x))
-    }
-}
-
-extension CGPoint {
-    /// The point `distance` away at `angle`, measured from the +x axis.
-    func offset(distance: CGFloat, angle: HexAngle) -> CGPoint {
-        CGPoint(
-            x: x + distance * cos(angle.radians),
-            y: y + distance * sin(angle.radians)
-        )
     }
 }

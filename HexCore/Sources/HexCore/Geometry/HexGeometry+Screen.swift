@@ -1,84 +1,55 @@
 //
-//  HexScreenMath.swift
+//  HexGeometry+Screen.swift
 //  HexCore
 //
-//  Created by Matt Gannon on 8/22/26.
+//  Created by Matt Gannon on 9/1/26.
 //
 
-import CoreGraphics
+import Foundation
 import HECommon
 
-public enum HexScreenMath {
-    /*
-     Yes, these pairs of functions are similar enough that they are duplicating a bit of effort.
-     To combine, we'd just pass orientation and flip the x/y logic as well as where q and r are used.
-     Ultimately, it's just clearer and easier to debug to keep them separated.
-     */
+extension HexGeometry { public enum Screen {} }
 
-    // MARK: - Hex to fractional point (equivalent to size = 1)
-    public static func hexToCartesianPoint(
-        axialCoordinate coord: some AxialCoordinateProviding,
-        orientation: HexOrientation
-    ) -> CGPoint {
-        switch orientation {
-        case .pointyTop: pointyHexToCartesianPoint(axialCoordinate: coord)
-        case .flatTop: flatHexToCartesianPoint(axialCoordinate: coord)
-        }
-    }
-
-    public static func pointyHexToCartesianPoint(
-        axialCoordinate coord: some AxialCoordinateProviding
-    ) -> CGPoint {
-        let coord = coord.axialCoordinate
-        let (q, r) = (CGFloat(coord.q), CGFloat(coord.r))
-        let x = sqrt(3) * (q + r/2)
-        let y = 3 * r/2
-        return CGPoint(x: x, y: y)
-    }
-
-    public static func flatHexToCartesianPoint(
-        axialCoordinate coord: some AxialCoordinateProviding
-    ) -> CGPoint {
-        let coord = coord.axialCoordinate
-        let (q, r) = (CGFloat(coord.q), CGFloat(coord.r))
-        let x = 3 * q/2
-        let y = sqrt(3) * (r + q/2)
-        return CGPoint(x: x, y: y)
-    }
-
+extension HexGeometry.Screen {
     // MARK: - Hex to Pixel (center coordinate)
     public static func pointyHexToPixel(
         axialCoordinate coord: some AxialCoordinateProviding,
         size: CGFloat
     ) -> CGPoint {
-        pointyHexToCartesianPoint(axialCoordinate: coord) * size
+        HexGeometry.pointyHexToCartesianPoint(axialCoordinate: coord) * size
     }
 
     public static func flatHexToPixel(
         axialCoordinate coord: some AxialCoordinateProviding,
         size: CGFloat
     ) -> CGPoint {
-        flatHexToCartesianPoint(axialCoordinate: coord) * size
+        HexGeometry.flatHexToCartesianPoint(axialCoordinate: coord) * size
     }
 
     // MARK: - Pixel (touch/click) input to Hex
     public static func pixelToPointyHex(point: CGPoint, size: CGFloat) -> AxialCoordinate {
+        let width = HexGeometry.Constants.inradius
+        let height = HexGeometry.Constants.circumradius
+
         // Invert the scaling
         let x = point.x / size
         let y = point.y / size
         // Convert from scaled cartesian to hex
-        let q = (sqrt(3) * x - y) / 3
-        let r = y * 2/3
+        let q = (width * x - y) / 3
+        let r = y * height / 3
         return axialRound(q: q, r: r)
     }
 
     public static func pixelToFlatHex(point: CGPoint, size: CGFloat) -> AxialCoordinate {
+        let width = HexGeometry.Constants.circumradius
+        let height = HexGeometry.Constants.inradius
+
         // Invert the scaling
         let x = point.x / size
         let y = point.y / size
         // Convert from scaled cartesian to hex
-        let q = x * 2/3
-        let r = (sqrt(3) * y - x) / 3
+        let q = x * width / 3
+        let r = (height * y - x) / 3
         return axialRound(q: q, r: r)
     }
 

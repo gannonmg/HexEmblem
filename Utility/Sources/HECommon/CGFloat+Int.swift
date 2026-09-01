@@ -7,6 +7,9 @@
 
 import Foundation
 
+/*
+ Helpers that automatically convert an Int to a CGFloat when doing arithmetic. Saves repeated `CGFloat(value)`
+ */
 extension Int {
     public static func + (lhs: Int, rhs: CGFloat) -> CGFloat {
         return CGFloat(lhs) + rhs

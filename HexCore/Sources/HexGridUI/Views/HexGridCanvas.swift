@@ -75,7 +75,7 @@ extension HexGridCanvas {
 
     private func buildGridLinePath(for cells: [PlacedCell]) -> Path {
         var path = Path()
-        let directions = HexGridGeometry.Constants.directions
+        let directions = HexGeometry.Constants.directions
 
         for placedCell in cells {
             let coordinate = placedCell.axialCoordinate
@@ -89,7 +89,7 @@ extension HexGridCanvas {
                     if layout.coordinateSet.contains(neighbor) { continue }
                 }
 
-                let edge = HexGridGeometry.fractionalEdgeOffset(
+                let edge = HexGeometry.fractionalEdgeOffset(
                     at: direction,
                     fractionalPosition: placedCell.fractionalContentCenter,
                     orientation: layout.orientation
@@ -106,7 +106,7 @@ extension HexGridCanvas {
     }
 }
 
-extension HexGridGeometry.EdgeOffset {
+extension HexGeometry.EdgeOffset {
     public func scaled(by hexRadius: CGFloat) -> Self {
         return Self(
             start: start * hexRadius,

@@ -10,7 +10,7 @@ import HexCore
 import SwiftUI
 
 /// Precomputed layout facts for a set of AxialCoordinates given an orientation and radius.
-/// Uses HexGridGeometry, which is agnostic to size, to spatially lay out the drawn hexagons.
+/// Uses HexGeometry, which is agnostic to size, to spatially lay out the drawn hexagons.
 struct HexGridLayout<Cell: AxialCoordinateProviding> {
     struct PlacedCell {
         let cell: Cell
@@ -53,13 +53,13 @@ struct HexGridLayout<Cell: AxialCoordinateProviding> {
         self.hexRadius = hexRadius
 
         // Fractional hex size is sqrt(3):2 or 2:sqrt(3) depending on orientation
-        self.hexSize = Hexagon.fractionalSize(for: orientation) * hexRadius
+        self.hexSize = HexGeometry.Constants.fractionalSize(for: orientation) * hexRadius
 
         // Store coordinates once so drawing can check neighboring cells without rebuilding the set.
         self.coordinateSet = Set(cells.map(\.axialCoordinate))
 
         // Preserve the true fractional content bounds so asymmetric maps keep their real origin.
-        self.fractionalContentBounds = HexGridGeometry.deriveContentRect(
+        self.fractionalContentBounds = HexGeometry.deriveContentRect(
             from: cells, orientation: orientation
         )
 
@@ -91,7 +91,7 @@ struct HexGridLayout<Cell: AxialCoordinateProviding> {
     ) -> [PlacedCell] {
         cells.map { cell in
             // Convert axial coordinates into a center point in fractional hex space.
-            let fractionalContentCenter = HexScreenMath.hexToCartesianPoint(
+            let fractionalContentCenter = HexGeometry.hexToCartesianPoint(
                 axialCoordinate: cell,
                 orientation: orientation
             )

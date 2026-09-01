@@ -5,10 +5,11 @@
 //  Created by Matt Gannon on 8/22/26.
 //
 
+import HECommon
 import HexCore
 import SwiftUI
 
-public struct Hexagon: Shape, HexShapeProviding {
+public struct Hexagon: Shape {
     /// A percent represented by a float `0...1` to aide in interpolating the rotation angle for animation
     /// `0` represents no rotation and a flat top hex
     /// `1` represents 30º rotation and a pointy top hex
@@ -44,20 +45,20 @@ public struct Hexagon: Shape, HexShapeProviding {
     }
 
     private var interpolatedAspectRatio: CGFloat {
-        let pointy = HexGridGeometry.Constants.pointyHexSizeRatio
-        let flat = HexGridGeometry.Constants.flatHexSizeRatio
+        let pointy = HexGeometry.Constants.pointyHexSizeRatio
+        let flat = HexGeometry.Constants.flatHexSizeRatio
         return interpolatedValue(pointy: pointy, flat: flat)
     }
 
     private var interpolatedRadiusRatio: CGFloat {
-        let pointy = HexGridGeometry.Constants.inradius // pointy top width is edge to edge
-        let flat = HexGridGeometry.Constants.circumradius // flat top width is point to point
+        let pointy = HexGeometry.Constants.inradius // pointy top width is edge to edge
+        let flat = HexGeometry.Constants.circumradius // flat top width is point to point
         return interpolatedValue(pointy: pointy, flat: flat)
     }
 
     // Store computed & ordered corners for path calculations
-    private static let pointyAngles = HexGridGeometry.Constants.directions.map { $0.angle(for: .pointyTop) }
-    private static let flatAngles = HexGridGeometry.Constants.directions.map { $0.angle(for: .flatTop) }
+    private static let pointyAngles = HexGeometry.Constants.directions.map { $0.angle(for: .pointyTop) }
+    private static let flatAngles = HexGeometry.Constants.directions.map { $0.angle(for: .flatTop) }
     private static let anglePairs = zip(pointyAngles, flatAngles)
 
     /// Corners sit halfway between adjacent neighbor headings, so the drawn shape comes from
@@ -75,7 +76,7 @@ public struct Hexagon: Shape, HexShapeProviding {
 extension AxialDirection {
     /// Heading toward this neighbor, straight from the pixel math.
     func angle(for orientation: HexOrientation) -> Angle {
-        let point = HexScreenMath.hexToCartesianPoint(
+        let point = HexGeometry.hexToCartesianPoint(
             axialCoordinate: offsetCoordinate,
             orientation: orientation
         )
@@ -83,12 +84,4 @@ extension AxialDirection {
     }
 }
 
-extension CGPoint {
-    /// The point `distance` away at `angle`, measured from the +x axis.
-    func offset(distance: CGFloat, angle: Angle) -> CGPoint {
-        CGPoint(
-            x: x + distance * cos(angle.radians),
-            y: y + distance * sin(angle.radians)
-        )
-    }
-}
+extension Angle: RadianProviding {}
