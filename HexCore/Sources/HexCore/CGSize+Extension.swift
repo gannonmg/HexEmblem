@@ -12,6 +12,10 @@ extension CGSize {
         CGSize(width: lhs.width * rhs, height: lhs.height * rhs)
     }
 
+    public static func / (lhs: Self, rhs: CGFloat) -> Self {
+        CGSize(width: lhs.width / rhs, height: lhs.height / rhs)
+    }
+
     public static func + (lhs: Self, rhs: Self) -> Self {
         CGSize(width: lhs.width + rhs.width, height: lhs.height + rhs.height)
     }

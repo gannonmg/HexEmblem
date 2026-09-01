@@ -9,23 +9,28 @@ import HexCore
 import SwiftUI
 
 struct HexGridCanvas<Cell: AxialCoordinateProviding>: View {
+    typealias PlacedCell = HexGridLayout<Cell>.PlacedCell
+
+    @Environment(\.scrollViewport) private var scrollViewport
+
     let layout: HexGridLayout<Cell>
     let appearance: HexGridAppearance<Cell>
 
     // Technically doing hexes and gridlines in sequence is needlessly O(2n) instead of O(n),
     // but for code clarity we keep separate until performance actually needs improving.
     var body: some View {
+        let visibleCells = layout.visibleCells(in: scrollViewport)
         Canvas { context, size in
             // Keep an eye on cavas draw times while building feature
             let start = CFAbsoluteTimeGetCurrent()
             defer {
                 let elapsed = (CFAbsoluteTimeGetCurrent() - start) * 1000
-                print(String(format: "draw %.2f ms, %d cells, size \(size.alignedDebugString)", elapsed, layout.placedCells.count))
+                print(String(format: "draw %.2f ms, %d cells, size \(size.alignedDebugString)", elapsed, visibleCells.count))
             }
 
             // print("Context size: \(size.alignedDebugString)")
-            drawHexes(in: context)
-            drawGridLines(in: context)
+            drawHexes(for: visibleCells, in: context)
+            drawGridLines(for: visibleCells, in: context)
         }
         .frame(size: layout.scaledContentSize)
     }
@@ -44,10 +49,9 @@ extension HexGridCanvas {
         return template
     }
 
-    private func drawHexes(in context: GraphicsContext) {
+    private func drawHexes(for cells: [PlacedCell], in context: GraphicsContext) {
         let template = buildHexTemplate()
-
-        for placedCell in layout.placedCells {
+        for placedCell in cells {
             let path = template.applying(.translation(with: placedCell.canvasOrigin))
             let style = appearance.style(placedCell.cell)
             context.fill(path, with: style.fill)
@@ -57,9 +61,9 @@ extension HexGridCanvas {
 
 // MARK: - Grid Lines
 extension HexGridCanvas {
-    func drawGridLines(in context: GraphicsContext) {
+    func drawGridLines(for cells: [PlacedCell], in context: GraphicsContext) {
         if let gridLine = appearance.gridLine, 0 < gridLine.width {
-            let gridLinePath = buildGridLinePath()
+            let gridLinePath = buildGridLinePath(for: cells)
             context.stroke(
                 gridLinePath,
                 with: gridLine.shading,
@@ -68,11 +72,11 @@ extension HexGridCanvas {
         }
     }
 
-    private func buildGridLinePath() -> Path {
+    private func buildGridLinePath(for cells: [PlacedCell]) -> Path {
         var path = Path()
         let directions = HexGridGeometry.Constants.directions
 
-        for placedCell in layout.placedCells {
+        for placedCell in cells {
             let coordinate = placedCell.axialCoordinate
 
             for direction in directions {

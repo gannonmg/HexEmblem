@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension EnvironmentValues {
-    /// The enclosing scroll view's visible rect, in content coordinates. `nil` when there
-    /// isn't one publishing it — content should draw everything in that case.
-    @Entry var scrollVisibleRect: CGRect?
+    /// The enclosing scrollview's visible rect, in content coordinates.
+    /// `zero` only until it is overidden in `ZoomableScrollUIView.makeUIView(context:)`
+    @Entry var scrollViewport: CGRect = .zero
 }

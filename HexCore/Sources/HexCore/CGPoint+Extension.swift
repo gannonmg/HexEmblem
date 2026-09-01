@@ -16,8 +16,12 @@ extension CGPoint {
         CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
     }
 
-    public static func * (point: CGPoint, mult: CGFloat) -> CGPoint {
-        CGPoint(x: point.x * mult, y: point.y * mult)
+    public static func * (point: CGPoint, scale: CGFloat) -> CGPoint {
+        CGPoint(x: point.x * scale, y: point.y * scale)
+    }
+
+    public static func / (point: CGPoint, scale: CGFloat) -> CGPoint {
+        CGPoint(x: point.x / scale, y: point.y / scale)
     }
 
     /// The point `distance` away at `angle`, measured from the +x axis.

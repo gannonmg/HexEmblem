@@ -17,12 +17,14 @@ struct HexGridLayout<Cell: AxialCoordinateProviding> {
         let fractionalContentCenter: CGPoint
         /// The cell center in scaled hex coordinates and unadjuseted scaledContentBounds, before shifting into the Canvas frame.
         let contentCenter: CGPoint
-        /// The cell center in final Canvas coordinates, where the canvas origin is top-left.
+        /// The cell center in final Canvas coordinates, where the canvas origin is top-left. Used for culling in visibile rect.
+        let canvasCenter: CGPoint
+        /// The cell origin in final Canvas coordinates, where the canvas origin is top-left. Used for Canvas drawing.
         let canvasOrigin: CGPoint
         var axialCoordinate: AxialCoordinate { cell.axialCoordinate }
     }
 
-    let placedCells: [PlacedCell]
+    private let placedCells: [PlacedCell]
 
     /// The orientation of the cells in the grid. Either pointy or flat top.
     let orientation: HexOrientation
@@ -104,8 +106,33 @@ struct HexGridLayout<Cell: AxialCoordinateProviding> {
                 cell: cell,
                 fractionalContentCenter: fractionalContentCenter,
                 contentCenter: contentCenter,
+                canvasCenter: canvasCenter,
                 canvasOrigin: canvasOrigin
             )
         }
     }
-}
+
+    func visibleCells(in visibleRect: CGRect) -> [PlacedCell] {
+        // Inset by one hex edge on each side to include cells that are not fully on screen.
+        let cullRect = visibleRect.insetBy(dx: -hexSize.width, dy: -hexSize.height)
+        let visibleCells: [PlacedCell] = placedCells.compactMap { cell in
+            guard cullRect.contains(cell.canvasCenter) else { return nil }
+            return cell
+        }
+        return visibleCells
+    }
+
+    /*
+    /// The smallest radius that keeps the drawn hex count under `maximumVisibleCells`
+    /// for a viewport of `size`. Zooming out past this stops shrinking hexes.
+    static func minimumHexRadius(
+        fitting size: CGSize,
+        maximumVisibleCells: Int = 400
+    ) -> CGFloat {
+        guard maximumVisibleCells > 0, size.width > 0, size.height > 0 else { return 1 }
+        let areaPerHex = size.width * size.height / CGFloat(maximumVisibleCells)
+        // Inverse of areaPerHex == (3 * sqrt(3) / 2) * radius²
+        return sqrt(areaPerHex / (3 * sqrt(3) / 2))
+    }
+    */
+ }

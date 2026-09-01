@@ -12,6 +12,10 @@ extension CGRect {
         CGRect(origin: lhs.origin * scale, size: lhs.size * scale)
     }
 
+    public static func / (lhs: CGRect, scale: CGFloat) -> CGRect {
+        CGRect(origin: lhs.origin / scale, size: lhs.size / scale)
+    }
+
     public var center: CGPoint { CGPoint(x: midX, y: midY) }
 
     public var alignedDebugString: String {

@@ -22,7 +22,7 @@ final class PannableHexDemoViewModel {
 
     var showGrid: Bool = true
     var showCoordinates: Bool = false
-    var hexRadius: CGFloat = 50
+    var hexRadius: CGFloat = 30
 
     var mapShape: HexMapShape {
         didSet { rebuildCells() }
@@ -38,7 +38,7 @@ final class PannableHexDemoViewModel {
     private(set) var cells: [ColoredHexCell]
 
     init(
-        mapShape: HexMapShape = .disk(radius: 3),
+        mapShape: HexMapShape = .disk(radius: 36),
         isPointyTop: Bool = true
     ) {
         self.mapShape = mapShape

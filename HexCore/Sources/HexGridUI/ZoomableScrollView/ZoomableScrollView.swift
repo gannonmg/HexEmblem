@@ -28,12 +28,38 @@ struct ZoomResetRequest: Equatable {
     let anchorInViewport: CGPoint
 }
 
-struct ZoomableScrollView<Content: View>: UIViewRepresentable {
+/// Thin wrapper around `ZoomableScrollUIView` to manage `scrollViewport` and pass it into the environment
+struct ZoomableScrollView<Content: View>: View {
+    @State private var scrollViewport: CGRect = .zero
+
+    let zoomRange: ClosedRange<CGFloat>
+    var showsScrollIndicators: Bool = false
+    let onZoomEvent: (ZoomEvent) -> Void
+    let zoomResetRequest: ZoomResetRequest?
+    let content: () -> Content
+
+    var body: some View {
+        ZoomableScrollUIView(
+            zoomRange: zoomRange,
+            showsScrollIndicators: showsScrollIndicators,
+            onZoomEvent: onZoomEvent,
+            zoomResetRequest: zoomResetRequest,
+            onViewportChange: { scrollViewport = $0 },
+            content: {
+                content()
+                    .environment(\.scrollViewport, scrollViewport)
+            }
+        )
+    }
+}
+
+private struct ZoomableScrollUIView<Content: View>: UIViewRepresentable {
+
     let zoomRange: ClosedRange<CGFloat>
     let showsScrollIndicators: Bool
     let onZoomEvent: (ZoomEvent) -> Void
     let zoomResetRequest: ZoomResetRequest?
-    let onVisibleRectChange: (CGRect) -> Void
+    let onViewportChange: (CGRect) -> Void
     let content: Content
 
     init(
@@ -41,14 +67,14 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
         showsScrollIndicators: Bool = false,
         onZoomEvent: @escaping (ZoomEvent) -> Void,
         zoomResetRequest: ZoomResetRequest?,
-        onVisibleRectChange: @escaping (CGRect) -> Void,
+        onViewportChange: @escaping (CGRect) -> Void,
         @ViewBuilder content: () -> Content
     ) {
         self.zoomRange = zoomRange
         self.showsScrollIndicators = showsScrollIndicators
         self.onZoomEvent = onZoomEvent
         self.zoomResetRequest = zoomResetRequest
-        self.onVisibleRectChange = onVisibleRectChange
+        self.onViewportChange = onViewportChange
         self.content = content()
     }
 
@@ -58,8 +84,12 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
         let hosting = buildHostingController(context: context)
         scrollView.addSubview(hosting.view)
         scrollView.contentLayoutGuide.pinSubviewToEdges(subview: hosting.view)
+        publishViewportUpdate(from: scrollView)
+
+        // Debug backgrounds
         hosting.view.backgroundColor = .systemPink
         scrollView.backgroundColor = .systemOrange
+
         return scrollView
     }
 
@@ -69,6 +99,7 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
         scrollView.minimumZoomScale = zoomRange.lowerBound
         scrollView.maximumZoomScale = zoomRange.upperBound
         context.coordinator.resetZoomIfNeeded(in: scrollView)
+        publishViewportUpdate(from: scrollView)
     }
 
     private func buildScrollView(delegate: UIScrollViewDelegate) -> UIScrollView {
@@ -90,16 +121,24 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
         return hosting
     }
 
+    // MARK: - ScrollView Updates
+    private func publishViewportUpdate(from scrollView: UIScrollView) {
+        DispatchQueue.main.async {
+            let viewport = scrollView.bounds / scrollView.zoomScale
+            onViewportChange(viewport)
+        }
+    }
+
     // MARK: - Coordinator
     func makeCoordinator() -> Coordinator { Coordinator(owner: self) }
 
     final class Coordinator: NSObject, UIScrollViewDelegate {
         var hostingController: UIHostingController<Content>?
-        var owner: ZoomableScrollView
+        var owner: ZoomableScrollUIView
         private var lastZoomResetRequest: ZoomResetRequest?
         private var isApplyingZoomReset: Bool = false
 
-        init(owner: ZoomableScrollView) {
+        init(owner: ZoomableScrollUIView) {
             self.owner = owner
             self.lastZoomResetRequest = owner.zoomResetRequest
         }
@@ -111,20 +150,20 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
 
         func scrollViewDidZoom(_ scrollView: UIScrollView) {
             guard !isApplyingZoomReset else { return }
-            reportChange(in: scrollView)
-            reportZoomScale(in: scrollView, zoomEnded: false)
+            owner.publishViewportUpdate(from: scrollView)
+            reportZoomScale(in: scrollView, didEnd: false)
         }
 
         func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
-            reportChange(in: scrollView)
-            reportZoomScale(in: scrollView, zoomEnded: true)
+            owner.publishViewportUpdate(from: scrollView)
+            reportZoomScale(in: scrollView, didEnd: true)
         }
 
         func scrollViewDidScroll(_ scrollView: UIScrollView) {
-            reportChange(in: scrollView)
+            owner.publishViewportUpdate(from: scrollView)
         }
 
-        private func reportZoomScale(in scrollView: UIScrollView, zoomEnded: Bool) {
+        private func reportZoomScale(in scrollView: UIScrollView, didEnd zoomEnded: Bool) {
             guard let gesture = scrollView.pinchGestureRecognizer else { return }
             let pinchLocationInScrollView = gesture.location(in: scrollView)
             let viewportAnchor = pinchLocationInScrollView - scrollView.bounds.origin
@@ -139,19 +178,6 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
             owner.onZoomEvent(event)
         }
 
-        private func reportChange(in scrollView: UIScrollView) {
-            let scale = scrollView.zoomScale
-            guard 0 < scale else { return }
-
-            let visibleRect = CGRect(
-                x: scrollView.contentOffset.x / scale,
-                y: scrollView.contentOffset.y / scale,
-                width: scrollView.bounds.width / scale,
-                height: scrollView.bounds.height / scale
-            )
-
-            owner.onVisibleRectChange(visibleRect)
-        }
 
         func resetZoomIfNeeded(in scrollView: UIScrollView) {
             // Ensure we have a fresh reset request
@@ -167,6 +193,8 @@ struct ZoomableScrollView<Content: View>: UIViewRepresentable {
             scrollView.setZoomScale(1, animated: false)
             scrollView.contentOffset = request.anchorInContent - request.anchorInViewport
             isApplyingZoomReset = false
+
+            owner.publishViewportUpdate(from: scrollView)
         }
     }
 }

@@ -9,8 +9,6 @@ import HexCore
 import SwiftUI
 
 struct ZoomableHexGridView<Cell: AxialCoordinateProviding>: View {
-    @State private var visibleRect: CGRect?
-
     let layout: HexGridLayout<Cell>
     @Binding var hexRadius: CGFloat
     let appearance: HexGridAppearance<Cell>
@@ -24,9 +22,6 @@ struct ZoomableHexGridView<Cell: AxialCoordinateProviding>: View {
             zoomRange: zoomRange,
             onZoomEvent: zoomChanged(event:),
             zoomResetRequest: zoomResetRequest,
-            onVisibleRectChange: { rect in
-//                self.visibleRect = rect
-            },
             content: {
                 HexGridCanvas(
                     layout: layout,
@@ -34,7 +29,6 @@ struct ZoomableHexGridView<Cell: AxialCoordinateProviding>: View {
                 )
                 .background(.green.opacity(0.7))
                 .background(.blue.opacity(0.7))
-//                .environment(\.scrollVisibleRect, visibleRect)
             }
         )
     }
