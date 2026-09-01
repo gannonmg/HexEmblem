@@ -51,11 +51,17 @@ struct ZoomableHexGridView<Cell: AxialCoordinateProviding>: View {
         let radiusRatio = newRadius / oldRadius
         let newContentAnchor = event.contentAnchor * radiusRatio
 
+        let viewportAfterReset = CGRect(
+            origin: newContentAnchor - event.viewportAnchor,
+            size: event.viewport.size * radiusRatio
+        )
+
         let nextRequestId = (zoomResetRequest?.id ?? 0) + 1
         self.zoomResetRequest = ZoomResetRequest(
             id: nextRequestId,
             anchorInContent: newContentAnchor,
-            anchorInViewport: event.viewportAnchor
+            anchorInViewport: event.viewportAnchor,
+            viewportAfterReset: viewportAfterReset
         )
     }
 }
