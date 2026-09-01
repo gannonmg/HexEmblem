@@ -9,29 +9,6 @@ import HexCore // Currently owns some CoreGraphics utility funcs. Should be abst
 import SwiftUI
 import UIKit
 
-struct ZoomEvent {
-    let scale: CGFloat
-    let didEnd: Bool
-    let contentAnchor: CGPoint
-    /// The point in the zoomable content’s own coordinate space that should remain visually stable across the zoom commit.
-    let viewportAnchor: CGPoint
-    let viewport: CGRect
-}
-
-struct ZoomResetRequest: Equatable {
-    let id: Int
-    /// The point in the zoomable content’s own coordinate space that should remain visually stable across the zoom commit.
-    /// Derived from `ZoomEvent.contentAnchor` updated with the newly applied content scale (in our case, hex radius)
-    let anchorInContent: CGPoint
-    /// The point in the zoomable content’s own coordinate space that should remain visually stable across the zoom commit.
-    ///
-    /// This is received from a `ZoomEvent` and serves as the constant between `Event` -> `Request`
-    let anchorInViewport: CGPoint
-
-    /// Lets us predict the post-reset viewport size without waiting on the scroll view's async publish.
-    let viewportAfterReset: CGRect
-}
-
 /// Thin wrapper around `ZoomableScrollUIView` to manage `scrollViewport` and pass it into the environment
 struct ZoomableScrollView<Content: View>: View {
     @State private var scrollViewport: CGRect = .zero
@@ -39,7 +16,7 @@ struct ZoomableScrollView<Content: View>: View {
     let zoomRange: ClosedRange<CGFloat>
     var showsScrollIndicators: Bool = false
     let onZoomEvent: (ZoomEvent) -> Void
-    let zoomResetRequest: ZoomResetRequest?
+    let zoomResetCommit: ZoomResetCommit?
     let content: () -> Content
 
     var body: some View {
@@ -47,17 +24,17 @@ struct ZoomableScrollView<Content: View>: View {
             zoomRange: zoomRange,
             showsScrollIndicators: showsScrollIndicators,
             onZoomEvent: onZoomEvent,
-            zoomResetRequest: zoomResetRequest,
+            zoomResetCommit: zoomResetCommit,
             onViewportChange: { scrollViewport = $0 },
             content: {
                 content()
                     .environment(\.scrollViewport, scrollViewport)
             }
         )
-        .onChange(of: zoomResetRequest) {
+        .onChange(of: zoomResetCommit) {
             // Ensures that consumers have a fresh viewport after a zoom scale reset.
-            guard let zoomResetRequest else { return }
-            scrollViewport = zoomResetRequest.viewportAfterReset
+            guard let zoomResetCommit else { return }
+            scrollViewport = zoomResetCommit.viewportAfterReset
         }
     }
 }
@@ -67,7 +44,7 @@ private struct ZoomableScrollUIView<Content: View>: UIViewRepresentable {
     let zoomRange: ClosedRange<CGFloat>
     let showsScrollIndicators: Bool
     let onZoomEvent: (ZoomEvent) -> Void
-    let zoomResetRequest: ZoomResetRequest?
+    let zoomResetCommit: ZoomResetCommit?
     let onViewportChange: (CGRect) -> Void
     let content: Content
 
@@ -75,14 +52,14 @@ private struct ZoomableScrollUIView<Content: View>: UIViewRepresentable {
         zoomRange: ClosedRange<CGFloat>,
         showsScrollIndicators: Bool = false,
         onZoomEvent: @escaping (ZoomEvent) -> Void,
-        zoomResetRequest: ZoomResetRequest?,
+        zoomResetCommit: ZoomResetCommit?,
         onViewportChange: @escaping (CGRect) -> Void,
         @ViewBuilder content: () -> Content
     ) {
         self.zoomRange = zoomRange
         self.showsScrollIndicators = showsScrollIndicators
         self.onZoomEvent = onZoomEvent
-        self.zoomResetRequest = zoomResetRequest
+        self.zoomResetCommit = zoomResetCommit
         self.onViewportChange = onViewportChange
         self.content = content()
     }
@@ -148,7 +125,7 @@ private struct ZoomableScrollUIView<Content: View>: UIViewRepresentable {
 
         init(owner: ZoomableScrollUIView) {
             self.owner = owner
-            self.lastZoomResetRequest = owner.zoomResetRequest
+            self.lastZoomResetRequest = owner.zoomResetCommit?.request
         }
 
         // MARK: UIScrollViewDelegate
@@ -191,12 +168,12 @@ private struct ZoomableScrollUIView<Content: View>: UIViewRepresentable {
 
         func resetZoomIfNeeded(in scrollView: UIScrollView) {
             // Ensure we have a fresh reset request
-            guard let request = owner.zoomResetRequest,
+            guard let request = owner.zoomResetCommit?.request,
                   lastZoomResetRequest?.id != request.id
             else { return }
 
             // Store new request as most recent
-            lastZoomResetRequest = owner.zoomResetRequest
+            lastZoomResetRequest = owner.zoomResetCommit?.request
 
             // Block update reports from zoom interactions until we are done with our reset
             isApplyingZoomReset = true
