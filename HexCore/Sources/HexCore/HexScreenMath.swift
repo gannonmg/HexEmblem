@@ -6,6 +6,7 @@
 //
 
 import CoreGraphics
+import HECommon
 
 public enum HexScreenMath {
     /*

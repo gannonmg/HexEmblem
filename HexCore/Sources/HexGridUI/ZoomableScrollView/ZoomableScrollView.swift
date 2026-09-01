@@ -5,7 +5,7 @@
 //  Created by Matt Gannon on 8/27/26.
 //
 
-import HexCore // Currently owns some CoreGraphics utility funcs. Should be abstracted out
+import HECommon
 import SwiftUI
 import UIKit
 

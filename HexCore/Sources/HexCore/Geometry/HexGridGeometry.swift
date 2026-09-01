@@ -7,6 +7,7 @@
 
 import Algorithms
 import Foundation
+import HECommon
 
 // Constants and Calculations specifically focused on the relative layout of a hex grid, irregardless to actual pixel size.
 // All math is done assuming radius = 1.

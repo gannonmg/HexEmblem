@@ -6,8 +6,8 @@
 //
 
 import CoreGraphics
-import HexCore // Currently owns some CoreGraphics utility funcs. Should be abstracted out
 import Foundation
+import HECommon
 
 /// After the consumer handles updating its content based on the forthcoming viewport changes,
 /// this resets the zoom scale to one and updates the viewport based on the projected size.

@@ -23,12 +23,4 @@ extension CGPoint {
     public static func / (point: CGPoint, scale: CGFloat) -> CGPoint {
         CGPoint(x: point.x / scale, y: point.y / scale)
     }
-
-    /// The point `distance` away at `angle`, measured from the +x axis.
-    func offset(distance: CGFloat, angle: Angle) -> CGPoint {
-        CGPoint(
-            x: x + distance * cos(angle.radians),
-            y: y + distance * sin(angle.radians)
-        )
-    }
 }

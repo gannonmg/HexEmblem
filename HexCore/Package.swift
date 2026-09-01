@@ -18,6 +18,7 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(path: "../Utility"),
         .package(url: "https://github.com/apple/swift-algorithms", from: "1.2.0"),
         .package(url: "https://github.com/apple/swift-collections.git", .upToNextMajor(from: "1.0.0"))
     ],
@@ -29,11 +30,15 @@ let package = Package(
             dependencies: [
                 .product(name: "Algorithms", package: "swift-algorithms"),
                 .product(name: "HeapModule", package: "swift-collections"),
+                .product(name: "HECommon", package: "Utility"),
             ]
         ),
         .target(
             name: "HexGridUI",
-            dependencies: ["HexCore"],
+            dependencies: [
+                "HexCore",
+                .product(name: "HECommon", package: "Utility"),
+            ],
         ),
         .testTarget(
             name: "HexCoreTests",
@@ -42,20 +47,3 @@ let package = Package(
     ],
     swiftLanguageModes: [.v6]
 )
-
-//.executable(
-//    name: "HexGridExampleApp",
-//    targets: ["HexGridExampleApp"]
-//),
-//.executableTarget(
-//    name: "HexGridExampleApp",
-//    dependencies: ["HexGridUI"],
-//),
-//.library(
-//    name: "HexMapUI",
-//    targets: ["HexMapUI"]
-//),
-//.target(
-//    name: "HexMapUI",
-//    dependencies: ["HexCore"],
-//),
