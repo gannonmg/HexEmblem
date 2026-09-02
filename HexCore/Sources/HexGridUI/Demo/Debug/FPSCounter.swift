@@ -52,7 +52,7 @@ final class FPSCounter: NSObject {
     }
 }
 
-#if canImport(AppKit)
+#if canImport(AppKit) && !canImport(UIKit)
 private final class FPSHostView: NSView {
     var counter: FPSCounter?
 
